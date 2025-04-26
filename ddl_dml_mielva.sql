@@ -19,9 +19,9 @@ GO
 DROP TABLE VentaDetalle;
 DROP TABLE Venta;
 DROP TABLE Cliente;
-DROP TABLE VentaDetalle;
 DROP TABLE CompraDetalle;
 DROP TABLE Compra;
+DROP TABLE Ingrediente;
 DROP TABLE Usuario;
 DROP TABLE Empleado;
 DROP TABLE Proveedor;
@@ -65,23 +65,41 @@ CREATE TABLE Usuario (
   CONSTRAINT FK_Usuario_Empleado FOREIGN KEY (idEmpleado) REFERENCES Empleado(id)
 );
 
+CREATE TABLE Ingrediente (
+    id INT NOT NULL PRIMARY KEY IDENTITY(1, 1),
+    codigo VARCHAR(20) NOT NULL UNIQUE, -- Código interno del ingrediente
+    descripcion VARCHAR(250) NOT NULL,
+    unidadMedida VARCHAR(20) NOT NULL,
+    saldo DECIMAL NOT NULL DEFAULT 0, -- Stock actual del ingrediente
+    precioCompra DECIMAL NULL, -- Último precio de compra (puede variar por proveedor)
+    usuarioRegistro VARCHAR(50) NOT NULL DEFAULT SUSER_NAME(),
+    fechaRegistro DATETIME NOT NULL DEFAULT GETDATE(),
+    estado SMALLINT NOT NULL DEFAULT 1 -- 1: Activo, 0: Inactivo, -1: Eliminado
+);
+
 CREATE TABLE Compra (
-  id  INT NOT NULL PRIMARY KEY IDENTITY(1, 1),
-  idProveedor INT NOT NULL,
-  transaccion INT NOT NULL,
-  fecha DATE NOT NULL DEFAULT GETDATE(),
-  CONSTRAINT FK_Compra_Proveedor FOREIGN KEY(idProveedor) REFERENCES Proveedor(id)
+ id INT NOT NULL PRIMARY KEY IDENTITY(1, 1),
+    idProveedor INT NOT NULL,
+    transaccion INT NOT NULL,
+    fecha DATE NOT NULL DEFAULT GETDATE(),
+    usuarioRegistro VARCHAR(50) NOT NULL DEFAULT SUSER_NAME(),
+    fechaRegistro DATETIME NOT NULL DEFAULT GETDATE(),
+    estado SMALLINT NOT NULL DEFAULT 1, -- 1: Activo, 0: Inactivo, -1: Anulado
+    CONSTRAINT FK_Compra_Proveedor FOREIGN KEY(idProveedor) REFERENCES Proveedor(id)
 );
 
 CREATE TABLE CompraDetalle (
-  id INT NOT NULL PRIMARY KEY IDENTITY(1, 1),
-  idCompra INT NOT NULL,
-  idProducto INT NOT NULL,
-  cantidad DECIMAL NOT NULL CHECK (cantidad > 0),
-  precioUnitario DECIMAL NOT NULL,
-  total DECIMAL NOT NULL,
-  CONSTRAINT FK_CompraDetalle_Compra FOREIGN KEY(idCompra) REFERENCES Compra(id),
-  CONSTRAINT FK_CompraDetalle_Producto FOREIGN KEY(idProducto) REFERENCES Producto(id)
+    id INT NOT NULL PRIMARY KEY IDENTITY(1, 1),
+    idCompra INT NOT NULL,
+    idIngrediente INT NOT NULL,
+    cantidad DECIMAL NOT NULL CHECK (cantidad > 0),
+    precioUnitario DECIMAL NOT NULL,
+    total DECIMAL NOT NULL,
+    usuarioRegistro VARCHAR(50) NOT NULL DEFAULT SUSER_NAME(),
+    fechaRegistro DATETIME NOT NULL DEFAULT GETDATE(),
+    estado SMALLINT NOT NULL DEFAULT 1,
+    CONSTRAINT FK_CompraDetalle_Compra FOREIGN KEY(idCompra) REFERENCES Compra(id),
+    CONSTRAINT FK_CompraDetalle_Ingrediente FOREIGN KEY(idIngrediente) REFERENCES Ingrediente(id)
 );
 
 CREATE TABLE Cliente (
@@ -137,14 +155,6 @@ ALTER TABLE Usuario ADD usuarioRegistro VARCHAR(50) NOT NULL DEFAULT SUSER_NAME(
 ALTER TABLE Usuario ADD fechaRegistro DATETIME NOT NULL DEFAULT GETDATE();
 ALTER TABLE Usuario ADD estado SMALLINT NOT NULL DEFAULT 1; -- 1: Activo, 0: Inactivo, -1: Eliminado
 
-ALTER TABLE Compra ADD usuarioRegistro VARCHAR(50) NOT NULL DEFAULT SUSER_NAME();
-ALTER TABLE Compra ADD fechaRegistro DATETIME NOT NULL DEFAULT GETDATE();
-ALTER TABLE Compra ADD estado SMALLINT NOT NULL DEFAULT 1; -- 1: Activo, 0: Inactivo, -1: Eliminado
-
-ALTER TABLE CompraDetalle ADD usuarioRegistro VARCHAR(50) NOT NULL DEFAULT SUSER_NAME();
-ALTER TABLE CompraDetalle ADD fechaRegistro DATETIME NOT NULL DEFAULT GETDATE();
-ALTER TABLE CompraDetalle ADD estado SMALLINT NOT NULL DEFAULT 1; -- 1: Activo, 0: Inactivo, -1: Eliminado
-
 
 --********************************************************
 
@@ -190,13 +200,51 @@ VALUES ('EM3285', 'Empanada', 'Docena', 0, 10);
 UPDATE Producto SET precioVenta=83 WHERE codigo='PT0254';
 UPDATE Producto SET estado=-1 WHERE codigo='EM3285';
 
+
+INSERT INTO Proveedor(nit,razonSocial,direccion,telefono,representante)
+VALUES (123456789, 'Mielva CDR', 'Calle Loa N° 50', '71717171', 'Juan Pérez');
+
+INSERT INTO Proveedor(nit,razonSocial,direccion,telefono,representante)
+VALUES (987654321, 'Mauricio Mendieta', 'Calle Loa N° 50', '71717171', 'Juan Pérez');
+
+UPDATE Proveedor SET telefono=78234568 WHERE nit='123456789';
+
+
 INSERT INTO Empleado(cedulaIdentidad, nombres, primerApellido, segundoApellido, direccion, celular, cargo)
 VALUES ('1234567', 'Juan', 'Pérez', 'López', 'Calle Loa N° 50', 71717171, 'Cajero');
+
+INSERT INTO Empleado(cedulaIdentidad, nombres, primerApellido, segundoApellido, direccion, celular, cargo)
+VALUES ('7654321', 'María', 'González', 'López', 'Calle Loa N° 50', 71717171, 'Cajero');
+
+UPDATE Empleado SET celular=61580236 WHERE cedulaIdentidad='1234567';
+
 
 INSERT INTO Usuario(idEmpleado, usuario, clave)
 VALUES (1, 'jperez', '');
 
 UPDATE Usuario SET clave='i0hcoO/nssY6WOs9pOp5Xw==' WHERE id=1;
+
+
+INSERT INTO Ingrediente(codigo, descripcion, unidadMedida, saldo, precioCompra)
+VALUES ('ING001', 'Harina de trigo', 'Kg', 100, 5.50);
+
+INSERT INTO Ingrediente(codigo, descripcion, unidadMedida, saldo, precioCompra)
+VALUES ('ING002', 'Azúcar', 'Kg', 50, 3.00);
+
+
+INSERT INTO Compra(idProveedor, transaccion)
+VALUES (1, 123456);
+
+INSERT INTO Compra(idProveedor, transaccion)
+VALUES (2, 654321);
+
+
+INSERT INTO CompraDetalle(idCompra, idIngrediente, cantidad, precioUnitario, total)
+VALUES (1, 1, 10, 5.50, 55);
+
+INSERT INTO CompraDetalle(idCompra, idIngrediente, cantidad, precioUnitario, total)
+VALUES (1, 2, 5, 3.00, 15);
+
 
 INSERT INTO Cliente(nit, razonSocial)
 VALUES (123456789, 'Mielva CDR');
@@ -204,7 +252,22 @@ VALUES (123456789, 'Mielva CDR');
 INSERT INTO Cliente(nit, razonSocial)
 VALUES (987654321, 'Mauricio Mendieta');
 
+
+INSERT INTO Venta(idUsuario, idCliente, transaccion)
+VALUES (1, 1, 123456);
+
+
+INSERT INTO VentaDetalle(idVenta, idProducto, cantidad, precioUnitario, total)
+VALUES (1, 1, 2, 85, 170);
+
+
 SELECT * FROM Producto;
-SELECT * FROM Usuario;
-SELECT * FROM Cliente;
+SELECT * FROM Proveedor;
 SELECT * FROM Empleado;
+SELECT * FROM Usuario;
+SELECT * FROM Ingrediente;
+SELECT * FROM Compra;
+SELECT * FROM CompraDetalle;
+SELECT * FROM Cliente;
+SELECT * FROM Venta;
+SELECT * FROM VentaDetalle;
