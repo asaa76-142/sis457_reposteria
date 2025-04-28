@@ -56,6 +56,10 @@ CREATE TABLE Empleado (
   cargo VARCHAR(50) NOT NULL
 );
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 77f4bd1190c557f6d71fe434e3dbfe179a04251d
 CREATE TABLE Usuario (
   id INT NOT NULL PRIMARY KEY IDENTITY(1, 1),
   idEmpleado INT NOT NULL,
@@ -102,6 +106,7 @@ CREATE TABLE CompraDetalle (
 );
 
 CREATE TABLE Cliente (
+<<<<<<< HEAD
 	id INT NOT NULL PRIMARY KEY IDENTITY(1,1),
 	nit BIGINT NOT NULL,
 	razonSocial VARCHAR(100) NOT NULL,
@@ -135,6 +140,42 @@ CREATE TABLE VentaDetalle (
 	registroActivo SMALLINT NOT NULL DEFAULT 1,
 	CONSTRAINT fk_VentaDetalle_Venta FOREIGN KEY(idVenta) REFERENCES Venta(id),
 	CONSTRAINT fk_VentaDetalle_Producto FOREIGN KEY(idProducto) REFERENCES Producto(id)
+=======
+id INT NOT NULL PRIMARY KEY IDENTITY(1,1),
+nit BIGINT NOT NULL,
+razonSocial VARCHAR(100) NOT NULL,
+usuarioRegistro VARCHAR(50) NOT NULL DEFAULT SUSER_NAME(),
+fechaRegistro DATETIME NOT NULL DEFAULT GETDATE(),
+registroActivo SMALLINT NOT NULL DEFAULT 1
+);
+
+CREATE TABLE Venta (
+id INT NOT NULL PRIMARY KEY IDENTITY(1,1),
+idUsuario INT NOT NULL,
+idCliente INT NOT NULL,
+transaccion INT NOT NULL,
+fecha DATE NOT NULL DEFAULT GETDATE(),
+usuarioRegistro VARCHAR(50) NOT NULL DEFAULT SUSER_NAME(),
+fechaRegistro DATETIME NOT NULL DEFAULT GETDATE(),
+registroActivo SMALLINT NOT NULL DEFAULT 1,
+CONSTRAINT fk_Venta_Usuario FOREIGN KEY(idUsuario) REFERENCES Usuario(id),
+CONSTRAINT fk_Venta_Cliente FOREIGN KEY(idCliente) REFERENCES Cliente(id)
+);
+
+CREATE TABLE VentaDetalle (
+id INT NOT NULL PRIMARY KEY IDENTITY(1,1),
+idVenta INT NOT NULL,
+idProducto INT NOT NULL,
+cantidad DECIMAL NOT NULL CHECK (cantidad > 0),
+precioUnitario DECIMAL NOT NULL,
+total DECIMAL NOT NULL,
+usuarioRegistro VARCHAR(50) NOT NULL DEFAULT SUSER_NAME(),
+fechaRegistro DATETIME NOT NULL DEFAULT GETDATE(),
+registroActivo SMALLINT NOT NULL DEFAULT 1,
+CONSTRAINT fk_VentaDetalle_Venta FOREIGN KEY(idVenta) REFERENCES Venta(id),
+CONSTRAINT fk_VentaDetalle_Producto FOREIGN KEY(idProducto) REFERENCES
+Producto(id)
+>>>>>>> 77f4bd1190c557f6d71fe434e3dbfe179a04251d
 );
 
 ALTER TABLE Producto ADD usuarioRegistro VARCHAR(50) NOT NULL DEFAULT SUSER_NAME();
@@ -154,6 +195,7 @@ ALTER TABLE Usuario ADD fechaRegistro DATETIME NOT NULL DEFAULT GETDATE();
 ALTER TABLE Usuario ADD estado SMALLINT NOT NULL DEFAULT 1; -- 1: Activo, 0: Inactivo, -1: Eliminado
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 ALTER TABLE Compra ADD usuarioRegistro VARCHAR(50) NOT NULL DEFAULT SUSER_NAME();
 ALTER TABLE Compra ADD fechaRegistro DATETIME NOT NULL DEFAULT GETDATE();
 ALTER TABLE Compra ADD estado SMALLINT NOT NULL DEFAULT 1; -- 1: Activo, 0: Inactivo, -1: Eliminado
@@ -166,6 +208,8 @@ ALTER TABLE VentaDetalle ADD usuarioRegistro VARCHAR(50) NOT NULL DEFAULT SUSER_
 ALTER TABLE VentaDetalle ADD fechaRegistro DATETIME NOT NULL DEFAULT GETDATE();
 ALTER TABLE VentaDetalle ADD estado SMALLINT NOT NULL DEFAULT 1; -- 1: Activo, 0: Inactivo, -1: Eliminado
 
+=======
+>>>>>>> 77f4bd1190c557f6d71fe434e3dbfe179a04251d
 =======
 >>>>>>> 77f4bd1190c557f6d71fe434e3dbfe179a04251d
 
@@ -181,15 +225,24 @@ AS
 GO
 ALTER PROC paEmpleadoListar @parametro VARCHAR(100)
 AS
+<<<<<<< HEAD
 	  SELECT e.*, u.usuario 
 	  FROM Empleado e
 	  LEFT JOIN Usuario u ON e.id = u.idEmpleado
 	  WHERE e.estado<>-1 AND e.cedulaIdentidad+e.nombres+e.primerApellido+e.segundoApellido LIKE '%'+REPLACE(@parametro,' ','%')+'%'
 	  ORDER BY e.estado DESC, e.nombres ASC, e.primerApellido ASC;
+=======
+  SELECT e.*, u.usuario 
+  FROM Empleado e
+  LEFT JOIN Usuario u ON e.id = u.idEmpleado
+  WHERE e.estado<>-1 AND e.cedulaIdentidad+e.nombres+e.primerApellido+e.segundoApellido LIKE '%'+REPLACE(@parametro,' ','%')+'%'
+  ORDER BY e.estado DESC, e.nombres ASC, e.primerApellido ASC;
+>>>>>>> 77f4bd1190c557f6d71fe434e3dbfe179a04251d
 
 GO
 ALTER PROC paClienteListar @parametro VARCHAR(100)
 AS
+<<<<<<< HEAD
 	SELECT * FROM Cliente
 	WHERE registroActivo = 1 AND CAST(nit AS VARCHAR) + razonSocial LIKE
 	'%'+REPLACE(@parametro, ' ','%')+'%'
@@ -247,16 +300,25 @@ ALTER PROC paProveedorListar @parametro VARCHAR(100)
 	ORDER BY estado DESC, razonSocial ASC;
 
 
+=======
+SELECT * FROM Cliente
+WHERE registroActivo = 1 AND CAST(nit AS VARCHAR) + razonSocial LIKE
+'%'+REPLACE(@parametro, ' ','%')+'%'
+ORDER BY registroActivo DESC, razonSocial ASC;
+>>>>>>> 77f4bd1190c557f6d71fe434e3dbfe179a04251d
 
 EXEC paClienteListar '';
 EXEC paClienteListar 'mielva';
 EXEC paProductoListar 'pastel varón';
 EXEC paEmpleadoListar 'juan';
+<<<<<<< HEAD
 EXEC paVentaListar '2025-04-01';
 EXEC paCompraListar '2025-04-01';
 EXEC paCompraDetalleListar '2025-04-01';
 EXEC paVentaDetalleListar '2025-04-01';
 EXEC paProveedorListar 'mielva';
+=======
+>>>>>>> 77f4bd1190c557f6d71fe434e3dbfe179a04251d
 
 -- DML *********************************
 INSERT INTO Producto(codigo,descripcion,unidadMedida,saldo,precioVenta)
