@@ -108,7 +108,7 @@ nit BIGINT NOT NULL,
 razonSocial VARCHAR(100) NOT NULL,
 usuarioRegistro VARCHAR(50) NOT NULL DEFAULT SUSER_NAME(),
 fechaRegistro DATETIME NOT NULL DEFAULT GETDATE(),
-registroActivo SMALLINT NOT NULL DEFAULT 1
+estado SMALLINT NOT NULL DEFAULT 1
 );
 
 CREATE TABLE Venta (
@@ -119,7 +119,7 @@ transaccion INT NOT NULL,
 fecha DATE NOT NULL DEFAULT GETDATE(),
 usuarioRegistro VARCHAR(50) NOT NULL DEFAULT SUSER_NAME(),
 fechaRegistro DATETIME NOT NULL DEFAULT GETDATE(),
-registroActivo SMALLINT NOT NULL DEFAULT 1,
+estado SMALLINT NOT NULL DEFAULT 1,
 CONSTRAINT fk_Venta_Usuario FOREIGN KEY(idUsuario) REFERENCES Usuario(id),
 CONSTRAINT fk_Venta_Cliente FOREIGN KEY(idCliente) REFERENCES Cliente(id)
 );
@@ -133,7 +133,7 @@ precioUnitario DECIMAL NOT NULL,
 total DECIMAL NOT NULL,
 usuarioRegistro VARCHAR(50) NOT NULL DEFAULT SUSER_NAME(),
 fechaRegistro DATETIME NOT NULL DEFAULT GETDATE(),
-registroActivo SMALLINT NOT NULL DEFAULT 1,
+estado SMALLINT NOT NULL DEFAULT 1,
 CONSTRAINT fk_VentaDetalle_Venta FOREIGN KEY(idVenta) REFERENCES Venta(id),
 CONSTRAINT fk_VentaDetalle_Producto FOREIGN KEY(idProducto) REFERENCES
 Producto(id)
@@ -161,31 +161,145 @@ ALTER TABLE Usuario ADD estado SMALLINT NOT NULL DEFAULT 1; -- 1: Activo, 0: Ina
 GO
 ALTER PROC paProductoListar @parametro VARCHAR(100)
 AS
-  SELECT * FROM Producto
-  WHERE estado<>-1 AND codigo+descripcion+unidadMedida LIKE '%'+REPLACE(@parametro,' ','%')+'%'
-  ORDER BY estado DESC, descripcion ASC;
+BEGIN
+    -- Crear una tabla temporal para almacenar las palabras de búsqueda
+    CREATE TABLE #PalabrasBusqueda (palabra VARCHAR(100));
+
+    -- Insertar las palabras de búsqueda divididas por espacios
+    INSERT INTO #PalabrasBusqueda (palabra)
+    SELECT value FROM STRING_SPLIT(@parametro, ' ') WHERE value <> '';
+
+    -- Contar el número total de palabras de búsqueda
+    DECLARE @totalPalabras INT = (SELECT COUNT(*) FROM #PalabrasBusqueda);
+
+    -- Seleccionar los productos donde todas las palabras de búsqueda aparecen en al menos uno de los campos
+    SELECT p.*
+    FROM Producto p
+    WHERE p.estado <> -1
+    AND (
+        SELECT COUNT(DISTINCT pb.palabra)
+        FROM #PalabrasBusqueda pb
+        WHERE 
+            p.codigo COLLATE Latin1_General_CI_AI LIKE '%' + pb.palabra + '%' OR
+            p.descripcion COLLATE Latin1_General_CI_AI LIKE '%' + pb.palabra + '%' OR
+            p.unidadMedida COLLATE Latin1_General_CI_AI LIKE '%' + pb.palabra + '%'
+    ) = @totalPalabras
+    ORDER BY p.estado DESC, p.descripcion ASC;
+
+    -- Limpiar la tabla temporal
+    DROP TABLE #PalabrasBusqueda;
+END;
+
 
 GO
 ALTER PROC paEmpleadoListar @parametro VARCHAR(100)
 AS
-  SELECT e.*, u.usuario 
-  FROM Empleado e
-  LEFT JOIN Usuario u ON e.id = u.idEmpleado
-  WHERE e.estado<>-1 AND e.cedulaIdentidad+e.nombres+e.primerApellido+e.segundoApellido LIKE '%'+REPLACE(@parametro,' ','%')+'%'
-  ORDER BY e.estado DESC, e.nombres ASC, e.primerApellido ASC;
+BEGIN
+    -- Crear tabla temporal con las palabras de búsqueda
+    CREATE TABLE #PalabrasBusqueda (palabra VARCHAR(100));
+
+    INSERT INTO #PalabrasBusqueda (palabra)
+    SELECT value 
+    FROM STRING_SPLIT(@parametro, ' ')
+    WHERE value <> '';
+
+    DECLARE @totalPalabras INT = (SELECT COUNT(*) FROM #PalabrasBusqueda);
+
+    SELECT 
+        e.*,
+        u.usuario
+    FROM Empleado e
+    LEFT JOIN Usuario u 
+        ON e.id = u.idEmpleado
+    WHERE e.estado <> -1
+      AND (
+          SELECT COUNT(DISTINCT pb.palabra)
+          FROM #PalabrasBusqueda pb
+          WHERE 
+               e.cedulaIdentidad COLLATE Latin1_General_CI_AI LIKE '%' + pb.palabra + '%'
+            OR e.nombres           COLLATE Latin1_General_CI_AI LIKE '%' + pb.palabra + '%'
+            OR ISNULL(e.primerApellido, '') COLLATE Latin1_General_CI_AI LIKE '%' + pb.palabra + '%'
+            OR ISNULL(e.segundoApellido, '') COLLATE Latin1_General_CI_AI LIKE '%' + pb.palabra + '%'
+            OR ISNULL(e.direccion, '')       COLLATE Latin1_General_CI_AI LIKE '%' + pb.palabra + '%'
+      ) = @totalPalabras
+    ORDER BY e.estado DESC, e.nombres ASC, e.primerApellido ASC;
+
+    DROP TABLE #PalabrasBusqueda;
+END;
 
 GO
 ALTER PROC paClienteListar @parametro VARCHAR(100)
 AS
-SELECT * FROM Cliente
-WHERE registroActivo = 1 AND CAST(nit AS VARCHAR) + razonSocial LIKE
-'%'+REPLACE(@parametro, ' ','%')+'%'
-ORDER BY registroActivo DESC, razonSocial ASC;
+SELECT *
+FROM Cliente
+WHERE estado = 1
+  AND (CAST(nit AS VARCHAR(20)) + razonSocial)
+      LIKE '%' + REPLACE(@parametro, ' ', '%') + '%'
+ORDER BY estado DESC, razonSocial ASC;
 
-EXEC paClienteListar '';
+GO
+ALTER PROC paVentaListar @parametro VARCHAR(100)
+AS
+	SELECT v.*, u.usuario, c.razonSocial
+	FROM Venta v
+	LEFT JOIN Usuario u ON v.idUsuario = u.id
+	LEFT JOIN Cliente c ON v.idCliente = c.id
+	WHERE v.estado = 1 AND CAST(v.transaccion AS VARCHAR) + CAST(v.fecha AS VARCHAR) + u.usuario + c.razonSocial LIKE
+	'%'+REPLACE(@parametro, ' ','%')+'%'
+ORDER BY v.estado DESC, v.fecha DESC;
+
+
+GO
+create PROC paCompraListar @parametro VARCHAR(100)
+AS
+SELECT c.*, p.razonSocial
+FROM Compra c
+	LEFT JOIN Proveedor p ON c.idProveedor = p.id
+	WHERE c.estado = 1 AND CAST(c.transaccion AS VARCHAR) + CAST(c.fecha AS VARCHAR) + p.razonSocial LIKE
+	'%'+REPLACE(@parametro, ' ','%')+'%'
+ORDER BY c.estado DESC, c.fecha DESC;
+
+GO
+ALTER PROC paCompraDetalleListar @parametro VARCHAR(100)
+	AS
+	SELECT cd.*, p.descripcion, c.transaccion, c.fecha
+	FROM CompraDetalle cd
+	LEFT JOIN Ingrediente p ON cd.idIngrediente = p.id
+	LEFT JOIN Compra c ON cd.idCompra = c.id
+	WHERE cd.estado = 1 AND CAST(cd.cantidad AS VARCHAR) + CAST(cd.precioUnitario AS VARCHAR) + CAST(cd.total AS VARCHAR) + p.descripcion + CAST(c.transaccion AS VARCHAR) + CAST(c.fecha AS VARCHAR) LIKE
+	'%'+REPLACE(@parametro, ' ','%')+'%'
+ORDER BY cd.estado DESC, c.fecha DESC;
+
+GO
+ALTER PROC paVentaDetalleListar @parametro VARCHAR(100)
+	AS
+	SELECT vd.*, p.descripcion, v.transaccion, v.fecha
+	FROM VentaDetalle vd
+	LEFT JOIN Producto p ON vd.idProducto = p.id
+	LEFT JOIN Venta v ON vd.idVenta = v.id
+	WHERE vd.estado = 1 AND CAST(vd.cantidad AS VARCHAR) + CAST(vd.precioUnitario AS VARCHAR) + CAST(vd.total AS VARCHAR) + p.descripcion + CAST(v.transaccion AS VARCHAR) + CAST(v.fecha AS VARCHAR) LIKE
+	'%'+REPLACE(@parametro, ' ','%')+'%'
+	ORDER BY vd.estado DESC, v.fecha DESC;
+
+GO
+ALTER PROC paProveedorListar @parametro VARCHAR(100)
+	AS
+	SELECT * FROM Proveedor
+	WHERE estado = 1 AND CAST(nit AS VARCHAR) + razonSocial + telefono + representante LIKE
+	'%'+REPLACE(@parametro, ' ','%')+'%'
+ORDER BY estado DESC, razonSocial ASC;
+
+
+
+EXEC paClienteListar 'mendieta';
 EXEC paClienteListar 'mielva';
-EXEC paProductoListar 'pastel varón';
-EXEC paEmpleadoListar 'juan';
+EXEC paProductoListar 'PASTEL varon';
+EXEC paEmpleadoListar '';
+EXEC paVentaListar '123456';
+EXEC paCompraListar '654321';
+EXEC paCompraDetalleListar '55';
+EXEC paVentaDetalleListar '170';
+EXEC paProveedorListar 'mielva';
 
 -- DML *********************************
 INSERT INTO Producto(codigo,descripcion,unidadMedida,saldo,precioVenta)
