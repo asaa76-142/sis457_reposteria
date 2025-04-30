@@ -56,7 +56,6 @@ CREATE TABLE Empleado (
   cargo VARCHAR(50) NOT NULL
 );
 
-
 CREATE TABLE Usuario (
   id INT NOT NULL PRIMARY KEY IDENTITY(1, 1),
   idEmpleado INT NOT NULL,
@@ -103,13 +102,40 @@ CREATE TABLE CompraDetalle (
 );
 
 CREATE TABLE Cliente (
-id INT NOT NULL PRIMARY KEY IDENTITY(1,1),
-nit BIGINT NOT NULL,
-razonSocial VARCHAR(100) NOT NULL,
-usuarioRegistro VARCHAR(50) NOT NULL DEFAULT SUSER_NAME(),
-fechaRegistro DATETIME NOT NULL DEFAULT GETDATE(),
-estado SMALLINT NOT NULL DEFAULT 1
+	id INT NOT NULL PRIMARY KEY IDENTITY(1,1),
+	nit BIGINT NOT NULL,
+	razonSocial VARCHAR(100) NOT NULL,
+	usuarioRegistro VARCHAR(50) NOT NULL DEFAULT SUSER_NAME(),
+	fechaRegistro DATETIME NOT NULL DEFAULT GETDATE(),
+	estado SMALLINT NOT NULL DEFAULT 1
 );
+
+CREATE TABLE Venta (
+	id INT NOT NULL PRIMARY KEY IDENTITY(1,1),
+	idUsuario INT NOT NULL,
+	idCliente INT NOT NULL,
+	transaccion INT NOT NULL,
+	fecha DATE NOT NULL DEFAULT GETDATE(),
+	usuarioRegistro VARCHAR(50) NOT NULL DEFAULT SUSER_NAME(),
+	fechaRegistro DATETIME NOT NULL DEFAULT GETDATE(),
+	estado SMALLINT NOT NULL DEFAULT 1,
+	CONSTRAINT fk_Venta_Usuario FOREIGN KEY(idUsuario) REFERENCES Usuario(id),
+	CONSTRAINT fk_Venta_Cliente FOREIGN KEY(idCliente) REFERENCES Cliente(id)
+);
+
+CREATE TABLE VentaDetalle (
+	id INT NOT NULL PRIMARY KEY IDENTITY(1,1),
+	idVenta INT NOT NULL,
+	idProducto INT NOT NULL,
+	cantidad DECIMAL NOT NULL CHECK (cantidad > 0),
+	precioUnitario DECIMAL NOT NULL,
+	total DECIMAL NOT NULL,
+	usuarioRegistro VARCHAR(50) NOT NULL DEFAULT SUSER_NAME(),
+	fechaRegistro DATETIME NOT NULL DEFAULT GETDATE(),
+	estado SMALLINT NOT NULL DEFAULT 1,
+	CONSTRAINT fk_VentaDetalle_Venta FOREIGN KEY(idVenta) REFERENCES Venta(id),
+	CONSTRAINT fk_VentaDetalle_Producto FOREIGN KEY(idProducto) REFERENCES Producto(id)
+	);
 
 CREATE TABLE Venta (
 id INT NOT NULL PRIMARY KEY IDENTITY(1,1),
@@ -155,7 +181,6 @@ ALTER TABLE Usuario ADD usuarioRegistro VARCHAR(50) NOT NULL DEFAULT SUSER_NAME(
 ALTER TABLE Usuario ADD fechaRegistro DATETIME NOT NULL DEFAULT GETDATE();
 ALTER TABLE Usuario ADD estado SMALLINT NOT NULL DEFAULT 1; -- 1: Activo, 0: Inactivo, -1: Eliminado
 
-
 --********************************************************
 
 GO
@@ -194,6 +219,7 @@ END;
 GO
 ALTER PROC paEmpleadoListar @parametro VARCHAR(100)
 AS
+<<<<<<< HEAD
 BEGIN
     -- Crear tabla temporal con las palabras de búsqueda
     CREATE TABLE #PalabrasBusqueda (palabra VARCHAR(100));
@@ -227,6 +253,7 @@ BEGIN
     DROP TABLE #PalabrasBusqueda;
 END;
 
+
 GO
 ALTER PROC paClienteListar @parametro VARCHAR(100)
 AS
@@ -236,6 +263,62 @@ WHERE estado = 1
   AND (CAST(nit AS VARCHAR(20)) + razonSocial)
       LIKE '%' + REPLACE(@parametro, ' ', '%') + '%'
 ORDER BY estado DESC, razonSocial ASC;
+	SELECT * FROM Cliente
+	WHERE registroActivo = 1 AND CAST(nit AS VARCHAR) + razonSocial LIKE
+	'%'+REPLACE(@parametro, ' ','%')+'%'
+	ORDER BY registroActivo DESC, razonSocial ASC;
+
+GO
+ALTER PROC paVentaListar @parametro VARCHAR(100)
+AS
+	SELECT v.*, u.usuario, c.razonSocial
+	FROM Venta v
+	LEFT JOIN Usuario u ON v.idUsuario = u.id
+	LEFT JOIN Cliente c ON v.idCliente = c.id
+	WHERE v.registroActivo = 1 AND CAST(v.transaccion AS VARCHAR) + CAST(v.fecha AS VARCHAR) + u.usuario + c.razonSocial LIKE
+	'%'+REPLACE(@parametro, ' ','%')+'%'
+	ORDER BY v.registroActivo DESC, v.fecha DESC;
+
+GO
+ALTER PROC paCompraListar @parametro VARCHAR(100)
+	AS
+	SELECT c.*, p.razonSocial
+	FROM Compra c
+	LEFT JOIN Proveedor p ON c.idProveedor = p.id
+	WHERE c.estado = 1 AND CAST(c.transaccion AS VARCHAR) + CAST(c.fecha AS VARCHAR) + p.razonSocial LIKE
+	'%'+REPLACE(@parametro, ' ','%')+'%'
+	ORDER BY c.estado DESC, c.fecha DESC;
+
+GO
+ALTER PROC paCompraDetalleListar @parametro VARCHAR(100)
+	AS
+	SELECT cd.*, p.descripcion, c.transaccion, c.fecha
+	FROM CompraDetalle cd
+	LEFT JOIN Producto p ON cd.idProducto = p.id
+	LEFT JOIN Compra c ON cd.idCompra = c.id
+	WHERE cd.estado = 1 AND CAST(cd.cantidad AS VARCHAR) + CAST(cd.precioUnitario AS VARCHAR) + CAST(cd.total AS VARCHAR) + p.descripcion + CAST(c.transaccion AS VARCHAR) + CAST(c.fecha AS VARCHAR) LIKE
+	'%'+REPLACE(@parametro, ' ','%')+'%'
+	ORDER BY cd.estado DESC, c.fecha DESC;
+
+GO
+ALTER PROC paVentaDetalleListar @parametro VARCHAR(100)
+	AS
+	SELECT vd.*, p.descripcion, v.transaccion, v.fecha
+	FROM VentaDetalle vd
+	LEFT JOIN Producto p ON vd.idProducto = p.id
+	LEFT JOIN Venta v ON vd.idVenta = v.id
+	WHERE vd.estado = 1 AND CAST(vd.cantidad AS VARCHAR) + CAST(vd.precioUnitario AS VARCHAR) + CAST(vd.total AS VARCHAR) + p.descripcion + CAST(v.transaccion AS VARCHAR) + CAST(v.fecha AS VARCHAR) LIKE
+	'%'+REPLACE(@parametro, ' ','%')+'%'
+	ORDER BY vd.estado DESC, v.fecha DESC;
+
+GO
+ALTER PROC paProveedorListar @parametro VARCHAR(100)
+	AS
+	SELECT * FROM Proveedor
+	WHERE estado = 1 AND CAST(nit AS VARCHAR) + razonSocial + telefono + representante LIKE
+	'%'+REPLACE(@parametro, ' ','%')+'%'
+	ORDER BY estado DESC, razonSocial ASC;
+
 
 GO
 ALTER PROC paVentaListar @parametro VARCHAR(100)
@@ -299,6 +382,13 @@ EXEC paVentaListar '123456';
 EXEC paCompraListar '654321';
 EXEC paCompraDetalleListar '55';
 EXEC paVentaDetalleListar '170';
+EXEC paProveedorListar 'mielva';
+EXEC paProductoListar 'pastel varon';
+EXEC paEmpleadoListar 'juan';
+EXEC paVentaListar '2025-04-01';
+EXEC paCompraListar '2025-04-01';
+EXEC paCompraDetalleListar '2025-04-01';
+EXEC paVentaDetalleListar '2025-04-01';
 EXEC paProveedorListar 'mielva';
 
 -- DML *********************************
