@@ -219,7 +219,6 @@ END;
 GO
 ALTER PROC paEmpleadoListar @parametro VARCHAR(100)
 AS
-<<<<<<< HEAD
 BEGIN
     -- Crear tabla temporal con las palabras de búsqueda
     CREATE TABLE #PalabrasBusqueda (palabra VARCHAR(100));
