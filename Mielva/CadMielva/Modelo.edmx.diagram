@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="de93e88fc250436594ecc2c607171ace" Name="Diagram1">
+        <EntityTypeShape EntityType="MielvaModel.Cliente" Width="1.5" PointX="3" PointY="5.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MielvaModel.Compra" Width="1.5" PointX="10" PointY="6.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="MielvaModel.CompraDetalle" Width="1.5" PointX="12.25" PointY="6" IsExpanded="true" />
+        <EntityTypeShape EntityType="MielvaModel.Empleado" Width="1.5" PointX="0.75" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="MielvaModel.Ingrediente" Width="1.5" PointX="10" PointY="2.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="MielvaModel.Producto" Width="1.5" PointX="5.25" PointY="5.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="MielvaModel.Proveedor" Width="1.5" PointX="7.75" PointY="6.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="MielvaModel.Usuario" Width="1.5" PointX="3" PointY="1.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="MielvaModel.Venta" Width="1.5" PointX="5.25" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="MielvaModel.VentaDetalle" Width="1.5" PointX="7.5" PointY="1.125" IsExpanded="true" />
+        <AssociationConnector Association="MielvaModel.fk_Venta_Cliente" ManuallyRouted="false" />
+        <AssociationConnector Association="MielvaModel.FK_Compra_Proveedor" ManuallyRouted="false" />
+        <AssociationConnector Association="MielvaModel.FK_CompraDetalle_Compra" ManuallyRouted="false" />
+        <AssociationConnector Association="MielvaModel.FK_CompraDetalle_Ingrediente" ManuallyRouted="false" />
+        <AssociationConnector Association="MielvaModel.FK_Usuario_Empleado" ManuallyRouted="false" />
+        <AssociationConnector Association="MielvaModel.fk_VentaDetalle_Producto" ManuallyRouted="false" />
+        <AssociationConnector Association="MielvaModel.fk_Venta_Usuario" ManuallyRouted="false" />
+        <AssociationConnector Association="MielvaModel.fk_VentaDetalle_Venta" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

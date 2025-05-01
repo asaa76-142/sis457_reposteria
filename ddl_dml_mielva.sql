@@ -182,75 +182,25 @@ ALTER TABLE Usuario ADD fechaRegistro DATETIME NOT NULL DEFAULT GETDATE();
 ALTER TABLE Usuario ADD estado SMALLINT NOT NULL DEFAULT 1; -- 1: Activo, 0: Inactivo, -1: Eliminado
 
 --********************************************************
-
 GO
 ALTER PROC paProductoListar @parametro VARCHAR(100)
 AS
-BEGIN
-    -- Crear una tabla temporal para almacenar las palabras de búsqueda
-    CREATE TABLE #PalabrasBusqueda (palabra VARCHAR(100));
-
-    -- Insertar las palabras de búsqueda divididas por espacios
-    INSERT INTO #PalabrasBusqueda (palabra)
-    SELECT value FROM STRING_SPLIT(@parametro, ' ') WHERE value <> '';
-
-    -- Contar el número total de palabras de búsqueda
-    DECLARE @totalPalabras INT = (SELECT COUNT(*) FROM #PalabrasBusqueda);
-
-    -- Seleccionar los productos donde todas las palabras de búsqueda aparecen en al menos uno de los campos
-    SELECT p.*
-    FROM Producto p
-    WHERE p.estado <> -1
-    AND (
-        SELECT COUNT(DISTINCT pb.palabra)
-        FROM #PalabrasBusqueda pb
-        WHERE 
-            p.codigo COLLATE Latin1_General_CI_AI LIKE '%' + pb.palabra + '%' OR
-            p.descripcion COLLATE Latin1_General_CI_AI LIKE '%' + pb.palabra + '%' OR
-            p.unidadMedida COLLATE Latin1_General_CI_AI LIKE '%' + pb.palabra + '%'
-    ) = @totalPalabras
-    ORDER BY p.estado DESC, p.descripcion ASC;
-
-    -- Limpiar la tabla temporal
-    DROP TABLE #PalabrasBusqueda;
-END;
+  SELECT * FROM Producto
+  WHERE estado<>-1 AND codigo+descripcion+unidadMedida LIKE '%'+REPLACE(@parametro,' ','%')+'%'
+  ORDER BY estado DESC, descripcion ASC;
 
 
 GO
 ALTER PROC paEmpleadoListar @parametro VARCHAR(100)
 AS
-BEGIN
-    -- Crear tabla temporal con las palabras de búsqueda
-    CREATE TABLE #PalabrasBusqueda (palabra VARCHAR(100));
-
-    INSERT INTO #PalabrasBusqueda (palabra)
-    SELECT value 
-    FROM STRING_SPLIT(@parametro, ' ')
-    WHERE value <> '';
-
-    DECLARE @totalPalabras INT = (SELECT COUNT(*) FROM #PalabrasBusqueda);
-
-    SELECT 
-        e.*,
-        u.usuario
-    FROM Empleado e
-    LEFT JOIN Usuario u 
-        ON e.id = u.idEmpleado
-    WHERE e.estado <> -1
+    SELECT *
+    FROM Empleado
+    WHERE estado <> -1 -- Excluir empleados eliminados
       AND (
-          SELECT COUNT(DISTINCT pb.palabra)
-          FROM #PalabrasBusqueda pb
-          WHERE 
-               e.cedulaIdentidad COLLATE Latin1_General_CI_AI LIKE '%' + pb.palabra + '%'
-            OR e.nombres           COLLATE Latin1_General_CI_AI LIKE '%' + pb.palabra + '%'
-            OR ISNULL(e.primerApellido, '') COLLATE Latin1_General_CI_AI LIKE '%' + pb.palabra + '%'
-            OR ISNULL(e.segundoApellido, '') COLLATE Latin1_General_CI_AI LIKE '%' + pb.palabra + '%'
-            OR ISNULL(e.direccion, '')       COLLATE Latin1_General_CI_AI LIKE '%' + pb.palabra + '%'
-      ) = @totalPalabras
-    ORDER BY e.estado DESC, e.nombres ASC, e.primerApellido ASC;
-
-    DROP TABLE #PalabrasBusqueda;
-END;
+          cedulaIdentidad + nombres + ISNULL(primerApellido, '') + ISNULL(segundoApellido, '') + direccion + cargo
+          LIKE '%' + REPLACE(@parametro, ' ', '%') + '%'
+      )
+    ORDER BY estado DESC, nombres ASC, primerApellido ASC;
 
 
 GO
