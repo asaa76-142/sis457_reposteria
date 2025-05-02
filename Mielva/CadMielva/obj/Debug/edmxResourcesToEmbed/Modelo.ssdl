@@ -11,32 +11,6 @@
     <Property Name="fechaRegistro" Type="datetime" Nullable="false" />
     <Property Name="estado" Type="smallint" Nullable="false" />
   </EntityType>
-  <EntityType Name="Compra">
-    <Key>
-      <PropertyRef Name="id" />
-    </Key>
-    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="idProveedor" Type="int" Nullable="false" />
-    <Property Name="transaccion" Type="int" Nullable="false" />
-    <Property Name="fecha" Type="date" Nullable="false" />
-    <Property Name="usuarioRegistro" Type="varchar" MaxLength="50" Nullable="false" />
-    <Property Name="fechaRegistro" Type="datetime" Nullable="false" />
-    <Property Name="estado" Type="smallint" Nullable="false" />
-  </EntityType>
-  <EntityType Name="CompraDetalle">
-    <Key>
-      <PropertyRef Name="id" />
-    </Key>
-    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="idCompra" Type="int" Nullable="false" />
-    <Property Name="idIngrediente" Type="int" Nullable="false" />
-    <Property Name="cantidad" Type="decimal" Precision="18" Scale="0" Nullable="false" />
-    <Property Name="precioUnitario" Type="decimal" Precision="18" Scale="0" Nullable="false" />
-    <Property Name="total" Type="decimal" Precision="18" Scale="0" Nullable="false" />
-    <Property Name="usuarioRegistro" Type="varchar" MaxLength="50" Nullable="false" />
-    <Property Name="fechaRegistro" Type="datetime" Nullable="false" />
-    <Property Name="estado" Type="smallint" Nullable="false" />
-  </EntityType>
   <EntityType Name="Empleado">
     <Key>
       <PropertyRef Name="id" />
@@ -53,20 +27,6 @@
     <Property Name="fechaRegistro" Type="datetime" Nullable="false" />
     <Property Name="estado" Type="smallint" Nullable="false" />
   </EntityType>
-  <EntityType Name="Ingrediente">
-    <Key>
-      <PropertyRef Name="id" />
-    </Key>
-    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="codigo" Type="varchar" MaxLength="20" Nullable="false" />
-    <Property Name="descripcion" Type="varchar" MaxLength="250" Nullable="false" />
-    <Property Name="unidadMedida" Type="varchar" MaxLength="20" Nullable="false" />
-    <Property Name="saldo" Type="decimal" Precision="18" Scale="0" Nullable="false" />
-    <Property Name="precioCompra" Type="decimal" Precision="18" Scale="0" />
-    <Property Name="usuarioRegistro" Type="varchar" MaxLength="50" Nullable="false" />
-    <Property Name="fechaRegistro" Type="datetime" Nullable="false" />
-    <Property Name="estado" Type="smallint" Nullable="false" />
-  </EntityType>
   <EntityType Name="Producto">
     <Key>
       <PropertyRef Name="id" />
@@ -77,20 +37,6 @@
     <Property Name="unidadMedida" Type="varchar" MaxLength="20" Nullable="false" />
     <Property Name="saldo" Type="decimal" Precision="18" Scale="0" Nullable="false" />
     <Property Name="precioVenta" Type="decimal" Precision="18" Scale="0" Nullable="false" />
-    <Property Name="usuarioRegistro" Type="varchar" MaxLength="50" Nullable="false" />
-    <Property Name="fechaRegistro" Type="datetime" Nullable="false" />
-    <Property Name="estado" Type="smallint" Nullable="false" />
-  </EntityType>
-  <EntityType Name="Proveedor">
-    <Key>
-      <PropertyRef Name="id" />
-    </Key>
-    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="nit" Type="bigint" Nullable="false" />
-    <Property Name="razonSocial" Type="varchar" MaxLength="150" Nullable="false" />
-    <Property Name="direccion" Type="varchar" MaxLength="250" />
-    <Property Name="telefono" Type="varchar" MaxLength="30" Nullable="false" />
-    <Property Name="representante" Type="varchar" MaxLength="100" Nullable="false" />
     <Property Name="usuarioRegistro" Type="varchar" MaxLength="50" Nullable="false" />
     <Property Name="fechaRegistro" Type="datetime" Nullable="false" />
     <Property Name="estado" Type="smallint" Nullable="false" />
@@ -134,42 +80,6 @@
     <Property Name="fechaRegistro" Type="datetime" Nullable="false" />
     <Property Name="estado" Type="smallint" Nullable="false" />
   </EntityType>
-  <Association Name="FK_Compra_Proveedor">
-    <End Role="Proveedor" Type="Self.Proveedor" Multiplicity="1" />
-    <End Role="Compra" Type="Self.Compra" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Proveedor">
-        <PropertyRef Name="id" />
-      </Principal>
-      <Dependent Role="Compra">
-        <PropertyRef Name="idProveedor" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK_CompraDetalle_Compra">
-    <End Role="Compra" Type="Self.Compra" Multiplicity="1" />
-    <End Role="CompraDetalle" Type="Self.CompraDetalle" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Compra">
-        <PropertyRef Name="id" />
-      </Principal>
-      <Dependent Role="CompraDetalle">
-        <PropertyRef Name="idCompra" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK_CompraDetalle_Ingrediente">
-    <End Role="Ingrediente" Type="Self.Ingrediente" Multiplicity="1" />
-    <End Role="CompraDetalle" Type="Self.CompraDetalle" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Ingrediente">
-        <PropertyRef Name="id" />
-      </Principal>
-      <Dependent Role="CompraDetalle">
-        <PropertyRef Name="idIngrediente" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
   <Association Name="FK_Usuario_Empleado">
     <End Role="Empleado" Type="Self.Empleado" Multiplicity="1" />
     <End Role="Usuario" Type="Self.Usuario" Multiplicity="*" />
@@ -218,34 +128,13 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="fk_VentaDetalle_Venta">
-    <End Role="Venta" Type="Self.Venta" Multiplicity="1" />
-    <End Role="VentaDetalle" Type="Self.VentaDetalle" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Venta">
-        <PropertyRef Name="id" />
-      </Principal>
-      <Dependent Role="VentaDetalle">
-        <PropertyRef Name="idVenta" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
   <Function Name="paClienteListar" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
-    <Parameter Name="parametro" Type="varchar" Mode="In" />
-  </Function>
-  <Function Name="paCompraDetalleListar" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
-    <Parameter Name="parametro" Type="varchar" Mode="In" />
-  </Function>
-  <Function Name="paCompraListar" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
     <Parameter Name="parametro" Type="varchar" Mode="In" />
   </Function>
   <Function Name="paEmpleadoListar" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
     <Parameter Name="parametro" Type="varchar" Mode="In" />
   </Function>
   <Function Name="paProductoListar" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
-    <Parameter Name="parametro" Type="varchar" Mode="In" />
-  </Function>
-  <Function Name="paProveedorListar" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
     <Parameter Name="parametro" Type="varchar" Mode="In" />
   </Function>
   <Function Name="paVentaDetalleListar" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
@@ -256,27 +145,11 @@
   </Function>
   <EntityContainer Name="MielvaModelStoreContainer">
     <EntitySet Name="Cliente" EntityType="Self.Cliente" Schema="dbo" store:Type="Tables" />
-    <EntitySet Name="Compra" EntityType="Self.Compra" Schema="dbo" store:Type="Tables" />
-    <EntitySet Name="CompraDetalle" EntityType="Self.CompraDetalle" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Empleado" EntityType="Self.Empleado" Schema="dbo" store:Type="Tables" />
-    <EntitySet Name="Ingrediente" EntityType="Self.Ingrediente" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Producto" EntityType="Self.Producto" Schema="dbo" store:Type="Tables" />
-    <EntitySet Name="Proveedor" EntityType="Self.Proveedor" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Usuario" EntityType="Self.Usuario" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Venta" EntityType="Self.Venta" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="VentaDetalle" EntityType="Self.VentaDetalle" Schema="dbo" store:Type="Tables" />
-    <AssociationSet Name="FK_Compra_Proveedor" Association="Self.FK_Compra_Proveedor">
-      <End Role="Proveedor" EntitySet="Proveedor" />
-      <End Role="Compra" EntitySet="Compra" />
-    </AssociationSet>
-    <AssociationSet Name="FK_CompraDetalle_Compra" Association="Self.FK_CompraDetalle_Compra">
-      <End Role="Compra" EntitySet="Compra" />
-      <End Role="CompraDetalle" EntitySet="CompraDetalle" />
-    </AssociationSet>
-    <AssociationSet Name="FK_CompraDetalle_Ingrediente" Association="Self.FK_CompraDetalle_Ingrediente">
-      <End Role="Ingrediente" EntitySet="Ingrediente" />
-      <End Role="CompraDetalle" EntitySet="CompraDetalle" />
-    </AssociationSet>
     <AssociationSet Name="FK_Usuario_Empleado" Association="Self.FK_Usuario_Empleado">
       <End Role="Empleado" EntitySet="Empleado" />
       <End Role="Usuario" EntitySet="Usuario" />
@@ -291,10 +164,6 @@
     </AssociationSet>
     <AssociationSet Name="fk_VentaDetalle_Producto" Association="Self.fk_VentaDetalle_Producto">
       <End Role="Producto" EntitySet="Producto" />
-      <End Role="VentaDetalle" EntitySet="VentaDetalle" />
-    </AssociationSet>
-    <AssociationSet Name="fk_VentaDetalle_Venta" Association="Self.fk_VentaDetalle_Venta">
-      <End Role="Venta" EntitySet="Venta" />
       <End Role="VentaDetalle" EntitySet="VentaDetalle" />
     </AssociationSet>
   </EntityContainer>

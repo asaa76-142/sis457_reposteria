@@ -63,7 +63,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\CadMielva\CadMielva.csproj">
-      <Project>{678c0075-d2e1-46a8-b041-762f7d369040}</Project>
+      <Project>{af4d7a1d-4317-468c-8276-214e28be26d8}</Project>
       <Name>CadMielva</Name>
     </ProjectReference>
   </ItemGroup>

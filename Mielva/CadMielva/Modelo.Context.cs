@@ -28,12 +28,8 @@ namespace CadMielva
         }
     
         public virtual DbSet<Cliente> Cliente { get; set; }
-        public virtual DbSet<Compra> Compra { get; set; }
-        public virtual DbSet<CompraDetalle> CompraDetalle { get; set; }
         public virtual DbSet<Empleado> Empleado { get; set; }
-        public virtual DbSet<Ingrediente> Ingrediente { get; set; }
         public virtual DbSet<Producto> Producto { get; set; }
-        public virtual DbSet<Proveedor> Proveedor { get; set; }
         public virtual DbSet<Usuario> Usuario { get; set; }
         public virtual DbSet<Venta> Venta { get; set; }
         public virtual DbSet<VentaDetalle> VentaDetalle { get; set; }
@@ -45,24 +41,6 @@ namespace CadMielva
                 new ObjectParameter("parametro", typeof(string));
     
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<paClienteListar_Result>("paClienteListar", parametroParameter);
-        }
-    
-        public virtual ObjectResult<paCompraDetalleListar_Result> paCompraDetalleListar(string parametro)
-        {
-            var parametroParameter = parametro != null ?
-                new ObjectParameter("parametro", parametro) :
-                new ObjectParameter("parametro", typeof(string));
-    
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<paCompraDetalleListar_Result>("paCompraDetalleListar", parametroParameter);
-        }
-    
-        public virtual ObjectResult<paCompraListar_Result> paCompraListar(string parametro)
-        {
-            var parametroParameter = parametro != null ?
-                new ObjectParameter("parametro", parametro) :
-                new ObjectParameter("parametro", typeof(string));
-    
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<paCompraListar_Result>("paCompraListar", parametroParameter);
         }
     
         public virtual ObjectResult<paEmpleadoListar_Result> paEmpleadoListar(string parametro)
@@ -81,15 +59,6 @@ namespace CadMielva
                 new ObjectParameter("parametro", typeof(string));
     
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<paProductoListar_Result>("paProductoListar", parametroParameter);
-        }
-    
-        public virtual ObjectResult<paProveedorListar_Result> paProveedorListar(string parametro)
-        {
-            var parametroParameter = parametro != null ?
-                new ObjectParameter("parametro", parametro) :
-                new ObjectParameter("parametro", typeof(string));
-    
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<paProveedorListar_Result>("paProveedorListar", parametroParameter);
         }
     
         public virtual ObjectResult<paVentaDetalleListar_Result> paVentaDetalleListar(string parametro)

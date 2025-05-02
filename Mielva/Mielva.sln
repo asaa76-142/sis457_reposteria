@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClnMielva", "ClnMielva\ClnM
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CpMielva", "CpMielva\CpMielva.csproj", "{733FFF16-68B9-45DF-836D-49246508909C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CadMielva", "CadMielva\CadMielva.csproj", "{678C0075-D2E1-46A8-B041-762F7D369040}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CadMielva", "CadMielva\CadMielva.csproj", "{AF4D7A1D-4317-468C-8276-214E28BE26D8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,10 +23,10 @@ Global
 		{733FFF16-68B9-45DF-836D-49246508909C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{733FFF16-68B9-45DF-836D-49246508909C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{733FFF16-68B9-45DF-836D-49246508909C}.Release|Any CPU.Build.0 = Release|Any CPU
-		{678C0075-D2E1-46A8-B041-762F7D369040}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{678C0075-D2E1-46A8-B041-762F7D369040}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{678C0075-D2E1-46A8-B041-762F7D369040}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{678C0075-D2E1-46A8-B041-762F7D369040}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AF4D7A1D-4317-468C-8276-214E28BE26D8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AF4D7A1D-4317-468C-8276-214E28BE26D8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AF4D7A1D-4317-468C-8276-214E28BE26D8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AF4D7A1D-4317-468C-8276-214E28BE26D8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
