@@ -33,7 +33,7 @@ CREATE TABLE Producto (
   descripcion VARCHAR(250) NOT NULL,
   unidadMedida VARCHAR(20) NOT NULL,
   saldo DECIMAL NOT NULL DEFAULT 0,
-  precioVenta DECIMAL NOT NULL CHECK (precioVenta > 0),
+  precioVenta DECIMAL NOT NULL CHECK (precioVenta > 0)
 );
 
 CREATE TABLE Proveedor (
