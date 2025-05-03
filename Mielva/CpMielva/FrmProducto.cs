@@ -22,20 +22,20 @@ namespace CpMielva
 
         private void listar()
         {
-            //var lista = ProductoCln.listarPa(txtParametro.Text.Trim());
-            //dgvLista.DataSource = lista;
-            //dgvLista.Columns["id"].Visible = false;
-            //dgvLista.Columns["estado"].Visible = false;
-            //dgvLista.Columns["codigo"].HeaderText = "Código";
-            //dgvLista.Columns["descripcion"].HeaderText = "Descripción";
-            //dgvLista.Columns["unidadMedida"].HeaderText = "Unidad de Medida";
-            //dgvLista.Columns["saldo"].HeaderText = "Saldo";
-            //dgvLista.Columns["precioVenta"].HeaderText = "Precio de Venta";
-            //dgvLista.Columns["usuarioRegistro"].HeaderText = "Usuario Registro";
-            //dgvLista.Columns["fechaRegistro"].HeaderText = "Fecha Registro";
-            //if (lista.Count > 0) dgvLista.CurrentCell = dgvLista.Rows[0].Cells["codigo"];
-            //btnEditar.Enabled = lista.Count > 0;
-            //btnEliminar.Enabled = lista.Count > 0;
+            var lista = ProductoCln.listarPa(txtParametro.Text.Trim());
+            dgvLista.DataSource = lista;
+            dgvLista.Columns["id"].Visible = false;
+            dgvLista.Columns["estado"].Visible = false;
+            dgvLista.Columns["codigo"].HeaderText = "Código";
+            dgvLista.Columns["descripcion"].HeaderText = "Descripción";
+            dgvLista.Columns["unidadMedida"].HeaderText = "Unidad de Medida";
+            dgvLista.Columns["saldo"].HeaderText = "Saldo";
+            dgvLista.Columns["precioVenta"].HeaderText = "Precio de Venta";
+            dgvLista.Columns["usuarioRegistro"].HeaderText = "Usuario Registro";
+            dgvLista.Columns["fechaRegistro"].HeaderText = "Fecha Registro";
+            if (lista.Count > 0) dgvLista.CurrentCell = dgvLista.Rows[0].Cells["codigo"];
+            btnEditar.Enabled = lista.Count > 0;
+            btnEliminar.Enabled = lista.Count > 0;
         }
 
         private void FrmProducto_Load(object sender, EventArgs e)

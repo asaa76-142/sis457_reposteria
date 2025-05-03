@@ -17,3 +17,5 @@ B:\Materias usfx\1.- Informática\1 - 2025\sis457\sis457_reposteria\Mielva\CpMie
 B:\Materias usfx\1.- Informática\1 - 2025\sis457\sis457_reposteria\Mielva\CpMielva\bin\Debug\ClnMielva.dll.config
 B:\Materias usfx\1.- Informática\1 - 2025\sis457\sis457_reposteria\Mielva\CpMielva\bin\Debug\EntityFramework.xml
 B:\Materias usfx\1.- Informática\1 - 2025\sis457\sis457_reposteria\Mielva\CpMielva\obj\Debug\CpMielva.csproj.Up2Date
+B:\Materias usfx\1.- Informática\1 - 2025\sis457\sis457_reposteria\Mielva\CpMielva\bin\Debug\EntityFramework.SqlServer.dll
+B:\Materias usfx\1.- Informática\1 - 2025\sis457\sis457_reposteria\Mielva\CpMielva\bin\Debug\EntityFramework.SqlServer.xml
