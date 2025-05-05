@@ -54,8 +54,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="EmpleadosCln.cs" />
     <Compile Include="ProductoCln.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UsuarioCln.cs" />
+    <Compile Include="VentaCln.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

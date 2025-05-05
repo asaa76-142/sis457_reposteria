@@ -10,3 +10,15 @@ B:\Materias usfx\1.- Informática\1 - 2025\sis457\sis457_reposteria\Mielva\CadMi
 B:\Materias usfx\1.- Informática\1 - 2025\sis457\sis457_reposteria\Mielva\CadMielva\obj\Debug\CadMielva.csproj.Up2Date
 B:\Materias usfx\1.- Informática\1 - 2025\sis457\sis457_reposteria\Mielva\CadMielva\obj\Debug\CadMielva.dll
 B:\Materias usfx\1.- Informática\1 - 2025\sis457\sis457_reposteria\Mielva\CadMielva\obj\Debug\CadMielva.pdb
+C:\Users\auzas\Desktop\sis475_repositorio\sis457_reposteria\Mielva\CadMielva\bin\Debug\CadMielva.dll.config
+C:\Users\auzas\Desktop\sis475_repositorio\sis457_reposteria\Mielva\CadMielva\bin\Debug\CadMielva.dll
+C:\Users\auzas\Desktop\sis475_repositorio\sis457_reposteria\Mielva\CadMielva\bin\Debug\CadMielva.pdb
+C:\Users\auzas\Desktop\sis475_repositorio\sis457_reposteria\Mielva\CadMielva\bin\Debug\EntityFramework.dll
+C:\Users\auzas\Desktop\sis475_repositorio\sis457_reposteria\Mielva\CadMielva\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\auzas\Desktop\sis475_repositorio\sis457_reposteria\Mielva\CadMielva\bin\Debug\EntityFramework.xml
+C:\Users\auzas\Desktop\sis475_repositorio\sis457_reposteria\Mielva\CadMielva\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\auzas\Desktop\sis475_repositorio\sis457_reposteria\Mielva\CadMielva\obj\Debug\CadMielva.csproj.AssemblyReference.cache
+C:\Users\auzas\Desktop\sis475_repositorio\sis457_reposteria\Mielva\CadMielva\obj\Debug\CadMielva.csproj.CoreCompileInputs.cache
+C:\Users\auzas\Desktop\sis475_repositorio\sis457_reposteria\Mielva\CadMielva\obj\Debug\CadMielva.csproj.Up2Date
+C:\Users\auzas\Desktop\sis475_repositorio\sis457_reposteria\Mielva\CadMielva\obj\Debug\CadMielva.dll
+C:\Users\auzas\Desktop\sis475_repositorio\sis457_reposteria\Mielva\CadMielva\obj\Debug\CadMielva.pdb

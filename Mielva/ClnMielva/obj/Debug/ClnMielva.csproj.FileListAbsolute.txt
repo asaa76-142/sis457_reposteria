@@ -13,3 +13,18 @@ B:\Materias usfx\1.- Informática\1 - 2025\sis457\sis457_reposteria\Mielva\ClnMi
 B:\Materias usfx\1.- Informática\1 - 2025\sis457\sis457_reposteria\Mielva\ClnMielva\obj\Debug\ClnMielva.csproj.Up2Date
 B:\Materias usfx\1.- Informática\1 - 2025\sis457\sis457_reposteria\Mielva\ClnMielva\obj\Debug\ClnMielva.dll
 B:\Materias usfx\1.- Informática\1 - 2025\sis457\sis457_reposteria\Mielva\ClnMielva\obj\Debug\ClnMielva.pdb
+C:\Users\auzas\Desktop\sis475_repositorio\sis457_reposteria\Mielva\ClnMielva\bin\Debug\ClnMielva.dll.config
+C:\Users\auzas\Desktop\sis475_repositorio\sis457_reposteria\Mielva\ClnMielva\bin\Debug\ClnMielva.dll
+C:\Users\auzas\Desktop\sis475_repositorio\sis457_reposteria\Mielva\ClnMielva\bin\Debug\ClnMielva.pdb
+C:\Users\auzas\Desktop\sis475_repositorio\sis457_reposteria\Mielva\ClnMielva\bin\Debug\CadMielva.dll
+C:\Users\auzas\Desktop\sis475_repositorio\sis457_reposteria\Mielva\ClnMielva\bin\Debug\EntityFramework.dll
+C:\Users\auzas\Desktop\sis475_repositorio\sis457_reposteria\Mielva\ClnMielva\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\auzas\Desktop\sis475_repositorio\sis457_reposteria\Mielva\ClnMielva\bin\Debug\CadMielva.pdb
+C:\Users\auzas\Desktop\sis475_repositorio\sis457_reposteria\Mielva\ClnMielva\bin\Debug\CadMielva.dll.config
+C:\Users\auzas\Desktop\sis475_repositorio\sis457_reposteria\Mielva\ClnMielva\bin\Debug\EntityFramework.xml
+C:\Users\auzas\Desktop\sis475_repositorio\sis457_reposteria\Mielva\ClnMielva\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\auzas\Desktop\sis475_repositorio\sis457_reposteria\Mielva\ClnMielva\obj\Debug\ClnMielva.csproj.AssemblyReference.cache
+C:\Users\auzas\Desktop\sis475_repositorio\sis457_reposteria\Mielva\ClnMielva\obj\Debug\ClnMielva.csproj.CoreCompileInputs.cache
+C:\Users\auzas\Desktop\sis475_repositorio\sis457_reposteria\Mielva\ClnMielva\obj\Debug\ClnMielva.csproj.Up2Date
+C:\Users\auzas\Desktop\sis475_repositorio\sis457_reposteria\Mielva\ClnMielva\obj\Debug\ClnMielva.dll
+C:\Users\auzas\Desktop\sis475_repositorio\sis457_reposteria\Mielva\ClnMielva\obj\Debug\ClnMielva.pdb

@@ -14,6 +14,10 @@ namespace CadMielva
     
     public partial class Empleado
     {
+        public object nombre;
+        public object apellido;
+        public object telefono;
+
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Empleado()
         {
