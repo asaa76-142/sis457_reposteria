@@ -43,3 +43,27 @@ C:\Users\auzas\Desktop\sis475_repositorio\sis457_reposteria\Mielva\CpMielva\obj\
 C:\Users\auzas\Desktop\sis475_repositorio\sis457_reposteria\Mielva\CpMielva\obj\Debug\CpMielva.pdb
 B:\Materias usfx\1.- Informática\1 - 2025\sis457\sis457_reposteria\Mielva\CpMielva\obj\Debug\CpMielva.FrmEmpleados.resources
 B:\Materias usfx\1.- Informática\1 - 2025\sis457\sis457_reposteria\Mielva\CpMielva\obj\Debug\CpMielva.FrmVenta.resources
+C:\Users\Kevin\Documents\sis457\sis457_reposteria\Mielva\CpMielva\bin\Debug\CpMielva.exe.config
+C:\Users\Kevin\Documents\sis457\sis457_reposteria\Mielva\CpMielva\bin\Debug\CpMielva.exe
+C:\Users\Kevin\Documents\sis457\sis457_reposteria\Mielva\CpMielva\bin\Debug\CpMielva.pdb
+C:\Users\Kevin\Documents\sis457\sis457_reposteria\Mielva\CpMielva\bin\Debug\CadMielva.dll
+C:\Users\Kevin\Documents\sis457\sis457_reposteria\Mielva\CpMielva\bin\Debug\ClnMielva.dll
+C:\Users\Kevin\Documents\sis457\sis457_reposteria\Mielva\CpMielva\bin\Debug\EntityFramework.dll
+C:\Users\Kevin\Documents\sis457\sis457_reposteria\Mielva\CpMielva\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Kevin\Documents\sis457\sis457_reposteria\Mielva\CpMielva\bin\Debug\CadMielva.pdb
+C:\Users\Kevin\Documents\sis457\sis457_reposteria\Mielva\CpMielva\bin\Debug\CadMielva.dll.config
+C:\Users\Kevin\Documents\sis457\sis457_reposteria\Mielva\CpMielva\bin\Debug\ClnMielva.pdb
+C:\Users\Kevin\Documents\sis457\sis457_reposteria\Mielva\CpMielva\bin\Debug\ClnMielva.dll.config
+C:\Users\Kevin\Documents\sis457\sis457_reposteria\Mielva\CpMielva\bin\Debug\EntityFramework.xml
+C:\Users\Kevin\Documents\sis457\sis457_reposteria\Mielva\CpMielva\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Kevin\Documents\sis457\sis457_reposteria\Mielva\CpMielva\obj\Debug\CpMielva.csproj.AssemblyReference.cache
+C:\Users\Kevin\Documents\sis457\sis457_reposteria\Mielva\CpMielva\obj\Debug\CpMielva.FrmEmpleados.resources
+C:\Users\Kevin\Documents\sis457\sis457_reposteria\Mielva\CpMielva\obj\Debug\CpMielva.FrmProducto.resources
+C:\Users\Kevin\Documents\sis457\sis457_reposteria\Mielva\CpMielva\obj\Debug\CpMielva.FrmVenta.resources
+C:\Users\Kevin\Documents\sis457\sis457_reposteria\Mielva\CpMielva\obj\Debug\CpMielva.Properties.Resources.resources
+C:\Users\Kevin\Documents\sis457\sis457_reposteria\Mielva\CpMielva\obj\Debug\CpMielva.csproj.GenerateResource.cache
+C:\Users\Kevin\Documents\sis457\sis457_reposteria\Mielva\CpMielva\obj\Debug\CpMielva.csproj.CoreCompileInputs.cache
+C:\Users\Kevin\Documents\sis457\sis457_reposteria\Mielva\CpMielva\obj\Debug\CpMielva.csproj.Up2Date
+C:\Users\Kevin\Documents\sis457\sis457_reposteria\Mielva\CpMielva\obj\Debug\CpMielva.exe
+C:\Users\Kevin\Documents\sis457\sis457_reposteria\Mielva\CpMielva\obj\Debug\CpMielva.pdb
+C:\Users\Kevin\Documents\sis457\sis457_reposteria\Mielva\CpMielva\obj\Debug\CpMielva.FrmVentaDetalle.resources

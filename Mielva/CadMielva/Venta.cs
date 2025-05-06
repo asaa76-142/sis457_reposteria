@@ -14,6 +14,12 @@ namespace CadMielva
     
     public partial class Venta
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public Venta()
+        {
+            this.VentaDetalle = new HashSet<VentaDetalle>();
+        }
+    
         public int id { get; set; }
         public int idUsuario { get; set; }
         public int idCliente { get; set; }
@@ -25,5 +31,7 @@ namespace CadMielva
     
         public virtual Cliente Cliente { get; set; }
         public virtual Usuario Usuario { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<VentaDetalle> VentaDetalle { get; set; }
     }
 }

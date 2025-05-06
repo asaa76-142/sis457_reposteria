@@ -25,5 +25,6 @@ namespace CadMielva
         public short estado { get; set; }
     
         public virtual Producto Producto { get; set; }
+        public virtual Venta Venta { get; set; }
     }
 }

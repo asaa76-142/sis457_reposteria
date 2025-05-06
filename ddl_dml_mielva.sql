@@ -83,7 +83,8 @@ CREATE TABLE VentaDetalle (
 	usuarioRegistro VARCHAR(50) NOT NULL DEFAULT SUSER_NAME(),
 	fechaRegistro DATETIME NOT NULL DEFAULT GETDATE(),
 	estado SMALLINT NOT NULL DEFAULT 1,
-	CONSTRAINT fk_VentaDetalle_Producto FOREIGN KEY(idProducto) REFERENCES Producto(id)
+	CONSTRAINT fk_VentaDetalle_Producto FOREIGN KEY(idProducto) REFERENCES Producto(id),
+	CONSTRAINT fk_VentaDetalle_Venta FOREIGN KEY(idVenta) REFERENCES Venta(id)
 	);
 
 
