@@ -69,7 +69,7 @@ namespace CpMielva
         private void btnEditar_Click(object sender, EventArgs e)
         {
             esNuevo = false;
-            Size = new Size(835, 487);
+            Size = new Size(1124, 593);
 
             int index = dgvLista.CurrentCell.RowIndex;
             int id = Convert.ToInt32(dgvLista.Rows[index].Cells["id"].Value);
@@ -94,7 +94,7 @@ namespace CpMielva
 
         private void txtParametro_KeyPress(object sender, KeyPressEventArgs e)
         {
-
+            if (e.KeyChar == (char)Keys.Enter) listar();
         }
 
         private bool validar()
@@ -135,51 +135,53 @@ namespace CpMielva
             return esValido;
         }
 
-        //private void btnGuardar_Click(object sender, EventArgs e)
-        //{
-        //    if (validar())
-        //    {
-        //        var producto = new Producto();
-        //        producto.codigo = txtCodigo.Text.Trim();
-        //        producto.descripcion = txtDescripcion.Text.Trim();
-        //        producto.unidadMedida = cbxUnidadMedida.Text;
-        //        producto.precioVenta = nudPrecioVenta.Value;
-        //        producto.saldo = nudSaldo.Value;
-        //        producto.usuarioRegistro = Util.usuario.usuario1;
+        private void btnGuardar_Click(object sender, EventArgs e)
+        {
+            if (validar())
+            {
+                var producto = new Producto();
+                producto.codigo = txtCodigo.Text.Trim();
+                producto.descripcion = txtDescripcion.Text.Trim();
+                producto.unidadMedida = cbxUnidadMedida.Text;
+                producto.precioVenta = nudPrecioVenta.Value;
+                producto.saldo = nudSaldo.Value;
+                producto.usuarioRegistro = "admin";
+                //producto.usuarioRegistro = Util.usuario.usuario1;
 
-        //        if (esNuevo)
-        //        {
-        //            producto.fechaRegistro = DateTime.Now;
-        //            producto.estado = 1;
-        //            ProductoCln.insertar(producto);
-        //        }
-        //        else
-        //        {
-        //            int index = dgvLista.CurrentCell.RowIndex;
-        //            producto.id = Convert.ToInt32(dgvLista.Rows[index].Cells["id"].Value);
-        //            ProductoCln.actualizar(producto);
-        //        }
-        //        listar();
-        //        btnCancelar.PerformClick();
-        //        MessageBox.Show("Producto guardado correctamente", "::: Minerva - Mensaje :::",
-        //            MessageBoxButtons.OK, MessageBoxIcon.Information);
-        //    }
-        //}
+                if (esNuevo)
+                {
+                    producto.fechaRegistro = DateTime.Now;
+                    producto.estado = 1;
+                    ProductoCln.insertar(producto);
+                }
+                else
+                {
+                    int index = dgvLista.CurrentCell.RowIndex;
+                    producto.id = Convert.ToInt32(dgvLista.Rows[index].Cells["id"].Value);
+                    ProductoCln.actualizar(producto);
+                }
+                listar();
+                btnCancelar.PerformClick();
+                MessageBox.Show("Producto guardado correctamente", "::: Minerva - Mensaje :::",
+                    MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
 
-        //private void btnEliminar_Click(object sender, EventArgs e)
-        //{
-        //    int index = dgvLista.CurrentCell.RowIndex;
-        //    int id = Convert.ToInt32(dgvLista.Rows[index].Cells["id"].Value);
-        //    string codigo = dgvLista.Rows[index].Cells["codigo"].Value.ToString();
-        //    DialogResult dialog = MessageBox.Show($"¿Está seguro de eliminar el producto {codigo}?",
-        //        "::: Minerva - Mensaje :::", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-        //    if (dialog == DialogResult.Yes)
-        //    {
-        //        ProductoCln.eliminar(id, Util.usuario.usuario1);
-        //        listar();
-        //        MessageBox.Show("Producto dado de baja correctamente", "::: Minerva - Mensaje :::",
-        //            MessageBoxButtons.OK, MessageBoxIcon.Information);
-        //    }
-        //}
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            int index = dgvLista.CurrentCell.RowIndex;
+            int id = Convert.ToInt32(dgvLista.Rows[index].Cells["id"].Value);
+            string codigo = dgvLista.Rows[index].Cells["codigo"].Value.ToString();
+            DialogResult dialog = MessageBox.Show($"¿Está seguro de eliminar el producto {codigo}?",
+                "::: Mielva - Mensaje :::", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (dialog == DialogResult.Yes)
+            {
+                ProductoCln.eliminar(id, "admin");
+                //ProductoCln.eliminar(id, Util.usuario.usuario1);
+                listar();
+                MessageBox.Show("Producto dado de baja correctamente", "::: Minerva - Mensaje :::",
+                    MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
     }
 }

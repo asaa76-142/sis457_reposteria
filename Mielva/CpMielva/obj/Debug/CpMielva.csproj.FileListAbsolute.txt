@@ -41,3 +41,5 @@ C:\Users\auzas\Desktop\sis475_repositorio\sis457_reposteria\Mielva\CpMielva\obj\
 C:\Users\auzas\Desktop\sis475_repositorio\sis457_reposteria\Mielva\CpMielva\obj\Debug\CpMielva.csproj.Up2Date
 C:\Users\auzas\Desktop\sis475_repositorio\sis457_reposteria\Mielva\CpMielva\obj\Debug\CpMielva.exe
 C:\Users\auzas\Desktop\sis475_repositorio\sis457_reposteria\Mielva\CpMielva\obj\Debug\CpMielva.pdb
+B:\Materias usfx\1.- Informática\1 - 2025\sis457\sis457_reposteria\Mielva\CpMielva\obj\Debug\CpMielva.FrmEmpleados.resources
+B:\Materias usfx\1.- Informática\1 - 2025\sis457\sis457_reposteria\Mielva\CpMielva\obj\Debug\CpMielva.FrmVenta.resources
