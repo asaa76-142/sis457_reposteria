@@ -60,15 +60,15 @@ namespace CpMielva
 
         private void btnEditar_Click(object sender, EventArgs e)
         {
-            //esNuevo = false;
-            //Size = new Size(1124, 593);
+            esNuevo = false;
+            Size = new Size(1124, 593);
 
-            //int index = dgvLista.CurrentCell.RowIndex;
-            //int id = Convert.ToInt32(dgvLista.Rows[index].Cells["id"].Value);
-            //var cliente = ClienteCln.obtenerUno(id);
-            //txtNit.Text = cliente.nit;
-            //txtRazonSocial.Text = cliente.razonSocial;
-            //txtNit.Focus();
+            int index = dgvLista.CurrentCell.RowIndex;
+            int id = Convert.ToInt32(dgvLista.Rows[index].Cells["id"].Value);
+            var cliente = ClienteCln.obtenerUno(id);
+            txtNit.Text = cliente.nit;
+            txtRazonSocial.Text = cliente.razonSocial;
+            txtNit.Focus();
         }
 
         private void btnCerrar_Click(object sender, EventArgs e)
@@ -108,39 +108,39 @@ namespace CpMielva
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            //if (validar())
-            //{
-            //    var cliente = new Cliente();
-            //    cliente.nit = txtNit.Text.Trim();
-            //    cliente.razonSocial = txtRazonSocial.Text.Trim();
-            //    cliente.usuarioRegistro = "admin";
-            //    //cliente.usuarioRegistro = Util.usuario.usuario1;
+            if (validar())
+            {
+                var cliente = new Cliente();
+                cliente.nit = txtNit.Text.Trim();
+                cliente.razonSocial = txtRazonSocial.Text.Trim();
+                cliente.usuarioRegistro = "admin";
+                //cliente.usuarioRegistro = Util.usuario.usuario1;
 
-            //    if (esNuevo)
-            //    {
-            //        cliente.fechaRegistro = DateTime.Now;
-            //        cliente.estado = 1;
-            //        ClienteCln.insertar(cliente);
-            //    }
-            //    else
-            //    {
-            //        int index = dgvLista.CurrentCell.RowIndex;
-            //        cliente.id = Convert.ToInt32(dgvLista.Rows[index].Cells["id"].Value);
-            //        ClienteCln.actualizar(cliente);
-            //    }
-            //    listar();
-            //    btnCancelar.PerformClick();
-            //    MessageBox.Show("Cliente guardado correctamente", "::: Minerva - Mensaje :::",
-            //        MessageBoxButtons.OK, MessageBoxIcon.Information);
-            //}
+                if (esNuevo)
+                {
+                    cliente.fechaRegistro = DateTime.Now;
+                    cliente.estado = 1;
+                    ClienteCln.insertar(cliente);
+                }
+                else
+                {
+                    int index = dgvLista.CurrentCell.RowIndex;
+                    cliente.id = Convert.ToInt32(dgvLista.Rows[index].Cells["id"].Value);
+                    ClienteCln.actualizar(cliente);
+                }
+                listar();
+                btnCancelar.PerformClick();
+                MessageBox.Show("Cliente guardado correctamente", "::: Minerva - Mensaje :::",
+                    MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
             int index = dgvLista.CurrentCell.RowIndex;
             int id = Convert.ToInt32(dgvLista.Rows[index].Cells["id"].Value);
-            string codigo = dgvLista.Rows[index].Cells["codigo"].Value.ToString();
-            DialogResult dialog = MessageBox.Show($"¿Está seguro de eliminar el cliente {codigo}?",
+            string nit = dgvLista.Rows[index].Cells["nit"].Value.ToString();
+            DialogResult dialog = MessageBox.Show($"¿Está seguro de eliminar el cliente {nit}?",
                 "::: Mielva - Mensaje :::", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (dialog == DialogResult.Yes)
             {

@@ -14,7 +14,7 @@ namespace CadMielva
     public partial class paClienteListar_Result
     {
         public int id { get; set; }
-        public long nit { get; set; }
+        public string nit { get; set; }
         public string razonSocial { get; set; }
         public string usuarioRegistro { get; set; }
         public System.DateTime fechaRegistro { get; set; }

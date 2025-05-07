@@ -47,12 +47,12 @@
             this.dgvLista = new System.Windows.Forms.DataGridView();
             this.gbxDatos = new System.Windows.Forms.GroupBox();
             this.lblNit = new System.Windows.Forms.Label();
-            this.txtNit = new System.Windows.Forms.TextBox();
             this.erpPrecioVenta = new System.Windows.Forms.ErrorProvider(this.components);
             this.erpCodigo = new System.Windows.Forms.ErrorProvider(this.components);
             this.erpDescripcion = new System.Windows.Forms.ErrorProvider(this.components);
             this.erpUnidadMedida = new System.Windows.Forms.ErrorProvider(this.components);
             this.erpSaldo = new System.Windows.Forms.ErrorProvider(this.components);
+            this.txtNit = new System.Windows.Forms.TextBox();
             this.pnlAcciones.SuspendLayout();
             this.gbxLista.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvLista)).BeginInit();
@@ -72,6 +72,7 @@
             this.txtParametro.Name = "txtParametro";
             this.txtParametro.Size = new System.Drawing.Size(905, 22);
             this.txtParametro.TabIndex = 16;
+            this.txtParametro.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtParametro_KeyPress);
             // 
             // lblTitulo
             // 
@@ -265,8 +266,8 @@
             // 
             // gbxDatos
             // 
-            this.gbxDatos.Controls.Add(this.lblNit);
             this.gbxDatos.Controls.Add(this.txtNit);
+            this.gbxDatos.Controls.Add(this.lblNit);
             this.gbxDatos.Controls.Add(this.btnCancelar);
             this.gbxDatos.Controls.Add(this.btnGuardar);
             this.gbxDatos.Controls.Add(this.txtRazonSocial);
@@ -291,15 +292,6 @@
             this.lblNit.TabIndex = 13;
             this.lblNit.Text = "nit:";
             // 
-            // txtNit
-            // 
-            this.txtNit.Location = new System.Drawing.Point(179, 23);
-            this.txtNit.Margin = new System.Windows.Forms.Padding(4);
-            this.txtNit.MaxLength = 250;
-            this.txtNit.Name = "txtNit";
-            this.txtNit.Size = new System.Drawing.Size(257, 22);
-            this.txtNit.TabIndex = 12;
-            // 
             // erpPrecioVenta
             // 
             this.erpPrecioVenta.ContainerControl = this;
@@ -319,6 +311,16 @@
             // erpSaldo
             // 
             this.erpSaldo.ContainerControl = this;
+            // 
+            // txtNit
+            // 
+            this.txtNit.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txtNit.Location = new System.Drawing.Point(179, 20);
+            this.txtNit.Margin = new System.Windows.Forms.Padding(4);
+            this.txtNit.MaxLength = 20;
+            this.txtNit.Name = "txtNit";
+            this.txtNit.Size = new System.Drawing.Size(257, 22);
+            this.txtNit.TabIndex = 14;
             // 
             // FrmCliente
             // 

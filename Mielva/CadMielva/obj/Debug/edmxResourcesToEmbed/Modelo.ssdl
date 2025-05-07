@@ -5,7 +5,7 @@
       <PropertyRef Name="id" />
     </Key>
     <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="nit" Type="bigint" Nullable="false" />
+    <Property Name="nit" Type="varchar" MaxLength="14" Nullable="false" />
     <Property Name="razonSocial" Type="varchar" MaxLength="100" Nullable="false" />
     <Property Name="usuarioRegistro" Type="varchar" MaxLength="50" Nullable="false" />
     <Property Name="fechaRegistro" Type="datetime" Nullable="false" />
