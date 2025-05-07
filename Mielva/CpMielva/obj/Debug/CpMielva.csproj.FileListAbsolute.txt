@@ -67,3 +67,4 @@ C:\Users\Kevin\Documents\sis457\sis457_reposteria\Mielva\CpMielva\obj\Debug\CpMi
 C:\Users\Kevin\Documents\sis457\sis457_reposteria\Mielva\CpMielva\obj\Debug\CpMielva.exe
 C:\Users\Kevin\Documents\sis457\sis457_reposteria\Mielva\CpMielva\obj\Debug\CpMielva.pdb
 C:\Users\Kevin\Documents\sis457\sis457_reposteria\Mielva\CpMielva\obj\Debug\CpMielva.FrmVentaDetalle.resources
+C:\Users\Kevin\Documents\sis457\sis457_reposteria\Mielva\CpMielva\obj\Debug\CpMielva.FrmCliente.resources
