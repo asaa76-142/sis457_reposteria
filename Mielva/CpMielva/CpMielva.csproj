@@ -36,6 +36,8 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="C1.Win.4.5.2, Version=4.5.20193.393, Culture=neutral, PublicKeyToken=944ae1ea0e47ca04" />
+    <Reference Include="C1.Win.Ribbon.4.5.2, Version=4.5.20193.393, Culture=neutral, PublicKeyToken=79882d576c6336da, processorArchitecture=MSIL" />
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.5.1\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
@@ -123,6 +125,7 @@
     <EmbeddedResource Include="FrmVentaDetalle.resx">
       <DependentUpon>FrmVentaDetalle.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>

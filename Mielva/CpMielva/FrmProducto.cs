@@ -2,6 +2,7 @@
 using ClnMielva;
 using System;
 using System.Collections.Generic;
+using System.Collections.Specialized;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
@@ -63,6 +64,14 @@ namespace CpMielva
         {
             esNuevo = true;
             Size = new Size(1124, 593);
+            int index = dgvLista.CurrentCell.RowIndex;
+            int id = Convert.ToInt32(dgvLista.Rows[index].Cells["id"].Value);
+            var producto = ProductoCln.obtenerUno(id);
+            txtCodigo.Text = producto.codigo;
+            txtDescripcion.Text = producto.descripcion;
+            cbxUnidadMedida.Text = producto.unidadMedida;
+            nudPrecioVenta.Value = producto.precioVenta;
+            nudSaldo.Value = producto.saldo;
             txtCodigo.Focus();
         }
 

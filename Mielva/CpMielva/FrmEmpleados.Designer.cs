@@ -36,6 +36,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.btnCancelar = new System.Windows.Forms.Button();
+            this.btnGuardar = new System.Windows.Forms.Button();
             this.cbxCargo = new System.Windows.Forms.ComboBox();
             this.lblUnidadMedida = new System.Windows.Forms.Label();
             this.txtPrimerApellido = new System.Windows.Forms.TextBox();
@@ -48,13 +50,13 @@
             this.lblParametro = new System.Windows.Forms.Label();
             this.lblTitulo = new System.Windows.Forms.Label();
             this.pnlAcciones = new System.Windows.Forms.Panel();
-            this.btnBuscar = new System.Windows.Forms.Button();
-            this.btnCancelar = new System.Windows.Forms.Button();
-            this.btnGuardar = new System.Windows.Forms.Button();
             this.btnCerrar = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnEditar = new System.Windows.Forms.Button();
             this.btnNuevo = new System.Windows.Forms.Button();
+            this.btnBuscar = new System.Windows.Forms.Button();
+            this.txtNombres = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.gbxDatos.SuspendLayout();
             this.gbxListaEmpleados.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvLista)).BeginInit();
@@ -63,6 +65,8 @@
             // 
             // gbxDatos
             // 
+            this.gbxDatos.Controls.Add(this.txtNombres);
+            this.gbxDatos.Controls.Add(this.label4);
             this.gbxDatos.Controls.Add(this.txtCelular);
             this.gbxDatos.Controls.Add(this.txtDireccion);
             this.gbxDatos.Controls.Add(this.txtSegundoApellido);
@@ -108,7 +112,7 @@
             // txtSegundoApellido
             // 
             this.txtSegundoApellido.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtSegundoApellido.Location = new System.Drawing.Point(140, 98);
+            this.txtSegundoApellido.Location = new System.Drawing.Point(140, 115);
             this.txtSegundoApellido.Margin = new System.Windows.Forms.Padding(4);
             this.txtSegundoApellido.MaxLength = 20;
             this.txtSegundoApellido.Name = "txtSegundoApellido";
@@ -148,6 +152,34 @@
             this.label3.TabIndex = 12;
             this.label3.Text = "Celular:";
             // 
+            // btnCancelar
+            // 
+            this.btnCancelar.Image = global::CpMielva.Properties.Resources.cancel;
+            this.btnCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCancelar.Location = new System.Drawing.Point(929, 85);
+            this.btnCancelar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Padding = new System.Windows.Forms.Padding(7, 0, 7, 0);
+            this.btnCancelar.Size = new System.Drawing.Size(123, 49);
+            this.btnCancelar.TabIndex = 11;
+            this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnCancelar.UseVisualStyleBackColor = true;
+            // 
+            // btnGuardar
+            // 
+            this.btnGuardar.Image = global::CpMielva.Properties.Resources.guardar;
+            this.btnGuardar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnGuardar.Location = new System.Drawing.Point(798, 85);
+            this.btnGuardar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnGuardar.Name = "btnGuardar";
+            this.btnGuardar.Padding = new System.Windows.Forms.Padding(7, 0, 7, 0);
+            this.btnGuardar.Size = new System.Drawing.Size(123, 49);
+            this.btnGuardar.TabIndex = 10;
+            this.btnGuardar.Text = "Guardar";
+            this.btnGuardar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnGuardar.UseVisualStyleBackColor = true;
+            // 
             // cbxCargo
             // 
             this.cbxCargo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
@@ -166,7 +198,7 @@
             // 
             this.lblUnidadMedida.AutoSize = true;
             this.lblUnidadMedida.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.3F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUnidadMedida.Location = new System.Drawing.Point(21, 98);
+            this.lblUnidadMedida.Location = new System.Drawing.Point(21, 115);
             this.lblUnidadMedida.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblUnidadMedida.Name = "lblUnidadMedida";
             this.lblUnidadMedida.Size = new System.Drawing.Size(118, 16);
@@ -175,7 +207,7 @@
             // 
             // txtPrimerApellido
             // 
-            this.txtPrimerApellido.Location = new System.Drawing.Point(140, 62);
+            this.txtPrimerApellido.Location = new System.Drawing.Point(140, 85);
             this.txtPrimerApellido.Margin = new System.Windows.Forms.Padding(4);
             this.txtPrimerApellido.MaxLength = 250;
             this.txtPrimerApellido.Name = "txtPrimerApellido";
@@ -186,7 +218,7 @@
             // 
             this.lblDescripcion.AutoSize = true;
             this.lblDescripcion.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.3F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDescripcion.Location = new System.Drawing.Point(37, 63);
+            this.lblDescripcion.Location = new System.Drawing.Point(37, 86);
             this.lblDescripcion.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblDescripcion.Name = "lblDescripcion";
             this.lblDescripcion.Size = new System.Drawing.Size(102, 16);
@@ -284,49 +316,6 @@
             this.pnlAcciones.Size = new System.Drawing.Size(1081, 58);
             this.pnlAcciones.TabIndex = 19;
             // 
-            // btnBuscar
-            // 
-            this.btnBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.3F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBuscar.Image = global::CpMielva.Properties.Resources.buscar1;
-            this.btnBuscar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnBuscar.Location = new System.Drawing.Point(943, 65);
-            this.btnBuscar.Margin = new System.Windows.Forms.Padding(4);
-            this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Padding = new System.Windows.Forms.Padding(7, 0, 7, 0);
-            this.btnBuscar.Size = new System.Drawing.Size(152, 49);
-            this.btnBuscar.TabIndex = 17;
-            this.btnBuscar.Text = "Buscar";
-            this.btnBuscar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnBuscar.UseVisualStyleBackColor = true;
-            // 
-            // btnCancelar
-            // 
-            this.btnCancelar.Image = global::CpMielva.Properties.Resources.cancel;
-            this.btnCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCancelar.Location = new System.Drawing.Point(929, 85);
-            this.btnCancelar.Margin = new System.Windows.Forms.Padding(4);
-            this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Padding = new System.Windows.Forms.Padding(7, 0, 7, 0);
-            this.btnCancelar.Size = new System.Drawing.Size(123, 49);
-            this.btnCancelar.TabIndex = 11;
-            this.btnCancelar.Text = "Cancelar";
-            this.btnCancelar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnCancelar.UseVisualStyleBackColor = true;
-            // 
-            // btnGuardar
-            // 
-            this.btnGuardar.Image = global::CpMielva.Properties.Resources.guardar;
-            this.btnGuardar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnGuardar.Location = new System.Drawing.Point(798, 85);
-            this.btnGuardar.Margin = new System.Windows.Forms.Padding(4);
-            this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Padding = new System.Windows.Forms.Padding(7, 0, 7, 0);
-            this.btnGuardar.Size = new System.Drawing.Size(123, 49);
-            this.btnGuardar.TabIndex = 10;
-            this.btnGuardar.Text = "Guardar";
-            this.btnGuardar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnGuardar.UseVisualStyleBackColor = true;
-            // 
             // btnCerrar
             // 
             this.btnCerrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.3F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -387,6 +376,41 @@
             this.btnNuevo.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnNuevo.UseVisualStyleBackColor = true;
             // 
+            // btnBuscar
+            // 
+            this.btnBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.3F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBuscar.Image = global::CpMielva.Properties.Resources.buscar1;
+            this.btnBuscar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnBuscar.Location = new System.Drawing.Point(943, 65);
+            this.btnBuscar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Padding = new System.Windows.Forms.Padding(7, 0, 7, 0);
+            this.btnBuscar.Size = new System.Drawing.Size(152, 49);
+            this.btnBuscar.TabIndex = 17;
+            this.btnBuscar.Text = "Buscar";
+            this.btnBuscar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnBuscar.UseVisualStyleBackColor = true;
+            // 
+            // txtNombres
+            // 
+            this.txtNombres.Location = new System.Drawing.Point(140, 55);
+            this.txtNombres.Margin = new System.Windows.Forms.Padding(4);
+            this.txtNombres.MaxLength = 250;
+            this.txtNombres.Name = "txtNombres";
+            this.txtNombres.Size = new System.Drawing.Size(257, 22);
+            this.txtNombres.TabIndex = 19;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.3F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(37, 56);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(66, 16);
+            this.label4.TabIndex = 18;
+            this.label4.Text = "Nombres:";
+            // 
             // FrmEmpleados
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -443,5 +467,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox txtNombres;
+        private System.Windows.Forms.Label label4;
     }
 }

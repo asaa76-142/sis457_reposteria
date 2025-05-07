@@ -70,3 +70,10 @@ C:\Users\Kevin\Documents\sis457\sis457_reposteria\Mielva\CpMielva\obj\Debug\CpMi
 C:\Users\Kevin\Documents\sis457\sis457_reposteria\Mielva\CpMielva\obj\Debug\CpMielva.FrmCliente.resources
 B:\Materias usfx\1.- Informática\1 - 2025\sis457\sis457_reposteria\Mielva\CpMielva\obj\Debug\CpMielva.FrmCliente.resources
 B:\Materias usfx\1.- Informática\1 - 2025\sis457\sis457_reposteria\Mielva\CpMielva\obj\Debug\CpMielva.FrmVentaDetalle.resources
+C:\Users\Kevin\Documents\sis457\sis457_reposteria\Mielva\CpMielva\obj\Debug\CpMielva.FrmAutenticacion.resources
+C:\Users\Kevin\Documents\sis457\sis457_reposteria\Mielva\CpMielva\obj\Debug\CpMielva.FrmPrincipal.resources
+C:\Users\Kevin\Documents\sis457\sis457_reposteria\Mielva\CpMielva\bin\Debug\C1.Win.4.5.2.dll
+C:\Users\Kevin\Documents\sis457\sis457_reposteria\Mielva\CpMielva\bin\Debug\C1.Win.Ribbon.4.5.2.dll
+C:\Users\Kevin\Documents\sis457\sis457_reposteria\Mielva\CpMielva\bin\Debug\C1.Win.4.5.2.xml
+C:\Users\Kevin\Documents\sis457\sis457_reposteria\Mielva\CpMielva\bin\Debug\C1.Win.Ribbon.4.5.2.xml
+C:\Users\Kevin\Documents\sis457\sis457_reposteria\Mielva\CpMielva\obj\Debug\CpMielva.exe.licenses
