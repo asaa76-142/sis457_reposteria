@@ -40,8 +40,8 @@
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnGuardar = new System.Windows.Forms.Button();
             this.lblParametro = new System.Windows.Forms.Label();
-            this.txtDescripcion = new System.Windows.Forms.TextBox();
-            this.lblDescripcion = new System.Windows.Forms.Label();
+            this.txtRazonSocial = new System.Windows.Forms.TextBox();
+            this.lblRazonSocial = new System.Windows.Forms.Label();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.gbxLista = new System.Windows.Forms.GroupBox();
             this.dgvLista = new System.Windows.Forms.DataGridView();
@@ -110,6 +110,7 @@
             this.btnCerrar.Text = "Cerrar";
             this.btnCerrar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnCerrar.UseVisualStyleBackColor = true;
+            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
             // 
             // btnEliminar
             // 
@@ -125,6 +126,7 @@
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // btnEditar
             // 
@@ -140,6 +142,7 @@
             this.btnEditar.Text = "Editar";
             this.btnEditar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnEditar.UseVisualStyleBackColor = true;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
             // btnNuevo
             // 
@@ -155,6 +158,7 @@
             this.btnNuevo.Text = "Nuevo";
             this.btnNuevo.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnNuevo.UseVisualStyleBackColor = true;
+            this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
             // 
             // btnCancelar
             // 
@@ -170,6 +174,7 @@
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // btnGuardar
             // 
@@ -185,6 +190,7 @@
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnGuardar.UseVisualStyleBackColor = true;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
             // lblParametro
             // 
@@ -196,24 +202,24 @@
             this.lblParametro.TabIndex = 15;
             this.lblParametro.Text = "Buscar por nit o Razón Social\r\n:";
             // 
-            // txtDescripcion
+            // txtRazonSocial
             // 
-            this.txtDescripcion.Location = new System.Drawing.Point(179, 53);
-            this.txtDescripcion.Margin = new System.Windows.Forms.Padding(4);
-            this.txtDescripcion.MaxLength = 250;
-            this.txtDescripcion.Name = "txtDescripcion";
-            this.txtDescripcion.Size = new System.Drawing.Size(257, 22);
-            this.txtDescripcion.TabIndex = 3;
+            this.txtRazonSocial.Location = new System.Drawing.Point(179, 53);
+            this.txtRazonSocial.Margin = new System.Windows.Forms.Padding(4);
+            this.txtRazonSocial.MaxLength = 250;
+            this.txtRazonSocial.Name = "txtRazonSocial";
+            this.txtRazonSocial.Size = new System.Drawing.Size(257, 22);
+            this.txtRazonSocial.TabIndex = 3;
             // 
-            // lblDescripcion
+            // lblRazonSocial
             // 
-            this.lblDescripcion.AutoSize = true;
-            this.lblDescripcion.Location = new System.Drawing.Point(89, 57);
-            this.lblDescripcion.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblDescripcion.Name = "lblDescripcion";
-            this.lblDescripcion.Size = new System.Drawing.Size(82, 16);
-            this.lblDescripcion.TabIndex = 2;
-            this.lblDescripcion.Text = "Descripción:";
+            this.lblRazonSocial.AutoSize = true;
+            this.lblRazonSocial.Location = new System.Drawing.Point(89, 57);
+            this.lblRazonSocial.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblRazonSocial.Name = "lblRazonSocial";
+            this.lblRazonSocial.Size = new System.Drawing.Size(90, 16);
+            this.lblRazonSocial.TabIndex = 2;
+            this.lblRazonSocial.Text = "Razón Social:";
             // 
             // btnBuscar
             // 
@@ -263,8 +269,8 @@
             this.gbxDatos.Controls.Add(this.txtNit);
             this.gbxDatos.Controls.Add(this.btnCancelar);
             this.gbxDatos.Controls.Add(this.btnGuardar);
-            this.gbxDatos.Controls.Add(this.txtDescripcion);
-            this.gbxDatos.Controls.Add(this.lblDescripcion);
+            this.gbxDatos.Controls.Add(this.txtRazonSocial);
+            this.gbxDatos.Controls.Add(this.lblRazonSocial);
             this.gbxDatos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.3F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbxDatos.Location = new System.Drawing.Point(23, 383);
             this.gbxDatos.Margin = new System.Windows.Forms.Padding(4);
@@ -362,8 +368,8 @@
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Button btnGuardar;
         private System.Windows.Forms.Label lblParametro;
-        private System.Windows.Forms.TextBox txtDescripcion;
-        private System.Windows.Forms.Label lblDescripcion;
+        private System.Windows.Forms.TextBox txtRazonSocial;
+        private System.Windows.Forms.Label lblRazonSocial;
         private System.Windows.Forms.Button btnBuscar;
         private System.Windows.Forms.GroupBox gbxLista;
         private System.Windows.Forms.DataGridView dgvLista;
