@@ -1,39 +1,26 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Kevin\\Documents\\sis457\\sis457_reposteria\\Mielva\\",
+  "WorkspaceRootPath": "B:\\Materias usfx\\1.- Inform\u00E1tica\\1 - 2025\\sis457\\sis457_reposteria\\Mielva\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{733FFF16-68B9-45DF-836D-49246508909C}|CpMielva\\CpMielva.csproj|C:\\Users\\Kevin\\Documents\\sis457\\sis457_reposteria\\Mielva\\cpmielva\\frmcliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{733FFF16-68B9-45DF-836D-49246508909C}|CpMielva\\CpMielva.csproj|solutionrelative:cpmielva\\frmcliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{733FFF16-68B9-45DF-836D-49246508909C}|CpMielva\\CpMielva.csproj|b:\\materias usfx\\1.- inform\u00E1tica\\1 - 2025\\sis457\\sis457_reposteria\\mielva\\cpmielva\\frmprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{733FFF16-68B9-45DF-836D-49246508909C}|CpMielva\\CpMielva.csproj|solutionrelative:cpmielva\\frmprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{733FFF16-68B9-45DF-836D-49246508909C}|CpMielva\\CpMielva.csproj|c:\\users\\kevin\\documents\\sis457\\sis457_reposteria\\mielva\\cpmielva\\frmcliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{733FFF16-68B9-45DF-836D-49246508909C}|CpMielva\\CpMielva.csproj|solutionrelative:cpmielva\\frmcliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{733FFF16-68B9-45DF-836D-49246508909C}|CpMielva\\CpMielva.csproj|b:\\materias usfx\\1.- inform\u00E1tica\\1 - 2025\\sis457\\sis457_reposteria\\mielva\\cpmielva\\frmautenticacion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{733FFF16-68B9-45DF-836D-49246508909C}|CpMielva\\CpMielva.csproj|solutionrelative:cpmielva\\frmautenticacion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{733FFF16-68B9-45DF-836D-49246508909C}|CpMielva\\CpMielva.csproj|C:\\Users\\Kevin\\Documents\\sis457\\sis457_reposteria\\Mielva\\cpmielva\\frmproducto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{733FFF16-68B9-45DF-836D-49246508909C}|CpMielva\\CpMielva.csproj|solutionrelative:cpmielva\\frmproducto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Kevin\\Documents\\sis457\\sis457_reposteria\\ddl_dml_mielva.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4322F04D-C0BC-40F3-9FC8-41B2E09C0397}|ClnMielva\\ClnMielva.csproj|C:\\Users\\Kevin\\Documents\\sis457\\sis457_reposteria\\Mielva\\clnmielva\\clientecln.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{4322F04D-C0BC-40F3-9FC8-41B2E09C0397}|ClnMielva\\ClnMielva.csproj|B:\\Materias usfx\\1.- Inform\u00E1tica\\1 - 2025\\sis457\\sis457_reposteria\\Mielva\\clnmielva\\clientecln.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4322F04D-C0BC-40F3-9FC8-41B2E09C0397}|ClnMielva\\ClnMielva.csproj|solutionrelative:clnmielva\\clientecln.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{733FFF16-68B9-45DF-836D-49246508909C}|CpMielva\\CpMielva.csproj|c:\\users\\kevin\\documents\\sis457\\sis457_reposteria\\mielva\\cpmielva\\frmproducto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{733FFF16-68B9-45DF-836D-49246508909C}|CpMielva\\CpMielva.csproj|solutionrelative:cpmielva\\frmproducto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{733FFF16-68B9-45DF-836D-49246508909C}|CpMielva\\CpMielva.csproj|b:\\materias usfx\\1.- inform\u00E1tica\\1 - 2025\\sis457\\sis457_reposteria\\mielva\\cpmielva\\frmcliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{733FFF16-68B9-45DF-836D-49246508909C}|CpMielva\\CpMielva.csproj|solutionrelative:cpmielva\\frmcliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4322F04D-C0BC-40F3-9FC8-41B2E09C0397}|ClnMielva\\ClnMielva.csproj|C:\\Users\\Kevin\\Documents\\sis457\\sis457_reposteria\\Mielva\\clnmielva\\productocln.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4322F04D-C0BC-40F3-9FC8-41B2E09C0397}|ClnMielva\\ClnMielva.csproj|solutionrelative:clnmielva\\productocln.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Kevin\\Documents\\sis457\\sis457_reposteria\\ddl_dml_mielva.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|CodeFrame"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Kevin\\Documents\\sis457\\sis457_reposteria\\ddl_dml_mielva.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|ResultFrame"
+      "AbsoluteMoniker": "D:0:0:{733FFF16-68B9-45DF-836D-49246508909C}|CpMielva\\CpMielva.csproj|B:\\Materias usfx\\1.- Inform\u00E1tica\\1 - 2025\\sis457\\sis457_reposteria\\Mielva\\cpmielva\\frmcliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{733FFF16-68B9-45DF-836D-49246508909C}|CpMielva\\CpMielva.csproj|solutionrelative:cpmielva\\frmcliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -43,17 +30,17 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 2,
               "Title": "ClienteCln.cs",
-              "DocumentMoniker": "C:\\Users\\Kevin\\Documents\\sis457\\sis457_reposteria\\Mielva\\ClnMielva\\ClienteCln.cs",
+              "DocumentMoniker": "B:\\Materias usfx\\1.- Inform\u00E1tica\\1 - 2025\\sis457\\sis457_reposteria\\Mielva\\ClnMielva\\ClienteCln.cs",
               "RelativeDocumentMoniker": "ClnMielva\\ClienteCln.cs",
-              "ToolTip": "C:\\Users\\Kevin\\Documents\\sis457\\sis457_reposteria\\Mielva\\ClnMielva\\ClienteCln.cs",
+              "ToolTip": "B:\\Materias usfx\\1.- Inform\u00E1tica\\1 - 2025\\sis457\\sis457_reposteria\\Mielva\\ClnMielva\\ClienteCln.cs",
               "RelativeToolTip": "ClnMielva\\ClienteCln.cs",
-              "ViewState": "AgIAABUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAADQAAAAAAAAAAAAiwD0AAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-07T13:14:20.025Z",
               "IsPinned": true,
@@ -61,34 +48,52 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "ddl_dml_mielva.sql ",
-              "DocumentMoniker": "C:\\Users\\Kevin\\Documents\\sis457\\sis457_reposteria\\ddl_dml_mielva.sql",
-              "RelativeDocumentMoniker": "..\\ddl_dml_mielva.sql",
-              "ToolTip": "ddl_dml_mielva.sql ",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
-              "WhenOpened": "2025-05-07T13:24:26.745Z",
+              "DocumentIndex": 1,
+              "Title": "FrmAutenticacion.cs",
+              "DocumentMoniker": "B:\\Materias usfx\\1.- Inform\u00E1tica\\1 - 2025\\sis457\\sis457_reposteria\\Mielva\\CpMielva\\FrmAutenticacion.cs",
+              "RelativeDocumentMoniker": "CpMielva\\FrmAutenticacion.cs",
+              "ToolTip": "B:\\Materias usfx\\1.- Inform\u00E1tica\\1 - 2025\\sis457\\sis457_reposteria\\Mielva\\CpMielva\\FrmAutenticacion.cs",
+              "RelativeToolTip": "CpMielva\\FrmAutenticacion.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAEwBIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-07T20:10:51.101Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "FrmProducto.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\Kevin\\Documents\\sis457\\sis457_reposteria\\Mielva\\CpMielva\\FrmProducto.cs",
-              "RelativeDocumentMoniker": "CpMielva\\FrmProducto.cs",
-              "ToolTip": "C:\\Users\\Kevin\\Documents\\sis457\\sis457_reposteria\\Mielva\\CpMielva\\FrmProducto.cs [Dise\u00F1o]",
-              "RelativeToolTip": "CpMielva\\FrmProducto.cs [Dise\u00F1o]",
+              "DocumentIndex": 0,
+              "Title": "FrmPrincipal.cs [Dise\u00F1o]",
+              "DocumentMoniker": "B:\\Materias usfx\\1.- Inform\u00E1tica\\1 - 2025\\sis457\\sis457_reposteria\\Mielva\\CpMielva\\FrmPrincipal.cs",
+              "RelativeDocumentMoniker": "CpMielva\\FrmPrincipal.cs",
+              "ToolTip": "B:\\Materias usfx\\1.- Inform\u00E1tica\\1 - 2025\\sis457\\sis457_reposteria\\Mielva\\CpMielva\\FrmPrincipal.cs [Dise\u00F1o]",
+              "RelativeToolTip": "CpMielva\\FrmPrincipal.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-07T13:18:18.665Z",
+              "WhenOpened": "2025-05-07T20:05:05.238Z",
               "EditorCaption": " [Dise\u00F1o]"
             },
             {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{269a02dc-6af8-11d3-bdc4-00c04f688e50}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{e1b7d1f8-9b3c-49b1-8f4f-bfc63a88835d}"
+            },
+            {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
               "Title": "FrmCliente.cs",
-              "DocumentMoniker": "C:\\Users\\Kevin\\Documents\\sis457\\sis457_reposteria\\Mielva\\CpMielva\\FrmCliente.cs",
+              "DocumentMoniker": "B:\\Materias usfx\\1.- Inform\u00E1tica\\1 - 2025\\sis457\\sis457_reposteria\\Mielva\\CpMielva\\FrmCliente.cs",
               "RelativeDocumentMoniker": "CpMielva\\FrmCliente.cs",
-              "ToolTip": "C:\\Users\\Kevin\\Documents\\sis457\\sis457_reposteria\\Mielva\\CpMielva\\FrmCliente.cs",
+              "ToolTip": "B:\\Materias usfx\\1.- Inform\u00E1tica\\1 - 2025\\sis457\\sis457_reposteria\\Mielva\\CpMielva\\FrmCliente.cs",
               "RelativeToolTip": "CpMielva\\FrmCliente.cs",
               "ViewState": "AgIAAIYAAAAAAAAAAAAUwI0AAABMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -97,40 +102,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "FrmProducto.cs",
-              "DocumentMoniker": "C:\\Users\\Kevin\\Documents\\sis457\\sis457_reposteria\\Mielva\\CpMielva\\FrmProducto.cs",
-              "RelativeDocumentMoniker": "CpMielva\\FrmProducto.cs",
-              "ToolTip": "C:\\Users\\Kevin\\Documents\\sis457\\sis457_reposteria\\Mielva\\CpMielva\\FrmProducto.cs",
-              "RelativeToolTip": "CpMielva\\FrmProducto.cs",
-              "ViewState": "AgIAAE8AAAAAAAAAAAAYwLgAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-06T12:19:22.813Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
               "Title": "FrmCliente.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\Kevin\\Documents\\sis457\\sis457_reposteria\\Mielva\\CpMielva\\FrmCliente.cs",
+              "DocumentMoniker": "B:\\Materias usfx\\1.- Inform\u00E1tica\\1 - 2025\\sis457\\sis457_reposteria\\Mielva\\CpMielva\\FrmCliente.cs",
               "RelativeDocumentMoniker": "CpMielva\\FrmCliente.cs",
               "ToolTip": "C:\\Users\\Kevin\\Documents\\sis457\\sis457_reposteria\\Mielva\\CpMielva\\FrmCliente.cs [Dise\u00F1o]",
-              "RelativeToolTip": "CpMielva\\FrmCliente.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-06T17:07:47.503Z",
-              "EditorCaption": " [Dise\u00F1o]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "ProductoCln.cs",
-              "DocumentMoniker": "C:\\Users\\Kevin\\Documents\\sis457\\sis457_reposteria\\Mielva\\ClnMielva\\ProductoCln.cs",
-              "RelativeDocumentMoniker": "ClnMielva\\ProductoCln.cs",
-              "ToolTip": "C:\\Users\\Kevin\\Documents\\sis457\\sis457_reposteria\\Mielva\\ClnMielva\\ProductoCln.cs",
-              "RelativeToolTip": "ClnMielva\\ProductoCln.cs",
-              "ViewState": "AgIAAAcAAAAAAAAAAAAYwEQAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-04T22:50:10.396Z"
+              "WhenOpened": "2025-05-06T17:07:47.503Z"
             }
           ]
         }
