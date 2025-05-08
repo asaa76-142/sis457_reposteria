@@ -1,5 +1,6 @@
 ﻿using CadMielva;
 using ClnMielva;
+using CpMinerva;
 using System;
 using System.Collections.Generic;
 using System.Collections.Specialized;
@@ -154,8 +155,8 @@ namespace CpMielva
                 producto.unidadMedida = cbxUnidadMedida.Text;
                 producto.precioVenta = nudPrecioVenta.Value;
                 producto.saldo = nudSaldo.Value;
-                producto.usuarioRegistro = "admin";
-                //producto.usuarioRegistro = Util.usuario.usuario1;
+                //producto.usuarioRegistro = "admin";
+                producto.usuarioRegistro = Util.usuario.usuario1;
 
                 if (esNuevo)
                 {
@@ -185,8 +186,8 @@ namespace CpMielva
                 "::: Mielva - Mensaje :::", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (dialog == DialogResult.Yes)
             {
-                ProductoCln.eliminar(id, "admin");
-                //ProductoCln.eliminar(id, Util.usuario.usuario1);
+                //ProductoCln.eliminar(id, "admin");
+                ProductoCln.eliminar(id, Util.usuario.usuario1);
                 listar();
                 MessageBox.Show("Producto dado de baja correctamente", "::: Minerva - Mensaje :::",
                     MessageBoxButtons.OK, MessageBoxIcon.Information);

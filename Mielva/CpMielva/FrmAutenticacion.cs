@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using ClnMielva;
+using CpMinerva;
 
 namespace CpMielva
 {
@@ -47,24 +48,24 @@ namespace CpMielva
 
         private void btnIngresar_Click(object sender, EventArgs e)
         {
-            //if (validar())
-            //{
-            //    var usuario = UsuarioCln.validar(txtUsuario.Text, Util.Encrypt(txtClave.Text));
-            //    if (usuario != null)
-            //    {
-            //        Util.usuario = usuario;
-            //        txtClave.Clear();
-            //        txtUsuario.Focus();
-            //        txtUsuario.SelectAll();
-            //        Hide();
-            //        new FrmPrincipal(this).ShowDialog();
-            //    }
-            //    else
-            //    {
-            //        MessageBox.Show("Usuario y/o contraseña incorrecto", "::: Minerva - Mensaje :::",
-            //            MessageBoxButtons.OK, MessageBoxIcon.Error);
-            //    }
-            //}
+            if (validar())
+            {
+                var usuario = UsuarioCln.validar(txtUsuario.Text, Util.Encrypt(txtClave.Text));
+                if (usuario != null)
+                {
+                    Util.usuario = usuario;
+                    txtClave.Clear();
+                    txtUsuario.Focus();
+                    txtUsuario.SelectAll();
+                    Hide();
+                    new FrmPrincipal(this).ShowDialog();
+                }
+                else
+                {
+                    MessageBox.Show("Usuario y/o contraseña incorrecto", "::: Minerva - Mensaje :::",
+                        MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
         }
 
         private void txtClave_KeyPress(object sender, KeyPressEventArgs e)

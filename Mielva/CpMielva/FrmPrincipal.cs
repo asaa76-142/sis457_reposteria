@@ -12,11 +12,11 @@ namespace CpMielva
 {
     public partial class FrmPrincipal: Form
     {
-        //private FrmAutenticacion frmAutenticacion;
-        public FrmPrincipal(/*FrmAutenticacion frmAutenticacion*/)
+        private FrmAutenticacion frmAutenticacion;
+        public FrmPrincipal(FrmAutenticacion frmAutenticacion)
         {
               InitializeComponent();
-        //    this.frmAutenticacion = frmAutenticacion;
+              this.frmAutenticacion = frmAutenticacion;
         }
 
         private void btnCaProductos_Click(object sender, EventArgs e)
@@ -24,9 +24,9 @@ namespace CpMielva
             new FrmProducto().ShowDialog();
         }
 
-        //private void FrmPrincipal_FormClosing(object sender, FormClosingEventArgs e)
-        //{
-        //    frmAutenticacion.Show();
-        //}
+        private void FrmPrincipal_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            frmAutenticacion.Show();
+        }
     }
 }
