@@ -45,7 +45,7 @@
             this.ribbonButton4 = new C1.Win.Ribbon.RibbonButton();
             this.ribbonTab3 = new C1.Win.Ribbon.RibbonTab();
             this.ribbonGroup5 = new C1.Win.Ribbon.RibbonGroup();
-            this.ribbonButton5 = new C1.Win.Ribbon.RibbonButton();
+            this.btnCaEmpleadosUsuarios = new C1.Win.Ribbon.RibbonButton();
             this.ribbonButton6 = new C1.Win.Ribbon.RibbonButton();
             this.ribbonButton7 = new C1.Win.Ribbon.RibbonButton();
             this.ribbonTopToolBar1 = new C1.Win.Ribbon.RibbonTopToolBar();
@@ -61,7 +61,7 @@
             this.c1Ribbon1.Location = new System.Drawing.Point(0, 0);
             this.c1Ribbon1.Name = "c1Ribbon1";
             this.c1Ribbon1.QatHolder = this.ribbonQat1;
-            this.c1Ribbon1.Size = new System.Drawing.Size(834, 241);
+            this.c1Ribbon1.Size = new System.Drawing.Size(834, 161);
             this.c1Ribbon1.Tabs.Add(this.ribbonTab1);
             this.c1Ribbon1.Tabs.Add(this.ribbonTab2);
             this.c1Ribbon1.Tabs.Add(this.ribbonTab3);
@@ -156,18 +156,19 @@
             // 
             // ribbonGroup5
             // 
-            this.ribbonGroup5.Items.Add(this.ribbonButton5);
+            this.ribbonGroup5.Items.Add(this.btnCaEmpleadosUsuarios);
             this.ribbonGroup5.Items.Add(this.ribbonButton6);
             this.ribbonGroup5.Items.Add(this.ribbonButton7);
             this.ribbonGroup5.Name = "ribbonGroup5";
             this.ribbonGroup5.Text = "Administración de Sistema";
             // 
-            // ribbonButton5
+            // btnCaEmpleadosUsuarios
             // 
-            this.ribbonButton5.IconSet.Add(new C1.Framework.C1BitmapIcon("DefaultImage", new System.Drawing.Size(16, 16), System.Drawing.Color.Transparent, "DefaultImage", -1));
-            this.ribbonButton5.IconSet.Add(new C1.Framework.C1BitmapIcon("Users", new System.Drawing.Size(32, 32), System.Drawing.Color.Transparent, "Preset_LargeImages", 332));
-            this.ribbonButton5.Name = "ribbonButton5";
-            this.ribbonButton5.Text = "Empleados y Usuarios";
+            this.btnCaEmpleadosUsuarios.IconSet.Add(new C1.Framework.C1BitmapIcon("DefaultImage", new System.Drawing.Size(16, 16), System.Drawing.Color.Transparent, "DefaultImage", -1));
+            this.btnCaEmpleadosUsuarios.IconSet.Add(new C1.Framework.C1BitmapIcon("Users", new System.Drawing.Size(32, 32), System.Drawing.Color.Transparent, "Preset_LargeImages", 332));
+            this.btnCaEmpleadosUsuarios.Name = "btnCaEmpleadosUsuarios";
+            this.btnCaEmpleadosUsuarios.Text = "Empleados y Usuarios";
+            this.btnCaEmpleadosUsuarios.Click += new System.EventHandler(this.btnCaEmpleadosUsuarios_Click);
             // 
             // ribbonButton6
             // 
@@ -187,7 +188,7 @@
             // 
             // FrmPrincipal
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.MediumAquamarine;
             this.ClientSize = new System.Drawing.Size(834, 554);
@@ -224,7 +225,7 @@
         private C1.Win.Ribbon.RibbonButton ribbonButton4;
         private C1.Win.Ribbon.RibbonTab ribbonTab3;
         private C1.Win.Ribbon.RibbonGroup ribbonGroup5;
-        private C1.Win.Ribbon.RibbonButton ribbonButton5;
+        private C1.Win.Ribbon.RibbonButton btnCaEmpleadosUsuarios;
         private C1.Win.Ribbon.RibbonButton ribbonButton6;
         private C1.Win.Ribbon.RibbonButton ribbonButton7;
     }

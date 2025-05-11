@@ -23,6 +23,7 @@ DROP TABLE Usuario;
 DROP TABLE Empleado;
 DROP TABLE Producto;
 
+
 CREATE TABLE Producto (
   id INT NOT NULL PRIMARY KEY IDENTITY(1, 1),
   codigo VARCHAR(20) NOT NULL,

@@ -28,5 +28,10 @@ namespace CpMielva
         {
             frmAutenticacion.Show();
         }
+
+        private void btnCaEmpleadosUsuarios_Click(object sender, EventArgs e)
+        {
+            new FrmEmpleados().ShowDialog();
+        }
     }
 }

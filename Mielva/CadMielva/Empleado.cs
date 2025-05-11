@@ -17,7 +17,7 @@ namespace CadMielva
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Empleado()
         {
-            this.Usuario = new HashSet<Usuario>();
+            this.Usuario = new HashSet<UsuarioCd>();
         }
     
         public int id { get; set; }
@@ -33,6 +33,6 @@ namespace CadMielva
         public short estado { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Usuario> Usuario { get; set; }
+        public virtual ICollection<UsuarioCd> Usuario { get; set; }
     }
 }

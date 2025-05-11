@@ -50,7 +50,7 @@ namespace CpMielva
         {
             if (validar())
             {
-                var usuario = UsuarioCln.validar(txtUsuario.Text, Util.Encrypt(txtClave.Text));
+                var usuario = Usuario.validar(txtUsuario.Text, Util.Encrypt(txtClave.Text));
                 if (usuario != null)
                 {
                     Util.usuario = usuario;
@@ -62,7 +62,7 @@ namespace CpMielva
                 }
                 else
                 {
-                    MessageBox.Show("Usuario y/o contraseña incorrecto", "::: Minerva - Mensaje :::",
+                    MessageBox.Show("Usuario y/o contraseña incorrecto", "::: Mielva - Mensaje :::",
                         MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
