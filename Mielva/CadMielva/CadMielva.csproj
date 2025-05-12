@@ -54,63 +54,63 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Cliente.cs">
-      <DependentUpon>Modelo.tt</DependentUpon>
+      <DependentUpon>ModelO.tt</DependentUpon>
     </Compile>
     <Compile Include="Empleado.cs">
-      <DependentUpon>Modelo.tt</DependentUpon>
+      <DependentUpon>ModelO.tt</DependentUpon>
     </Compile>
-    <Compile Include="Modelo.Context.cs">
+    <Compile Include="ModelO.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>Modelo.Context.tt</DependentUpon>
+      <DependentUpon>ModelO.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="Modelo.cs">
+    <Compile Include="ModelO.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>Modelo.tt</DependentUpon>
+      <DependentUpon>ModelO.tt</DependentUpon>
     </Compile>
-    <Compile Include="Modelo.Designer.cs">
+    <Compile Include="ModelO.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>Modelo.edmx</DependentUpon>
+      <DependentUpon>ModelO.edmx</DependentUpon>
     </Compile>
     <Compile Include="paClienteListar_Result.cs">
-      <DependentUpon>Modelo.tt</DependentUpon>
+      <DependentUpon>ModelO.tt</DependentUpon>
     </Compile>
     <Compile Include="paEmpleadoListar_Result.cs">
-      <DependentUpon>Modelo.tt</DependentUpon>
+      <DependentUpon>ModelO.tt</DependentUpon>
     </Compile>
     <Compile Include="paProductoListar_Result.cs">
-      <DependentUpon>Modelo.tt</DependentUpon>
+      <DependentUpon>ModelO.tt</DependentUpon>
     </Compile>
     <Compile Include="paVentaDetalleListar_Result.cs">
-      <DependentUpon>Modelo.tt</DependentUpon>
+      <DependentUpon>ModelO.tt</DependentUpon>
     </Compile>
     <Compile Include="paVentaListar_Result.cs">
-      <DependentUpon>Modelo.tt</DependentUpon>
+      <DependentUpon>ModelO.tt</DependentUpon>
     </Compile>
     <Compile Include="Producto.cs">
-      <DependentUpon>Modelo.tt</DependentUpon>
+      <DependentUpon>ModelO.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Usuario.cs">
-      <DependentUpon>Modelo.tt</DependentUpon>
+      <DependentUpon>ModelO.tt</DependentUpon>
     </Compile>
     <Compile Include="Venta.cs">
-      <DependentUpon>Modelo.tt</DependentUpon>
+      <DependentUpon>ModelO.tt</DependentUpon>
     </Compile>
     <Compile Include="VentaDetalle.cs">
-      <DependentUpon>Modelo.tt</DependentUpon>
+      <DependentUpon>ModelO.tt</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.Config" />
-    <EntityDeploy Include="Modelo.edmx">
+    <EntityDeploy Include="ModelO.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>Modelo.Designer.cs</LastGenOutput>
+      <LastGenOutput>ModelO.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <None Include="Modelo.edmx.diagram">
-      <DependentUpon>Modelo.edmx</DependentUpon>
+    <None Include="ModelO.edmx.diagram">
+      <DependentUpon>ModelO.edmx</DependentUpon>
     </None>
     <None Include="packages.config" />
   </ItemGroup>
@@ -118,15 +118,15 @@
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Modelo.Context.tt">
+    <Content Include="ModelO.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>Modelo.edmx</DependentUpon>
-      <LastGenOutput>Modelo.Context.cs</LastGenOutput>
+      <DependentUpon>ModelO.edmx</DependentUpon>
+      <LastGenOutput>ModelO.Context.cs</LastGenOutput>
     </Content>
-    <Content Include="Modelo.tt">
+    <Content Include="ModelO.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>Modelo.edmx</DependentUpon>
-      <LastGenOutput>Modelo.cs</LastGenOutput>
+      <DependentUpon>ModelO.edmx</DependentUpon>
+      <LastGenOutput>ModelO.cs</LastGenOutput>
     </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

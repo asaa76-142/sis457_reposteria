@@ -13,7 +13,7 @@ namespace CpMinerva
 {
     public class Util
     {
-        public static UsuarioCd usuario;
+        public static Usuario usuario;
         public static bool notPaste = true;
         public static string Encrypt(string clearText)
         {

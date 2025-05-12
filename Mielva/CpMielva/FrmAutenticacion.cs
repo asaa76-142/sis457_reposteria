@@ -7,7 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using CadMielva;
 using ClnMielva;
+using ClnMinerva;
 using CpMinerva;
 
 namespace CpMielva
@@ -50,7 +52,7 @@ namespace CpMielva
         {
             if (validar())
             {
-                var usuario = Usuario.validar(txtUsuario.Text, Util.Encrypt(txtClave.Text));
+                var usuario = UsuarioCln.validar(txtUsuario.Text, Util.Encrypt(txtClave.Text));
                 if (usuario != null)
                 {
                     Util.usuario = usuario;

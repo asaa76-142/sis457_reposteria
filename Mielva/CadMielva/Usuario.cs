@@ -12,10 +12,10 @@ namespace CadMielva
     using System;
     using System.Collections.Generic;
     
-    public partial class UsuarioCd
+    public partial class Usuario
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public UsuarioCd()
+        public Usuario()
         {
             this.Venta = new HashSet<Venta>();
         }

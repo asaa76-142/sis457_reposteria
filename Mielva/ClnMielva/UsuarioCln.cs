@@ -1,27 +1,25 @@
 ﻿using CadMielva;
 using System;
 using System.Collections.Generic;
-using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ClnMielva
+namespace ClnMinerva
 {
-    public class Usuario
+    public class UsuarioCln
     {
-
-        public static UsuarioCd validar(string usuario, string clave)
+        public static int insertar(Usuario usuario)
         {
             using (var context = new MielvaEntities())
             {
-                return context.Usuario
-                    .Where(u => u.usuario1 == usuario && u.clave == clave)
-                    .FirstOrDefault();
+                context.Usuario.Add(usuario);
+                context.SaveChanges();
+                return usuario.id;
             }
         }
 
-        public static int actualizar(UsuarioCd usuario)
+        public static int actualizar(Usuario usuario)
         {
             using (var context = new MielvaEntities())
             {
@@ -30,7 +28,6 @@ namespace ClnMielva
                 existente.usuarioRegistro = usuario.usuarioRegistro;
                 return context.SaveChanges();
             }
-
         }
 
         public static int eliminar(int id, string usuarioRegistro)
@@ -42,29 +39,24 @@ namespace ClnMielva
                 usuario.usuarioRegistro = usuarioRegistro;
                 return context.SaveChanges();
             }
-
         }
 
-        public static int insertar(UsuarioCd usuario)
+        public static Usuario obtenerUnoPorEmpleado(int idEmpleado)
         {
             using (var context = new MielvaEntities())
             {
-                context.Usuario.Add(usuario);
-                context.SaveChanges();
-                return usuario.id;
+                return context.Usuario.Where(x => x.idEmpleado == idEmpleado).FirstOrDefault();
             }
-
         }
 
-        public static UsuarioCd obtenerUnoPorEmpleado(int idEmpleado)
+        public static Usuario validar(string usuario, string clave)
         {
             using (var context = new MielvaEntities())
             {
-                return context.Usuario.Where(x => x.idEmpleado == idEmpleado)
+                return context.Usuario
+                    .Where(u => u.usuario1 == usuario && u.clave == clave)
                     .FirstOrDefault();
             }
-
         }
-
     }
 }

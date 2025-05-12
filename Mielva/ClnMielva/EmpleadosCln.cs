@@ -1,28 +1,29 @@
 ﻿using CadMielva;
 using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ClnMielva
+namespace ClnMinerva
 {
-    public class EmpleadosCln
+    public class EmpleadoCln
     {
-        public static int insertar(Empleado empleado, UsuarioCd usuario)
+        public static int insertar(Empleado empleado, Usuario usuario)
         {
             using (var context = new MielvaEntities())
             {
                 context.Empleado.Add(empleado);
                 context.SaveChanges();
 
-                if (usuario != null && Usuario.obtenerUnoPorEmpleado(empleado.id) == null)
+                if (usuario != null && UsuarioCln.obtenerUnoPorEmpleado(empleado.id) == null)
                 {
                     usuario.idEmpleado = empleado.id;
-                    usuario.usuarioRegistro = (string)empleado.usuarioRegistro;
+                    usuario.usuarioRegistro = empleado.usuarioRegistro;
                     usuario.fechaRegistro = empleado.fechaRegistro;
                     usuario.estado = empleado.estado;
-                    Usuario.insertar(usuario);
+                    UsuarioCln.insertar(usuario);
                 }
 
                 return empleado.id;
@@ -45,16 +46,16 @@ namespace ClnMielva
 
                 if (!string.IsNullOrEmpty(nombreUsuario))
                 {
-                    var usuario = Usuario.obtenerUnoPorEmpleado(existente.id);
+                    var usuario = UsuarioCln.obtenerUnoPorEmpleado(existente.id);
                     if (usuario != null)
                     {
                         usuario.usuario1 = nombreUsuario;
                         usuario.usuarioRegistro = empleado.usuarioRegistro;
-                        Usuario.actualizar(usuario);
+                        UsuarioCln.actualizar(usuario);
                     }
                     else
                     {
-                        usuario = new UsuarioCd
+                        usuario = new Usuario
                         {
                             idEmpleado = existente.id,
                             usuario1 = nombreUsuario,
@@ -63,13 +64,11 @@ namespace ClnMielva
                             fechaRegistro = DateTime.Now,
                             usuarioRegistro = empleado.usuarioRegistro
                         };
-                        Usuario.insertar(usuario);
+                        UsuarioCln.insertar(usuario);
                     }
                 }
 
                 return context.SaveChanges();
-
-
             }
         }
 
@@ -81,15 +80,13 @@ namespace ClnMielva
                 empleado.estado = -1;
                 empleado.usuarioRegistro = usuario;
 
-                var usuarioEmpleado = Usuario.obtenerUnoPorEmpleado(empleado.id);
+                var usuarioEmpleado = UsuarioCln.obtenerUnoPorEmpleado(empleado.id);
                 if (usuarioEmpleado != null)
                 {
-                    Usuario.eliminar(usuarioEmpleado.id, usuario);
+                    UsuarioCln.eliminar(usuarioEmpleado.id, usuario);
                 }
 
                 return context.SaveChanges();
-
-
             }
         }
 
@@ -97,7 +94,7 @@ namespace ClnMielva
         {
             using (var context = new MielvaEntities())
             {
-                return context.Empleado.Include("Usuario").Where(x => x.id == id).FirstOrDefault();
+                return context.Empleado.Include(x => x.Usuario).Where(x => x.id == id).FirstOrDefault();
             }
         }
 
@@ -108,7 +105,5 @@ namespace ClnMielva
                 return context.paEmpleadoListar(parametro).ToList();
             }
         }
-
     }
-
 }

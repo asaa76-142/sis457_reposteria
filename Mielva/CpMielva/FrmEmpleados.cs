@@ -1,5 +1,6 @@
 ﻿using CadMielva;
 using ClnMielva;
+using ClnMinerva;
 using CpMinerva;
 using System;
 using System.Collections.Generic;
@@ -23,7 +24,7 @@ namespace CpMielva
         }
         private void listar()
         {
-            var lista = EmpleadosCln.listarPa(txtParametro.Text.Trim());
+            var lista = EmpleadoCln.listarPa(txtParametro.Text.Trim());
             dgvLista.DataSource = lista;
             dgvLista.Columns["id"].Visible = false;
             dgvLista.Columns["estado"].Visible = false;
@@ -84,7 +85,7 @@ namespace CpMielva
 
             int index = dgvLista.CurrentCell.RowIndex;
             int id = Convert.ToInt32(dgvLista.Rows[index].Cells["id"].Value);
-            var empleado = EmpleadosCln.obtenerUno(id);
+            var empleado = EmpleadoCln.obtenerUno(id);
             var usuario = empleado.Usuario.Count > 0 ? empleado.Usuario.First().usuario1 : "";
             txtCedulaIdentidad.Text = empleado.cedulaIdentidad;
             txtNombres.Text = empleado.nombres;
@@ -169,10 +170,10 @@ namespace CpMielva
                 empleado.cargo = cbxCargo.Text;
                 empleado.usuarioRegistro = Util.usuario.usuario1;
 
-                UsuarioCd usuario = null;
+                Usuario usuario = null;
                 if (!string.IsNullOrEmpty(txtUsuario.Text))
                 {
-                    usuario = new UsuarioCd();
+                    usuario = new Usuario();
                     usuario.usuario1 = txtUsuario.Text.Trim();
                     usuario.clave = Util.Encrypt("hola123");
                 }
@@ -181,13 +182,13 @@ namespace CpMielva
                 {
                     empleado.fechaRegistro = DateTime.Now;
                     empleado.estado = 1;
-                    EmpleadosCln.insertar(empleado, usuario);
+                    EmpleadoCln.insertar(empleado, usuario);
                 }
                 else
                 {
                     int index = dgvLista.CurrentCell.RowIndex;
                     empleado.id = Convert.ToInt32(dgvLista.Rows[index].Cells["id"].Value);
-                    EmpleadosCln.actualizar(empleado, txtUsuario.Text.Trim(), Util.Encrypt("hola123"));
+                    EmpleadoCln.actualizar(empleado, txtUsuario.Text.Trim(), Util.Encrypt("hola123"));
                 }
                 listar();
                 btnCancelar.PerformClick();
@@ -205,7 +206,7 @@ namespace CpMielva
                 "::: Minerva - Mensaje :::", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (dialog == DialogResult.Yes)
             {
-                EmpleadosCln.eliminar(id, Util.usuario.usuario1);
+                EmpleadoCln.eliminar(id, Util.usuario.usuario1);
                 listar();
                 MessageBox.Show("Producto dado de baja correctamente", "::: Minerva - Mensaje :::",
                     MessageBoxButtons.OK, MessageBoxIcon.Information);
