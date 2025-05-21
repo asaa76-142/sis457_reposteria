@@ -45,7 +45,7 @@ namespace CpMielva
 
         private void FrmEmpleados_Load(object sender, EventArgs e)
         {
-            //Size = new Size();
+            Size = new Size(1124, 431);
             listar();
             txtCelular.KeyPress += Util.onlyNumbers;
             txtNombres.KeyPress += Util.onlyLetters;
