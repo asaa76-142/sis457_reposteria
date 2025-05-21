@@ -55,7 +55,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ClienteCln.cs" />
-    <Compile Include="EmpleadosCln.cs" />
+    <Compile Include="EmpleadoCln.cs" />
     <Compile Include="MinervaEntities.cs" />
     <Compile Include="ProductoCln.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

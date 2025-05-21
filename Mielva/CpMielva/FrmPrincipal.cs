@@ -31,7 +31,7 @@ namespace CpMielva
 
         private void btnCaEmpleadosUsuarios_Click(object sender, EventArgs e)
         {
-            new FrmEmpleados().ShowDialog();
+            new FrmEmpleado().ShowDialog();
         }
     }
 }

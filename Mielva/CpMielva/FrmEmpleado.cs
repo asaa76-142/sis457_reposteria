@@ -14,11 +14,11 @@ using System.Windows.Forms;
 
 namespace CpMielva
 {
-    public partial class FrmEmpleados : Form
+    public partial class FrmEmpleado : Form
     {
-        private bool esNuevo;
+        private bool esNuevo = false;
 
-        public FrmEmpleados()
+        public FrmEmpleado()
         {
             InitializeComponent();
         }
@@ -192,7 +192,7 @@ namespace CpMielva
                 }
                 listar();
                 btnCancelar.PerformClick();
-                MessageBox.Show("Registro guardado correctamente", "::: Minerva - Mensaje :::",
+                MessageBox.Show("Registro guardado correctamente", "::: Mielva - Mensaje :::",
                     MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
@@ -203,12 +203,12 @@ namespace CpMielva
             int id = Convert.ToInt32(dgvLista.Rows[index].Cells["id"].Value);
             string ci = dgvLista.Rows[index].Cells["cedulaIdentidad"].Value.ToString();
             DialogResult dialog = MessageBox.Show($"¿Está seguro de eliminar el empleado {ci}?",
-                "::: Minerva - Mensaje :::", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                "::: Mielva - Mensaje :::", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (dialog == DialogResult.Yes)
             {
                 EmpleadoCln.eliminar(id, Util.usuario.usuario1);
                 listar();
-                MessageBox.Show("Producto dado de baja correctamente", "::: Minerva - Mensaje :::",
+                MessageBox.Show("Producto dado de baja correctamente", "::: Mielva - Mensaje :::",
                     MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
 
