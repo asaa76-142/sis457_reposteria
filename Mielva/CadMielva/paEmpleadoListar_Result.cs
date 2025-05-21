@@ -13,6 +13,7 @@ namespace CadMielva
     
     public partial class paEmpleadoListar_Result
     {
+        public string usuario { get; set; }
         public int id { get; set; }
         public string cedulaIdentidad { get; set; }
         public string nombres { get; set; }

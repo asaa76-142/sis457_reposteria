@@ -113,14 +113,12 @@ AS
 GO
 ALTER PROC paEmpleadoListar @parametro VARCHAR(100)
 AS
-    SELECT *
-    FROM Empleado
-    WHERE estado <> -1 -- Excluir empleados eliminados
-      AND (
-          cedulaIdentidad + nombres + ISNULL(primerApellido, '') + ISNULL(segundoApellido, '') + direccion + cargo
-          LIKE '%' + REPLACE(@parametro, ' ', '%') + '%'
-      )
-    ORDER BY estado DESC, nombres ASC, primerApellido ASC;
+  SELECT ISNULL(u.usuario,'--') AS usuario,e.* 
+  FROM Empleado e
+  LEFT JOIN Usuario u ON e.id = u.idEmpleado
+  WHERE e.estado<>-1 
+	AND e.cedulaIdentidad+e.nombres+ISNULL(e.primerApellido,'')+ISNULL(e.segundoApellido,'') LIKE '%'+REPLACE(@parametro,' ','%')+'%'
+  ORDER BY e.estado DESC, e.nombres ASC, e.primerApellido ASC;
 
 
 GO

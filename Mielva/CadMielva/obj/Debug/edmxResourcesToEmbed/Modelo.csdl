@@ -202,6 +202,7 @@
     <Property Type="Int16" Name="estado" Nullable="false" />
   </ComplexType>
   <ComplexType Name="paEmpleadoListar_Result">
+    <Property Type="String" Name="usuario" Nullable="false" MaxLength="20" />
     <Property Type="Int32" Name="id" Nullable="false" />
     <Property Type="String" Name="cedulaIdentidad" Nullable="false" MaxLength="12" />
     <Property Type="String" Name="nombres" Nullable="false" MaxLength="30" />

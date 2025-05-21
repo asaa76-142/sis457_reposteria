@@ -102,6 +102,7 @@
     <FunctionImportMapping FunctionImportName="paEmpleadoListar" FunctionName="MielvaModel.Store.paEmpleadoListar">
       <ResultMapping>
         <ComplexTypeMapping TypeName="MielvaModel.paEmpleadoListar_Result">
+          <ScalarProperty Name="usuario" ColumnName="usuario" />
           <ScalarProperty Name="id" ColumnName="id" />
           <ScalarProperty Name="cedulaIdentidad" ColumnName="cedulaIdentidad" />
           <ScalarProperty Name="nombres" ColumnName="nombres" />
