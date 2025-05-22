@@ -10,7 +10,6 @@ using System.Windows.Forms;
 using CadMielva;
 using ClnMielva;
 using ClnMinerva;
-using CpMinerva;
 
 namespace CpMielva
 {

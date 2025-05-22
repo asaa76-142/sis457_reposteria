@@ -96,7 +96,6 @@ C:\Users\auzas\Desktop\sis475_reposteria\sis457_reposteria\Mielva\CpMielva\bin\D
 C:\Users\auzas\Desktop\sis475_reposteria\sis457_reposteria\Mielva\CpMielva\obj\Debug\CpMielva.csproj.AssemblyReference.cache
 C:\Users\auzas\Desktop\sis475_reposteria\sis457_reposteria\Mielva\CpMielva\obj\Debug\CpMielva.FrmAutenticacion.resources
 C:\Users\auzas\Desktop\sis475_reposteria\sis457_reposteria\Mielva\CpMielva\obj\Debug\CpMielva.FrmCliente.resources
-C:\Users\auzas\Desktop\sis475_reposteria\sis457_reposteria\Mielva\CpMielva\obj\Debug\CpMielva.FrmEmpleados.resources
 C:\Users\auzas\Desktop\sis475_reposteria\sis457_reposteria\Mielva\CpMielva\obj\Debug\CpMielva.FrmPrincipal.resources
 C:\Users\auzas\Desktop\sis475_reposteria\sis457_reposteria\Mielva\CpMielva\obj\Debug\CpMielva.FrmProducto.resources
 C:\Users\auzas\Desktop\sis475_reposteria\sis457_reposteria\Mielva\CpMielva\obj\Debug\CpMielva.FrmVenta.resources
@@ -110,3 +109,5 @@ C:\Users\auzas\Desktop\sis475_reposteria\sis457_reposteria\Mielva\CpMielva\obj\D
 C:\Users\auzas\Desktop\sis475_reposteria\sis457_reposteria\Mielva\CpMielva\obj\Debug\CpMielva.pdb
 C:\Users\Kevin\Documents\sis457\sis457_reposteria\Mielva\CpMielva\obj\Debug\CpMielva.exe.config
 C:\Users\Kevin\Documents\sis457\sis457_reposteria\Mielva\CpMielva\obj\Debug\CpMielva.FrmEmpleado.resources
+C:\Users\auzas\Desktop\sis475_reposteria\sis457_reposteria\Mielva\CpMielva\obj\Debug\CpMielva.exe.config
+C:\Users\auzas\Desktop\sis475_reposteria\sis457_reposteria\Mielva\CpMielva\obj\Debug\CpMielva.FrmEmpleado.resources

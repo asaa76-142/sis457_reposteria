@@ -46,13 +46,13 @@
             this.gbxLista = new System.Windows.Forms.GroupBox();
             this.dgvLista = new System.Windows.Forms.DataGridView();
             this.gbxDatos = new System.Windows.Forms.GroupBox();
+            this.txtNit = new System.Windows.Forms.TextBox();
             this.lblNit = new System.Windows.Forms.Label();
             this.erpPrecioVenta = new System.Windows.Forms.ErrorProvider(this.components);
             this.erpCodigo = new System.Windows.Forms.ErrorProvider(this.components);
             this.erpDescripcion = new System.Windows.Forms.ErrorProvider(this.components);
             this.erpUnidadMedida = new System.Windows.Forms.ErrorProvider(this.components);
             this.erpSaldo = new System.Windows.Forms.ErrorProvider(this.components);
-            this.txtNit = new System.Windows.Forms.TextBox();
             this.pnlAcciones.SuspendLayout();
             this.gbxLista.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvLista)).BeginInit();
@@ -199,13 +199,13 @@
             this.lblParametro.Location = new System.Drawing.Point(23, 37);
             this.lblParametro.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblParametro.Name = "lblParametro";
-            this.lblParametro.Size = new System.Drawing.Size(182, 32);
+            this.lblParametro.Size = new System.Drawing.Size(191, 16);
             this.lblParametro.TabIndex = 15;
-            this.lblParametro.Text = "Buscar por nit o Razón Social\r\n:";
+            this.lblParametro.Text = "Buscar por NIT o Razón Social\r\n";
             // 
             // txtRazonSocial
             // 
-            this.txtRazonSocial.Location = new System.Drawing.Point(179, 53);
+            this.txtRazonSocial.Location = new System.Drawing.Point(190, 81);
             this.txtRazonSocial.Margin = new System.Windows.Forms.Padding(4);
             this.txtRazonSocial.MaxLength = 250;
             this.txtRazonSocial.Name = "txtRazonSocial";
@@ -215,7 +215,7 @@
             // lblRazonSocial
             // 
             this.lblRazonSocial.AutoSize = true;
-            this.lblRazonSocial.Location = new System.Drawing.Point(89, 57);
+            this.lblRazonSocial.Location = new System.Drawing.Point(64, 87);
             this.lblRazonSocial.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblRazonSocial.Name = "lblRazonSocial";
             this.lblRazonSocial.Size = new System.Drawing.Size(90, 16);
@@ -236,6 +236,7 @@
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnBuscar.UseVisualStyleBackColor = true;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // gbxLista
             // 
@@ -282,15 +283,25 @@
             this.gbxDatos.TabStop = false;
             this.gbxDatos.Text = "Datos";
             // 
+            // txtNit
+            // 
+            this.txtNit.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txtNit.Location = new System.Drawing.Point(190, 38);
+            this.txtNit.Margin = new System.Windows.Forms.Padding(4);
+            this.txtNit.MaxLength = 20;
+            this.txtNit.Name = "txtNit";
+            this.txtNit.Size = new System.Drawing.Size(257, 22);
+            this.txtNit.TabIndex = 14;
+            // 
             // lblNit
             // 
             this.lblNit.AutoSize = true;
-            this.lblNit.Location = new System.Drawing.Point(89, 26);
+            this.lblNit.Location = new System.Drawing.Point(122, 44);
             this.lblNit.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblNit.Name = "lblNit";
-            this.lblNit.Size = new System.Drawing.Size(23, 16);
+            this.lblNit.Size = new System.Drawing.Size(32, 16);
             this.lblNit.TabIndex = 13;
-            this.lblNit.Text = "nit:";
+            this.lblNit.Text = "NIT:";
             // 
             // erpPrecioVenta
             // 
@@ -311,16 +322,6 @@
             // erpSaldo
             // 
             this.erpSaldo.ContainerControl = this;
-            // 
-            // txtNit
-            // 
-            this.txtNit.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtNit.Location = new System.Drawing.Point(179, 20);
-            this.txtNit.Margin = new System.Windows.Forms.Padding(4);
-            this.txtNit.MaxLength = 20;
-            this.txtNit.Name = "txtNit";
-            this.txtNit.Size = new System.Drawing.Size(257, 22);
-            this.txtNit.TabIndex = 14;
             // 
             // FrmCliente
             // 

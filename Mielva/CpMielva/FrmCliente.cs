@@ -76,10 +76,6 @@ namespace CpMielva
             Close();
         }
 
-        private void btnBuscar_Click(object sender, EventArgs e)
-        {
-            listar();
-        }
 
         private void txtParametro_KeyPress(object sender, KeyPressEventArgs e)
         {
@@ -150,6 +146,11 @@ namespace CpMielva
                 MessageBox.Show("Cliente dado de baja correctamente", "::: Minerva - Mensaje :::",
                     MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
+        }
+
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            listar();
         }
     }
 }

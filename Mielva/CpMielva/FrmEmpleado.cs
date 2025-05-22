@@ -1,7 +1,6 @@
 ﻿using CadMielva;
 using ClnMielva;
 using ClnMinerva;
-using CpMinerva;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -107,16 +106,13 @@ namespace CpMielva
         {
             listar();
         }
-        private void txtParametro_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (e.KeyChar == (char)Keys.Enter) listar();
-        }
         private bool validar()
         {
             bool esValido = true;
             erpCedulaIdentidad.SetError(txtCedulaIdentidad, "");
             erpNombres.SetError(txtNombres, "");
             erpApellidos.SetError(txtPrimerApellido, "");
+            erpApellidos.SetError(txtSegundoApellido, "");
             erpDireccion.SetError(txtDireccion, "");
             erpCelular.SetError(txtCelular, "");
             erpCargo.SetError(cbxCargo, "");
@@ -212,6 +208,11 @@ namespace CpMielva
                     MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
 
+        }
+
+        private void txtParametro_KeyPress_1(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter) listar();
         }
     }
 }

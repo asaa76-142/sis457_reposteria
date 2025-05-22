@@ -147,6 +147,7 @@
             this.ribbonButton4.IconSet.Add(new C1.Framework.C1BitmapIcon("DefaultImage", new System.Drawing.Size(16, 16), System.Drawing.Color.Transparent, "DefaultImage", -1));
             this.ribbonButton4.Name = "ribbonButton4";
             this.ribbonButton4.Text = "Ventas";
+            this.ribbonButton4.Click += new System.EventHandler(this.ribbonButton4_Click);
             // 
             // ribbonTab3
             // 
