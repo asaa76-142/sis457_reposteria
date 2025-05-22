@@ -499,6 +499,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "FrmEmpleado";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "::: Empleados :::";
             this.Load += new System.EventHandler(this.FrmEmpleados_Load);
             this.gbxDatos.ResumeLayout(false);

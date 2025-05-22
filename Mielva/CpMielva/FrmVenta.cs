@@ -26,7 +26,7 @@ namespace CpMielva
         {
             Size = new Size(1124, 431);
             listar();
-            txtTransaccion.KeyPress += Util.onlyNumbers;
+            //txtTransaccion.KeyPress += Util.onlyNumbers;
         }
         private void listar()
         {
@@ -39,8 +39,8 @@ namespace CpMielva
         }
         private void limpiar()
         {
-            txtTransaccion.Clear();
-            txtFecha.Clear();
+            //txtTransaccion.Clear();
+            //txtFecha.Clear();
         }
         private void btnCancelar_Click(object sender, EventArgs e)
         {
