@@ -103,7 +103,7 @@
             0});
             this.nudSaldo.Name = "nudSaldo";
             this.nudSaldo.Size = new System.Drawing.Size(160, 22);
-            this.nudSaldo.TabIndex = 9;
+            this.nudSaldo.TabIndex = 5;
             // 
             // gbxDatos
             // 
@@ -172,7 +172,7 @@
             0});
             this.nudPrecioVenta.Name = "nudPrecioVenta";
             this.nudPrecioVenta.Size = new System.Drawing.Size(160, 22);
-            this.nudPrecioVenta.TabIndex = 8;
+            this.nudPrecioVenta.TabIndex = 4;
             // 
             // lblSaldo
             // 
@@ -206,7 +206,7 @@
             this.cbxUnidadMedida.Margin = new System.Windows.Forms.Padding(4);
             this.cbxUnidadMedida.Name = "cbxUnidadMedida";
             this.cbxUnidadMedida.Size = new System.Drawing.Size(257, 23);
-            this.cbxUnidadMedida.TabIndex = 5;
+            this.cbxUnidadMedida.TabIndex = 3;
             // 
             // lblUnidadMedida
             // 
@@ -225,7 +225,7 @@
             this.txtDescripcion.MaxLength = 250;
             this.txtDescripcion.Name = "txtDescripcion";
             this.txtDescripcion.Size = new System.Drawing.Size(257, 22);
-            this.txtDescripcion.TabIndex = 3;
+            this.txtDescripcion.TabIndex = 2;
             // 
             // lblDescripcion
             // 

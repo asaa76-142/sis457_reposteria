@@ -63,7 +63,7 @@
             this.c1Ribbon1.Location = new System.Drawing.Point(0, 0);
             this.c1Ribbon1.Name = "c1Ribbon1";
             this.c1Ribbon1.QatHolder = this.ribbonQat1;
-            this.c1Ribbon1.Size = new System.Drawing.Size(834, 241);
+            this.c1Ribbon1.Size = new System.Drawing.Size(834, 161);
             this.c1Ribbon1.Tabs.Add(this.ribbonTab1);
             this.c1Ribbon1.Tabs.Add(this.ribbonTab2);
             this.c1Ribbon1.Tabs.Add(this.ribbonTab3);
@@ -113,6 +113,7 @@
             this.ribbonButton2.IconSet.Add(new C1.Framework.C1BitmapIcon("Users", new System.Drawing.Size(32, 32), System.Drawing.Color.Transparent, "Preset_LargeImages", 332));
             this.ribbonButton2.Name = "ribbonButton2";
             this.ribbonButton2.Text = "Clientes";
+            this.ribbonButton2.Click += new System.EventHandler(this.ribbonButton2_Click);
             // 
             // ribbonGroup2
             // 
@@ -135,6 +136,7 @@
             // ribbonButton3
             // 
             this.ribbonButton3.IconSet.Add(new C1.Framework.C1BitmapIcon("DefaultImage", new System.Drawing.Size(16, 16), System.Drawing.Color.Transparent, "DefaultImage", -1));
+            this.ribbonButton3.IconSet.Add(new C1.Framework.C1BitmapIcon("MarkAsFinal", new System.Drawing.Size(32, 32), System.Drawing.Color.Transparent, "Preset_LargeImages", 161));
             this.ribbonButton3.Name = "ribbonButton3";
             this.ribbonButton3.Text = "Compras";
             // 
@@ -147,6 +149,7 @@
             // ribbonButton4
             // 
             this.ribbonButton4.IconSet.Add(new C1.Framework.C1BitmapIcon("DefaultImage", new System.Drawing.Size(16, 16), System.Drawing.Color.Transparent, "DefaultImage", -1));
+            this.ribbonButton4.IconSet.Add(new C1.Framework.C1BitmapIcon("MarkCitration", new System.Drawing.Size(32, 32), System.Drawing.Color.Transparent, "Preset_LargeImages", 162));
             this.ribbonButton4.Name = "ribbonButton4";
             this.ribbonButton4.Text = "Ventas";
             this.ribbonButton4.Click += new System.EventHandler(this.ribbonButton4_Click);
@@ -176,12 +179,14 @@
             // ribbonButton6
             // 
             this.ribbonButton6.IconSet.Add(new C1.Framework.C1BitmapIcon("DefaultImage", new System.Drawing.Size(16, 16), System.Drawing.Color.Transparent, "DefaultImage", -1));
+            this.ribbonButton6.IconSet.Add(new C1.Framework.C1BitmapIcon("DigitalSignature", new System.Drawing.Size(32, 32), System.Drawing.Color.Transparent, "Preset_LargeImages", 73));
             this.ribbonButton6.Name = "ribbonButton6";
             this.ribbonButton6.Text = "Roles";
             // 
             // ribbonButton7
             // 
             this.ribbonButton7.IconSet.Add(new C1.Framework.C1BitmapIcon("DefaultImage", new System.Drawing.Size(16, 16), System.Drawing.Color.Transparent, "DefaultImage", -1));
+            this.ribbonButton7.IconSet.Add(new C1.Framework.C1BitmapIcon("SchPrivate", new System.Drawing.Size(32, 32), System.Drawing.Color.Transparent, "Preset_LargeImages", 258));
             this.ribbonButton7.Name = "ribbonButton7";
             this.ribbonButton7.Text = "Permisos";
             // 
@@ -193,16 +198,16 @@
             // 
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox1.Image = global::CpMielva.Properties.Resources.off;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 241);
+            this.pictureBox1.Location = new System.Drawing.Point(0, 161);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(834, 313);
+            this.pictureBox1.Size = new System.Drawing.Size(834, 393);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             // 
             // FrmPrincipal
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.MediumAquamarine;
             this.ClientSize = new System.Drawing.Size(834, 554);

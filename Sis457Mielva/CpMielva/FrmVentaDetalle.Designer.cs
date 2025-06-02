@@ -214,7 +214,7 @@
             0});
             this.nudSaldo.Name = "nudSaldo";
             this.nudSaldo.Size = new System.Drawing.Size(160, 22);
-            this.nudSaldo.TabIndex = 9;
+            this.nudSaldo.TabIndex = 5;
             // 
             // nudPrecioVenta
             // 
@@ -227,7 +227,7 @@
             0});
             this.nudPrecioVenta.Name = "nudPrecioVenta";
             this.nudPrecioVenta.Size = new System.Drawing.Size(160, 22);
-            this.nudPrecioVenta.TabIndex = 8;
+            this.nudPrecioVenta.TabIndex = 4;
             // 
             // lblSaldo
             // 
@@ -261,7 +261,7 @@
             this.cbxUnidadMedida.Margin = new System.Windows.Forms.Padding(4);
             this.cbxUnidadMedida.Name = "cbxUnidadMedida";
             this.cbxUnidadMedida.Size = new System.Drawing.Size(257, 23);
-            this.cbxUnidadMedida.TabIndex = 5;
+            this.cbxUnidadMedida.TabIndex = 3;
             // 
             // lblUnidadMedida
             // 
@@ -280,7 +280,7 @@
             this.txtDescripcion.MaxLength = 250;
             this.txtDescripcion.Name = "txtDescripcion";
             this.txtDescripcion.Size = new System.Drawing.Size(257, 22);
-            this.txtDescripcion.TabIndex = 3;
+            this.txtDescripcion.TabIndex = 2;
             // 
             // lblDescripcion
             // 
@@ -412,7 +412,7 @@
             this.Controls.Add(this.gbxLista);
             this.Controls.Add(this.gbxDatos);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.Name = "FrmVentaDetalle";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

@@ -210,7 +210,7 @@
             this.txtRazonSocial.MaxLength = 250;
             this.txtRazonSocial.Name = "txtRazonSocial";
             this.txtRazonSocial.Size = new System.Drawing.Size(257, 22);
-            this.txtRazonSocial.TabIndex = 3;
+            this.txtRazonSocial.TabIndex = 2;
             // 
             // lblRazonSocial
             // 
@@ -291,7 +291,7 @@
             this.txtNit.MaxLength = 20;
             this.txtNit.Name = "txtNit";
             this.txtNit.Size = new System.Drawing.Size(257, 22);
-            this.txtNit.TabIndex = 14;
+            this.txtNit.TabIndex = 1;
             // 
             // lblNit
             // 
