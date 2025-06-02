@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-  <EntityContainerMapping StorageEntityContainer="MielvaModelStoreContainer" CdmEntityContainer="MielvaEntities">
+  <EntityContainerMapping StorageEntityContainer="LabMielvaModelStoreContainer" CdmEntityContainer="LabMielvaEntities">
     <EntitySetMapping Name="Cliente">
-      <EntityTypeMapping TypeName="MielvaModel.Cliente">
+      <EntityTypeMapping TypeName="LabMielvaModel.Cliente">
         <MappingFragment StoreEntitySet="Cliente">
           <ScalarProperty Name="id" ColumnName="id" />
           <ScalarProperty Name="nit" ColumnName="nit" />
@@ -14,7 +14,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Empleado">
-      <EntityTypeMapping TypeName="MielvaModel.Empleado">
+      <EntityTypeMapping TypeName="LabMielvaModel.Empleado">
         <MappingFragment StoreEntitySet="Empleado">
           <ScalarProperty Name="id" ColumnName="id" />
           <ScalarProperty Name="cedulaIdentidad" ColumnName="cedulaIdentidad" />
@@ -31,7 +31,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Producto">
-      <EntityTypeMapping TypeName="MielvaModel.Producto">
+      <EntityTypeMapping TypeName="LabMielvaModel.Producto">
         <MappingFragment StoreEntitySet="Producto">
           <ScalarProperty Name="id" ColumnName="id" />
           <ScalarProperty Name="codigo" ColumnName="codigo" />
@@ -46,7 +46,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Usuario">
-      <EntityTypeMapping TypeName="MielvaModel.Usuario">
+      <EntityTypeMapping TypeName="LabMielvaModel.Usuario">
         <MappingFragment StoreEntitySet="Usuario">
           <ScalarProperty Name="id" ColumnName="id" />
           <ScalarProperty Name="idEmpleado" ColumnName="idEmpleado" />
@@ -59,7 +59,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Venta">
-      <EntityTypeMapping TypeName="MielvaModel.Venta">
+      <EntityTypeMapping TypeName="LabMielvaModel.Venta">
         <MappingFragment StoreEntitySet="Venta">
           <ScalarProperty Name="id" ColumnName="id" />
           <ScalarProperty Name="idUsuario" ColumnName="idUsuario" />
@@ -73,7 +73,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="VentaDetalle">
-      <EntityTypeMapping TypeName="MielvaModel.VentaDetalle">
+      <EntityTypeMapping TypeName="LabMielvaModel.VentaDetalle">
         <MappingFragment StoreEntitySet="VentaDetalle">
           <ScalarProperty Name="id" ColumnName="id" />
           <ScalarProperty Name="idVenta" ColumnName="idVenta" />
@@ -87,9 +87,9 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <FunctionImportMapping FunctionImportName="paClienteListar" FunctionName="MielvaModel.Store.paClienteListar">
+    <FunctionImportMapping FunctionImportName="paClienteListar" FunctionName="LabMielvaModel.Store.paClienteListar">
       <ResultMapping>
-        <ComplexTypeMapping TypeName="MielvaModel.paClienteListar_Result">
+        <ComplexTypeMapping TypeName="LabMielvaModel.paClienteListar_Result">
           <ScalarProperty Name="id" ColumnName="id" />
           <ScalarProperty Name="nit" ColumnName="nit" />
           <ScalarProperty Name="razonSocial" ColumnName="razonSocial" />
@@ -99,9 +99,9 @@
         </ComplexTypeMapping>
       </ResultMapping>
     </FunctionImportMapping>
-    <FunctionImportMapping FunctionImportName="paEmpleadoListar" FunctionName="MielvaModel.Store.paEmpleadoListar">
+    <FunctionImportMapping FunctionImportName="paEmpleadoListar" FunctionName="LabMielvaModel.Store.paEmpleadoListar">
       <ResultMapping>
-        <ComplexTypeMapping TypeName="MielvaModel.paEmpleadoListar_Result">
+        <ComplexTypeMapping TypeName="LabMielvaModel.paEmpleadoListar_Result">
           <ScalarProperty Name="usuario" ColumnName="usuario" />
           <ScalarProperty Name="id" ColumnName="id" />
           <ScalarProperty Name="cedulaIdentidad" ColumnName="cedulaIdentidad" />
@@ -117,9 +117,9 @@
         </ComplexTypeMapping>
       </ResultMapping>
     </FunctionImportMapping>
-    <FunctionImportMapping FunctionImportName="paProductoListar" FunctionName="MielvaModel.Store.paProductoListar">
+    <FunctionImportMapping FunctionImportName="paProductoListar" FunctionName="LabMielvaModel.Store.paProductoListar">
       <ResultMapping>
-        <ComplexTypeMapping TypeName="MielvaModel.paProductoListar_Result">
+        <ComplexTypeMapping TypeName="LabMielvaModel.paProductoListar_Result">
           <ScalarProperty Name="id" ColumnName="id" />
           <ScalarProperty Name="codigo" ColumnName="codigo" />
           <ScalarProperty Name="descripcion" ColumnName="descripcion" />
@@ -132,9 +132,9 @@
         </ComplexTypeMapping>
       </ResultMapping>
     </FunctionImportMapping>
-    <FunctionImportMapping FunctionImportName="paVentaDetalleListar" FunctionName="MielvaModel.Store.paVentaDetalleListar">
+    <FunctionImportMapping FunctionImportName="paVentaDetalleListar" FunctionName="LabMielvaModel.Store.paVentaDetalleListar">
       <ResultMapping>
-        <ComplexTypeMapping TypeName="MielvaModel.paVentaDetalleListar_Result">
+        <ComplexTypeMapping TypeName="LabMielvaModel.paVentaDetalleListar_Result">
           <ScalarProperty Name="id" ColumnName="id" />
           <ScalarProperty Name="idVenta" ColumnName="idVenta" />
           <ScalarProperty Name="idProducto" ColumnName="idProducto" />
@@ -150,9 +150,9 @@
         </ComplexTypeMapping>
       </ResultMapping>
     </FunctionImportMapping>
-    <FunctionImportMapping FunctionImportName="paVentaListar" FunctionName="MielvaModel.Store.paVentaListar">
+    <FunctionImportMapping FunctionImportName="paVentaListar" FunctionName="LabMielvaModel.Store.paVentaListar">
       <ResultMapping>
-        <ComplexTypeMapping TypeName="MielvaModel.paVentaListar_Result">
+        <ComplexTypeMapping TypeName="LabMielvaModel.paVentaListar_Result">
           <ScalarProperty Name="id" ColumnName="id" />
           <ScalarProperty Name="idUsuario" ColumnName="idUsuario" />
           <ScalarProperty Name="idCliente" ColumnName="idCliente" />

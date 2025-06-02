@@ -1,6 +1,5 @@
 ﻿using CadMielva;
 using ClnMielva;
-using ClnMinerva;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -213,6 +212,11 @@ namespace CpMielva
         private void txtParametro_KeyPress_1(object sender, KeyPressEventArgs e)
         {
             if (e.KeyChar == (char)Keys.Enter) listar();
+        }
+
+        private void dgvLista_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

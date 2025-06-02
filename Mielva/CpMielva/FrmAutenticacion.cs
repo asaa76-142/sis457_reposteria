@@ -9,7 +9,6 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using CadMielva;
 using ClnMielva;
-using ClnMinerva;
 
 namespace CpMielva
 {

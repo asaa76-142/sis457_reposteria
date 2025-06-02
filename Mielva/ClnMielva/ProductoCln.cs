@@ -11,7 +11,7 @@ namespace ClnMielva
     {
         public static int insertar(Producto producto)
         {
-            using (var context = new MielvaEntities())
+            using (var context = new LabMielvaEntities())
             {
                 context.Producto.Add(producto);
                 context.SaveChanges();
@@ -20,7 +20,7 @@ namespace ClnMielva
         }
         public static int actualizar(Producto producto)
         {
-            using (var context = new MielvaEntities())
+            using (var context = new LabMielvaEntities())
             {
                 var existente = context.Producto.Find(producto.id);
                 existente.codigo = producto.codigo;
@@ -35,7 +35,7 @@ namespace ClnMielva
 
         public static int eliminar(int id, string usuario)
         {
-            using (var context = new MielvaEntities())
+            using (var context = new LabMielvaEntities())
             {
                 var producto = context.Producto.Find(id);
                 producto.estado = -1;
@@ -46,7 +46,7 @@ namespace ClnMielva
 
         public static Producto obtenerUno(int id)
         {
-            using (var context = new MielvaEntities())
+            using (var context = new LabMielvaEntities())
             {
                 return context.Producto.Find(id);
             }
@@ -54,14 +54,14 @@ namespace ClnMielva
 
         public static List<Producto> listar()
         {
-            using (var context = new MielvaEntities())
+            using (var context = new LabMielvaEntities())
             {
                 return context.Producto.Where(x => x.estado != -1).ToList();
             }
         }
         public static List<paProductoListar_Result> listarPa(string parametro)
         {
-            using (var context = new MielvaEntities())
+            using (var context = new LabMielvaEntities())
             {
                 return context.paProductoListar(parametro).ToList();
             }

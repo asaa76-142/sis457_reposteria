@@ -15,10 +15,10 @@ namespace CadMielva
     using System.Data.Entity.Core.Objects;
     using System.Linq;
     
-    public partial class MielvaEntities : DbContext
+    public partial class LabMielvaEntities : DbContext
     {
-        public MielvaEntities()
-            : base("name=MielvaEntities")
+        public LabMielvaEntities()
+            : base("name=LabMielvaEntities")
         {
         }
     

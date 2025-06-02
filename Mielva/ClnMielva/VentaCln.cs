@@ -1,5 +1,5 @@
 ﻿using CadMielva;
-using ClnMinerva;
+using ClnMielva;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,7 +12,7 @@ namespace ClnMielva
     {
         public static int insertar(Venta venta)
         {
-            using (var context = new MielvaEntities())
+            using (var context = new LabMielvaEntities())
             {
                 context.Venta.Add(venta);
                 context.SaveChanges();
@@ -21,7 +21,7 @@ namespace ClnMielva
         }
         public static int actualizar(Venta venta)
         {
-            using (var context = new MielvaEntities())
+            using (var context = new LabMielvaEntities())
             {
                 var existente = context.Venta.Find(venta.id);
                 existente.fecha = venta.fecha;
@@ -32,7 +32,7 @@ namespace ClnMielva
         }
         public static int eliminar(int id, string usuario)
         {
-            using (var context = new MielvaEntities())
+            using (var context = new LabMielvaEntities())
             {
                 var venta = context.Venta.Find(id);
                 venta.estado = -1;
@@ -42,21 +42,21 @@ namespace ClnMielva
         }
         public static Venta obtenerUno(int id)
         {
-            using (var context = new MielvaEntities())
+            using (var context = new LabMielvaEntities())
             {
                 return context.Venta.Find(id);
             }
         }
         public static List<Venta> listar()
         {
-            using (var context = new MielvaEntities())
+            using (var context = new LabMielvaEntities())
             {
                 return context.Venta.Where(x => x.estado != -1).ToList();
             }
         }
         public static List<paVentaListar_Result> listar(string parametro)
         {
-            using (var context = new MielvaEntities())
+            using (var context = new LabMielvaEntities())
             {
                 return context.paVentaListar(parametro).ToList();
             }

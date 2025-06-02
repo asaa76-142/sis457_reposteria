@@ -1,15 +1,23 @@
-﻿CREATE DATABASE Mielva;
+﻿CREATE DATABASE LabMielva;
 
 GO
 USE [master];
 GO
 CREATE LOGIN  [usrmielva] WITH PASSWORD = N'123456',
-	DEFAULT_DATABASE = [Mielva],
+	DEFAULT_DATABASE = [LabMielva],
 	CHECK_EXPIRATION = OFF,
 	CHECK_POLICY = ON
 
+USE LabMielva
 GO
-USE [Mielva]
+DROP USER [usrmielva]
+GO
+
+DROP LOGIN [usrmielva]
+
+
+GO
+USE [LabMielva]
 GO
 CREATE USER usrmielva FOR LOGIN usrmielva
 GO
@@ -196,7 +204,7 @@ UPDATE Usuario SET clave='i0hcoO/nssY6WOs9pOp5Xw==' WHERE id=1;
 
 
 INSERT INTO Cliente(nit, razonSocial)
-VALUES (123456789, 'Mielva CDR');
+VALUES (123456789, 'LabMielva CDR');
 
 INSERT INTO Cliente(nit, razonSocial)
 VALUES (987654321, 'Mauricio Mendieta');

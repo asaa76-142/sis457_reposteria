@@ -6,13 +6,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ClnMinerva
+namespace ClnMielva
 {
     public class EmpleadoCln
     {
         public static int insertar(Empleado empleado, Usuario usuario)
         {
-            using (var context = new MielvaEntities())
+            using (var context = new LabMielvaEntities())
             {
                 context.Empleado.Add(empleado);
                 context.SaveChanges();
@@ -32,7 +32,7 @@ namespace ClnMinerva
 
         public static int actualizar(Empleado empleado, string nombreUsuario, string clave)
         {
-            using (var context = new MielvaEntities())
+            using (var context = new LabMielvaEntities())
             {
                 var existente = context.Empleado.Find(empleado.id);
                 existente.cedulaIdentidad = empleado.cedulaIdentidad;
@@ -74,7 +74,7 @@ namespace ClnMinerva
 
         public static int eliminar(int id, string usuario)
         {
-            using (var context = new MielvaEntities())
+            using (var context = new LabMielvaEntities())
             {
                 var empleado = context.Empleado.Find(id);
                 empleado.estado = -1;
@@ -92,7 +92,7 @@ namespace ClnMinerva
 
         public static Empleado obtenerUno(int id)
         {
-            using (var context = new MielvaEntities())
+            using (var context = new LabMielvaEntities())
             {
                 return context.Empleado.Include(x => x.Usuario).Where(x => x.id == id).FirstOrDefault();
             }
@@ -100,7 +100,7 @@ namespace ClnMinerva
 
         public static List<paEmpleadoListar_Result> listarPa(string parametro)
         {
-            using (var context = new MielvaEntities())
+            using (var context = new LabMielvaEntities())
             {
                 return context.paEmpleadoListar(parametro).ToList();
             }

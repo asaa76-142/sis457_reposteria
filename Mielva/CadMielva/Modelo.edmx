@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="MielvaModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+      <Schema Namespace="LabMielvaModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Cliente">
           <Key>
             <PropertyRef Name="id" />
@@ -160,7 +160,7 @@
         <Function Name="paVentaListar" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="parametro" Type="varchar" Mode="In" />
         </Function>
-        <EntityContainer Name="MielvaModelStoreContainer">
+        <EntityContainer Name="LabMielvaModelStoreContainer">
           <EntitySet Name="Cliente" EntityType="Self.Cliente" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Empleado" EntityType="Self.Empleado" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Producto" EntityType="Self.Producto" Schema="dbo" store:Type="Tables" />
@@ -192,7 +192,7 @@
     </edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
-      <Schema Namespace="MielvaModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+      <Schema Namespace="LabMielvaModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
         <EntityType Name="Cliente">
           <Key>
             <PropertyRef Name="id" />
@@ -343,7 +343,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="MielvaEntities" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="LabMielvaEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Cliente" EntityType="Self.Cliente" />
           <EntitySet Name="Empleado" EntityType="Self.Empleado" />
           <EntitySet Name="Producto" EntityType="Self.Producto" />
@@ -370,19 +370,19 @@
             <End Role="Venta" EntitySet="Venta" />
             <End Role="VentaDetalle" EntitySet="VentaDetalle" />
           </AssociationSet>
-          <FunctionImport Name="paClienteListar" ReturnType="Collection(MielvaModel.paClienteListar_Result)">
+          <FunctionImport Name="paClienteListar" ReturnType="Collection(LabMielvaModel.paClienteListar_Result)">
             <Parameter Name="parametro" Mode="In" Type="String" />
           </FunctionImport>
-          <FunctionImport Name="paEmpleadoListar" ReturnType="Collection(MielvaModel.paEmpleadoListar_Result)">
+          <FunctionImport Name="paEmpleadoListar" ReturnType="Collection(LabMielvaModel.paEmpleadoListar_Result)">
             <Parameter Name="parametro" Mode="In" Type="String" />
           </FunctionImport>
-          <FunctionImport Name="paProductoListar" ReturnType="Collection(MielvaModel.paProductoListar_Result)">
+          <FunctionImport Name="paProductoListar" ReturnType="Collection(LabMielvaModel.paProductoListar_Result)">
             <Parameter Name="parametro" Mode="In" Type="String" />
           </FunctionImport>
-          <FunctionImport Name="paVentaDetalleListar" ReturnType="Collection(MielvaModel.paVentaDetalleListar_Result)">
+          <FunctionImport Name="paVentaDetalleListar" ReturnType="Collection(LabMielvaModel.paVentaDetalleListar_Result)">
             <Parameter Name="parametro" Mode="In" Type="String" />
           </FunctionImport>
-          <FunctionImport Name="paVentaListar" ReturnType="Collection(MielvaModel.paVentaListar_Result)">
+          <FunctionImport Name="paVentaListar" ReturnType="Collection(LabMielvaModel.paVentaListar_Result)">
             <Parameter Name="parametro" Mode="In" Type="String" />
           </FunctionImport>
         </EntityContainer>
@@ -450,9 +450,9 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="MielvaModelStoreContainer" CdmEntityContainer="MielvaEntities">
+        <EntityContainerMapping StorageEntityContainer="LabMielvaModelStoreContainer" CdmEntityContainer="LabMielvaEntities">
           <EntitySetMapping Name="Cliente">
-            <EntityTypeMapping TypeName="MielvaModel.Cliente">
+            <EntityTypeMapping TypeName="LabMielvaModel.Cliente">
               <MappingFragment StoreEntitySet="Cliente">
                 <ScalarProperty Name="id" ColumnName="id" />
                 <ScalarProperty Name="nit" ColumnName="nit" />
@@ -464,7 +464,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Empleado">
-            <EntityTypeMapping TypeName="MielvaModel.Empleado">
+            <EntityTypeMapping TypeName="LabMielvaModel.Empleado">
               <MappingFragment StoreEntitySet="Empleado">
                 <ScalarProperty Name="id" ColumnName="id" />
                 <ScalarProperty Name="cedulaIdentidad" ColumnName="cedulaIdentidad" />
@@ -481,7 +481,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Producto">
-            <EntityTypeMapping TypeName="MielvaModel.Producto">
+            <EntityTypeMapping TypeName="LabMielvaModel.Producto">
               <MappingFragment StoreEntitySet="Producto">
                 <ScalarProperty Name="id" ColumnName="id" />
                 <ScalarProperty Name="codigo" ColumnName="codigo" />
@@ -496,7 +496,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Usuario">
-            <EntityTypeMapping TypeName="MielvaModel.Usuario">
+            <EntityTypeMapping TypeName="LabMielvaModel.Usuario">
               <MappingFragment StoreEntitySet="Usuario">
                 <ScalarProperty Name="id" ColumnName="id" />
                 <ScalarProperty Name="idEmpleado" ColumnName="idEmpleado" />
@@ -509,7 +509,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Venta">
-            <EntityTypeMapping TypeName="MielvaModel.Venta">
+            <EntityTypeMapping TypeName="LabMielvaModel.Venta">
               <MappingFragment StoreEntitySet="Venta">
                 <ScalarProperty Name="id" ColumnName="id" />
                 <ScalarProperty Name="idUsuario" ColumnName="idUsuario" />
@@ -523,7 +523,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="VentaDetalle">
-            <EntityTypeMapping TypeName="MielvaModel.VentaDetalle">
+            <EntityTypeMapping TypeName="LabMielvaModel.VentaDetalle">
               <MappingFragment StoreEntitySet="VentaDetalle">
                 <ScalarProperty Name="id" ColumnName="id" />
                 <ScalarProperty Name="idVenta" ColumnName="idVenta" />
@@ -537,9 +537,9 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <FunctionImportMapping FunctionImportName="paClienteListar" FunctionName="MielvaModel.Store.paClienteListar">
+          <FunctionImportMapping FunctionImportName="paClienteListar" FunctionName="LabMielvaModel.Store.paClienteListar">
             <ResultMapping>
-              <ComplexTypeMapping TypeName="MielvaModel.paClienteListar_Result">
+              <ComplexTypeMapping TypeName="LabMielvaModel.paClienteListar_Result">
                 <ScalarProperty Name="id" ColumnName="id" />
                 <ScalarProperty Name="nit" ColumnName="nit" />
                 <ScalarProperty Name="razonSocial" ColumnName="razonSocial" />
@@ -549,9 +549,9 @@
               </ComplexTypeMapping>
             </ResultMapping>
           </FunctionImportMapping>
-          <FunctionImportMapping FunctionImportName="paEmpleadoListar" FunctionName="MielvaModel.Store.paEmpleadoListar">
+          <FunctionImportMapping FunctionImportName="paEmpleadoListar" FunctionName="LabMielvaModel.Store.paEmpleadoListar">
             <ResultMapping>
-              <ComplexTypeMapping TypeName="MielvaModel.paEmpleadoListar_Result">
+              <ComplexTypeMapping TypeName="LabMielvaModel.paEmpleadoListar_Result">
                 <ScalarProperty Name="usuario" ColumnName="usuario" />
                 <ScalarProperty Name="id" ColumnName="id" />
                 <ScalarProperty Name="cedulaIdentidad" ColumnName="cedulaIdentidad" />
@@ -567,9 +567,9 @@
               </ComplexTypeMapping>
             </ResultMapping>
           </FunctionImportMapping>
-          <FunctionImportMapping FunctionImportName="paProductoListar" FunctionName="MielvaModel.Store.paProductoListar">
+          <FunctionImportMapping FunctionImportName="paProductoListar" FunctionName="LabMielvaModel.Store.paProductoListar">
             <ResultMapping>
-              <ComplexTypeMapping TypeName="MielvaModel.paProductoListar_Result">
+              <ComplexTypeMapping TypeName="LabMielvaModel.paProductoListar_Result">
                 <ScalarProperty Name="id" ColumnName="id" />
                 <ScalarProperty Name="codigo" ColumnName="codigo" />
                 <ScalarProperty Name="descripcion" ColumnName="descripcion" />
@@ -582,9 +582,9 @@
               </ComplexTypeMapping>
             </ResultMapping>
           </FunctionImportMapping>
-          <FunctionImportMapping FunctionImportName="paVentaDetalleListar" FunctionName="MielvaModel.Store.paVentaDetalleListar">
+          <FunctionImportMapping FunctionImportName="paVentaDetalleListar" FunctionName="LabMielvaModel.Store.paVentaDetalleListar">
             <ResultMapping>
-              <ComplexTypeMapping TypeName="MielvaModel.paVentaDetalleListar_Result">
+              <ComplexTypeMapping TypeName="LabMielvaModel.paVentaDetalleListar_Result">
                 <ScalarProperty Name="id" ColumnName="id" />
                 <ScalarProperty Name="idVenta" ColumnName="idVenta" />
                 <ScalarProperty Name="idProducto" ColumnName="idProducto" />
@@ -600,9 +600,9 @@
               </ComplexTypeMapping>
             </ResultMapping>
           </FunctionImportMapping>
-          <FunctionImportMapping FunctionImportName="paVentaListar" FunctionName="MielvaModel.Store.paVentaListar">
+          <FunctionImportMapping FunctionImportName="paVentaListar" FunctionName="LabMielvaModel.Store.paVentaListar">
             <ResultMapping>
-              <ComplexTypeMapping TypeName="MielvaModel.paVentaListar_Result">
+              <ComplexTypeMapping TypeName="LabMielvaModel.paVentaListar_Result">
                 <ScalarProperty Name="id" ColumnName="id" />
                 <ScalarProperty Name="idUsuario" ColumnName="idUsuario" />
                 <ScalarProperty Name="idCliente" ColumnName="idCliente" />

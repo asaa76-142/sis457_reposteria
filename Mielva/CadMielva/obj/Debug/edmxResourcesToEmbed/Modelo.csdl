@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Schema Namespace="MielvaModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+<Schema Namespace="LabMielvaModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
   <EntityType Name="Cliente">
     <Key>
       <PropertyRef Name="id" />
@@ -150,7 +150,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <EntityContainer Name="MielvaEntities" annotation:LazyLoadingEnabled="true">
+  <EntityContainer Name="LabMielvaEntities" annotation:LazyLoadingEnabled="true">
     <EntitySet Name="Cliente" EntityType="Self.Cliente" />
     <EntitySet Name="Empleado" EntityType="Self.Empleado" />
     <EntitySet Name="Producto" EntityType="Self.Producto" />
@@ -177,19 +177,19 @@
       <End Role="Venta" EntitySet="Venta" />
       <End Role="VentaDetalle" EntitySet="VentaDetalle" />
     </AssociationSet>
-    <FunctionImport Name="paClienteListar" ReturnType="Collection(MielvaModel.paClienteListar_Result)">
+    <FunctionImport Name="paClienteListar" ReturnType="Collection(LabMielvaModel.paClienteListar_Result)">
       <Parameter Name="parametro" Mode="In" Type="String" />
     </FunctionImport>
-    <FunctionImport Name="paEmpleadoListar" ReturnType="Collection(MielvaModel.paEmpleadoListar_Result)">
+    <FunctionImport Name="paEmpleadoListar" ReturnType="Collection(LabMielvaModel.paEmpleadoListar_Result)">
       <Parameter Name="parametro" Mode="In" Type="String" />
     </FunctionImport>
-    <FunctionImport Name="paProductoListar" ReturnType="Collection(MielvaModel.paProductoListar_Result)">
+    <FunctionImport Name="paProductoListar" ReturnType="Collection(LabMielvaModel.paProductoListar_Result)">
       <Parameter Name="parametro" Mode="In" Type="String" />
     </FunctionImport>
-    <FunctionImport Name="paVentaDetalleListar" ReturnType="Collection(MielvaModel.paVentaDetalleListar_Result)">
+    <FunctionImport Name="paVentaDetalleListar" ReturnType="Collection(LabMielvaModel.paVentaDetalleListar_Result)">
       <Parameter Name="parametro" Mode="In" Type="String" />
     </FunctionImport>
-    <FunctionImport Name="paVentaListar" ReturnType="Collection(MielvaModel.paVentaListar_Result)">
+    <FunctionImport Name="paVentaListar" ReturnType="Collection(LabMielvaModel.paVentaListar_Result)">
       <Parameter Name="parametro" Mode="In" Type="String" />
     </FunctionImport>
   </EntityContainer>

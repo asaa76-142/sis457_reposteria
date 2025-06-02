@@ -11,7 +11,7 @@ namespace ClnMielva
     {
         public static int insertar(Cliente cliente)
         {
-            using (var context = new MielvaEntities())
+            using (var context = new LabMielvaEntities())
             {
                 context.Cliente.Add(cliente);
                 context.SaveChanges();
@@ -20,7 +20,7 @@ namespace ClnMielva
         }
         public static int actualizar(Cliente cliente)
         {
-            using (var context = new MielvaEntities())
+            using (var context = new LabMielvaEntities())
             {
                 var existente = context.Cliente.Find(cliente.id);
                 existente.nit = cliente.nit;
@@ -31,7 +31,7 @@ namespace ClnMielva
 
         public static int eliminar(int id, string usuario)
         {
-            using (var context = new MielvaEntities())
+            using (var context = new LabMielvaEntities())
             {
                 var cliente = context.Cliente.Find(id);
                 cliente.estado = -1;
@@ -42,7 +42,7 @@ namespace ClnMielva
 
         public static Cliente obtenerUno(int id)
         {
-            using (var context = new MielvaEntities())
+            using (var context = new LabMielvaEntities())
             {
                 return context.Cliente.Find(id);
             }
@@ -50,14 +50,14 @@ namespace ClnMielva
 
         public static List<Cliente> listar()
         {
-            using (var context = new MielvaEntities())
+            using (var context = new LabMielvaEntities())
             {
                 return context.Cliente.Where(x => x.estado != -1).ToList();
             }
         }
         public static List<paClienteListar_Result> listarPa(string parametro)
         {
-            using (var context = new MielvaEntities())
+            using (var context = new LabMielvaEntities())
             {
                 return context.paClienteListar(parametro).ToList();
             }
