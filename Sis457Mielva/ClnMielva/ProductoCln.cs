@@ -25,7 +25,7 @@ namespace ClnMielva
                 var existente = context.Producto.Find(producto.id);
                 existente.codigo = producto.codigo;
                 existente.descripcion = producto.descripcion;
-                existente.unidadMedida = producto.unidadMedida;
+                existente.idUnidadMedida = producto.idUnidadMedida;
                 existente.saldo = producto.saldo;
                 existente.precioVenta = producto.precioVenta;
                 existente.usuarioRegistro = producto.usuarioRegistro;

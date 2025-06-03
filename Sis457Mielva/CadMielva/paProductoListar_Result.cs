@@ -22,5 +22,6 @@ namespace CadMielva
         public string usuarioRegistro { get; set; }
         public System.DateTime fechaRegistro { get; set; }
         public short estado { get; set; }
+        public int idUnidadMedida { get; set; }
     }
 }

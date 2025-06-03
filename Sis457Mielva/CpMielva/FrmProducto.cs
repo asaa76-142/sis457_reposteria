@@ -39,10 +39,20 @@ namespace CpMielva
             btnEliminar.Enabled = lista.Count > 0;
         }
 
+        private void cargarUnidadesMedida()
+        {
+            var unidadesMedida = UnidadMedidaCln.listar();
+            cbxUnidadMedida.DataSource = unidadesMedida;
+            cbxUnidadMedida.DisplayMember = "descripcion";
+            cbxUnidadMedida.ValueMember = "id";
+        }
+
+
         private void FrmProducto_Load(object sender, EventArgs e)
         {
             Size = new Size(1124, 431);
             listar();
+            cargarUnidadesMedida();
         }
 
         private void limpiar()
@@ -77,7 +87,7 @@ namespace CpMielva
             var producto = ProductoCln.obtenerUno(id);
             txtCodigo.Text = producto.codigo;
             txtDescripcion.Text = producto.descripcion;
-            cbxUnidadMedida.Text = producto.unidadMedida;
+            cbxUnidadMedida.SelectedValue = producto.idUnidadMedida;
             nudPrecioVenta.Value = producto.precioVenta;
             nudSaldo.Value = producto.saldo;
             txtCodigo.Focus();
@@ -143,7 +153,7 @@ namespace CpMielva
                 var producto = new Producto();
                 producto.codigo = txtCodigo.Text.Trim();
                 producto.descripcion = txtDescripcion.Text.Trim();
-                producto.unidadMedida = cbxUnidadMedida.Text;
+                producto.idUnidadMedida = Convert.ToInt32(cbxUnidadMedida.SelectedValue);
                 producto.precioVenta = nudPrecioVenta.Value;
                 producto.saldo = nudSaldo.Value;
                 //producto.usuarioRegistro = "admin";

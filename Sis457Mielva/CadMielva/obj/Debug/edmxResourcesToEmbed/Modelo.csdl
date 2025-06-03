@@ -34,15 +34,27 @@
       <PropertyRef Name="id" />
     </Key>
     <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="idUnidadMedida" Type="Int32" Nullable="false" />
     <Property Name="codigo" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="descripcion" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="unidadMedida" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="saldo" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
     <Property Name="precioVenta" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
     <Property Name="usuarioRegistro" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="fechaRegistro" Type="DateTime" Nullable="false" Precision="3" />
     <Property Name="estado" Type="Int16" Nullable="false" />
+    <NavigationProperty Name="UnidadMedida" Relationship="Self.fk_Producto_UnidadMedida" FromRole="Producto" ToRole="UnidadMedida" />
     <NavigationProperty Name="VentaDetalle" Relationship="Self.fk_VentaDetalle_Producto" FromRole="Producto" ToRole="VentaDetalle" />
+  </EntityType>
+  <EntityType Name="UnidadMedida">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="descripcion" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="usuarioRegistro" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="fechaRegistro" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="estado" Type="Int16" Nullable="false" />
+    <NavigationProperty Name="Producto" Relationship="Self.fk_Producto_UnidadMedida" FromRole="UnidadMedida" ToRole="Producto" />
   </EntityType>
   <EntityType Name="Usuario">
     <Key>
@@ -114,6 +126,18 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <Association Name="fk_Producto_UnidadMedida">
+    <End Role="UnidadMedida" Type="Self.UnidadMedida" Multiplicity="1" />
+    <End Role="Producto" Type="Self.Producto" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="UnidadMedida">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Producto">
+        <PropertyRef Name="idUnidadMedida" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
   <Association Name="fk_VentaDetalle_Producto">
     <End Role="Producto" Type="Self.Producto" Multiplicity="1" />
     <End Role="VentaDetalle" Type="Self.VentaDetalle" Multiplicity="*" />
@@ -154,6 +178,7 @@
     <EntitySet Name="Cliente" EntityType="Self.Cliente" />
     <EntitySet Name="Empleado" EntityType="Self.Empleado" />
     <EntitySet Name="Producto" EntityType="Self.Producto" />
+    <EntitySet Name="UnidadMedida" EntityType="Self.UnidadMedida" />
     <EntitySet Name="Usuario" EntityType="Self.Usuario" />
     <EntitySet Name="Venta" EntityType="Self.Venta" />
     <EntitySet Name="VentaDetalle" EntityType="Self.VentaDetalle" />
@@ -164,6 +189,10 @@
     <AssociationSet Name="FK_Usuario_Empleado" Association="Self.FK_Usuario_Empleado">
       <End Role="Empleado" EntitySet="Empleado" />
       <End Role="Usuario" EntitySet="Usuario" />
+    </AssociationSet>
+    <AssociationSet Name="fk_Producto_UnidadMedida" Association="Self.fk_Producto_UnidadMedida">
+      <End Role="UnidadMedida" EntitySet="UnidadMedida" />
+      <End Role="Producto" EntitySet="Producto" />
     </AssociationSet>
     <AssociationSet Name="fk_VentaDetalle_Producto" Association="Self.fk_VentaDetalle_Producto">
       <End Role="Producto" EntitySet="Producto" />
@@ -225,6 +254,7 @@
     <Property Type="String" Name="usuarioRegistro" Nullable="false" MaxLength="50" />
     <Property Type="DateTime" Name="fechaRegistro" Nullable="false" Precision="23" />
     <Property Type="Int16" Name="estado" Nullable="false" />
+    <Property Type="Int32" Name="idUnidadMedida" Nullable="false" />
   </ComplexType>
   <ComplexType Name="paVentaDetalleListar_Result">
     <Property Type="Int32" Name="id" Nullable="false" />

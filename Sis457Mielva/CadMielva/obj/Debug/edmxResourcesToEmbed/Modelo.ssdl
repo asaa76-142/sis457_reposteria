@@ -32,11 +32,21 @@
       <PropertyRef Name="id" />
     </Key>
     <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="idUnidadMedida" Type="int" Nullable="false" />
     <Property Name="codigo" Type="varchar" MaxLength="20" Nullable="false" />
     <Property Name="descripcion" Type="varchar" MaxLength="250" Nullable="false" />
-    <Property Name="unidadMedida" Type="varchar" MaxLength="20" Nullable="false" />
     <Property Name="saldo" Type="decimal" Precision="18" Scale="0" Nullable="false" />
     <Property Name="precioVenta" Type="decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="usuarioRegistro" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="fechaRegistro" Type="datetime" Nullable="false" />
+    <Property Name="estado" Type="smallint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="UnidadMedida">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="descripcion" Type="varchar" MaxLength="20" Nullable="false" />
     <Property Name="usuarioRegistro" Type="varchar" MaxLength="50" Nullable="false" />
     <Property Name="fechaRegistro" Type="datetime" Nullable="false" />
     <Property Name="estado" Type="smallint" Nullable="false" />
@@ -80,6 +90,18 @@
     <Property Name="fechaRegistro" Type="datetime" Nullable="false" />
     <Property Name="estado" Type="smallint" Nullable="false" />
   </EntityType>
+  <Association Name="fk_Producto_UnidadMedida">
+    <End Role="UnidadMedida" Type="Self.UnidadMedida" Multiplicity="1" />
+    <End Role="Producto" Type="Self.Producto" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="UnidadMedida">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Producto">
+        <PropertyRef Name="idUnidadMedida" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
   <Association Name="FK_Usuario_Empleado">
     <End Role="Empleado" Type="Self.Empleado" Multiplicity="1" />
     <End Role="Usuario" Type="Self.Usuario" Multiplicity="*" />
@@ -159,9 +181,14 @@
     <EntitySet Name="Cliente" EntityType="Self.Cliente" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Empleado" EntityType="Self.Empleado" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Producto" EntityType="Self.Producto" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="UnidadMedida" EntityType="Self.UnidadMedida" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Usuario" EntityType="Self.Usuario" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Venta" EntityType="Self.Venta" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="VentaDetalle" EntityType="Self.VentaDetalle" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="fk_Producto_UnidadMedida" Association="Self.fk_Producto_UnidadMedida">
+      <End Role="UnidadMedida" EntitySet="UnidadMedida" />
+      <End Role="Producto" EntitySet="Producto" />
+    </AssociationSet>
     <AssociationSet Name="FK_Usuario_Empleado" Association="Self.FK_Usuario_Empleado">
       <End Role="Empleado" EntitySet="Empleado" />
       <End Role="Usuario" EntitySet="Usuario" />
