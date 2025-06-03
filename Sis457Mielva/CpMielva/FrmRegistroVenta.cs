@@ -14,7 +14,7 @@ using System.Windows.Forms;
 
 namespace CpMielva
 {
-    public partial class FrmVenta : Form
+    public partial class FrmRegistroVenta : Form
     {
         private void CalcularCambio()
         {
@@ -35,9 +35,9 @@ namespace CpMielva
         private void nud_ValueChanged(object sender, EventArgs e)
         {
             ActualizarTotal();
-            CalcularCambio(); // Agregar esta línea para recalcular el cambio
+            CalcularCambio(); // Agregamos esta línea para recalcular el cambio
         }
-        public FrmVenta()
+        public FrmRegistroVenta()
         {
             InitializeComponent();
             nudPastelCumpleVaron.ValueChanged += nud_ValueChanged;
@@ -53,7 +53,7 @@ namespace CpMielva
 
         private void txtEfectivo_TextChanged(object sender, EventArgs e)
         {
-            CalcularCambio(); // Usar método separado para calcular cambio
+            CalcularCambio(); // Usamos método separado para calcular cambio
         }
 
         private void FrmVenta_Load(object sender, EventArgs e)
@@ -91,6 +91,7 @@ namespace CpMielva
                 btnBuscar_Click(sender, e);
             }
         }
+
         private decimal precioPastelCumpleVaron = 85m;
         private decimal precioPastelCumpleMujer = 85m;
         private decimal precioPastelCumpleVaron2 = 65m;
@@ -118,7 +119,7 @@ namespace CpMielva
         }
         private void txtTotal_TextChanged(object sender, EventArgs e)
         {
-            CalcularCambio(); // También recalcular cambio cuando cambie el total
+            CalcularCambio(); // También recalculamos cambio cuando cambie el total
         }
     }
 }

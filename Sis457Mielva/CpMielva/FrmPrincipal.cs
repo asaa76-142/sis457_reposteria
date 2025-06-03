@@ -36,7 +36,7 @@ namespace CpMielva
 
         private void ribbonButton4_Click(object sender, EventArgs e)
         {
-            new FrmVenta().ShowDialog();
+            new FrmRegistroVenta().ShowDialog();
         }
 
         private void ribbonButton2_Click(object sender, EventArgs e)

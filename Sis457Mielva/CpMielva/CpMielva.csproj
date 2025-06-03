@@ -90,11 +90,11 @@
     <Compile Include="FrmProducto.Designer.cs">
       <DependentUpon>FrmProducto.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmVenta.cs">
+    <Compile Include="FrmRegistroVenta.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmVenta.Designer.cs">
-      <DependentUpon>FrmVenta.cs</DependentUpon>
+    <Compile Include="FrmRegistroVenta.Designer.cs">
+      <DependentUpon>FrmRegistroVenta.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmVentaDetalle.cs">
       <SubType>Form</SubType>
@@ -120,8 +120,8 @@
     <EmbeddedResource Include="FrmProducto.resx">
       <DependentUpon>FrmProducto.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmVenta.resx">
-      <DependentUpon>FrmVenta.cs</DependentUpon>
+    <EmbeddedResource Include="FrmRegistroVenta.resx">
+      <DependentUpon>FrmRegistroVenta.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmVentaDetalle.resx">
       <DependentUpon>FrmVentaDetalle.cs</DependentUpon>

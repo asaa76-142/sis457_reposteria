@@ -167,7 +167,6 @@ B:\Materias usfx\1.- Informática\1 - 2025\sis457\sis457_reposteria\Sis457Mielva
 B:\Materias usfx\1.- Informática\1 - 2025\sis457\sis457_reposteria\Sis457Mielva\CpMielva\obj\Debug\CpMielva.FrmEmpleado.resources
 B:\Materias usfx\1.- Informática\1 - 2025\sis457\sis457_reposteria\Sis457Mielva\CpMielva\obj\Debug\CpMielva.FrmPrincipal.resources
 B:\Materias usfx\1.- Informática\1 - 2025\sis457\sis457_reposteria\Sis457Mielva\CpMielva\obj\Debug\CpMielva.FrmProducto.resources
-B:\Materias usfx\1.- Informática\1 - 2025\sis457\sis457_reposteria\Sis457Mielva\CpMielva\obj\Debug\CpMielva.FrmVenta.resources
 B:\Materias usfx\1.- Informática\1 - 2025\sis457\sis457_reposteria\Sis457Mielva\CpMielva\obj\Debug\CpMielva.FrmVentaDetalle.resources
 B:\Materias usfx\1.- Informática\1 - 2025\sis457\sis457_reposteria\Sis457Mielva\CpMielva\obj\Debug\CpMielva.Properties.Resources.resources
 B:\Materias usfx\1.- Informática\1 - 2025\sis457\sis457_reposteria\Sis457Mielva\CpMielva\obj\Debug\CpMielva.csproj.GenerateResource.cache
@@ -176,3 +175,4 @@ B:\Materias usfx\1.- Informática\1 - 2025\sis457\sis457_reposteria\Sis457Mielva
 B:\Materias usfx\1.- Informática\1 - 2025\sis457\sis457_reposteria\Sis457Mielva\CpMielva\obj\Debug\CpMielva.csproj.Up2Date
 B:\Materias usfx\1.- Informática\1 - 2025\sis457\sis457_reposteria\Sis457Mielva\CpMielva\obj\Debug\CpMielva.exe
 B:\Materias usfx\1.- Informática\1 - 2025\sis457\sis457_reposteria\Sis457Mielva\CpMielva\obj\Debug\CpMielva.pdb
+B:\Materias usfx\1.- Informática\1 - 2025\sis457\sis457_reposteria\Sis457Mielva\CpMielva\obj\Debug\CpMielva.FrmRegistroVenta.resources
