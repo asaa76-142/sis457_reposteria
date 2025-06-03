@@ -16,9 +16,26 @@ namespace CpMielva
 {
     public partial class FrmVenta : Form
     {
+        private void CalcularCambio()
+        {
+            if (!string.IsNullOrEmpty(txtTotal.Text) && !string.IsNullOrEmpty(txtEfectivo.Text))
+            {
+                decimal total, efectivo;
+                if (decimal.TryParse(txtTotal.Text, out total) && decimal.TryParse(txtEfectivo.Text, out efectivo))
+                {
+                    decimal cambio = efectivo - total;
+                    txtCambio.Text = cambio.ToString("0.00");
+                }
+            }
+            else
+            {
+                txtCambio.Text = "0.00";
+            }
+        }
         private void nud_ValueChanged(object sender, EventArgs e)
         {
             ActualizarTotal();
+            CalcularCambio(); // Agregar esta línea para recalcular el cambio
         }
         public FrmVenta()
         {
@@ -36,10 +53,7 @@ namespace CpMielva
 
         private void txtEfectivo_TextChanged(object sender, EventArgs e)
         {
-            if (!string.IsNullOrEmpty(txtTotal.Text) && !string.IsNullOrEmpty(txtEfectivo.Text))
-            {
-                txtCambio.Text = (Convert.ToDouble(txtEfectivo.Text) - Convert.ToDouble(txtTotal.Text)).ToString();
-            }
+            CalcularCambio(); // Usar método separado para calcular cambio
         }
 
         private void FrmVenta_Load(object sender, EventArgs e)
@@ -59,9 +73,8 @@ namespace CpMielva
             if (clientes.Count > 0)
             {
                 var cliente = clientes[0];
-                // Supón que tienes un txtRazonSocial para mostrar la razón social
                 txtNombre.Text = cliente.razonSocial;
-                // Puedes guardar el id del cliente para usarlo al guardar la venta
+                // guardar el id del cliente para usarlo al guardar la venta
                 // this.clienteId = cliente.id;
             }
             else
@@ -81,9 +94,9 @@ namespace CpMielva
         private decimal precioPastelCumpleVaron = 85m;
         private decimal precioPastelCumpleMujer = 85m;
         private decimal precioPastelCumpleVaron2 = 65m;
-        private decimal precioPastelCumpleMujero2 = 65m;
+        private decimal precioPastelCumpleMujer2 = 65m;
         private decimal precioPastelNormalVaron = 85m;
-        private decimal precioPastelNormalMujero = 85m;
+        private decimal precioPastelNormalMujer = 85m;
         private decimal precioEmpanada = 3.5m;
         private decimal precioGalletaNaranja = 0.5m;
         private decimal precioGalletaMaicena = 0.5m;
@@ -94,9 +107,9 @@ namespace CpMielva
             total += precioPastelCumpleVaron * nudPastelCumpleVaron.Value;
             total += precioPastelCumpleMujer * nudPastelCumpleMujer.Value;
             total += precioPastelCumpleVaron2 * nudPastelCumpleVaron2.Value;
-            total += precioPastelCumpleMujero2 * nudPastelCumpleMujer2.Value;
+            total += precioPastelCumpleMujer2 * nudPastelCumpleMujer2.Value;
             total += precioPastelNormalVaron * nudPastelNormalVaron.Value;
-            total += precioPastelNormalMujero * nudPastelNormalMujer.Value;
+            total += precioPastelNormalMujer * nudPastelNormalMujer.Value;
             total += precioEmpanada * nudEmpanada.Value;
             total += precioGalletaNaranja * nudGalletaNaranja.Value;
             total += precioGalletaMaicena * nudGalletaMaicena.Value;
@@ -105,7 +118,7 @@ namespace CpMielva
         }
         private void txtTotal_TextChanged(object sender, EventArgs e)
         {
-
+            CalcularCambio(); // También recalcular cambio cuando cambie el total
         }
     }
 }
