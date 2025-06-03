@@ -144,3 +144,35 @@ C:\Users\Kevin\Documents\sis457\sis457_reposteria\Sis457Mielva\CpMielva\obj\Debu
 C:\Users\Kevin\Documents\sis457\sis457_reposteria\Sis457Mielva\CpMielva\obj\Debug\CpMielva.csproj.Up2Date
 C:\Users\Kevin\Documents\sis457\sis457_reposteria\Sis457Mielva\CpMielva\obj\Debug\CpMielva.exe
 C:\Users\Kevin\Documents\sis457\sis457_reposteria\Sis457Mielva\CpMielva\obj\Debug\CpMielva.pdb
+B:\Materias usfx\1.- Informática\1 - 2025\sis457\sis457_reposteria\Sis457Mielva\CpMielva\bin\Debug\CpMielva.exe.config
+B:\Materias usfx\1.- Informática\1 - 2025\sis457\sis457_reposteria\Sis457Mielva\CpMielva\bin\Debug\CpMielva.exe
+B:\Materias usfx\1.- Informática\1 - 2025\sis457\sis457_reposteria\Sis457Mielva\CpMielva\bin\Debug\CpMielva.pdb
+B:\Materias usfx\1.- Informática\1 - 2025\sis457\sis457_reposteria\Sis457Mielva\CpMielva\bin\Debug\C1.Win.4.5.2.dll
+B:\Materias usfx\1.- Informática\1 - 2025\sis457\sis457_reposteria\Sis457Mielva\CpMielva\bin\Debug\C1.Win.Ribbon.4.5.2.dll
+B:\Materias usfx\1.- Informática\1 - 2025\sis457\sis457_reposteria\Sis457Mielva\CpMielva\bin\Debug\CadMielva.dll
+B:\Materias usfx\1.- Informática\1 - 2025\sis457\sis457_reposteria\Sis457Mielva\CpMielva\bin\Debug\ClnMielva.dll
+B:\Materias usfx\1.- Informática\1 - 2025\sis457\sis457_reposteria\Sis457Mielva\CpMielva\bin\Debug\EntityFramework.dll
+B:\Materias usfx\1.- Informática\1 - 2025\sis457\sis457_reposteria\Sis457Mielva\CpMielva\bin\Debug\EntityFramework.SqlServer.dll
+B:\Materias usfx\1.- Informática\1 - 2025\sis457\sis457_reposteria\Sis457Mielva\CpMielva\bin\Debug\CadMielva.pdb
+B:\Materias usfx\1.- Informática\1 - 2025\sis457\sis457_reposteria\Sis457Mielva\CpMielva\bin\Debug\CadMielva.dll.config
+B:\Materias usfx\1.- Informática\1 - 2025\sis457\sis457_reposteria\Sis457Mielva\CpMielva\bin\Debug\ClnMielva.pdb
+B:\Materias usfx\1.- Informática\1 - 2025\sis457\sis457_reposteria\Sis457Mielva\CpMielva\bin\Debug\ClnMielva.dll.config
+B:\Materias usfx\1.- Informática\1 - 2025\sis457\sis457_reposteria\Sis457Mielva\CpMielva\bin\Debug\C1.Win.4.5.2.xml
+B:\Materias usfx\1.- Informática\1 - 2025\sis457\sis457_reposteria\Sis457Mielva\CpMielva\bin\Debug\C1.Win.Ribbon.4.5.2.xml
+B:\Materias usfx\1.- Informática\1 - 2025\sis457\sis457_reposteria\Sis457Mielva\CpMielva\bin\Debug\EntityFramework.xml
+B:\Materias usfx\1.- Informática\1 - 2025\sis457\sis457_reposteria\Sis457Mielva\CpMielva\bin\Debug\EntityFramework.SqlServer.xml
+B:\Materias usfx\1.- Informática\1 - 2025\sis457\sis457_reposteria\Sis457Mielva\CpMielva\obj\Debug\CpMielva.csproj.AssemblyReference.cache
+B:\Materias usfx\1.- Informática\1 - 2025\sis457\sis457_reposteria\Sis457Mielva\CpMielva\obj\Debug\CpMielva.FrmAutenticacion.resources
+B:\Materias usfx\1.- Informática\1 - 2025\sis457\sis457_reposteria\Sis457Mielva\CpMielva\obj\Debug\CpMielva.FrmCliente.resources
+B:\Materias usfx\1.- Informática\1 - 2025\sis457\sis457_reposteria\Sis457Mielva\CpMielva\obj\Debug\CpMielva.FrmEmpleado.resources
+B:\Materias usfx\1.- Informática\1 - 2025\sis457\sis457_reposteria\Sis457Mielva\CpMielva\obj\Debug\CpMielva.FrmPrincipal.resources
+B:\Materias usfx\1.- Informática\1 - 2025\sis457\sis457_reposteria\Sis457Mielva\CpMielva\obj\Debug\CpMielva.FrmProducto.resources
+B:\Materias usfx\1.- Informática\1 - 2025\sis457\sis457_reposteria\Sis457Mielva\CpMielva\obj\Debug\CpMielva.FrmVenta.resources
+B:\Materias usfx\1.- Informática\1 - 2025\sis457\sis457_reposteria\Sis457Mielva\CpMielva\obj\Debug\CpMielva.FrmVentaDetalle.resources
+B:\Materias usfx\1.- Informática\1 - 2025\sis457\sis457_reposteria\Sis457Mielva\CpMielva\obj\Debug\CpMielva.Properties.Resources.resources
+B:\Materias usfx\1.- Informática\1 - 2025\sis457\sis457_reposteria\Sis457Mielva\CpMielva\obj\Debug\CpMielva.csproj.GenerateResource.cache
+B:\Materias usfx\1.- Informática\1 - 2025\sis457\sis457_reposteria\Sis457Mielva\CpMielva\obj\Debug\CpMielva.exe.licenses
+B:\Materias usfx\1.- Informática\1 - 2025\sis457\sis457_reposteria\Sis457Mielva\CpMielva\obj\Debug\CpMielva.csproj.CoreCompileInputs.cache
+B:\Materias usfx\1.- Informática\1 - 2025\sis457\sis457_reposteria\Sis457Mielva\CpMielva\obj\Debug\CpMielva.csproj.Up2Date
+B:\Materias usfx\1.- Informática\1 - 2025\sis457\sis457_reposteria\Sis457Mielva\CpMielva\obj\Debug\CpMielva.exe
+B:\Materias usfx\1.- Informática\1 - 2025\sis457\sis457_reposteria\Sis457Mielva\CpMielva\obj\Debug\CpMielva.pdb

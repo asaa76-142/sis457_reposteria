@@ -16,9 +16,22 @@ namespace CpMielva
 {
     public partial class FrmVenta : Form
     {
+        private void nud_ValueChanged(object sender, EventArgs e)
+        {
+            ActualizarTotal();
+        }
         public FrmVenta()
         {
             InitializeComponent();
+            nudPastelCumpleVaron.ValueChanged += nud_ValueChanged;
+            nudPastelCumpleMujer.ValueChanged += nud_ValueChanged;
+            nudPastelCumpleVaron2.ValueChanged += nud_ValueChanged;
+            nudPastelCumpleMujer2.ValueChanged += nud_ValueChanged;
+            nudPastelNormalVaron.ValueChanged += nud_ValueChanged;
+            nudPastelNormalMujer.ValueChanged += nud_ValueChanged;
+            nudEmpanada.ValueChanged += nud_ValueChanged;
+            nudGalletaNaranja.ValueChanged += nud_ValueChanged;
+            nudGalletaMaicena.ValueChanged += nud_ValueChanged;
         }
 
         private void txtEfectivo_TextChanged(object sender, EventArgs e)
@@ -40,15 +53,6 @@ namespace CpMielva
             Close();
         }
 
-        private void btnGuardar_Click(object sender, EventArgs e)
-        {
-        }
-
-        private void btnNuevo_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnBuscar_Click(object sender, EventArgs e)
         {
             var clientes = ClienteCln.listarPa2(txtNit.Text.Trim());
@@ -66,6 +70,42 @@ namespace CpMielva
                 txtNombre.Text = "";
                 // this.clienteId = 0;
             }
+        }
+        private void txtNit_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                btnBuscar_Click(sender, e);
+            }
+        }
+        private decimal precioPastelCumpleVaron = 85m;
+        private decimal precioPastelCumpleMujer = 85m;
+        private decimal precioPastelCumpleVaron2 = 65m;
+        private decimal precioPastelCumpleMujero2 = 65m;
+        private decimal precioPastelNormalVaron = 85m;
+        private decimal precioPastelNormalMujero = 85m;
+        private decimal precioEmpanada = 3.5m;
+        private decimal precioGalletaNaranja = 0.5m;
+        private decimal precioGalletaMaicena = 0.5m;
+
+        private void ActualizarTotal()
+        {
+            decimal total = 0;
+            total += precioPastelCumpleVaron * nudPastelCumpleVaron.Value;
+            total += precioPastelCumpleMujer * nudPastelCumpleMujer.Value;
+            total += precioPastelCumpleVaron2 * nudPastelCumpleVaron2.Value;
+            total += precioPastelCumpleMujero2 * nudPastelCumpleMujer2.Value;
+            total += precioPastelNormalVaron * nudPastelNormalVaron.Value;
+            total += precioPastelNormalMujero * nudPastelNormalMujer.Value;
+            total += precioEmpanada * nudEmpanada.Value;
+            total += precioGalletaNaranja * nudGalletaNaranja.Value;
+            total += precioGalletaMaicena * nudGalletaMaicena.Value;
+
+            txtTotal.Text = total.ToString("0.00");
+        }
+        private void txtTotal_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

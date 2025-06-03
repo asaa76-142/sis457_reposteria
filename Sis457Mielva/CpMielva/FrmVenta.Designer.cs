@@ -35,6 +35,7 @@
             this.lblNit = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.txtNombre = new System.Windows.Forms.TextBox();
+            this.btnBuscar = new System.Windows.Forms.Button();
             this.lblNombre = new System.Windows.Forms.Label();
             this.txtNit = new System.Windows.Forms.TextBox();
             this.lblTotal = new System.Windows.Forms.Label();
@@ -48,57 +49,56 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.nudGalletaMaicena = new System.Windows.Forms.Label();
-            this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.nudPastelCumpleVaron = new System.Windows.Forms.NumericUpDown();
-            this.label7 = new System.Windows.Forms.Label();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            this.pictureBox7 = new System.Windows.Forms.PictureBox();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.nudPastelNormalMujer = new System.Windows.Forms.NumericUpDown();
+            this.nudPastelCumpleMujer2 = new System.Windows.Forms.NumericUpDown();
+            this.nudPastelCumpleMujer = new System.Windows.Forms.NumericUpDown();
+            this.nudPastelNormalVaron = new System.Windows.Forms.NumericUpDown();
+            this.nudPastelCumpleVaron2 = new System.Windows.Forms.NumericUpDown();
+            this.label8 = new System.Windows.Forms.Label();
             this.pictureBox9 = new System.Windows.Forms.PictureBox();
+            this.label7 = new System.Windows.Forms.Label();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
+            this.nudPastelCumpleVaron = new System.Windows.Forms.NumericUpDown();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.nudEmpanada = new System.Windows.Forms.NumericUpDown();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.txtGalletaMaicena = new System.Windows.Forms.Label();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.nudGalletaNaranja = new System.Windows.Forms.NumericUpDown();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.btnGuardar = new System.Windows.Forms.Button();
             this.btnCerrar = new System.Windows.Forms.Button();
             this.btnNuevo = new System.Windows.Forms.Button();
-            this.btnBuscar = new System.Windows.Forms.Button();
-            this.label8 = new System.Windows.Forms.Label();
-            this.nudPastelCumpleVaron2 = new System.Windows.Forms.NumericUpDown();
-            this.nudPastelNormalVaron = new System.Windows.Forms.NumericUpDown();
-            this.nudPastelCumpleMujer = new System.Windows.Forms.NumericUpDown();
-            this.nudPastelCumpleMujer2 = new System.Windows.Forms.NumericUpDown();
-            this.nudPastelNormalMujer = new System.Windows.Forms.NumericUpDown();
-            this.nudEmpanada = new System.Windows.Forms.NumericUpDown();
-            this.nudGalletaNaranja = new System.Windows.Forms.NumericUpDown();
-            this.label9 = new System.Windows.Forms.Label();
-            this.numericUpDown8 = new System.Windows.Forms.NumericUpDown();
+            this.nudGalletaMaicena = new System.Windows.Forms.NumericUpDown();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
-            this.groupBox3.SuspendLayout();
-            this.groupBox4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nudPastelCumpleVaron)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudPastelNormalMujer)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudPastelCumpleMujer2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudPastelCumpleMujer)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudPastelNormalVaron)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudPastelCumpleVaron2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudPastelCumpleVaron)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudPastelCumpleVaron2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudPastelNormalVaron)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudPastelCumpleMujer)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudPastelCumpleMujer2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudPastelNormalMujer)).BeginInit();
+            this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudEmpanada)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            this.groupBox4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudGalletaNaranja)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudGalletaMaicena)).BeginInit();
             this.SuspendLayout();
             // 
             // lblTitulo
@@ -165,6 +165,20 @@
             this.txtNombre.Size = new System.Drawing.Size(384, 22);
             this.txtNombre.TabIndex = 8;
             // 
+            // btnBuscar
+            // 
+            this.btnBuscar.Image = global::CpMielva.Properties.Resources.buscar1;
+            this.btnBuscar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnBuscar.Location = new System.Drawing.Point(201, 8);
+            this.btnBuscar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Padding = new System.Windows.Forms.Padding(9, 0, 9, 0);
+            this.btnBuscar.Size = new System.Drawing.Size(63, 49);
+            this.btnBuscar.TabIndex = 5;
+            this.btnBuscar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnBuscar.UseVisualStyleBackColor = true;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
+            // 
             // lblNombre
             // 
             this.lblNombre.AutoSize = true;
@@ -182,6 +196,7 @@
             this.txtNit.Name = "txtNit";
             this.txtNit.Size = new System.Drawing.Size(133, 22);
             this.txtNit.TabIndex = 6;
+            this.txtNit.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNit_KeyPress);
             // 
             // lblTotal
             // 
@@ -201,7 +216,7 @@
             this.txtTotal.Name = "txtTotal";
             this.txtTotal.Size = new System.Drawing.Size(133, 22);
             this.txtTotal.TabIndex = 24;
-            this.txtTotal.Text = "98";
+            this.txtTotal.TextChanged += new System.EventHandler(this.txtTotal_TextChanged);
             // 
             // lblEfectivo
             // 
@@ -312,54 +327,112 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Pasteles:";
             // 
-            // groupBox3
+            // nudPastelNormalMujer
             // 
-            this.groupBox3.Controls.Add(this.label9);
-            this.groupBox3.Controls.Add(this.nudEmpanada);
-            this.groupBox3.Controls.Add(this.pictureBox5);
-            this.groupBox3.Location = new System.Drawing.Point(532, 100);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(210, 157);
-            this.groupBox3.TabIndex = 42;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Empanada:";
+            this.nudPastelNormalMujer.Location = new System.Drawing.Point(416, 366);
+            this.nudPastelNormalMujer.Margin = new System.Windows.Forms.Padding(4);
+            this.nudPastelNormalMujer.Maximum = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
+            this.nudPastelNormalMujer.Name = "nudPastelNormalMujer";
+            this.nudPastelNormalMujer.Size = new System.Drawing.Size(32, 22);
+            this.nudPastelNormalMujer.TabIndex = 55;
             // 
-            // label5
+            // nudPastelCumpleMujer2
             // 
-            this.label5.AutoSize = true;
-            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.label5.Location = new System.Drawing.Point(25, 135);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(176, 16);
-            this.label5.TabIndex = 40;
-            this.label5.Text = "Galleta de Naranja - 0,50 Bs:";
+            this.nudPastelCumpleMujer2.Location = new System.Drawing.Point(418, 242);
+            this.nudPastelCumpleMujer2.Margin = new System.Windows.Forms.Padding(4);
+            this.nudPastelCumpleMujer2.Maximum = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
+            this.nudPastelCumpleMujer2.Name = "nudPastelCumpleMujer2";
+            this.nudPastelCumpleMujer2.Size = new System.Drawing.Size(32, 22);
+            this.nudPastelCumpleMujer2.TabIndex = 54;
             // 
-            // nudGalletaMaicena
+            // nudPastelCumpleMujer
             // 
-            this.nudGalletaMaicena.AutoSize = true;
-            this.nudGalletaMaicena.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.nudGalletaMaicena.Location = new System.Drawing.Point(275, 135);
-            this.nudGalletaMaicena.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.nudGalletaMaicena.Name = "nudGalletaMaicena";
-            this.nudGalletaMaicena.Size = new System.Drawing.Size(180, 16);
-            this.nudGalletaMaicena.TabIndex = 44;
-            this.nudGalletaMaicena.Text = "Galleta de Maicena - 0,50 Bs:";
+            this.nudPastelCumpleMujer.Location = new System.Drawing.Point(416, 118);
+            this.nudPastelCumpleMujer.Margin = new System.Windows.Forms.Padding(4);
+            this.nudPastelCumpleMujer.Maximum = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
+            this.nudPastelCumpleMujer.Name = "nudPastelCumpleMujer";
+            this.nudPastelCumpleMujer.Size = new System.Drawing.Size(32, 22);
+            this.nudPastelCumpleMujer.TabIndex = 53;
             // 
-            // groupBox4
+            // nudPastelNormalVaron
             // 
-            this.groupBox4.Controls.Add(this.numericUpDown8);
-            this.groupBox4.Controls.Add(this.nudGalletaNaranja);
-            this.groupBox4.Controls.Add(this.pictureBox6);
-            this.groupBox4.Controls.Add(this.nudGalletaMaicena);
-            this.groupBox4.Controls.Add(this.label5);
-            this.groupBox4.Controls.Add(this.pictureBox7);
-            this.groupBox4.Location = new System.Drawing.Point(532, 274);
-            this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(499, 160);
-            this.groupBox4.TabIndex = 45;
-            this.groupBox4.TabStop = false;
-            this.groupBox4.Text = "Galletas:";
+            this.nudPastelNormalVaron.Location = new System.Drawing.Point(156, 365);
+            this.nudPastelNormalVaron.Margin = new System.Windows.Forms.Padding(4);
+            this.nudPastelNormalVaron.Maximum = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
+            this.nudPastelNormalVaron.Name = "nudPastelNormalVaron";
+            this.nudPastelNormalVaron.Size = new System.Drawing.Size(32, 22);
+            this.nudPastelNormalVaron.TabIndex = 52;
+            // 
+            // nudPastelCumpleVaron2
+            // 
+            this.nudPastelCumpleVaron2.Location = new System.Drawing.Point(156, 241);
+            this.nudPastelCumpleVaron2.Margin = new System.Windows.Forms.Padding(4);
+            this.nudPastelCumpleVaron2.Maximum = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
+            this.nudPastelCumpleVaron2.Name = "nudPastelCumpleVaron2";
+            this.nudPastelCumpleVaron2.Size = new System.Drawing.Size(32, 22);
+            this.nudPastelCumpleVaron2.TabIndex = 51;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.label8.Location = new System.Drawing.Point(31, 231);
+            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(117, 32);
+            this.label8.TabIndex = 50;
+            this.label8.Text = "Pastel de cumple \r\npara Varón - 65Bs:";
+            // 
+            // pictureBox9
+            // 
+            this.pictureBox9.Image = global::CpMielva.Properties.Resources.pastel_cumpleanos_v;
+            this.pictureBox9.Location = new System.Drawing.Point(32, 21);
+            this.pictureBox9.Name = "pictureBox9";
+            this.pictureBox9.Size = new System.Drawing.Size(109, 84);
+            this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox9.TabIndex = 49;
+            this.pictureBox9.TabStop = false;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.label7.Location = new System.Drawing.Point(296, 232);
+            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(114, 32);
+            this.label7.TabIndex = 48;
+            this.label7.Text = "Pastel de cumple \r\npara Mujer - 65Bs:\r\n";
+            // 
+            // pictureBox8
+            // 
+            this.pictureBox8.Image = global::CpMielva.Properties.Resources.pastel_cumple_mujer_2;
+            this.pictureBox8.Location = new System.Drawing.Point(299, 144);
+            this.pictureBox8.Name = "pictureBox8";
+            this.pictureBox8.Size = new System.Drawing.Size(109, 84);
+            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox8.TabIndex = 47;
+            this.pictureBox8.TabStop = false;
             // 
             // nudPastelCumpleVaron
             // 
@@ -373,67 +446,6 @@
             this.nudPastelCumpleVaron.Name = "nudPastelCumpleVaron";
             this.nudPastelCumpleVaron.Size = new System.Drawing.Size(32, 22);
             this.nudPastelCumpleVaron.TabIndex = 46;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.label7.Location = new System.Drawing.Point(296, 232);
-            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(114, 32);
-            this.label7.TabIndex = 48;
-            this.label7.Text = "Pastel de cumple \r\npara Mujer - 65Bs:\r\n";
-            // 
-            // pictureBox6
-            // 
-            this.pictureBox6.Image = global::CpMielva.Properties.Resources.galleta_de_naranja;
-            this.pictureBox6.Location = new System.Drawing.Point(28, 21);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(131, 101);
-            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox6.TabIndex = 40;
-            this.pictureBox6.TabStop = false;
-            // 
-            // pictureBox7
-            // 
-            this.pictureBox7.Image = global::CpMielva.Properties.Resources.galletitas_de_maicena_foto_principal;
-            this.pictureBox7.Location = new System.Drawing.Point(278, 21);
-            this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(131, 101);
-            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox7.TabIndex = 43;
-            this.pictureBox7.TabStop = false;
-            // 
-            // pictureBox5
-            // 
-            this.pictureBox5.Image = global::CpMielva.Properties.Resources.empanadas;
-            this.pictureBox5.Location = new System.Drawing.Point(6, 19);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(175, 101);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox5.TabIndex = 40;
-            this.pictureBox5.TabStop = false;
-            // 
-            // pictureBox9
-            // 
-            this.pictureBox9.Image = global::CpMielva.Properties.Resources.pastel_cumpleanos_v;
-            this.pictureBox9.Location = new System.Drawing.Point(32, 21);
-            this.pictureBox9.Name = "pictureBox9";
-            this.pictureBox9.Size = new System.Drawing.Size(109, 84);
-            this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox9.TabIndex = 49;
-            this.pictureBox9.TabStop = false;
-            // 
-            // pictureBox8
-            // 
-            this.pictureBox8.Image = global::CpMielva.Properties.Resources.pastel_cumple_mujer_2;
-            this.pictureBox8.Location = new System.Drawing.Point(299, 144);
-            this.pictureBox8.Name = "pictureBox8";
-            this.pictureBox8.Size = new System.Drawing.Size(109, 84);
-            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox8.TabIndex = 47;
-            this.pictureBox8.TabStop = false;
             // 
             // pictureBox1
             // 
@@ -475,6 +487,122 @@
             this.pictureBox2.TabIndex = 36;
             this.pictureBox2.TabStop = false;
             // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.label9);
+            this.groupBox3.Controls.Add(this.nudEmpanada);
+            this.groupBox3.Controls.Add(this.pictureBox5);
+            this.groupBox3.Location = new System.Drawing.Point(532, 100);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(210, 157);
+            this.groupBox3.TabIndex = 42;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Empanada:";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.label9.Location = new System.Drawing.Point(44, 129);
+            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(50, 16);
+            this.label9.TabIndex = 49;
+            this.label9.Text = "3,50 Bs";
+            // 
+            // nudEmpanada
+            // 
+            this.nudEmpanada.Location = new System.Drawing.Point(106, 127);
+            this.nudEmpanada.Margin = new System.Windows.Forms.Padding(4);
+            this.nudEmpanada.Maximum = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
+            this.nudEmpanada.Name = "nudEmpanada";
+            this.nudEmpanada.Size = new System.Drawing.Size(32, 22);
+            this.nudEmpanada.TabIndex = 47;
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.Image = global::CpMielva.Properties.Resources.empanadas;
+            this.pictureBox5.Location = new System.Drawing.Point(6, 19);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(175, 101);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox5.TabIndex = 40;
+            this.pictureBox5.TabStop = false;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.label5.Location = new System.Drawing.Point(25, 135);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(176, 16);
+            this.label5.TabIndex = 40;
+            this.label5.Text = "Galleta de Naranja - 0,50 Bs:";
+            // 
+            // txtGalletaMaicena
+            // 
+            this.txtGalletaMaicena.AutoSize = true;
+            this.txtGalletaMaicena.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.txtGalletaMaicena.Location = new System.Drawing.Point(275, 135);
+            this.txtGalletaMaicena.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.txtGalletaMaicena.Name = "txtGalletaMaicena";
+            this.txtGalletaMaicena.Size = new System.Drawing.Size(180, 16);
+            this.txtGalletaMaicena.TabIndex = 44;
+            this.txtGalletaMaicena.Text = "Galleta de Maicena - 0,50 Bs:";
+            // 
+            // groupBox4
+            // 
+            this.groupBox4.Controls.Add(this.nudGalletaMaicena);
+            this.groupBox4.Controls.Add(this.nudGalletaNaranja);
+            this.groupBox4.Controls.Add(this.pictureBox6);
+            this.groupBox4.Controls.Add(this.txtGalletaMaicena);
+            this.groupBox4.Controls.Add(this.label5);
+            this.groupBox4.Controls.Add(this.pictureBox7);
+            this.groupBox4.Location = new System.Drawing.Point(532, 274);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(499, 160);
+            this.groupBox4.TabIndex = 45;
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Text = "Galletas:";
+            // 
+            // nudGalletaNaranja
+            // 
+            this.nudGalletaNaranja.Location = new System.Drawing.Point(206, 131);
+            this.nudGalletaNaranja.Margin = new System.Windows.Forms.Padding(4);
+            this.nudGalletaNaranja.Maximum = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
+            this.nudGalletaNaranja.Name = "nudGalletaNaranja";
+            this.nudGalletaNaranja.Size = new System.Drawing.Size(32, 22);
+            this.nudGalletaNaranja.TabIndex = 48;
+            // 
+            // pictureBox6
+            // 
+            this.pictureBox6.Image = global::CpMielva.Properties.Resources.galleta_de_naranja;
+            this.pictureBox6.Location = new System.Drawing.Point(28, 21);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(131, 101);
+            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox6.TabIndex = 40;
+            this.pictureBox6.TabStop = false;
+            // 
+            // pictureBox7
+            // 
+            this.pictureBox7.Image = global::CpMielva.Properties.Resources.galletitas_de_maicena_foto_principal;
+            this.pictureBox7.Location = new System.Drawing.Point(278, 21);
+            this.pictureBox7.Name = "pictureBox7";
+            this.pictureBox7.Size = new System.Drawing.Size(131, 101);
+            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox7.TabIndex = 43;
+            this.pictureBox7.TabStop = false;
+            // 
             // btnGuardar
             // 
             this.btnGuardar.Image = global::CpMielva.Properties.Resources.guardar;
@@ -488,7 +616,6 @@
             this.btnGuardar.Text = "Guardar Venta";
             this.btnGuardar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnGuardar.UseVisualStyleBackColor = true;
-            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
             // btnCerrar
             // 
@@ -518,147 +645,19 @@
             this.btnNuevo.Text = "Agregar Productos";
             this.btnNuevo.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnNuevo.UseVisualStyleBackColor = true;
-            this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
             // 
-            // btnBuscar
+            // nudGalletaMaicena
             // 
-            this.btnBuscar.Image = global::CpMielva.Properties.Resources.buscar1;
-            this.btnBuscar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnBuscar.Location = new System.Drawing.Point(201, 8);
-            this.btnBuscar.Margin = new System.Windows.Forms.Padding(4);
-            this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Padding = new System.Windows.Forms.Padding(9, 0, 9, 0);
-            this.btnBuscar.Size = new System.Drawing.Size(63, 49);
-            this.btnBuscar.TabIndex = 5;
-            this.btnBuscar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnBuscar.UseVisualStyleBackColor = true;
-            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.label8.Location = new System.Drawing.Point(31, 231);
-            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(117, 32);
-            this.label8.TabIndex = 50;
-            this.label8.Text = "Pastel de cumple \r\npara Varón - 65Bs:";
-            // 
-            // nudPastelCumpleVaron2
-            // 
-            this.nudPastelCumpleVaron2.Location = new System.Drawing.Point(156, 241);
-            this.nudPastelCumpleVaron2.Margin = new System.Windows.Forms.Padding(4);
-            this.nudPastelCumpleVaron2.Maximum = new decimal(new int[] {
+            this.nudGalletaMaicena.Location = new System.Drawing.Point(460, 131);
+            this.nudGalletaMaicena.Margin = new System.Windows.Forms.Padding(4);
+            this.nudGalletaMaicena.Maximum = new decimal(new int[] {
             1000,
             0,
             0,
             0});
-            this.nudPastelCumpleVaron2.Name = "nudPastelCumpleVaron2";
-            this.nudPastelCumpleVaron2.Size = new System.Drawing.Size(32, 22);
-            this.nudPastelCumpleVaron2.TabIndex = 51;
-            // 
-            // nudPastelNormalVaron
-            // 
-            this.nudPastelNormalVaron.Location = new System.Drawing.Point(156, 365);
-            this.nudPastelNormalVaron.Margin = new System.Windows.Forms.Padding(4);
-            this.nudPastelNormalVaron.Maximum = new decimal(new int[] {
-            1000,
-            0,
-            0,
-            0});
-            this.nudPastelNormalVaron.Name = "nudPastelNormalVaron";
-            this.nudPastelNormalVaron.Size = new System.Drawing.Size(32, 22);
-            this.nudPastelNormalVaron.TabIndex = 52;
-            // 
-            // nudPastelCumpleMujer
-            // 
-            this.nudPastelCumpleMujer.Location = new System.Drawing.Point(416, 118);
-            this.nudPastelCumpleMujer.Margin = new System.Windows.Forms.Padding(4);
-            this.nudPastelCumpleMujer.Maximum = new decimal(new int[] {
-            1000,
-            0,
-            0,
-            0});
-            this.nudPastelCumpleMujer.Name = "nudPastelCumpleMujer";
-            this.nudPastelCumpleMujer.Size = new System.Drawing.Size(32, 22);
-            this.nudPastelCumpleMujer.TabIndex = 53;
-            // 
-            // nudPastelCumpleMujer2
-            // 
-            this.nudPastelCumpleMujer2.Location = new System.Drawing.Point(418, 242);
-            this.nudPastelCumpleMujer2.Margin = new System.Windows.Forms.Padding(4);
-            this.nudPastelCumpleMujer2.Maximum = new decimal(new int[] {
-            1000,
-            0,
-            0,
-            0});
-            this.nudPastelCumpleMujer2.Name = "nudPastelCumpleMujer2";
-            this.nudPastelCumpleMujer2.Size = new System.Drawing.Size(32, 22);
-            this.nudPastelCumpleMujer2.TabIndex = 54;
-            // 
-            // nudPastelNormalMujer
-            // 
-            this.nudPastelNormalMujer.Location = new System.Drawing.Point(416, 366);
-            this.nudPastelNormalMujer.Margin = new System.Windows.Forms.Padding(4);
-            this.nudPastelNormalMujer.Maximum = new decimal(new int[] {
-            1000,
-            0,
-            0,
-            0});
-            this.nudPastelNormalMujer.Name = "nudPastelNormalMujer";
-            this.nudPastelNormalMujer.Size = new System.Drawing.Size(32, 22);
-            this.nudPastelNormalMujer.TabIndex = 55;
-            // 
-            // nudEmpanada
-            // 
-            this.nudEmpanada.Location = new System.Drawing.Point(106, 127);
-            this.nudEmpanada.Margin = new System.Windows.Forms.Padding(4);
-            this.nudEmpanada.Maximum = new decimal(new int[] {
-            1000,
-            0,
-            0,
-            0});
-            this.nudEmpanada.Name = "nudEmpanada";
-            this.nudEmpanada.Size = new System.Drawing.Size(32, 22);
-            this.nudEmpanada.TabIndex = 47;
-            // 
-            // nudGalletaNaranja
-            // 
-            this.nudGalletaNaranja.Location = new System.Drawing.Point(206, 131);
-            this.nudGalletaNaranja.Margin = new System.Windows.Forms.Padding(4);
-            this.nudGalletaNaranja.Maximum = new decimal(new int[] {
-            1000,
-            0,
-            0,
-            0});
-            this.nudGalletaNaranja.Name = "nudGalletaNaranja";
-            this.nudGalletaNaranja.Size = new System.Drawing.Size(32, 22);
-            this.nudGalletaNaranja.TabIndex = 48;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.label9.Location = new System.Drawing.Point(44, 129);
-            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(50, 16);
-            this.label9.TabIndex = 49;
-            this.label9.Text = "3,50 Bs";
-            // 
-            // numericUpDown8
-            // 
-            this.numericUpDown8.Location = new System.Drawing.Point(458, 131);
-            this.numericUpDown8.Margin = new System.Windows.Forms.Padding(4);
-            this.numericUpDown8.Maximum = new decimal(new int[] {
-            1000,
-            0,
-            0,
-            0});
-            this.numericUpDown8.Name = "numericUpDown8";
-            this.numericUpDown8.Size = new System.Drawing.Size(32, 22);
-            this.numericUpDown8.TabIndex = 49;
+            this.nudGalletaMaicena.Name = "nudGalletaMaicena";
+            this.nudGalletaMaicena.Size = new System.Drawing.Size(32, 22);
+            this.nudGalletaMaicena.TabIndex = 49;
             // 
             // FrmVenta
             // 
@@ -693,28 +692,28 @@
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
-            this.groupBox3.ResumeLayout(false);
-            this.groupBox3.PerformLayout();
-            this.groupBox4.ResumeLayout(false);
-            this.groupBox4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nudPastelCumpleVaron)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudPastelNormalMujer)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudPastelCumpleMujer2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudPastelCumpleMujer)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudPastelNormalVaron)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudPastelCumpleVaron2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudPastelCumpleVaron)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudPastelCumpleVaron2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudPastelNormalVaron)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudPastelCumpleMujer)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudPastelCumpleMujer2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudPastelNormalMujer)).EndInit();
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudEmpanada)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            this.groupBox4.ResumeLayout(false);
+            this.groupBox4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudGalletaNaranja)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudGalletaMaicena)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -754,7 +753,7 @@
         private System.Windows.Forms.PictureBox pictureBox6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.PictureBox pictureBox7;
-        private System.Windows.Forms.Label nudGalletaMaicena;
+        private System.Windows.Forms.Label txtGalletaMaicena;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.NumericUpDown nudPastelCumpleVaron;
         private System.Windows.Forms.PictureBox pictureBox8;
@@ -768,7 +767,7 @@
         private System.Windows.Forms.NumericUpDown nudPastelCumpleMujer;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.NumericUpDown nudEmpanada;
-        private System.Windows.Forms.NumericUpDown numericUpDown8;
         private System.Windows.Forms.NumericUpDown nudGalletaNaranja;
+        private System.Windows.Forms.NumericUpDown nudGalletaMaicena;
     }
 }

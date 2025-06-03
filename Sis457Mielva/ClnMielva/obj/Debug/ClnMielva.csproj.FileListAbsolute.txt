@@ -73,3 +73,18 @@ C:\Users\Kevin\Documents\sis457\sis457_reposteria\Sis457Mielva\ClnMielva\obj\Deb
 C:\Users\Kevin\Documents\sis457\sis457_reposteria\Sis457Mielva\ClnMielva\obj\Debug\ClnMielva.csproj.Up2Date
 C:\Users\Kevin\Documents\sis457\sis457_reposteria\Sis457Mielva\ClnMielva\obj\Debug\ClnMielva.dll
 C:\Users\Kevin\Documents\sis457\sis457_reposteria\Sis457Mielva\ClnMielva\obj\Debug\ClnMielva.pdb
+B:\Materias usfx\1.- Informática\1 - 2025\sis457\sis457_reposteria\Sis457Mielva\ClnMielva\bin\Debug\ClnMielva.dll.config
+B:\Materias usfx\1.- Informática\1 - 2025\sis457\sis457_reposteria\Sis457Mielva\ClnMielva\bin\Debug\ClnMielva.dll
+B:\Materias usfx\1.- Informática\1 - 2025\sis457\sis457_reposteria\Sis457Mielva\ClnMielva\bin\Debug\ClnMielva.pdb
+B:\Materias usfx\1.- Informática\1 - 2025\sis457\sis457_reposteria\Sis457Mielva\ClnMielva\bin\Debug\CadMielva.dll
+B:\Materias usfx\1.- Informática\1 - 2025\sis457\sis457_reposteria\Sis457Mielva\ClnMielva\bin\Debug\EntityFramework.dll
+B:\Materias usfx\1.- Informática\1 - 2025\sis457\sis457_reposteria\Sis457Mielva\ClnMielva\bin\Debug\EntityFramework.SqlServer.dll
+B:\Materias usfx\1.- Informática\1 - 2025\sis457\sis457_reposteria\Sis457Mielva\ClnMielva\bin\Debug\CadMielva.pdb
+B:\Materias usfx\1.- Informática\1 - 2025\sis457\sis457_reposteria\Sis457Mielva\ClnMielva\bin\Debug\CadMielva.dll.config
+B:\Materias usfx\1.- Informática\1 - 2025\sis457\sis457_reposteria\Sis457Mielva\ClnMielva\bin\Debug\EntityFramework.xml
+B:\Materias usfx\1.- Informática\1 - 2025\sis457\sis457_reposteria\Sis457Mielva\ClnMielva\bin\Debug\EntityFramework.SqlServer.xml
+B:\Materias usfx\1.- Informática\1 - 2025\sis457\sis457_reposteria\Sis457Mielva\ClnMielva\obj\Debug\ClnMielva.csproj.AssemblyReference.cache
+B:\Materias usfx\1.- Informática\1 - 2025\sis457\sis457_reposteria\Sis457Mielva\ClnMielva\obj\Debug\ClnMielva.csproj.CoreCompileInputs.cache
+B:\Materias usfx\1.- Informática\1 - 2025\sis457\sis457_reposteria\Sis457Mielva\ClnMielva\obj\Debug\ClnMielva.csproj.Up2Date
+B:\Materias usfx\1.- Informática\1 - 2025\sis457\sis457_reposteria\Sis457Mielva\ClnMielva\obj\Debug\ClnMielva.dll
+B:\Materias usfx\1.- Informática\1 - 2025\sis457\sis457_reposteria\Sis457Mielva\ClnMielva\obj\Debug\ClnMielva.pdb
