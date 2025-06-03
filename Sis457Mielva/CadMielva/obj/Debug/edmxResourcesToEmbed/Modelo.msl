@@ -144,6 +144,18 @@
         </ComplexTypeMapping>
       </ResultMapping>
     </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="paVentaClienteListar" FunctionName="LabMielvaModel.Store.paVentaClienteListar">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="LabMielvaModel.paVentaClienteListar_Result">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="nit" ColumnName="nit" />
+          <ScalarProperty Name="razonSocial" ColumnName="razonSocial" />
+          <ScalarProperty Name="usuarioRegistro" ColumnName="usuarioRegistro" />
+          <ScalarProperty Name="fechaRegistro" ColumnName="fechaRegistro" />
+          <ScalarProperty Name="estado" ColumnName="estado" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
     <FunctionImportMapping FunctionImportName="paVentaDetalleListar" FunctionName="LabMielvaModel.Store.paVentaDetalleListar">
       <ResultMapping>
         <ComplexTypeMapping TypeName="LabMielvaModel.paVentaDetalleListar_Result">

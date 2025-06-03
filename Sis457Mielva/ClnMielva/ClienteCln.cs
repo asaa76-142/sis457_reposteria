@@ -62,5 +62,12 @@ namespace ClnMielva
                 return context.paClienteListar(parametro).ToList();
             }
         }
+        public static List<paVentaClienteListar_Result> listarPa2(string parametro)
+        {
+            using (var context = new LabMielvaEntities())
+            {
+                return context.paVentaClienteListar(parametro).ToList();
+            }
+        }
     }
 }

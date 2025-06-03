@@ -34,5 +34,38 @@ namespace CpMielva
             dtpFecha.MaxDate = DateTime.Now;
             //txtTransaccion.KeyPress += Util.onlyNumbers;
         }
+
+        private void btnCerrar_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void btnGuardar_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void btnNuevo_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            var clientes = ClienteCln.listarPa2(txtNit.Text.Trim());
+            if (clientes.Count > 0)
+            {
+                var cliente = clientes[0];
+                // Supón que tienes un txtRazonSocial para mostrar la razón social
+                txtNombre.Text = cliente.razonSocial;
+                // Puedes guardar el id del cliente para usarlo al guardar la venta
+                // this.clienteId = cliente.id;
+            }
+            else
+            {
+                MessageBox.Show("Cliente no encontrado.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtNombre.Text = "";
+                // this.clienteId = 0;
+            }
+        }
     }
 }

@@ -25,6 +25,7 @@ namespace CpMielva
             var lista = ClienteCln.listarPa(txtParametro.Text.Trim());
             dgvLista.DataSource = lista;
             dgvLista.Columns["id"].Visible = false;
+            dgvLista.Columns["estado"].Visible = false;
             dgvLista.Columns["razonSocial"].HeaderText = "Razón Social";
             dgvLista.Columns["usuarioRegistro"].HeaderText = "Usuario Registro";
             dgvLista.Columns["fechaRegistro"].HeaderText = "Fecha Registro";

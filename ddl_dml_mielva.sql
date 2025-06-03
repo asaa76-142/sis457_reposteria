@@ -34,6 +34,7 @@ DROP TABLE UnidadMedida;
 DROP PROC paProductoListar;
 DROP PROC paEmpleadoListar;
 DROP PROC paClienteListar;
+DROP PROC paVentaClienteListar;
 DROP PROC paVentaListar;
 DROP PROC paVentaDetalleListar;
 
@@ -160,6 +161,15 @@ ORDER BY estado DESC, razonSocial ASC;
 	WHERE estado = 1 AND CAST(nit AS VARCHAR) + razonSocial LIKE
 	'%'+REPLACE(@parametro, ' ','%')+'%'
 	ORDER BY estado DESC, razonSocial ASC;
+
+GO
+CREATE PROC paVentaClienteListar @nit VARCHAR(14)
+AS
+SELECT *
+FROM Cliente
+WHERE estado = 1
+  AND nit = @nit
+ORDER BY estado DESC, razonSocial ASC;
 
 GO
 CREATE PROC paVentaListar @parametro VARCHAR(100)

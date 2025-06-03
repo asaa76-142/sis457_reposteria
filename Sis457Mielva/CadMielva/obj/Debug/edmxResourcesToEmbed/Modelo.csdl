@@ -215,6 +215,9 @@
     <FunctionImport Name="paProductoListar" ReturnType="Collection(LabMielvaModel.paProductoListar_Result)">
       <Parameter Name="parametro" Mode="In" Type="String" />
     </FunctionImport>
+    <FunctionImport Name="paVentaClienteListar" ReturnType="Collection(LabMielvaModel.paVentaClienteListar_Result)">
+      <Parameter Name="nit" Mode="In" Type="String" />
+    </FunctionImport>
     <FunctionImport Name="paVentaDetalleListar" ReturnType="Collection(LabMielvaModel.paVentaDetalleListar_Result)">
       <Parameter Name="parametro" Mode="In" Type="String" />
     </FunctionImport>
@@ -255,6 +258,14 @@
     <Property Type="DateTime" Name="fechaRegistro" Nullable="false" Precision="23" />
     <Property Type="Int16" Name="estado" Nullable="false" />
     <Property Type="Int32" Name="idUnidadMedida" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="paVentaClienteListar_Result">
+    <Property Type="Int32" Name="id" Nullable="false" />
+    <Property Type="String" Name="nit" Nullable="false" MaxLength="14" />
+    <Property Type="String" Name="razonSocial" Nullable="false" MaxLength="100" />
+    <Property Type="String" Name="usuarioRegistro" Nullable="false" MaxLength="50" />
+    <Property Type="DateTime" Name="fechaRegistro" Nullable="false" Precision="23" />
+    <Property Type="Int16" Name="estado" Nullable="false" />
   </ComplexType>
   <ComplexType Name="paVentaDetalleListar_Result">
     <Property Type="Int32" Name="id" Nullable="false" />

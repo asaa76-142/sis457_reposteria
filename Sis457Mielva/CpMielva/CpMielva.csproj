@@ -206,6 +206,39 @@
   <ItemGroup>
     <None Include="Resources\loupe_78956.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pastel-cumpleanos-v.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pastel cumple mujer.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pastel.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pastel normal varon.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pastel normal varon1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pastel normal mujer.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\empanadas.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\galleta de naranja.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\galletitas-de-maicena-foto-principal.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pastel cumple mujer 2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pastel cumple varon.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
