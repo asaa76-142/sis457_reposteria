@@ -176,3 +176,36 @@ B:\Materias usfx\1.- Informática\1 - 2025\sis457\sis457_reposteria\Sis457Mielva
 B:\Materias usfx\1.- Informática\1 - 2025\sis457\sis457_reposteria\Sis457Mielva\CpMielva\obj\Debug\CpMielva.exe
 B:\Materias usfx\1.- Informática\1 - 2025\sis457\sis457_reposteria\Sis457Mielva\CpMielva\obj\Debug\CpMielva.pdb
 B:\Materias usfx\1.- Informática\1 - 2025\sis457\sis457_reposteria\Sis457Mielva\CpMielva\obj\Debug\CpMielva.FrmRegistroVenta.resources
+C:\Users\auzas\Desktop\sis475_reposteria\sis457_reposteria\Sis457Mielva\CpMielva\bin\Debug\CpMielva.exe.config
+C:\Users\auzas\Desktop\sis475_reposteria\sis457_reposteria\Sis457Mielva\CpMielva\bin\Debug\CpMielva.exe
+C:\Users\auzas\Desktop\sis475_reposteria\sis457_reposteria\Sis457Mielva\CpMielva\bin\Debug\CpMielva.pdb
+C:\Users\auzas\Desktop\sis475_reposteria\sis457_reposteria\Sis457Mielva\CpMielva\bin\Debug\C1.Win.4.5.2.dll
+C:\Users\auzas\Desktop\sis475_reposteria\sis457_reposteria\Sis457Mielva\CpMielva\bin\Debug\C1.Win.Ribbon.4.5.2.dll
+C:\Users\auzas\Desktop\sis475_reposteria\sis457_reposteria\Sis457Mielva\CpMielva\bin\Debug\CadMielva.dll
+C:\Users\auzas\Desktop\sis475_reposteria\sis457_reposteria\Sis457Mielva\CpMielva\bin\Debug\ClnMielva.dll
+C:\Users\auzas\Desktop\sis475_reposteria\sis457_reposteria\Sis457Mielva\CpMielva\bin\Debug\EntityFramework.dll
+C:\Users\auzas\Desktop\sis475_reposteria\sis457_reposteria\Sis457Mielva\CpMielva\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\auzas\Desktop\sis475_reposteria\sis457_reposteria\Sis457Mielva\CpMielva\bin\Debug\CadMielva.pdb
+C:\Users\auzas\Desktop\sis475_reposteria\sis457_reposteria\Sis457Mielva\CpMielva\bin\Debug\CadMielva.dll.config
+C:\Users\auzas\Desktop\sis475_reposteria\sis457_reposteria\Sis457Mielva\CpMielva\bin\Debug\ClnMielva.pdb
+C:\Users\auzas\Desktop\sis475_reposteria\sis457_reposteria\Sis457Mielva\CpMielva\bin\Debug\ClnMielva.dll.config
+C:\Users\auzas\Desktop\sis475_reposteria\sis457_reposteria\Sis457Mielva\CpMielva\bin\Debug\C1.Win.4.5.2.xml
+C:\Users\auzas\Desktop\sis475_reposteria\sis457_reposteria\Sis457Mielva\CpMielva\bin\Debug\C1.Win.Ribbon.4.5.2.xml
+C:\Users\auzas\Desktop\sis475_reposteria\sis457_reposteria\Sis457Mielva\CpMielva\bin\Debug\EntityFramework.xml
+C:\Users\auzas\Desktop\sis475_reposteria\sis457_reposteria\Sis457Mielva\CpMielva\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\auzas\Desktop\sis475_reposteria\sis457_reposteria\Sis457Mielva\CpMielva\obj\Debug\CpMielva.csproj.AssemblyReference.cache
+C:\Users\auzas\Desktop\sis475_reposteria\sis457_reposteria\Sis457Mielva\CpMielva\obj\Debug\CpMielva.exe.config
+C:\Users\auzas\Desktop\sis475_reposteria\sis457_reposteria\Sis457Mielva\CpMielva\obj\Debug\CpMielva.FrmAutenticacion.resources
+C:\Users\auzas\Desktop\sis475_reposteria\sis457_reposteria\Sis457Mielva\CpMielva\obj\Debug\CpMielva.FrmCliente.resources
+C:\Users\auzas\Desktop\sis475_reposteria\sis457_reposteria\Sis457Mielva\CpMielva\obj\Debug\CpMielva.FrmEmpleado.resources
+C:\Users\auzas\Desktop\sis475_reposteria\sis457_reposteria\Sis457Mielva\CpMielva\obj\Debug\CpMielva.FrmPrincipal.resources
+C:\Users\auzas\Desktop\sis475_reposteria\sis457_reposteria\Sis457Mielva\CpMielva\obj\Debug\CpMielva.FrmProducto.resources
+C:\Users\auzas\Desktop\sis475_reposteria\sis457_reposteria\Sis457Mielva\CpMielva\obj\Debug\CpMielva.FrmRegistroVenta.resources
+C:\Users\auzas\Desktop\sis475_reposteria\sis457_reposteria\Sis457Mielva\CpMielva\obj\Debug\CpMielva.FrmVentaDetalle.resources
+C:\Users\auzas\Desktop\sis475_reposteria\sis457_reposteria\Sis457Mielva\CpMielva\obj\Debug\CpMielva.Properties.Resources.resources
+C:\Users\auzas\Desktop\sis475_reposteria\sis457_reposteria\Sis457Mielva\CpMielva\obj\Debug\CpMielva.csproj.GenerateResource.cache
+C:\Users\auzas\Desktop\sis475_reposteria\sis457_reposteria\Sis457Mielva\CpMielva\obj\Debug\CpMielva.exe.licenses
+C:\Users\auzas\Desktop\sis475_reposteria\sis457_reposteria\Sis457Mielva\CpMielva\obj\Debug\CpMielva.csproj.CoreCompileInputs.cache
+C:\Users\auzas\Desktop\sis475_reposteria\sis457_reposteria\Sis457Mielva\CpMielva\obj\Debug\CpMielva.csproj.Up2Date
+C:\Users\auzas\Desktop\sis475_reposteria\sis457_reposteria\Sis457Mielva\CpMielva\obj\Debug\CpMielva.exe
+C:\Users\auzas\Desktop\sis475_reposteria\sis457_reposteria\Sis457Mielva\CpMielva\obj\Debug\CpMielva.pdb

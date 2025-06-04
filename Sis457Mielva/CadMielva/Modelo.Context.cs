@@ -27,6 +27,7 @@ namespace CadMielva
             throw new UnintentionalCodeFirstException();
         }
     
+        public virtual DbSet<Cargo> Cargo { get; set; }
         public virtual DbSet<Cliente> Cliente { get; set; }
         public virtual DbSet<Empleado> Empleado { get; set; }
         public virtual DbSet<Producto> Producto { get; set; }

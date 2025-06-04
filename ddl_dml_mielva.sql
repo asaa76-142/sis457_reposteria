@@ -29,6 +29,7 @@ DROP TABLE Venta;
 DROP TABLE Cliente;
 DROP TABLE Usuario;
 DROP TABLE Empleado;
+DROP TABLE Cargo;
 DROP TABLE Producto;
 DROP TABLE UnidadMedida;
 DROP PROC paProductoListar;
@@ -40,38 +41,44 @@ DROP PROC paVentaDetalleListar;
 
 
 CREATE TABLE UnidadMedida(
-  id INT NOT NULL PRIMARY KEY IDENTITY(1,1),
-  descripcion VARCHAR(20) NOT NULL UNIQUE
+	  id INT NOT NULL PRIMARY KEY IDENTITY(1,1),
+	  descripcion VARCHAR(20) NOT NULL UNIQUE
 );
 
 CREATE TABLE Producto (
-  id INT NOT NULL PRIMARY KEY IDENTITY(1, 1),
-  idUnidadMedida INT NOT NULL,
-  codigo VARCHAR(20) NOT NULL,
-  descripcion VARCHAR(250) NOT NULL,
-  --unidadMedida VARCHAR(20) NOT NULL,
-  saldo DECIMAL NOT NULL DEFAULT 0,
-  precioVenta DECIMAL NOT NULL CHECK (precioVenta > 0)
-    CONSTRAINT fk_Producto_UnidadMedida FOREIGN KEY(idUnidadMedida) REFERENCES UnidadMedida(id)
+	  id INT NOT NULL PRIMARY KEY IDENTITY(1, 1),
+	  idUnidadMedida INT NOT NULL,
+	  codigo VARCHAR(20) NOT NULL,
+	  descripcion VARCHAR(250) NOT NULL,
+	  --unidadMedida VARCHAR(20) NOT NULL,
+	  saldo DECIMAL NOT NULL DEFAULT 0,
+	  precioVenta DECIMAL NOT NULL CHECK (precioVenta > 0)
+	  CONSTRAINT fk_Producto_UnidadMedida FOREIGN KEY(idUnidadMedida) REFERENCES UnidadMedida(id)
+);
+
+CREATE TABLE Cargo (
+	  id INT NOT NULL PRIMARY KEY IDENTITY(1, 1),
+	  descripcion VARCHAR(50) NOT NULL UNIQUE
 );
 
 CREATE TABLE Empleado (
-  id INT NOT NULL PRIMARY KEY IDENTITY(1, 1),
-  cedulaIdentidad VARCHAR(12) NOT NULL,
-  nombres VARCHAR(30) NOT NULL,
-  primerApellido VARCHAR(30) NULL,
-  segundoApellido VARCHAR(30) NULL,
-  direccion VARCHAR(250) NOT NULL,
-  celular BIGINT NOT NULL,
-  cargo VARCHAR(50) NOT NULL
+	  id INT NOT NULL PRIMARY KEY IDENTITY(1, 1),
+	  idCargo INT NOT NULL,
+	  cedulaIdentidad VARCHAR(12) NOT NULL,
+	  nombres VARCHAR(30) NOT NULL,
+	  primerApellido VARCHAR(30) NULL,
+	  segundoApellido VARCHAR(30) NULL,
+	  direccion VARCHAR(250) NOT NULL,
+	  celular BIGINT NOT NULL,
+	  CONSTRAINT FK_Empleado_Cargo FOREIGN KEY (idCargo) REFERENCES Cargo(id)
 );
 
 CREATE TABLE Usuario (
-  id INT NOT NULL PRIMARY KEY IDENTITY(1, 1),
-  idEmpleado INT NOT NULL,
-  usuario VARCHAR(20) NOT NULL,
-  clave VARCHAR(250) NOT NULL,
-  CONSTRAINT FK_Usuario_Empleado FOREIGN KEY (idEmpleado) REFERENCES Empleado(id)
+	  id INT NOT NULL PRIMARY KEY IDENTITY(1, 1),
+	  idEmpleado INT NOT NULL,
+	  usuario VARCHAR(20) NOT NULL,
+	  clave VARCHAR(250) NOT NULL,
+	  CONSTRAINT FK_Usuario_Empleado FOREIGN KEY (idEmpleado) REFERENCES Empleado(id)
 );
 
 CREATE TABLE Cliente (
@@ -126,6 +133,10 @@ ALTER TABLE Usuario ADD usuarioRegistro VARCHAR(50) NOT NULL DEFAULT SUSER_NAME(
 ALTER TABLE Usuario ADD fechaRegistro DATETIME NOT NULL DEFAULT GETDATE();
 ALTER TABLE Usuario ADD estado SMALLINT NOT NULL DEFAULT 1; -- 1: Activo, 0: Inactivo, -1: Eliminado
 
+ALTER TABLE Cargo ADD usuarioRegistro VARCHAR(50) NOT NULL DEFAULT SUSER_NAME();
+ALTER TABLE Cargo ADD fechaRegistro DATETIME NOT NULL DEFAULT GETDATE();
+ALTER TABLE Cargo ADD estado SMALLINT NOT NULL DEFAULT 1; -- 1: Activo, 0: Inactivo, -1: Eliminado
+
 --********************************************************
 GO
 CREATE PROC paProductoListar @parametro VARCHAR(100)
@@ -143,8 +154,9 @@ AS
   SELECT ISNULL(u.usuario,'--') AS usuario,e.* 
   FROM Empleado e
   LEFT JOIN Usuario u ON e.id = u.idEmpleado
+  INNER JOIN Cargo c ON c.id = e.idCargo
   WHERE e.estado<>-1 
-	AND e.cedulaIdentidad+e.nombres+ISNULL(e.primerApellido,'')+ISNULL(e.segundoApellido,'') LIKE '%'+REPLACE(@parametro,' ','%')+'%'
+	AND e.cedulaIdentidad+e.nombres+c.descripcion+ISNULL(e.primerApellido,'')+ISNULL(e.segundoApellido,'') LIKE '%'+REPLACE(@parametro,' ','%')+'%'
   ORDER BY e.estado DESC, e.nombres ASC, e.primerApellido ASC;
 
 
@@ -206,6 +218,9 @@ EXEC paEmpleadoListar 'juan';
 INSERT INTO UnidadMedida(descripcion)
 VALUES ('Caja'),('Docena'),('Unidad');
 
+INSERT INTO Cargo(descripcion)
+VALUES ('Pastelero'),('Cajero'),('Limpieza'),('Repartidor'),('Mantenimiento');
+
 INSERT INTO Producto(codigo,descripcion,idUnidadMedida,saldo,precioVenta)
 VALUES ('PT0254', 'Pastel para varón de Feliz Cumpleaños', 3, 0, 85);
 
@@ -219,11 +234,11 @@ UPDATE Producto SET precioVenta=83 WHERE codigo='PT0254';
 UPDATE Producto SET estado=-1 WHERE codigo='EM3285';
 
 
-INSERT INTO Empleado(cedulaIdentidad, nombres, primerApellido, segundoApellido, direccion, celular, cargo)
-VALUES ('1234567', 'Juan', 'Pérez', 'López', 'Calle Loa N° 50', 71717171, 'Cajero');
+INSERT INTO Empleado(cedulaIdentidad, nombres, primerApellido, segundoApellido, direccion, celular, idCargo)
+VALUES ('1234567', 'Juan', 'Pérez', 'López', 'Calle Loa N° 50', 71717171, 2);
 
-INSERT INTO Empleado(cedulaIdentidad, nombres, primerApellido, segundoApellido, direccion, celular, cargo)
-VALUES ('7654321', 'María', 'González', 'López', 'Calle Loa N° 50', 71717171, 'Cajero');
+INSERT INTO Empleado(cedulaIdentidad, nombres, primerApellido, segundoApellido, direccion, celular, idCargo)
+VALUES ('7654321', 'María', 'González', 'López', 'Calle Loa N° 50', 71717171, 2);
 
 UPDATE Empleado SET celular=61580236 WHERE cedulaIdentidad='1234567';
 

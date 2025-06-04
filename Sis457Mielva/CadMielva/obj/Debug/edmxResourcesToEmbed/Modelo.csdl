@@ -1,5 +1,16 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Schema Namespace="LabMielvaModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Cargo">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="descripcion" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="usuarioRegistro" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="fechaRegistro" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="estado" Type="Int16" Nullable="false" />
+    <NavigationProperty Name="Empleado" Relationship="Self.FK_Empleado_Cargo" FromRole="Cargo" ToRole="Empleado" />
+  </EntityType>
   <EntityType Name="Cliente">
     <Key>
       <PropertyRef Name="id" />
@@ -17,16 +28,17 @@
       <PropertyRef Name="id" />
     </Key>
     <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="idCargo" Type="Int32" Nullable="false" />
     <Property Name="cedulaIdentidad" Type="String" MaxLength="12" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="nombres" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="primerApellido" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
     <Property Name="segundoApellido" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
     <Property Name="direccion" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="celular" Type="Int64" Nullable="false" />
-    <Property Name="cargo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="usuarioRegistro" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="fechaRegistro" Type="DateTime" Nullable="false" Precision="3" />
     <Property Name="estado" Type="Int16" Nullable="false" />
+    <NavigationProperty Name="Cargo" Relationship="Self.FK_Empleado_Cargo" FromRole="Empleado" ToRole="Cargo" />
     <NavigationProperty Name="Usuario" Relationship="Self.FK_Usuario_Empleado" FromRole="Empleado" ToRole="Usuario" />
   </EntityType>
   <EntityType Name="Producto">
@@ -102,6 +114,18 @@
     <NavigationProperty Name="Producto" Relationship="Self.fk_VentaDetalle_Producto" FromRole="VentaDetalle" ToRole="Producto" />
     <NavigationProperty Name="Venta" Relationship="Self.fk_VentaDetalle_Venta" FromRole="VentaDetalle" ToRole="Venta" />
   </EntityType>
+  <Association Name="FK_Empleado_Cargo">
+    <End Role="Cargo" Type="Self.Cargo" Multiplicity="1" />
+    <End Role="Empleado" Type="Self.Empleado" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Cargo">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Empleado">
+        <PropertyRef Name="idCargo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
   <Association Name="fk_Venta_Cliente">
     <End Role="Cliente" Type="Self.Cliente" Multiplicity="1" />
     <End Role="Venta" Type="Self.Venta" Multiplicity="*" />
@@ -175,6 +199,7 @@
     </ReferentialConstraint>
   </Association>
   <EntityContainer Name="LabMielvaEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Cargo" EntityType="Self.Cargo" />
     <EntitySet Name="Cliente" EntityType="Self.Cliente" />
     <EntitySet Name="Empleado" EntityType="Self.Empleado" />
     <EntitySet Name="Producto" EntityType="Self.Producto" />
@@ -182,6 +207,10 @@
     <EntitySet Name="Usuario" EntityType="Self.Usuario" />
     <EntitySet Name="Venta" EntityType="Self.Venta" />
     <EntitySet Name="VentaDetalle" EntityType="Self.VentaDetalle" />
+    <AssociationSet Name="FK_Empleado_Cargo" Association="Self.FK_Empleado_Cargo">
+      <End Role="Cargo" EntitySet="Cargo" />
+      <End Role="Empleado" EntitySet="Empleado" />
+    </AssociationSet>
     <AssociationSet Name="fk_Venta_Cliente" Association="Self.fk_Venta_Cliente">
       <End Role="Cliente" EntitySet="Cliente" />
       <End Role="Venta" EntitySet="Venta" />
@@ -236,13 +265,13 @@
   <ComplexType Name="paEmpleadoListar_Result">
     <Property Type="String" Name="usuario" Nullable="false" MaxLength="20" />
     <Property Type="Int32" Name="id" Nullable="false" />
+    <Property Type="Int32" Name="idCargo" Nullable="false" />
     <Property Type="String" Name="cedulaIdentidad" Nullable="false" MaxLength="12" />
     <Property Type="String" Name="nombres" Nullable="false" MaxLength="30" />
     <Property Type="String" Name="primerApellido" Nullable="true" MaxLength="30" />
     <Property Type="String" Name="segundoApellido" Nullable="true" MaxLength="30" />
     <Property Type="String" Name="direccion" Nullable="false" MaxLength="250" />
     <Property Type="Int64" Name="celular" Nullable="false" />
-    <Property Type="String" Name="cargo" Nullable="false" MaxLength="50" />
     <Property Type="String" Name="usuarioRegistro" Nullable="false" MaxLength="50" />
     <Property Type="DateTime" Name="fechaRegistro" Nullable="false" Precision="23" />
     <Property Type="Int16" Name="estado" Nullable="false" />

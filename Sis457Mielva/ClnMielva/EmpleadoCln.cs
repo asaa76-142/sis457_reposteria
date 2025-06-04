@@ -41,7 +41,7 @@ namespace ClnMielva
                 existente.segundoApellido = empleado.segundoApellido;
                 existente.direccion = empleado.direccion;
                 existente.celular = empleado.celular;
-                existente.cargo = empleado.cargo;
+                existente.idCargo = empleado.idCargo;
                 existente.usuarioRegistro = empleado.usuarioRegistro;
 
                 if (!string.IsNullOrEmpty(nombreUsuario))

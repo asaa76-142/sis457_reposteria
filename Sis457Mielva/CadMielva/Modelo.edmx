@@ -5,6 +5,16 @@
     <!-- SSDL content -->
     <edmx:StorageModels>
       <Schema Namespace="LabMielvaModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Cargo">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="descripcion" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="usuarioRegistro" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="fechaRegistro" Type="datetime" Nullable="false" />
+          <Property Name="estado" Type="smallint" Nullable="false" />
+        </EntityType>
         <EntityType Name="Cliente">
           <Key>
             <PropertyRef Name="id" />
@@ -21,13 +31,13 @@
             <PropertyRef Name="id" />
           </Key>
           <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="idCargo" Type="int" Nullable="false" />
           <Property Name="cedulaIdentidad" Type="varchar" MaxLength="12" Nullable="false" />
           <Property Name="nombres" Type="varchar" MaxLength="30" Nullable="false" />
           <Property Name="primerApellido" Type="varchar" MaxLength="30" />
           <Property Name="segundoApellido" Type="varchar" MaxLength="30" />
           <Property Name="direccion" Type="varchar" MaxLength="250" Nullable="false" />
           <Property Name="celular" Type="bigint" Nullable="false" />
-          <Property Name="cargo" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="usuarioRegistro" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="fechaRegistro" Type="datetime" Nullable="false" />
           <Property Name="estado" Type="smallint" Nullable="false" />
@@ -95,6 +105,18 @@
           <Property Name="fechaRegistro" Type="datetime" Nullable="false" />
           <Property Name="estado" Type="smallint" Nullable="false" />
         </EntityType>
+        <Association Name="FK_Empleado_Cargo">
+          <End Role="Cargo" Type="Self.Cargo" Multiplicity="1" />
+          <End Role="Empleado" Type="Self.Empleado" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Cargo">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Empleado">
+              <PropertyRef Name="idCargo" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="fk_Producto_UnidadMedida">
           <End Role="UnidadMedida" Type="Self.UnidadMedida" Multiplicity="1" />
           <End Role="Producto" Type="Self.Producto" Multiplicity="*" />
@@ -186,6 +208,7 @@
           <Parameter Name="parametro" Type="varchar" Mode="In" />
         </Function>
         <EntityContainer Name="LabMielvaModelStoreContainer">
+          <EntitySet Name="Cargo" EntityType="Self.Cargo" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Cliente" EntityType="Self.Cliente" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Empleado" EntityType="Self.Empleado" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Producto" EntityType="Self.Producto" Schema="dbo" store:Type="Tables" />
@@ -193,6 +216,10 @@
           <EntitySet Name="Usuario" EntityType="Self.Usuario" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Venta" EntityType="Self.Venta" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="VentaDetalle" EntityType="Self.VentaDetalle" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_Empleado_Cargo" Association="Self.FK_Empleado_Cargo">
+            <End Role="Cargo" EntitySet="Cargo" />
+            <End Role="Empleado" EntitySet="Empleado" />
+          </AssociationSet>
           <AssociationSet Name="fk_Producto_UnidadMedida" Association="Self.fk_Producto_UnidadMedida">
             <End Role="UnidadMedida" EntitySet="UnidadMedida" />
             <End Role="Producto" EntitySet="Producto" />
@@ -223,6 +250,17 @@
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="LabMielvaModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Cargo">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="descripcion" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="usuarioRegistro" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="fechaRegistro" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="estado" Type="Int16" Nullable="false" />
+          <NavigationProperty Name="Empleado" Relationship="Self.FK_Empleado_Cargo" FromRole="Cargo" ToRole="Empleado" />
+        </EntityType>
         <EntityType Name="Cliente">
           <Key>
             <PropertyRef Name="id" />
@@ -240,16 +278,17 @@
             <PropertyRef Name="id" />
           </Key>
           <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="idCargo" Type="Int32" Nullable="false" />
           <Property Name="cedulaIdentidad" Type="String" MaxLength="12" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="nombres" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="primerApellido" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
           <Property Name="segundoApellido" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
           <Property Name="direccion" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="celular" Type="Int64" Nullable="false" />
-          <Property Name="cargo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="usuarioRegistro" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="fechaRegistro" Type="DateTime" Nullable="false" Precision="3" />
           <Property Name="estado" Type="Int16" Nullable="false" />
+          <NavigationProperty Name="Cargo" Relationship="Self.FK_Empleado_Cargo" FromRole="Empleado" ToRole="Cargo" />
           <NavigationProperty Name="Usuario" Relationship="Self.FK_Usuario_Empleado" FromRole="Empleado" ToRole="Usuario" />
         </EntityType>
         <EntityType Name="Producto">
@@ -325,6 +364,18 @@
           <NavigationProperty Name="Producto" Relationship="Self.fk_VentaDetalle_Producto" FromRole="VentaDetalle" ToRole="Producto" />
           <NavigationProperty Name="Venta" Relationship="Self.fk_VentaDetalle_Venta" FromRole="VentaDetalle" ToRole="Venta" />
         </EntityType>
+        <Association Name="FK_Empleado_Cargo">
+          <End Role="Cargo" Type="Self.Cargo" Multiplicity="1" />
+          <End Role="Empleado" Type="Self.Empleado" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Cargo">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Empleado">
+              <PropertyRef Name="idCargo" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="fk_Venta_Cliente">
           <End Role="Cliente" Type="Self.Cliente" Multiplicity="1" />
           <End Role="Venta" Type="Self.Venta" Multiplicity="*" />
@@ -398,6 +449,7 @@
           </ReferentialConstraint>
         </Association>
         <EntityContainer Name="LabMielvaEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Cargo" EntityType="Self.Cargo" />
           <EntitySet Name="Cliente" EntityType="Self.Cliente" />
           <EntitySet Name="Empleado" EntityType="Self.Empleado" />
           <EntitySet Name="Producto" EntityType="Self.Producto" />
@@ -405,6 +457,10 @@
           <EntitySet Name="Usuario" EntityType="Self.Usuario" />
           <EntitySet Name="Venta" EntityType="Self.Venta" />
           <EntitySet Name="VentaDetalle" EntityType="Self.VentaDetalle" />
+          <AssociationSet Name="FK_Empleado_Cargo" Association="Self.FK_Empleado_Cargo">
+            <End Role="Cargo" EntitySet="Cargo" />
+            <End Role="Empleado" EntitySet="Empleado" />
+          </AssociationSet>
           <AssociationSet Name="fk_Venta_Cliente" Association="Self.fk_Venta_Cliente">
             <End Role="Cliente" EntitySet="Cliente" />
             <End Role="Venta" EntitySet="Venta" />
@@ -459,13 +515,13 @@
         <ComplexType Name="paEmpleadoListar_Result">
           <Property Type="String" Name="usuario" Nullable="false" MaxLength="20" />
           <Property Type="Int32" Name="id" Nullable="false" />
+          <Property Type="Int32" Name="idCargo" Nullable="false" />
           <Property Type="String" Name="cedulaIdentidad" Nullable="false" MaxLength="12" />
           <Property Type="String" Name="nombres" Nullable="false" MaxLength="30" />
           <Property Type="String" Name="primerApellido" Nullable="true" MaxLength="30" />
           <Property Type="String" Name="segundoApellido" Nullable="true" MaxLength="30" />
           <Property Type="String" Name="direccion" Nullable="false" MaxLength="250" />
           <Property Type="Int64" Name="celular" Nullable="false" />
-          <Property Type="String" Name="cargo" Nullable="false" MaxLength="50" />
           <Property Type="String" Name="usuarioRegistro" Nullable="false" MaxLength="50" />
           <Property Type="DateTime" Name="fechaRegistro" Nullable="false" Precision="23" />
           <Property Type="Int16" Name="estado" Nullable="false" />
@@ -522,6 +578,17 @@
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
         <EntityContainerMapping StorageEntityContainer="LabMielvaModelStoreContainer" CdmEntityContainer="LabMielvaEntities">
+          <EntitySetMapping Name="Cargo">
+            <EntityTypeMapping TypeName="LabMielvaModel.Cargo">
+              <MappingFragment StoreEntitySet="Cargo">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+                <ScalarProperty Name="usuarioRegistro" ColumnName="usuarioRegistro" />
+                <ScalarProperty Name="fechaRegistro" ColumnName="fechaRegistro" />
+                <ScalarProperty Name="estado" ColumnName="estado" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
           <EntitySetMapping Name="Cliente">
             <EntityTypeMapping TypeName="LabMielvaModel.Cliente">
               <MappingFragment StoreEntitySet="Cliente">
@@ -538,13 +605,13 @@
             <EntityTypeMapping TypeName="LabMielvaModel.Empleado">
               <MappingFragment StoreEntitySet="Empleado">
                 <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="idCargo" ColumnName="idCargo" />
                 <ScalarProperty Name="cedulaIdentidad" ColumnName="cedulaIdentidad" />
                 <ScalarProperty Name="nombres" ColumnName="nombres" />
                 <ScalarProperty Name="primerApellido" ColumnName="primerApellido" />
                 <ScalarProperty Name="segundoApellido" ColumnName="segundoApellido" />
                 <ScalarProperty Name="direccion" ColumnName="direccion" />
                 <ScalarProperty Name="celular" ColumnName="celular" />
-                <ScalarProperty Name="cargo" ColumnName="cargo" />
                 <ScalarProperty Name="usuarioRegistro" ColumnName="usuarioRegistro" />
                 <ScalarProperty Name="fechaRegistro" ColumnName="fechaRegistro" />
                 <ScalarProperty Name="estado" ColumnName="estado" />
@@ -636,13 +703,13 @@
               <ComplexTypeMapping TypeName="LabMielvaModel.paEmpleadoListar_Result">
                 <ScalarProperty Name="usuario" ColumnName="usuario" />
                 <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="idCargo" ColumnName="idCargo" />
                 <ScalarProperty Name="cedulaIdentidad" ColumnName="cedulaIdentidad" />
                 <ScalarProperty Name="nombres" ColumnName="nombres" />
                 <ScalarProperty Name="primerApellido" ColumnName="primerApellido" />
                 <ScalarProperty Name="segundoApellido" ColumnName="segundoApellido" />
                 <ScalarProperty Name="direccion" ColumnName="direccion" />
                 <ScalarProperty Name="celular" ColumnName="celular" />
-                <ScalarProperty Name="cargo" ColumnName="cargo" />
                 <ScalarProperty Name="usuarioRegistro" ColumnName="usuarioRegistro" />
                 <ScalarProperty Name="fechaRegistro" ColumnName="fechaRegistro" />
                 <ScalarProperty Name="estado" ColumnName="estado" />

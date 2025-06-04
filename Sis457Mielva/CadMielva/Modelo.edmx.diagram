@@ -4,14 +4,16 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="56a1493e38fc4f2bb609652e5d67861a" Name="Diagram1">
-        <EntityTypeShape EntityType="LabMielvaModel.Cliente" Width="1.5" PointX="3" PointY="5.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="LabMielvaModel.Empleado" Width="1.5" PointX="0.75" PointY="1" IsExpanded="true" />
-        <EntityTypeShape EntityType="LabMielvaModel.Producto" Width="1.5" PointX="5.25" PointY="9.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="LabMielvaModel.UnidadMedida" Width="1.5" PointX="3" PointY="9.625" IsExpanded="true" />
-        <EntityTypeShape EntityType="LabMielvaModel.Usuario" Width="1.5" PointX="3" PointY="1.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="LabMielvaModel.Venta" Width="1.5" PointX="5.25" PointY="1.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="LabMielvaModel.VentaDetalle" Width="1.5" PointX="7.5" PointY="1.125" IsExpanded="true" />
+      <Diagram DiagramId="fd1279b5afc5459b9053683263532b2d" Name="Diagram1">
+        <EntityTypeShape EntityType="LabMielvaModel.Cargo" Width="1.5" PointX="0.75" PointY="1.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="LabMielvaModel.Cliente" Width="1.5" PointX="5.25" PointY="5.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="LabMielvaModel.Empleado" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="LabMielvaModel.Producto" Width="1.5" PointX="7.5" PointY="9.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="LabMielvaModel.UnidadMedida" Width="1.5" PointX="5.25" PointY="9.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="LabMielvaModel.Usuario" Width="1.5" PointX="5.25" PointY="1.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="LabMielvaModel.Venta" Width="1.5" PointX="7.5" PointY="1.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="LabMielvaModel.VentaDetalle" Width="1.5" PointX="9.75" PointY="1.25" IsExpanded="true" />
+        <AssociationConnector Association="LabMielvaModel.FK_Empleado_Cargo" ManuallyRouted="false" />
         <AssociationConnector Association="LabMielvaModel.fk_Venta_Cliente" ManuallyRouted="false" />
         <AssociationConnector Association="LabMielvaModel.FK_Usuario_Empleado" ManuallyRouted="false" />
         <AssociationConnector Association="LabMielvaModel.fk_Producto_UnidadMedida" ManuallyRouted="false" />

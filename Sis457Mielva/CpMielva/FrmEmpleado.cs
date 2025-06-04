@@ -33,7 +33,7 @@ namespace CpMielva
             dgvLista.Columns["segundoApellido"].HeaderText = "Segundo Apellido";
             dgvLista.Columns["direccion"].HeaderText = "Dirección";
             dgvLista.Columns["celular"].HeaderText = "Celular";
-            dgvLista.Columns["cargo"].HeaderText = "Cargo";
+            dgvLista.Columns["idCargo"].HeaderText = "Cargo";
             dgvLista.Columns["usuarioRegistro"].HeaderText = "Usuario Registro";
             dgvLista.Columns["fechaRegistro"].HeaderText = "Fecha Registro";
             if (lista.Count > 0) dgvLista.CurrentCell = dgvLista.Rows[0].Cells["cedulaIdentidad"];
@@ -41,6 +41,13 @@ namespace CpMielva
             btnEliminar.Enabled = lista.Count > 0;
         }
 
+        private void cargarCargos()
+        {
+            var listaCargos = CargoCln.listar();
+            cbxCargo.DataSource = listaCargos;
+            cbxCargo.DisplayMember = "descripcion";
+            cbxCargo.ValueMember = "descripcion";
+        }
         private void FrmEmpleados_Load(object sender, EventArgs e)
         {
             Size = new Size(1124, 431);
@@ -49,6 +56,7 @@ namespace CpMielva
             txtNombres.KeyPress += Util.onlyLetters;
             txtPrimerApellido.KeyPress += Util.onlyLetters;
             txtSegundoApellido.KeyPress += Util.onlyLetters;
+            cargarCargos();
         }
         private void limpiar()
         {
@@ -92,7 +100,7 @@ namespace CpMielva
             txtDireccion.Text = empleado.direccion;
             txtCelular.Text = empleado.celular.ToString();
             txtUsuario.Text = usuario;
-            cbxCargo.Text = empleado.cargo;
+            cbxCargo.SelectedValue = empleado.idCargo;
             txtCedulaIdentidad.Focus();
         }
 
@@ -162,7 +170,7 @@ namespace CpMielva
                 empleado.segundoApellido = txtSegundoApellido.Text.Trim();
                 empleado.direccion = txtDireccion.Text.Trim();
                 empleado.celular = Convert.ToInt64(txtCelular.Text);
-                empleado.cargo = cbxCargo.Text;
+                empleado.idCargo = Convert.ToInt32(cbxCargo.SelectedValue);
                 empleado.usuarioRegistro = Util.usuario.usuario1;
 
                 Usuario usuario = null;

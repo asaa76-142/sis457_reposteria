@@ -1,5 +1,15 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Schema Namespace="LabMielvaModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Cargo">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="descripcion" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="usuarioRegistro" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="fechaRegistro" Type="datetime" Nullable="false" />
+    <Property Name="estado" Type="smallint" Nullable="false" />
+  </EntityType>
   <EntityType Name="Cliente">
     <Key>
       <PropertyRef Name="id" />
@@ -16,13 +26,13 @@
       <PropertyRef Name="id" />
     </Key>
     <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="idCargo" Type="int" Nullable="false" />
     <Property Name="cedulaIdentidad" Type="varchar" MaxLength="12" Nullable="false" />
     <Property Name="nombres" Type="varchar" MaxLength="30" Nullable="false" />
     <Property Name="primerApellido" Type="varchar" MaxLength="30" />
     <Property Name="segundoApellido" Type="varchar" MaxLength="30" />
     <Property Name="direccion" Type="varchar" MaxLength="250" Nullable="false" />
     <Property Name="celular" Type="bigint" Nullable="false" />
-    <Property Name="cargo" Type="varchar" MaxLength="50" Nullable="false" />
     <Property Name="usuarioRegistro" Type="varchar" MaxLength="50" Nullable="false" />
     <Property Name="fechaRegistro" Type="datetime" Nullable="false" />
     <Property Name="estado" Type="smallint" Nullable="false" />
@@ -90,6 +100,18 @@
     <Property Name="fechaRegistro" Type="datetime" Nullable="false" />
     <Property Name="estado" Type="smallint" Nullable="false" />
   </EntityType>
+  <Association Name="FK_Empleado_Cargo">
+    <End Role="Cargo" Type="Self.Cargo" Multiplicity="1" />
+    <End Role="Empleado" Type="Self.Empleado" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Cargo">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Empleado">
+        <PropertyRef Name="idCargo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
   <Association Name="fk_Producto_UnidadMedida">
     <End Role="UnidadMedida" Type="Self.UnidadMedida" Multiplicity="1" />
     <End Role="Producto" Type="Self.Producto" Multiplicity="*" />
@@ -181,6 +203,7 @@
     <Parameter Name="parametro" Type="varchar" Mode="In" />
   </Function>
   <EntityContainer Name="LabMielvaModelStoreContainer">
+    <EntitySet Name="Cargo" EntityType="Self.Cargo" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Cliente" EntityType="Self.Cliente" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Empleado" EntityType="Self.Empleado" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Producto" EntityType="Self.Producto" Schema="dbo" store:Type="Tables" />
@@ -188,6 +211,10 @@
     <EntitySet Name="Usuario" EntityType="Self.Usuario" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Venta" EntityType="Self.Venta" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="VentaDetalle" EntityType="Self.VentaDetalle" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_Empleado_Cargo" Association="Self.FK_Empleado_Cargo">
+      <End Role="Cargo" EntitySet="Cargo" />
+      <End Role="Empleado" EntitySet="Empleado" />
+    </AssociationSet>
     <AssociationSet Name="fk_Producto_UnidadMedida" Association="Self.fk_Producto_UnidadMedida">
       <End Role="UnidadMedida" EntitySet="UnidadMedida" />
       <End Role="Producto" EntitySet="Producto" />

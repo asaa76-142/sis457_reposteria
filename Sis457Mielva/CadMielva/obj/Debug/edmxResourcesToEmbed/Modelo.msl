@@ -1,6 +1,17 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
   <EntityContainerMapping StorageEntityContainer="LabMielvaModelStoreContainer" CdmEntityContainer="LabMielvaEntities">
+    <EntitySetMapping Name="Cargo">
+      <EntityTypeMapping TypeName="LabMielvaModel.Cargo">
+        <MappingFragment StoreEntitySet="Cargo">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+          <ScalarProperty Name="usuarioRegistro" ColumnName="usuarioRegistro" />
+          <ScalarProperty Name="fechaRegistro" ColumnName="fechaRegistro" />
+          <ScalarProperty Name="estado" ColumnName="estado" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
     <EntitySetMapping Name="Cliente">
       <EntityTypeMapping TypeName="LabMielvaModel.Cliente">
         <MappingFragment StoreEntitySet="Cliente">
@@ -17,13 +28,13 @@
       <EntityTypeMapping TypeName="LabMielvaModel.Empleado">
         <MappingFragment StoreEntitySet="Empleado">
           <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="idCargo" ColumnName="idCargo" />
           <ScalarProperty Name="cedulaIdentidad" ColumnName="cedulaIdentidad" />
           <ScalarProperty Name="nombres" ColumnName="nombres" />
           <ScalarProperty Name="primerApellido" ColumnName="primerApellido" />
           <ScalarProperty Name="segundoApellido" ColumnName="segundoApellido" />
           <ScalarProperty Name="direccion" ColumnName="direccion" />
           <ScalarProperty Name="celular" ColumnName="celular" />
-          <ScalarProperty Name="cargo" ColumnName="cargo" />
           <ScalarProperty Name="usuarioRegistro" ColumnName="usuarioRegistro" />
           <ScalarProperty Name="fechaRegistro" ColumnName="fechaRegistro" />
           <ScalarProperty Name="estado" ColumnName="estado" />
@@ -115,13 +126,13 @@
         <ComplexTypeMapping TypeName="LabMielvaModel.paEmpleadoListar_Result">
           <ScalarProperty Name="usuario" ColumnName="usuario" />
           <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="idCargo" ColumnName="idCargo" />
           <ScalarProperty Name="cedulaIdentidad" ColumnName="cedulaIdentidad" />
           <ScalarProperty Name="nombres" ColumnName="nombres" />
           <ScalarProperty Name="primerApellido" ColumnName="primerApellido" />
           <ScalarProperty Name="segundoApellido" ColumnName="segundoApellido" />
           <ScalarProperty Name="direccion" ColumnName="direccion" />
           <ScalarProperty Name="celular" ColumnName="celular" />
-          <ScalarProperty Name="cargo" ColumnName="cargo" />
           <ScalarProperty Name="usuarioRegistro" ColumnName="usuarioRegistro" />
           <ScalarProperty Name="fechaRegistro" ColumnName="fechaRegistro" />
           <ScalarProperty Name="estado" ColumnName="estado" />
