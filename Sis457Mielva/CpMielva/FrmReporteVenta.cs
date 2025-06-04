@@ -34,6 +34,10 @@ namespace CpMielva
             dgvLista.Columns["cantidad"].HeaderText = "Cantidad";
             dgvLista.Columns["precioUnitario"].HeaderText = "Precio Unitario";
             dgvLista.Columns["total"].HeaderText = "Total";
+            //dgvLista.Columns["precioUnitario"].DefaultCellStyle.Format = "N2";
+            //dgvLista.Columns["total"].DefaultCellStyle.Format = "N2";
+
+
             if (lista.Count > 0) dgvLista.CurrentCell = dgvLista.Rows[0].Cells["transaccion"];
             btnEliminar.Enabled = lista.Count > 0;
 
