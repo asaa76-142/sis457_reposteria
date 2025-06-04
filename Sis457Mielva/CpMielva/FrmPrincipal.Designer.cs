@@ -50,6 +50,7 @@
             this.ribbonButton7 = new C1.Win.Ribbon.RibbonButton();
             this.ribbonTopToolBar1 = new C1.Win.Ribbon.RibbonTopToolBar();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.ribbonButton1 = new C1.Win.Ribbon.RibbonButton();
             ((System.ComponentModel.ISupportInitialize)(this.c1Ribbon1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -143,13 +144,14 @@
             // ribbonGroup4
             // 
             this.ribbonGroup4.Items.Add(this.ribbonButton4);
+            this.ribbonGroup4.Items.Add(this.ribbonButton1);
             this.ribbonGroup4.Name = "ribbonGroup4";
             this.ribbonGroup4.Text = "Gestión de Ventas";
             // 
             // ribbonButton4
             // 
             this.ribbonButton4.IconSet.Add(new C1.Framework.C1BitmapIcon("DefaultImage", new System.Drawing.Size(16, 16), System.Drawing.Color.Transparent, "DefaultImage", -1));
-            this.ribbonButton4.IconSet.Add(new C1.Framework.C1BitmapIcon("MarkCitration", new System.Drawing.Size(32, 32), System.Drawing.Color.Transparent, "Preset_LargeImages", 162));
+            this.ribbonButton4.IconSet.Add(new C1.Framework.C1BitmapIcon("Open", new System.Drawing.Size(32, 32), System.Drawing.Color.Transparent, "Preset_LargeImages", 185));
             this.ribbonButton4.Name = "ribbonButton4";
             this.ribbonButton4.Text = "Ventas";
             this.ribbonButton4.Click += new System.EventHandler(this.ribbonButton4_Click);
@@ -205,6 +207,14 @@
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             // 
+            // ribbonButton1
+            // 
+            this.ribbonButton1.IconSet.Add(new C1.Framework.C1BitmapIcon("DefaultImage", new System.Drawing.Size(16, 16), System.Drawing.Color.Transparent, "DefaultImage", -1));
+            this.ribbonButton1.IconSet.Add(new C1.Framework.C1BitmapIcon("NewWindow", new System.Drawing.Size(32, 32), System.Drawing.Color.Transparent, "Preset_LargeImages", 177));
+            this.ribbonButton1.Name = "ribbonButton1";
+            this.ribbonButton1.Text = "Registrar Venta";
+            this.ribbonButton1.Click += new System.EventHandler(this.ribbonButton1_Click);
+            // 
             // FrmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -251,5 +261,6 @@
         private C1.Win.Ribbon.RibbonButton ribbonButton7;
         private System.Windows.Forms.PictureBox pictureBox1;
         private C1.Win.Ribbon.RibbonGroup ribbonGroup2;
+        private C1.Win.Ribbon.RibbonButton ribbonButton1;
     }
 }

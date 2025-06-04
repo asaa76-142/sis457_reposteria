@@ -96,11 +96,11 @@
     <Compile Include="FrmRegistroVenta.Designer.cs">
       <DependentUpon>FrmRegistroVenta.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmVentaDetalle.cs">
+    <Compile Include="FrmReporteVenta.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmVentaDetalle.Designer.cs">
-      <DependentUpon>FrmVentaDetalle.cs</DependentUpon>
+    <Compile Include="FrmReporteVenta.Designer.cs">
+      <DependentUpon>FrmReporteVenta.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -123,8 +123,8 @@
     <EmbeddedResource Include="FrmRegistroVenta.resx">
       <DependentUpon>FrmRegistroVenta.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmVentaDetalle.resx">
-      <DependentUpon>FrmVentaDetalle.cs</DependentUpon>
+    <EmbeddedResource Include="FrmReporteVenta.resx">
+      <DependentUpon>FrmReporteVenta.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
