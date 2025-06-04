@@ -30,11 +30,10 @@ namespace CpMielva
             dgvLista.Columns["fechaRegistro"].HeaderText = "Fecha de Registro";
             //dgvLista.Columns["razonSocial"].HeaderText = "Cliente";
             dgvLista.Columns["nit"].HeaderText = "NIT";
-            dgvLista.Columns["usuarioRegistro"].HeaderText = "Usuario Registro";
-            //dgvLista.Columns["pro"].HeaderText = "Descripción de Producto";
-            //dgvLista.Columns["cantidad"].HeaderText = "Cantidad";
-            //dgvLista.Columns["precioUnitario"].HeaderText = "Precio Unitario";
-            //dgvLista.Columns["total"].HeaderText = "Total";
+            dgvLista.Columns["usuarioRegistro"].HeaderText = "Usuario de Registro";
+            dgvLista.Columns["cantidad"].HeaderText = "Cantidad";
+            dgvLista.Columns["precioUnitario"].HeaderText = "Precio Unitario";
+            dgvLista.Columns["total"].HeaderText = "Total";
             if (lista.Count > 0) dgvLista.CurrentCell = dgvLista.Rows[0].Cells["transaccion"];
             btnEliminar.Enabled = lista.Count > 0;
 
