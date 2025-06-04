@@ -70,13 +70,12 @@
             this.label5 = new System.Windows.Forms.Label();
             this.txtGalletaMaicena = new System.Windows.Forms.Label();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.nudGalletaMaicena = new System.Windows.Forms.NumericUpDown();
             this.nudGalletaNaranja = new System.Windows.Forms.NumericUpDown();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.btnGuardar = new System.Windows.Forms.Button();
             this.btnCerrar = new System.Windows.Forms.Button();
-            this.btnNuevo = new System.Windows.Forms.Button();
-            this.nudGalletaMaicena = new System.Windows.Forms.NumericUpDown();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudPastelNormalMujer)).BeginInit();
@@ -95,10 +94,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.nudEmpanada)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.groupBox4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudGalletaMaicena)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudGalletaNaranja)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudGalletaMaicena)).BeginInit();
             this.SuspendLayout();
             // 
             // lblTitulo
@@ -570,6 +569,19 @@
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Galletas:";
             // 
+            // nudGalletaMaicena
+            // 
+            this.nudGalletaMaicena.Location = new System.Drawing.Point(460, 131);
+            this.nudGalletaMaicena.Margin = new System.Windows.Forms.Padding(4);
+            this.nudGalletaMaicena.Maximum = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
+            this.nudGalletaMaicena.Name = "nudGalletaMaicena";
+            this.nudGalletaMaicena.Size = new System.Drawing.Size(32, 22);
+            this.nudGalletaMaicena.TabIndex = 49;
+            // 
             // nudGalletaNaranja
             // 
             this.nudGalletaNaranja.Location = new System.Drawing.Point(206, 131);
@@ -632,34 +644,7 @@
             this.btnCerrar.UseVisualStyleBackColor = true;
             this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
             // 
-            // btnNuevo
-            // 
-            this.btnNuevo.Image = global::CpMielva.Properties.Resources.nuevo;
-            this.btnNuevo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnNuevo.Location = new System.Drawing.Point(780, 173);
-            this.btnNuevo.Margin = new System.Windows.Forms.Padding(4);
-            this.btnNuevo.Name = "btnNuevo";
-            this.btnNuevo.Padding = new System.Windows.Forms.Padding(7, 0, 7, 0);
-            this.btnNuevo.Size = new System.Drawing.Size(229, 49);
-            this.btnNuevo.TabIndex = 21;
-            this.btnNuevo.Text = "Agregar Productos";
-            this.btnNuevo.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnNuevo.UseVisualStyleBackColor = true;
-            // 
-            // nudGalletaMaicena
-            // 
-            this.nudGalletaMaicena.Location = new System.Drawing.Point(460, 131);
-            this.nudGalletaMaicena.Margin = new System.Windows.Forms.Padding(4);
-            this.nudGalletaMaicena.Maximum = new decimal(new int[] {
-            1000,
-            0,
-            0,
-            0});
-            this.nudGalletaMaicena.Name = "nudGalletaMaicena";
-            this.nudGalletaMaicena.Size = new System.Drawing.Size(32, 22);
-            this.nudGalletaMaicena.TabIndex = 49;
-            // 
-            // FrmVenta
+            // FrmRegistroVenta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -676,7 +661,6 @@
             this.Controls.Add(this.txtTotal);
             this.Controls.Add(this.lblTotal);
             this.Controls.Add(this.btnCerrar);
-            this.Controls.Add(this.btnNuevo);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.dtpFecha);
             this.Controls.Add(this.lblFecha);
@@ -684,7 +668,8 @@
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
-            this.Name = "FrmVenta";
+            this.MaximizeBox = false;
+            this.Name = "FrmRegistroVenta";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "::: Ventas :::";
             this.Load += new System.EventHandler(this.FrmVenta_Load);
@@ -710,10 +695,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudGalletaMaicena)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudGalletaNaranja)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudGalletaMaicena)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -730,7 +715,6 @@
         private System.Windows.Forms.Label lblNombre;
         private System.Windows.Forms.Button btnBuscar;
         private System.Windows.Forms.TextBox txtNit;
-        private System.Windows.Forms.Button btnNuevo;
         private System.Windows.Forms.Button btnCerrar;
         private System.Windows.Forms.Label lblTotal;
         private System.Windows.Forms.TextBox txtTotal;
