@@ -37,7 +37,6 @@ DROP PROC paEmpleadoListar;
 DROP PROC paClienteListar;
 DROP PROC paVentaClienteListar;
 DROP PROC paVentaListar;
-DROP PROC paVentaDetalleListar;
 
 
 CREATE TABLE UnidadMedida(
@@ -186,52 +185,76 @@ ORDER BY estado DESC, razonSocial ASC;
 GO
 CREATE PROC paVentaListar @parametro VARCHAR(100)
 AS
-	SELECT v.*, u.usuario, c.razonSocial
+	SELECT DISTINCT v.id, v.transaccion, v.fecha, v.usuarioRegistro, v.fechaRegistro,
+	       v.estado, u.usuario, c.razonSocial, c.nit
 	FROM Venta v
 	LEFT JOIN Usuario u ON v.idUsuario = u.id
 	LEFT JOIN Cliente c ON v.idCliente = c.id
-	WHERE v.estado = 1 AND CAST(v.transaccion AS VARCHAR) + CAST(v.fecha AS VARCHAR) + u.usuario + c.razonSocial LIKE
-	'%'+REPLACE(@parametro, ' ','%')+'%'
-	ORDER BY v.estado DESC, v.fecha DESC;
-
-GO
-CREATE PROC paVentaDetalleListar @parametro VARCHAR(100)
-	AS
-	SELECT vd.*, p.descripcion, v.transaccion, v.fecha
-	FROM VentaDetalle vd
-	LEFT JOIN Producto p ON vd.idProducto = p.id
-	LEFT JOIN Venta v ON vd.idVenta = v.id
-	WHERE vd.estado = 1 AND CAST(vd.cantidad AS VARCHAR) + CAST(vd.precioUnitario AS VARCHAR) + CAST(vd.total AS VARCHAR) + p.descripcion + CAST(v.transaccion AS VARCHAR) + CAST(v.fecha AS VARCHAR) LIKE
-	'%'+REPLACE(@parametro, ' ','%')+'%'
-	ORDER BY vd.estado DESC, v.fecha DESC;
+	INNER JOIN VentaDetalle vd ON vd.idVenta = v.id
+	INNER JOIN Producto p ON p.id = vd.idProducto
+	WHERE v.estado = 1 AND (
+		CAST(v.transaccion AS VARCHAR) + 
+		CAST(v.fecha AS VARCHAR) +
+		ISNULL(u.usuario, '') +
+		ISNULL(c.razonSocial, '') +
+		ISNULL(c.nit, '') +
+		ISNULL(p.descripcion, '') +
+		ISNULL(p.codigo, '')
+	) LIKE '%' + REPLACE(@parametro, ' ', '%') + '%'
+	ORDER BY v.fecha DESC;
 
 
 EXEC paClienteListar 'mendieta';
 EXEC paClienteListar 'mielva';
 EXEC paEmpleadoListar '';
 EXEC paVentaListar '123456';
-EXEC paVentaDetalleListar '170';
 EXEC paProductoListar 'pastel varon';
 EXEC paEmpleadoListar 'juan';
+EXEC paVentaListar 'mielva';         -- Buscar por razonSocial
+EXEC paVentaListar '123456';         -- Buscar por transacción o NIT
+EXEC paVentaListar 'pastel';         -- Buscar por producto vendido
+EXEC paVentaListar 'jperez';         -- Buscar por usuario que registró la venta
+EXEC paVentaListar '2025-06-04';     -- Buscar por fecha
 
 -- DML *********************************
 INSERT INTO UnidadMedida(descripcion)
-VALUES ('Caja'),('Docena'),('Unidad');
+VALUES ('Unidad'),('Docena');
 
 INSERT INTO Cargo(descripcion)
 VALUES ('Pastelero'),('Cajero'),('Limpieza'),('Repartidor'),('Mantenimiento');
 
 INSERT INTO Producto(codigo,descripcion,idUnidadMedida,saldo,precioVenta)
-VALUES ('PT0254', 'Pastel para varón de Feliz Cumpleaños', 3, 0, 85);
+VALUES ('PT0254', 'Pastel de cumpleaños para Varón', 1, 0, 85);
 
 INSERT INTO Producto(codigo,descripcion,idUnidadMedida,saldo,precioVenta)
-VALUES ('PT0253', 'Pastel para mujer de Feliz Cumpleaños', 3, 0, 87);
+VALUES ('PT0255', 'Pastel de cumpleaños para Mujer', 1, 0, 87);
 
 INSERT INTO Producto(codigo,descripcion,idUnidadMedida,saldo,precioVenta)
 VALUES ('EM3285', 'Empanada', 2, 0, 10);
 
-UPDATE Producto SET precioVenta=83 WHERE codigo='PT0254';
+UPDATE Producto SET precioVenta=85 WHERE codigo='PT0255';
 UPDATE Producto SET estado=-1 WHERE codigo='EM3285';
+
+INSERT INTO Producto(codigo,descripcion,idUnidadMedida,saldo,precioVenta)
+VALUES ('PT0256', 'Pastel de cumpleaños para Varón', 1, 0, 65);
+
+INSERT INTO Producto(codigo,descripcion,idUnidadMedida,saldo,precioVenta)
+VALUES ('PT0257', 'Pastel de cumpleaños para Mujer', 1, 0, 65);
+
+INSERT INTO Producto(codigo,descripcion,idUnidadMedida,saldo,precioVenta)
+VALUES ('PT0258', 'Pastel normal para Varón', 1, 0, 85);
+
+INSERT INTO Producto(codigo,descripcion,idUnidadMedida,saldo,precioVenta)
+VALUES ('PT0259', 'Pastel normal para Mujer', 1, 0, 85);
+
+INSERT INTO Producto(codigo,descripcion,idUnidadMedida,saldo,precioVenta)
+VALUES ('EM0301', 'Empanada', 1, 0, 3.50);
+
+INSERT INTO Producto(codigo,descripcion,idUnidadMedida,saldo,precioVenta)
+VALUES ('GT0321', 'Galleta de Naranja', 1, 0, 0.50);
+
+INSERT INTO Producto(codigo,descripcion,idUnidadMedida,saldo,precioVenta)
+VALUES ('GT0322', 'Galleta de Maicena', 1, 0, 0.50);
 
 
 INSERT INTO Empleado(cedulaIdentidad, nombres, primerApellido, segundoApellido, direccion, celular, idCargo)

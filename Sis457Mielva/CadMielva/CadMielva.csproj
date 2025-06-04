@@ -89,9 +89,6 @@
     <Compile Include="paVentaClienteListar_Result.cs">
       <DependentUpon>Modelo.tt</DependentUpon>
     </Compile>
-    <Compile Include="paVentaDetalleListar_Result.cs">
-      <DependentUpon>Modelo.tt</DependentUpon>
-    </Compile>
     <Compile Include="paVentaListar_Result.cs">
       <DependentUpon>Modelo.tt</DependentUpon>
     </Compile>

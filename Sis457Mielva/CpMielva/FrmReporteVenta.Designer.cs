@@ -42,6 +42,7 @@
             this.erpSaldo = new System.Windows.Forms.ErrorProvider(this.components);
             this.btnRegistrarNuevaVenta = new System.Windows.Forms.Button();
             this.btnCerrar = new System.Windows.Forms.Button();
+            this.btnEliminar = new System.Windows.Forms.Button();
             this.gbxLista.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvLista)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.erpPrecioVenta)).BeginInit();
@@ -66,9 +67,9 @@
             this.lblParametro.Location = new System.Drawing.Point(24, 52);
             this.lblParametro.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblParametro.Name = "lblParametro";
-            this.lblParametro.Size = new System.Drawing.Size(231, 16);
+            this.lblParametro.Size = new System.Drawing.Size(329, 16);
             this.lblParametro.TabIndex = 15;
-            this.lblParametro.Text = "Buscar por Cliente, Fecha o Producto:";
+            this.lblParametro.Text = "Buscar por nit o nombre de Cliente,  Fecha o Producto:";
             // 
             // lblTitulo
             // 
@@ -78,7 +79,7 @@
             this.lblTitulo.Name = "lblTitulo";
             this.lblTitulo.Size = new System.Drawing.Size(1105, 38);
             this.lblTitulo.TabIndex = 14;
-            this.lblTitulo.Text = " Detalles de Ventas";
+            this.lblTitulo.Text = " Reporte de Ventas";
             this.lblTitulo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // btnBuscar
@@ -95,6 +96,7 @@
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnBuscar.UseVisualStyleBackColor = true;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // gbxLista
             // 
@@ -148,7 +150,7 @@
             this.btnRegistrarNuevaVenta.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.3F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRegistrarNuevaVenta.Image = global::CpMielva.Properties.Resources.nuevo;
             this.btnRegistrarNuevaVenta.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnRegistrarNuevaVenta.Location = new System.Drawing.Point(293, 358);
+            this.btnRegistrarNuevaVenta.Location = new System.Drawing.Point(486, 428);
             this.btnRegistrarNuevaVenta.Margin = new System.Windows.Forms.Padding(4);
             this.btnRegistrarNuevaVenta.Name = "btnRegistrarNuevaVenta";
             this.btnRegistrarNuevaVenta.Padding = new System.Windows.Forms.Padding(7, 0, 7, 0);
@@ -163,7 +165,7 @@
             // 
             this.btnCerrar.Image = global::CpMielva.Properties.Resources.cerrar;
             this.btnCerrar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCerrar.Location = new System.Drawing.Point(592, 358);
+            this.btnCerrar.Location = new System.Drawing.Point(562, 353);
             this.btnCerrar.Margin = new System.Windows.Forms.Padding(4);
             this.btnCerrar.Name = "btnCerrar";
             this.btnCerrar.Padding = new System.Windows.Forms.Padding(7, 0, 7, 0);
@@ -174,12 +176,29 @@
             this.btnCerrar.UseVisualStyleBackColor = true;
             this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
             // 
+            // btnEliminar
+            // 
+            this.btnEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.3F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEliminar.Image = global::CpMielva.Properties.Resources.eliminar;
+            this.btnEliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnEliminar.Location = new System.Drawing.Point(313, 353);
+            this.btnEliminar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnEliminar.Name = "btnEliminar";
+            this.btnEliminar.Padding = new System.Windows.Forms.Padding(7, 0, 7, 0);
+            this.btnEliminar.Size = new System.Drawing.Size(199, 49);
+            this.btnEliminar.TabIndex = 31;
+            this.btnEliminar.Text = "Eliminar Venta";
+            this.btnEliminar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
+            // 
             // FrmReporteVenta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.MediumAquamarine;
             this.ClientSize = new System.Drawing.Size(1108, 554);
+            this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnCerrar);
             this.Controls.Add(this.txtParametro);
             this.Controls.Add(this.lblParametro);
@@ -192,7 +211,7 @@
             this.MaximizeBox = false;
             this.Name = "FrmReporteVenta";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = ":::...Mielva - Detalles de Ventas...:::";
+            this.Text = ":::...Mielva - Reporte de Ventas...:::";
             this.Load += new System.EventHandler(this.FrmVentaDetalle_Load);
             this.gbxLista.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvLista)).EndInit();
@@ -221,5 +240,6 @@
         private System.Windows.Forms.ErrorProvider erpSaldo;
         private System.Windows.Forms.Button btnRegistrarNuevaVenta;
         private System.Windows.Forms.Button btnCerrar;
+        private System.Windows.Forms.Button btnEliminar;
     }
 }

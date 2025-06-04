@@ -14,8 +14,6 @@ namespace CadMielva
     public partial class paVentaListar_Result
     {
         public int id { get; set; }
-        public int idUsuario { get; set; }
-        public int idCliente { get; set; }
         public int transaccion { get; set; }
         public System.DateTime fecha { get; set; }
         public string usuarioRegistro { get; set; }
@@ -23,5 +21,6 @@ namespace CadMielva
         public short estado { get; set; }
         public string usuario { get; set; }
         public string razonSocial { get; set; }
+        public string nit { get; set; }
     }
 }

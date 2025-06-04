@@ -519,7 +519,7 @@
             0,
             0});
             this.nudEmpanada.Name = "nudEmpanada";
-            this.nudEmpanada.Size = new System.Drawing.Size(32, 22);
+            this.nudEmpanada.Size = new System.Drawing.Size(37, 22);
             this.nudEmpanada.TabIndex = 47;
             // 
             // pictureBox5
@@ -628,6 +628,7 @@
             this.btnGuardar.Text = "Guardar Venta";
             this.btnGuardar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnGuardar.UseVisualStyleBackColor = true;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
             // btnCerrar
             // 
