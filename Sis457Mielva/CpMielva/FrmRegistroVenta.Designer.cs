@@ -76,6 +76,7 @@
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.btnGuardar = new System.Windows.Forms.Button();
             this.btnCerrar = new System.Windows.Forms.Button();
+            this.btnRegistrarNuevaVenta = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudPastelNormalMujer)).BeginInit();
@@ -645,12 +646,29 @@
             this.btnCerrar.UseVisualStyleBackColor = true;
             this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
             // 
+            // btnRegistrarNuevaVenta
+            // 
+            this.btnRegistrarNuevaVenta.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.3F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRegistrarNuevaVenta.Image = global::CpMielva.Properties.Resources.nuevo;
+            this.btnRegistrarNuevaVenta.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnRegistrarNuevaVenta.Location = new System.Drawing.Point(789, 143);
+            this.btnRegistrarNuevaVenta.Margin = new System.Windows.Forms.Padding(4);
+            this.btnRegistrarNuevaVenta.Name = "btnRegistrarNuevaVenta";
+            this.btnRegistrarNuevaVenta.Padding = new System.Windows.Forms.Padding(7, 0, 7, 0);
+            this.btnRegistrarNuevaVenta.Size = new System.Drawing.Size(242, 49);
+            this.btnRegistrarNuevaVenta.TabIndex = 46;
+            this.btnRegistrarNuevaVenta.Text = "Registrar Nuevo Cliente";
+            this.btnRegistrarNuevaVenta.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnRegistrarNuevaVenta.UseVisualStyleBackColor = true;
+            this.btnRegistrarNuevaVenta.Click += new System.EventHandler(this.btnRegistrarNuevaVenta_Click);
+            // 
             // FrmRegistroVenta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.MediumAquamarine;
             this.ClientSize = new System.Drawing.Size(1108, 554);
+            this.Controls.Add(this.btnRegistrarNuevaVenta);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
@@ -754,5 +772,6 @@
         private System.Windows.Forms.NumericUpDown nudEmpanada;
         private System.Windows.Forms.NumericUpDown nudGalletaNaranja;
         private System.Windows.Forms.NumericUpDown nudGalletaMaicena;
+        private System.Windows.Forms.Button btnRegistrarNuevaVenta;
     }
 }

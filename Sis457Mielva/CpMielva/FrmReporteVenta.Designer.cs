@@ -152,7 +152,7 @@
             this.btnRegistrarNuevaVenta.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.3F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRegistrarNuevaVenta.Image = global::CpMielva.Properties.Resources.nuevo;
             this.btnRegistrarNuevaVenta.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnRegistrarNuevaVenta.Location = new System.Drawing.Point(486, 428);
+            this.btnRegistrarNuevaVenta.Location = new System.Drawing.Point(408, 428);
             this.btnRegistrarNuevaVenta.Margin = new System.Windows.Forms.Padding(4);
             this.btnRegistrarNuevaVenta.Name = "btnRegistrarNuevaVenta";
             this.btnRegistrarNuevaVenta.Padding = new System.Windows.Forms.Padding(7, 0, 7, 0);

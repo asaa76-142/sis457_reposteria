@@ -187,5 +187,10 @@ namespace CpMielva
             this.DialogResult = DialogResult.OK;
             this.Close();
         }
+
+        private void btnRegistrarNuevaVenta_Click(object sender, EventArgs e)
+        {
+            new FrmCliente().ShowDialog();
+        }
     }
 }
