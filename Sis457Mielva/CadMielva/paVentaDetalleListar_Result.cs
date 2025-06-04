@@ -11,20 +11,19 @@ namespace CadMielva
 {
     using System;
     
-    public partial class paVentaListar_Result
+    public partial class paVentaDetalleListar_Result
     {
+        public int id { get; set; }
         public int idVenta { get; set; }
-        public int transaccion { get; set; }
-        public System.DateTime fecha { get; set; }
-        public string Cliente { get; set; }
-        public string NIT { get; set; }
-        public string Usuario { get; set; }
-        public string Producto { get; set; }
+        public int idProducto { get; set; }
         public decimal cantidad { get; set; }
         public decimal precioUnitario { get; set; }
         public decimal total { get; set; }
         public string usuarioRegistro { get; set; }
         public System.DateTime fechaRegistro { get; set; }
         public short estado { get; set; }
+        public string descripcion { get; set; }
+        public Nullable<int> transaccion { get; set; }
+        public Nullable<System.DateTime> fecha { get; set; }
     }
 }

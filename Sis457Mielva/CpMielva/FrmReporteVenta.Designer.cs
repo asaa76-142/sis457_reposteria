@@ -60,6 +60,7 @@
             this.txtParametro.Name = "txtParametro";
             this.txtParametro.Size = new System.Drawing.Size(905, 22);
             this.txtParametro.TabIndex = 16;
+            this.txtParametro.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtParametro_KeyPress);
             // 
             // lblParametro
             // 
@@ -67,9 +68,9 @@
             this.lblParametro.Location = new System.Drawing.Point(24, 52);
             this.lblParametro.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblParametro.Name = "lblParametro";
-            this.lblParametro.Size = new System.Drawing.Size(329, 16);
+            this.lblParametro.Size = new System.Drawing.Size(418, 16);
             this.lblParametro.TabIndex = 15;
-            this.lblParametro.Text = "Buscar por nit o nombre de Cliente,  Fecha o Producto:";
+            this.lblParametro.Text = "Buscar por Transacción, Producto, nit de Cliente o nombre de Cliente:";
             // 
             // lblTitulo
             // 

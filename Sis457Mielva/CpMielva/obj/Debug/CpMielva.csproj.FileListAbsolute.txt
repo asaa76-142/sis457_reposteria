@@ -165,7 +165,6 @@ B:\Materias usfx\1.- Informática\1 - 2025\sis457\sis457_reposteria\Sis457Mielva
 B:\Materias usfx\1.- Informática\1 - 2025\sis457\sis457_reposteria\Sis457Mielva\CpMielva\obj\Debug\CpMielva.FrmEmpleado.resources
 B:\Materias usfx\1.- Informática\1 - 2025\sis457\sis457_reposteria\Sis457Mielva\CpMielva\obj\Debug\CpMielva.FrmPrincipal.resources
 B:\Materias usfx\1.- Informática\1 - 2025\sis457\sis457_reposteria\Sis457Mielva\CpMielva\obj\Debug\CpMielva.FrmProducto.resources
-B:\Materias usfx\1.- Informática\1 - 2025\sis457\sis457_reposteria\Sis457Mielva\CpMielva\obj\Debug\CpMielva.FrmVentaDetalle.resources
 B:\Materias usfx\1.- Informática\1 - 2025\sis457\sis457_reposteria\Sis457Mielva\CpMielva\obj\Debug\CpMielva.Properties.Resources.resources
 B:\Materias usfx\1.- Informática\1 - 2025\sis457\sis457_reposteria\Sis457Mielva\CpMielva\obj\Debug\CpMielva.csproj.GenerateResource.cache
 B:\Materias usfx\1.- Informática\1 - 2025\sis457\sis457_reposteria\Sis457Mielva\CpMielva\obj\Debug\CpMielva.exe.licenses
@@ -209,3 +208,4 @@ C:\Users\auzas\Desktop\sis475_reposteria\sis457_reposteria\Sis457Mielva\CpMielva
 C:\Users\auzas\Desktop\sis475_reposteria\sis457_reposteria\Sis457Mielva\CpMielva\obj\Debug\CpMielva.pdb
 C:\Users\Kevin\Documents\sis457\sis457_reposteria\Sis457Mielva\CpMielva\obj\Debug\CpMielva.FrmRegistroVenta.resources
 C:\Users\Kevin\Documents\sis457\sis457_reposteria\Sis457Mielva\CpMielva\obj\Debug\CpMielva.FrmReporteVenta.resources
+B:\Materias usfx\1.- Informática\1 - 2025\sis457\sis457_reposteria\Sis457Mielva\CpMielva\obj\Debug\CpMielva.FrmReporteVenta.resources

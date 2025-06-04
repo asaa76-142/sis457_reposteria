@@ -185,23 +185,36 @@ ORDER BY estado DESC, razonSocial ASC;
 GO
 CREATE PROC paVentaListar @parametro VARCHAR(100)
 AS
-	SELECT DISTINCT v.id, v.transaccion, v.fecha, v.usuarioRegistro, v.fechaRegistro,
-	       v.estado, u.usuario, c.razonSocial, c.nit
-	FROM Venta v
-	LEFT JOIN Usuario u ON v.idUsuario = u.id
-	LEFT JOIN Cliente c ON v.idCliente = c.id
-	INNER JOIN VentaDetalle vd ON vd.idVenta = v.id
-	INNER JOIN Producto p ON p.id = vd.idProducto
-	WHERE v.estado = 1 AND (
-		CAST(v.transaccion AS VARCHAR) + 
-		CAST(v.fecha AS VARCHAR) +
-		ISNULL(u.usuario, '') +
-		ISNULL(c.razonSocial, '') +
-		ISNULL(c.nit, '') +
-		ISNULL(p.descripcion, '') +
-		ISNULL(p.codigo, '')
-	) LIKE '%' + REPLACE(@parametro, ' ', '%') + '%'
-	ORDER BY v.fecha DESC;
+SELECT 
+    v.id AS idVenta,
+    v.transaccion,
+    v.fecha,
+    c.razonSocial AS Cliente,
+    c.nit AS NIT,
+    u.usuario AS Usuario,
+    p.descripcion AS Producto,
+    vd.cantidad,
+    vd.precioUnitario,
+    vd.total,
+    v.usuarioRegistro,
+    v.fechaRegistro,
+    v.estado
+FROM Venta v
+INNER JOIN Cliente c ON v.idCliente = c.id
+INNER JOIN Usuario u ON v.idUsuario = u.id
+INNER JOIN VentaDetalle vd ON v.id = vd.idVenta
+INNER JOIN Producto p ON vd.idProducto = p.id
+WHERE v.estado = 1
+  AND (
+        CAST(v.transaccion AS VARCHAR) +
+        CAST(v.fecha AS VARCHAR) +
+        ISNULL(u.usuario, '') +
+        ISNULL(c.razonSocial, '') +
+        ISNULL(c.nit, '') +
+        ISNULL(p.descripcion, '') +
+        ISNULL(p.codigo, '')
+      ) LIKE '%' + REPLACE(@parametro, ' ', '%') + '%'
+ORDER BY v.fecha DESC, v.transaccion DESC;
 
 
 EXEC paClienteListar 'mendieta';

@@ -54,7 +54,7 @@ namespace ClnMielva
                 return context.Venta.Where(x => x.estado != -1).ToList();
             }
         }
-        public static List<paVentaListar_Result> listar(string parametro)
+        public static List<paVentaListar_Result> listarPa(string parametro)
         {
             using (var context = new LabMielvaEntities())
             {

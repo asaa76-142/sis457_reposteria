@@ -21,29 +21,23 @@ namespace CpMielva
 
         private void CargarVentas()
         {
-            using (var context = new LabMielvaEntities())
-            {
-                var lista = (from v in context.Venta
-                             join c in context.Cliente on v.idCliente equals c.id
-                             join u in context.Usuario on v.idUsuario equals u.id
-                             join vd in context.VentaDetalle on v.id equals vd.idVenta
-                             join p in context.Producto on vd.idProducto equals p.id
-                             where v.estado == 1
-                             select new
-                             {
-                                 v.id,
-                                 v.transaccion,
-                                 v.fecha,
-                                 Cliente = c.razonSocial,
-                                 NIT = c.nit,
-                                 Usuario = u.usuario1,
-                                 Producto = p.descripcion,
-                                 vd.cantidad,
-                                 vd.precioUnitario,
-                                 vd.total
-                             }).ToList();
-                dgvLista.DataSource = lista;
-            }
+           var lista = VentaCln.listarPa(txtParametro.Text.Trim());
+            dgvLista.DataSource = lista;
+            dgvLista.Columns["idVenta"].Visible = false;
+            dgvLista.Columns["estado"].Visible = false;
+            dgvLista.Columns["fecha"].Visible = false;
+            dgvLista.Columns["transaccion"].HeaderText = "Transacción";
+            dgvLista.Columns["fechaRegistro"].HeaderText = "Fecha de Registro";
+            //dgvLista.Columns["razonSocial"].HeaderText = "Cliente";
+            dgvLista.Columns["nit"].HeaderText = "NIT";
+            dgvLista.Columns["usuarioRegistro"].HeaderText = "Usuario Registro";
+            //dgvLista.Columns["pro"].HeaderText = "Descripción de Producto";
+            //dgvLista.Columns["cantidad"].HeaderText = "Cantidad";
+            //dgvLista.Columns["precioUnitario"].HeaderText = "Precio Unitario";
+            //dgvLista.Columns["total"].HeaderText = "Total";
+            if (lista.Count > 0) dgvLista.CurrentCell = dgvLista.Rows[0].Cells["transaccion"];
+            btnEliminar.Enabled = lista.Count > 0;
+
         }
 
         private void FrmVentaDetalle_Load(object sender, EventArgs e)
@@ -85,6 +79,11 @@ namespace CpMielva
         private void btnBuscar_Click(object sender, EventArgs e)
         {
             CargarVentas();
+        }
+
+        private void txtParametro_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter) CargarVentas();
         }
     }
 }
