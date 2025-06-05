@@ -118,7 +118,7 @@
             this.lblFecha.Location = new System.Drawing.Point(5, 55);
             this.lblFecha.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblFecha.Name = "lblFecha";
-            this.lblFecha.Size = new System.Drawing.Size(73, 25);
+            this.lblFecha.Size = new System.Drawing.Size(48, 16);
             this.lblFecha.TabIndex = 18;
             this.lblFecha.Text = "Fecha:";
             // 
@@ -128,7 +128,7 @@
             this.dtpFecha.Location = new System.Drawing.Point(77, 52);
             this.dtpFecha.Margin = new System.Windows.Forms.Padding(4);
             this.dtpFecha.Name = "dtpFecha";
-            this.dtpFecha.Size = new System.Drawing.Size(259, 30);
+            this.dtpFecha.Size = new System.Drawing.Size(259, 22);
             this.dtpFecha.TabIndex = 19;
             // 
             // lblNit
@@ -137,7 +137,7 @@
             this.lblNit.Location = new System.Drawing.Point(8, 28);
             this.lblNit.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblNit.Name = "lblNit";
-            this.lblNit.Size = new System.Drawing.Size(50, 25);
+            this.lblNit.Size = new System.Drawing.Size(32, 16);
             this.lblNit.TabIndex = 5;
             this.lblNit.Text = "NIT:";
             // 
@@ -162,7 +162,7 @@
             this.txtNombre.Location = new System.Drawing.Point(358, 23);
             this.txtNombre.Margin = new System.Windows.Forms.Padding(4);
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(384, 30);
+            this.txtNombre.Size = new System.Drawing.Size(384, 22);
             this.txtNombre.TabIndex = 8;
             // 
             // btnBuscar
@@ -185,7 +185,7 @@
             this.lblNombre.Location = new System.Drawing.Point(272, 27);
             this.lblNombre.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(87, 25);
+            this.lblNombre.Size = new System.Drawing.Size(59, 16);
             this.lblNombre.TabIndex = 7;
             this.lblNombre.Text = "Nombre:";
             // 
@@ -194,7 +194,7 @@
             this.txtNit.Location = new System.Drawing.Point(58, 24);
             this.txtNit.Margin = new System.Windows.Forms.Padding(4);
             this.txtNit.Name = "txtNit";
-            this.txtNit.Size = new System.Drawing.Size(133, 30);
+            this.txtNit.Size = new System.Drawing.Size(133, 22);
             this.txtNit.TabIndex = 6;
             this.txtNit.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNit_KeyPress);
             // 
@@ -204,7 +204,7 @@
             this.lblTotal.Location = new System.Drawing.Point(907, 460);
             this.lblTotal.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTotal.Name = "lblTotal";
-            this.lblTotal.Size = new System.Drawing.Size(62, 25);
+            this.lblTotal.Size = new System.Drawing.Size(41, 16);
             this.lblTotal.TabIndex = 23;
             this.lblTotal.Text = "Total:";
             // 
@@ -214,7 +214,7 @@
             this.txtTotal.Location = new System.Drawing.Point(970, 456);
             this.txtTotal.Margin = new System.Windows.Forms.Padding(4);
             this.txtTotal.Name = "txtTotal";
-            this.txtTotal.Size = new System.Drawing.Size(133, 30);
+            this.txtTotal.Size = new System.Drawing.Size(133, 22);
             this.txtTotal.TabIndex = 24;
             this.txtTotal.TextChanged += new System.EventHandler(this.txtTotal_TextChanged);
             // 
@@ -224,7 +224,7 @@
             this.lblEfectivo.Location = new System.Drawing.Point(886, 501);
             this.lblEfectivo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblEfectivo.Name = "lblEfectivo";
-            this.lblEfectivo.Size = new System.Drawing.Size(87, 25);
+            this.lblEfectivo.Size = new System.Drawing.Size(58, 16);
             this.lblEfectivo.TabIndex = 25;
             this.lblEfectivo.Text = "Efectivo:";
             // 
@@ -233,7 +233,7 @@
             this.txtEfectivo.Location = new System.Drawing.Point(970, 498);
             this.txtEfectivo.Margin = new System.Windows.Forms.Padding(4);
             this.txtEfectivo.Name = "txtEfectivo";
-            this.txtEfectivo.Size = new System.Drawing.Size(133, 30);
+            this.txtEfectivo.Size = new System.Drawing.Size(133, 22);
             this.txtEfectivo.TabIndex = 26;
             this.txtEfectivo.TextChanged += new System.EventHandler(this.txtEfectivo_TextChanged);
             // 
@@ -243,7 +243,7 @@
             this.lblCambio.Location = new System.Drawing.Point(886, 529);
             this.lblCambio.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCambio.Name = "lblCambio";
-            this.lblCambio.Size = new System.Drawing.Size(86, 25);
+            this.lblCambio.Size = new System.Drawing.Size(57, 16);
             this.lblCambio.TabIndex = 27;
             this.lblCambio.Text = "Cambio:";
             // 
@@ -253,7 +253,7 @@
             this.txtCambio.Location = new System.Drawing.Point(970, 525);
             this.txtCambio.Margin = new System.Windows.Forms.Padding(4);
             this.txtCambio.Name = "txtCambio";
-            this.txtCambio.Size = new System.Drawing.Size(133, 30);
+            this.txtCambio.Size = new System.Drawing.Size(133, 22);
             this.txtCambio.TabIndex = 28;
             // 
             // label1
@@ -263,7 +263,7 @@
             this.label1.Location = new System.Drawing.Point(31, 107);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(177, 50);
+            this.label1.Size = new System.Drawing.Size(117, 32);
             this.label1.TabIndex = 32;
             this.label1.Text = "Pastel de cumple\r\npara Varón - 85Bs:";
             // 
@@ -274,7 +274,7 @@
             this.label2.Location = new System.Drawing.Point(294, 108);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(173, 50);
+            this.label2.Size = new System.Drawing.Size(114, 32);
             this.label2.TabIndex = 34;
             this.label2.Text = "Pastel de cumple \r\npara Mujer - 85Bs:";
             // 
@@ -285,7 +285,7 @@
             this.label3.Location = new System.Drawing.Point(31, 359);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(165, 50);
+            this.label3.Size = new System.Drawing.Size(110, 32);
             this.label3.TabIndex = 37;
             this.label3.Text = "Pastel normal \r\npara Varón 85Bs:";
             // 
@@ -296,7 +296,7 @@
             this.label4.Location = new System.Drawing.Point(296, 356);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(178, 50);
+            this.label4.Size = new System.Drawing.Size(117, 32);
             this.label4.TabIndex = 39;
             this.label4.Text = "Pastel normal\r\n para Mujer - 85Bs:";
             // 
@@ -337,7 +337,7 @@
             0,
             0});
             this.nudPastelNormalMujer.Name = "nudPastelNormalMujer";
-            this.nudPastelNormalMujer.Size = new System.Drawing.Size(32, 30);
+            this.nudPastelNormalMujer.Size = new System.Drawing.Size(32, 22);
             this.nudPastelNormalMujer.TabIndex = 55;
             // 
             // nudPastelCumpleMujer2
@@ -350,7 +350,7 @@
             0,
             0});
             this.nudPastelCumpleMujer2.Name = "nudPastelCumpleMujer2";
-            this.nudPastelCumpleMujer2.Size = new System.Drawing.Size(32, 30);
+            this.nudPastelCumpleMujer2.Size = new System.Drawing.Size(32, 22);
             this.nudPastelCumpleMujer2.TabIndex = 54;
             // 
             // nudPastelCumpleMujer
@@ -363,7 +363,7 @@
             0,
             0});
             this.nudPastelCumpleMujer.Name = "nudPastelCumpleMujer";
-            this.nudPastelCumpleMujer.Size = new System.Drawing.Size(32, 30);
+            this.nudPastelCumpleMujer.Size = new System.Drawing.Size(32, 22);
             this.nudPastelCumpleMujer.TabIndex = 53;
             // 
             // nudPastelNormalVaron
@@ -376,7 +376,7 @@
             0,
             0});
             this.nudPastelNormalVaron.Name = "nudPastelNormalVaron";
-            this.nudPastelNormalVaron.Size = new System.Drawing.Size(32, 30);
+            this.nudPastelNormalVaron.Size = new System.Drawing.Size(32, 22);
             this.nudPastelNormalVaron.TabIndex = 52;
             // 
             // nudPastelCumpleVaron2
@@ -389,7 +389,7 @@
             0,
             0});
             this.nudPastelCumpleVaron2.Name = "nudPastelCumpleVaron2";
-            this.nudPastelCumpleVaron2.Size = new System.Drawing.Size(32, 30);
+            this.nudPastelCumpleVaron2.Size = new System.Drawing.Size(32, 22);
             this.nudPastelCumpleVaron2.TabIndex = 51;
             // 
             // label8
@@ -399,7 +399,7 @@
             this.label8.Location = new System.Drawing.Point(31, 231);
             this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(177, 50);
+            this.label8.Size = new System.Drawing.Size(117, 32);
             this.label8.TabIndex = 50;
             this.label8.Text = "Pastel de cumple \r\npara Varón - 65Bs:";
             // 
@@ -420,7 +420,7 @@
             this.label7.Location = new System.Drawing.Point(296, 232);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(173, 50);
+            this.label7.Size = new System.Drawing.Size(114, 32);
             this.label7.TabIndex = 48;
             this.label7.Text = "Pastel de cumple \r\npara Mujer - 65Bs:\r\n";
             // 
@@ -444,7 +444,7 @@
             0,
             0});
             this.nudPastelCumpleVaron.Name = "nudPastelCumpleVaron";
-            this.nudPastelCumpleVaron.Size = new System.Drawing.Size(32, 30);
+            this.nudPastelCumpleVaron.Size = new System.Drawing.Size(32, 22);
             this.nudPastelCumpleVaron.TabIndex = 46;
             // 
             // pictureBox1
@@ -506,7 +506,7 @@
             this.label9.Location = new System.Drawing.Point(44, 129);
             this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(78, 25);
+            this.label9.Size = new System.Drawing.Size(50, 16);
             this.label9.TabIndex = 49;
             this.label9.Text = "3,50 Bs";
             // 
@@ -520,7 +520,7 @@
             0,
             0});
             this.nudEmpanada.Name = "nudEmpanada";
-            this.nudEmpanada.Size = new System.Drawing.Size(37, 30);
+            this.nudEmpanada.Size = new System.Drawing.Size(37, 22);
             this.nudEmpanada.TabIndex = 47;
             // 
             // pictureBox5
@@ -540,7 +540,7 @@
             this.label5.Location = new System.Drawing.Point(25, 135);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(262, 25);
+            this.label5.Size = new System.Drawing.Size(176, 16);
             this.label5.TabIndex = 40;
             this.label5.Text = "Galleta de Naranja - 0,50 Bs:";
             // 
@@ -551,7 +551,7 @@
             this.txtGalletaMaicena.Location = new System.Drawing.Point(275, 135);
             this.txtGalletaMaicena.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.txtGalletaMaicena.Name = "txtGalletaMaicena";
-            this.txtGalletaMaicena.Size = new System.Drawing.Size(269, 25);
+            this.txtGalletaMaicena.Size = new System.Drawing.Size(180, 16);
             this.txtGalletaMaicena.TabIndex = 44;
             this.txtGalletaMaicena.Text = "Galleta de Maicena - 0,50 Bs:";
             // 
@@ -580,7 +580,7 @@
             0,
             0});
             this.nudGalletaMaicena.Name = "nudGalletaMaicena";
-            this.nudGalletaMaicena.Size = new System.Drawing.Size(32, 30);
+            this.nudGalletaMaicena.Size = new System.Drawing.Size(32, 22);
             this.nudGalletaMaicena.TabIndex = 49;
             // 
             // nudGalletaNaranja
@@ -593,7 +593,7 @@
             0,
             0});
             this.nudGalletaNaranja.Name = "nudGalletaNaranja";
-            this.nudGalletaNaranja.Size = new System.Drawing.Size(32, 30);
+            this.nudGalletaNaranja.Size = new System.Drawing.Size(32, 22);
             this.nudGalletaNaranja.TabIndex = 48;
             // 
             // pictureBox6
@@ -664,7 +664,7 @@
             // 
             // FrmRegistroVenta
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.MediumAquamarine;
             this.ClientSize = new System.Drawing.Size(1108, 554);
@@ -691,7 +691,7 @@
             this.MaximizeBox = false;
             this.Name = "FrmRegistroVenta";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "::: Ventas :::";
+            this.Text = "...::: Registrar una Venta :::...";
             this.Load += new System.EventHandler(this.FrmVenta_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

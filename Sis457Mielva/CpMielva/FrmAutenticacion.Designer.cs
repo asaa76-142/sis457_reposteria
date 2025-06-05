@@ -160,7 +160,7 @@
             this.MaximizeBox = false;
             this.Name = "FrmAutenticacion";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = ":::... Mielva - Iniciar Sesión ...:::";
+            this.Text = "...::: Mielva - Iniciar Sesión :::...";
             ((System.ComponentModel.ISupportInitialize)(this.erpUsuario)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.erpClave)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

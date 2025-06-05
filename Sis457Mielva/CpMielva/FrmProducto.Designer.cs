@@ -427,7 +427,7 @@
             this.MaximizeBox = false;
             this.Name = "FrmProducto";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "::: Productos :::";
+            this.Text = "...::: Productos :::...";
             this.Load += new System.EventHandler(this.FrmProducto_Load);
             ((System.ComponentModel.ISupportInitialize)(this.erpSaldo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.erpUnidadMedida)).EndInit();

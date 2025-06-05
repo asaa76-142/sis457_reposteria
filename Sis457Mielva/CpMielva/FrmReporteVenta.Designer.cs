@@ -216,7 +216,7 @@
             this.MaximizeBox = false;
             this.Name = "FrmReporteVenta";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = ":::...Mielva - Reporte de Ventas...:::";
+            this.Text = "...:::Mielva - Reporte de Ventas:::...";
             this.Load += new System.EventHandler(this.FrmVentaDetalle_Load);
             this.gbxLista.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvLista)).EndInit();
