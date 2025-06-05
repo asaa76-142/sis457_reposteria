@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmPrincipal));
             this.c1Ribbon1 = new C1.Win.Ribbon.C1Ribbon();
             this.ribbonApplicationMenu1 = new C1.Win.Ribbon.RibbonApplicationMenu();
             this.ribbonBottomToolBar1 = new C1.Win.Ribbon.RibbonBottomToolBar();
@@ -43,15 +44,17 @@
             this.ribbonButton3 = new C1.Win.Ribbon.RibbonButton();
             this.ribbonGroup4 = new C1.Win.Ribbon.RibbonGroup();
             this.ribbonButton4 = new C1.Win.Ribbon.RibbonButton();
+            this.ribbonButton1 = new C1.Win.Ribbon.RibbonButton();
             this.ribbonTab3 = new C1.Win.Ribbon.RibbonTab();
             this.ribbonGroup5 = new C1.Win.Ribbon.RibbonGroup();
             this.btnCaEmpleadosUsuarios = new C1.Win.Ribbon.RibbonButton();
             this.ribbonButton6 = new C1.Win.Ribbon.RibbonButton();
             this.ribbonButton7 = new C1.Win.Ribbon.RibbonButton();
             this.ribbonTopToolBar1 = new C1.Win.Ribbon.RibbonTopToolBar();
+            this.c1PictureBox1 = new C1.Win.C1Input.C1PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.ribbonButton1 = new C1.Win.Ribbon.RibbonButton();
             ((System.ComponentModel.ISupportInitialize)(this.c1Ribbon1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.c1PictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -156,6 +159,14 @@
             this.ribbonButton4.Text = "Ventas";
             this.ribbonButton4.Click += new System.EventHandler(this.ribbonButton4_Click);
             // 
+            // ribbonButton1
+            // 
+            this.ribbonButton1.IconSet.Add(new C1.Framework.C1BitmapIcon("DefaultImage", new System.Drawing.Size(16, 16), System.Drawing.Color.Transparent, "DefaultImage", -1));
+            this.ribbonButton1.IconSet.Add(new C1.Framework.C1BitmapIcon("NewWindow", new System.Drawing.Size(32, 32), System.Drawing.Color.Transparent, "Preset_LargeImages", 177));
+            this.ribbonButton1.Name = "ribbonButton1";
+            this.ribbonButton1.Text = "Registrar Venta";
+            this.ribbonButton1.Click += new System.EventHandler(this.ribbonButton1_Click);
+            // 
             // ribbonTab3
             // 
             this.ribbonTab3.Groups.Add(this.ribbonGroup5);
@@ -196,6 +207,15 @@
             // 
             this.ribbonTopToolBar1.Name = "ribbonTopToolBar1";
             // 
+            // c1PictureBox1
+            // 
+            this.c1PictureBox1.Image = global::CpMielva.Properties.Resources.ooiiiii;
+            this.c1PictureBox1.Location = new System.Drawing.Point(0, 161);
+            this.c1PictureBox1.Name = "c1PictureBox1";
+            this.c1PictureBox1.Size = new System.Drawing.Size(148, 148);
+            this.c1PictureBox1.TabIndex = 3;
+            this.c1PictureBox1.TabStop = false;
+            // 
             // pictureBox1
             // 
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -207,23 +227,17 @@
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             // 
-            // ribbonButton1
-            // 
-            this.ribbonButton1.IconSet.Add(new C1.Framework.C1BitmapIcon("DefaultImage", new System.Drawing.Size(16, 16), System.Drawing.Color.Transparent, "DefaultImage", -1));
-            this.ribbonButton1.IconSet.Add(new C1.Framework.C1BitmapIcon("NewWindow", new System.Drawing.Size(32, 32), System.Drawing.Color.Transparent, "Preset_LargeImages", 177));
-            this.ribbonButton1.Name = "ribbonButton1";
-            this.ribbonButton1.Text = "Registrar Venta";
-            this.ribbonButton1.Click += new System.EventHandler(this.ribbonButton1_Click);
-            // 
             // FrmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.MediumAquamarine;
             this.ClientSize = new System.Drawing.Size(834, 554);
+            this.Controls.Add(this.c1PictureBox1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.c1Ribbon1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FrmPrincipal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -231,6 +245,7 @@
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmPrincipal_FormClosing);
             ((System.ComponentModel.ISupportInitialize)(this.c1Ribbon1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.c1PictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -262,5 +277,6 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private C1.Win.Ribbon.RibbonGroup ribbonGroup2;
         private C1.Win.Ribbon.RibbonButton ribbonButton1;
+        private C1.Win.C1Input.C1PictureBox c1PictureBox1;
     }
 }

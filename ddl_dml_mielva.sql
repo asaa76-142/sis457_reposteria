@@ -138,19 +138,20 @@ ALTER TABLE Cargo ADD estado SMALLINT NOT NULL DEFAULT 1; -- 1: Activo, 0: Inact
 
 --********************************************************
 GO
-CREATE PROC paProductoListar @parametro VARCHAR(100)
+ALTER PROC paProductoListar @parametro VARCHAR(100)
 AS
   SELECT p.id, p.codigo, p.descripcion, um.descripcion AS unidadMedida, p.saldo, p.precioVenta,
-		 p.usuarioRegistro, p.fechaRegistro, p.estado, p.idUnidadMedida
+		 p.usuarioRegistro, p.fechaRegistro, p.estado
   FROM Producto p
   INNER JOIN UnidadMedida um ON um.id = p.idUnidadMedida
   WHERE p.estado<>-1 AND p.codigo+p.descripcion+um.descripcion LIKE '%'+REPLACE(@parametro,' ','%')+'%'
   ORDER BY p.estado DESC, p.descripcion ASC;
 
 GO
-CREATE PROC paEmpleadoListar @parametro VARCHAR(100)
+ALTER PROC paEmpleadoListar @parametro VARCHAR(100)
 AS
-  SELECT ISNULL(u.usuario,'--') AS usuario,e.* 
+  SELECT ISNULL(u.usuario,'--') AS usuario,e.id, e.cedulaIdentidad, e.nombres, e.primerApellido, e.segundoApellido, c.descripcion AS cargo,
+		 e.direccion, e.celular, e.usuarioRegistro, e.fechaRegistro, e.estado
   FROM Empleado e
   LEFT JOIN Usuario u ON e.id = u.idEmpleado
   INNER JOIN Cargo c ON c.id = e.idCargo
@@ -158,9 +159,8 @@ AS
 	AND e.cedulaIdentidad+e.nombres+c.descripcion+ISNULL(e.primerApellido,'')+ISNULL(e.segundoApellido,'') LIKE '%'+REPLACE(@parametro,' ','%')+'%'
   ORDER BY e.estado DESC, e.nombres ASC, e.primerApellido ASC;
 
-
 GO
-CREATE PROC paClienteListar @parametro VARCHAR(100)
+ALTER PROC paClienteListar @parametro VARCHAR(100)
 AS
 SELECT *
 FROM Cliente
@@ -174,7 +174,7 @@ ORDER BY estado DESC, razonSocial ASC;
 	ORDER BY estado DESC, razonSocial ASC;
 
 GO
-CREATE PROC paVentaClienteListar @nit VARCHAR(14)
+ALTER PROC paVentaClienteListar @nit VARCHAR(14)
 AS
 SELECT *
 FROM Cliente
@@ -183,7 +183,7 @@ WHERE estado = 1
 ORDER BY estado DESC, razonSocial ASC;
 
 GO
-CREATE PROC paVentaListar @parametro VARCHAR(100)
+ALTER PROC paVentaListar @parametro VARCHAR(100)
 AS
 SELECT 
     v.id AS idVenta,
@@ -221,7 +221,7 @@ EXEC paClienteListar 'mendieta';
 EXEC paClienteListar 'mielva';
 EXEC paEmpleadoListar '';
 EXEC paVentaListar '123456';
-EXEC paProductoListar 'pastel varon';
+EXEC paProductoListar '';
 EXEC paEmpleadoListar 'juan';
 EXEC paVentaListar 'mielva';         -- Buscar por razonSocial
 EXEC paVentaListar '123456';         -- Buscar por transacción o NIT

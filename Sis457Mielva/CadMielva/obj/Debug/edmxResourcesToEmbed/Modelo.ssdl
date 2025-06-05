@@ -94,8 +94,8 @@
     <Property Name="idVenta" Type="int" Nullable="false" />
     <Property Name="idProducto" Type="int" Nullable="false" />
     <Property Name="cantidad" Type="decimal" Precision="18" Scale="0" Nullable="false" />
-    <Property Name="precioUnitario" Type="decimal" Precision="18" Scale="0" Nullable="false" />
-    <Property Name="total" Type="decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="precioUnitario" Type="decimal" Precision="10" Scale="2" Nullable="false" />
+    <Property Name="total" Type="decimal" Precision="10" Scale="2" Nullable="false" />
     <Property Name="usuarioRegistro" Type="varchar" MaxLength="50" Nullable="false" />
     <Property Name="fechaRegistro" Type="datetime" Nullable="false" />
     <Property Name="estado" Type="smallint" Nullable="false" />

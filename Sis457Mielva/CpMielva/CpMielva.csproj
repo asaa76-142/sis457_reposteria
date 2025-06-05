@@ -37,6 +37,8 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="C1.Win.4.5.2, Version=4.5.20193.393, Culture=neutral, PublicKeyToken=944ae1ea0e47ca04" />
+    <Reference Include="C1.Win.C1Command.4.5.2, Version=4.5.20193.393, Culture=neutral, PublicKeyToken=e808566f358766d8" />
+    <Reference Include="C1.Win.C1Input.4.5.2, Version=4.5.20193.393, Culture=neutral, PublicKeyToken=7e7ff60f0c214f9a, processorArchitecture=MSIL" />
     <Reference Include="C1.Win.Ribbon.4.5.2, Version=4.5.20193.393, Culture=neutral, PublicKeyToken=79882d576c6336da, processorArchitecture=MSIL" />
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.5.1\lib\net45\EntityFramework.dll</HintPath>
@@ -46,6 +48,7 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Design" />
     <Reference Include="System.Drawing.Design" />
@@ -238,6 +241,21 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\pastel cumple varon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\451870548_1037873655013113_6165796472409656022_n.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\451870548_1037873655013113_6165796472409656022_n1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dsafasdf.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dsafasdf1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ooiiiii.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

@@ -152,7 +152,7 @@
             this.btnRegistrarNuevaVenta.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.3F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRegistrarNuevaVenta.Image = global::CpMielva.Properties.Resources.nuevo;
             this.btnRegistrarNuevaVenta.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnRegistrarNuevaVenta.Location = new System.Drawing.Point(408, 428);
+            this.btnRegistrarNuevaVenta.Location = new System.Drawing.Point(418, 431);
             this.btnRegistrarNuevaVenta.Margin = new System.Windows.Forms.Padding(4);
             this.btnRegistrarNuevaVenta.Name = "btnRegistrarNuevaVenta";
             this.btnRegistrarNuevaVenta.Padding = new System.Windows.Forms.Padding(7, 0, 7, 0);
@@ -165,9 +165,10 @@
             // 
             // btnCerrar
             // 
+            this.btnCerrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCerrar.Image = global::CpMielva.Properties.Resources.cerrar;
             this.btnCerrar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCerrar.Location = new System.Drawing.Point(562, 353);
+            this.btnCerrar.Location = new System.Drawing.Point(547, 353);
             this.btnCerrar.Margin = new System.Windows.Forms.Padding(4);
             this.btnCerrar.Name = "btnCerrar";
             this.btnCerrar.Padding = new System.Windows.Forms.Padding(7, 0, 7, 0);
@@ -180,7 +181,7 @@
             // 
             // btnEliminar
             // 
-            this.btnEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.3F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEliminar.Image = global::CpMielva.Properties.Resources.eliminar;
             this.btnEliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnEliminar.Location = new System.Drawing.Point(313, 353);
@@ -209,6 +210,7 @@
             this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.gbxLista);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;

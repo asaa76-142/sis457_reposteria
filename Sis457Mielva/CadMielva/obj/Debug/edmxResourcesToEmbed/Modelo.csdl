@@ -106,8 +106,8 @@
     <Property Name="idVenta" Type="Int32" Nullable="false" />
     <Property Name="idProducto" Type="Int32" Nullable="false" />
     <Property Name="cantidad" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
-    <Property Name="precioUnitario" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
-    <Property Name="total" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="precioUnitario" Type="Decimal" Precision="10" Scale="2" Nullable="false" />
+    <Property Name="total" Type="Decimal" Precision="10" Scale="2" Nullable="false" />
     <Property Name="usuarioRegistro" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="fechaRegistro" Type="DateTime" Nullable="false" Precision="3" />
     <Property Name="estado" Type="Int16" Nullable="false" />
@@ -265,11 +265,11 @@
   <ComplexType Name="paEmpleadoListar_Result">
     <Property Type="String" Name="usuario" Nullable="false" MaxLength="20" />
     <Property Type="Int32" Name="id" Nullable="false" />
-    <Property Type="Int32" Name="idCargo" Nullable="false" />
     <Property Type="String" Name="cedulaIdentidad" Nullable="false" MaxLength="12" />
     <Property Type="String" Name="nombres" Nullable="false" MaxLength="30" />
     <Property Type="String" Name="primerApellido" Nullable="true" MaxLength="30" />
     <Property Type="String" Name="segundoApellido" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="cargo" Nullable="false" MaxLength="50" />
     <Property Type="String" Name="direccion" Nullable="false" MaxLength="250" />
     <Property Type="Int64" Name="celular" Nullable="false" />
     <Property Type="String" Name="usuarioRegistro" Nullable="false" MaxLength="50" />
@@ -286,7 +286,6 @@
     <Property Type="String" Name="usuarioRegistro" Nullable="false" MaxLength="50" />
     <Property Type="DateTime" Name="fechaRegistro" Nullable="false" Precision="23" />
     <Property Type="Int16" Name="estado" Nullable="false" />
-    <Property Type="Int32" Name="idUnidadMedida" Nullable="false" />
   </ComplexType>
   <ComplexType Name="paVentaClienteListar_Result">
     <Property Type="Int32" Name="id" Nullable="false" />
@@ -301,8 +300,8 @@
     <Property Type="Int32" Name="idVenta" Nullable="false" />
     <Property Type="Int32" Name="idProducto" Nullable="false" />
     <Property Type="Decimal" Name="cantidad" Nullable="false" Precision="18" Scale="0" />
-    <Property Type="Decimal" Name="precioUnitario" Nullable="false" Precision="18" Scale="0" />
-    <Property Type="Decimal" Name="total" Nullable="false" Precision="18" Scale="0" />
+    <Property Type="Decimal" Name="precioUnitario" Nullable="false" Precision="10" Scale="2" />
+    <Property Type="Decimal" Name="total" Nullable="false" Precision="10" Scale="2" />
     <Property Type="String" Name="usuarioRegistro" Nullable="false" MaxLength="50" />
     <Property Type="DateTime" Name="fechaRegistro" Nullable="false" Precision="23" />
     <Property Type="Int16" Name="estado" Nullable="false" />
@@ -319,8 +318,8 @@
     <Property Type="String" Name="Usuario" Nullable="false" MaxLength="20" />
     <Property Type="String" Name="Producto" Nullable="false" MaxLength="250" />
     <Property Type="Decimal" Name="cantidad" Nullable="false" Precision="18" Scale="0" />
-    <Property Type="Decimal" Name="precioUnitario" Nullable="false" Precision="18" Scale="0" />
-    <Property Type="Decimal" Name="total" Nullable="false" Precision="18" Scale="0" />
+    <Property Type="Decimal" Name="precioUnitario" Nullable="false" Precision="10" Scale="2" />
+    <Property Type="Decimal" Name="total" Nullable="false" Precision="10" Scale="2" />
     <Property Type="String" Name="usuarioRegistro" Nullable="false" MaxLength="50" />
     <Property Type="DateTime" Name="fechaRegistro" Nullable="false" Precision="23" />
     <Property Type="Int16" Name="estado" Nullable="false" />

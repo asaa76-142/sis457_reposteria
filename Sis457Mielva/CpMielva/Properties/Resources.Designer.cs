@@ -63,6 +63,26 @@ namespace CpMielva.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _451870548_1037873655013113_6165796472409656022_n {
+            get {
+                object obj = ResourceManager.GetObject("451870548_1037873655013113_6165796472409656022_n", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _451870548_1037873655013113_6165796472409656022_n1 {
+            get {
+                object obj = ResourceManager.GetObject("451870548_1037873655013113_6165796472409656022_n1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _492040753_1267437702056706_2186686621331816190_n {
             get {
                 object obj = ResourceManager.GetObject("492040753_1267437702056706_2186686621331816190_n", resourceCulture);
@@ -116,6 +136,26 @@ namespace CpMielva.Properties {
         internal static System.Drawing.Bitmap cerrar {
             get {
                 object obj = ResourceManager.GetObject("cerrar", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap dsafasdf {
+            get {
+                object obj = ResourceManager.GetObject("dsafasdf", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap dsafasdf1 {
+            get {
+                object obj = ResourceManager.GetObject("dsafasdf1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -216,6 +256,16 @@ namespace CpMielva.Properties {
         internal static System.Drawing.Bitmap off {
             get {
                 object obj = ResourceManager.GetObject("off", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ooiiiii {
+            get {
+                object obj = ResourceManager.GetObject("ooiiiii", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

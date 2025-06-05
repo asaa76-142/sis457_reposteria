@@ -126,11 +126,11 @@
         <ComplexTypeMapping TypeName="LabMielvaModel.paEmpleadoListar_Result">
           <ScalarProperty Name="usuario" ColumnName="usuario" />
           <ScalarProperty Name="id" ColumnName="id" />
-          <ScalarProperty Name="idCargo" ColumnName="idCargo" />
           <ScalarProperty Name="cedulaIdentidad" ColumnName="cedulaIdentidad" />
           <ScalarProperty Name="nombres" ColumnName="nombres" />
           <ScalarProperty Name="primerApellido" ColumnName="primerApellido" />
           <ScalarProperty Name="segundoApellido" ColumnName="segundoApellido" />
+          <ScalarProperty Name="cargo" ColumnName="cargo" />
           <ScalarProperty Name="direccion" ColumnName="direccion" />
           <ScalarProperty Name="celular" ColumnName="celular" />
           <ScalarProperty Name="usuarioRegistro" ColumnName="usuarioRegistro" />
@@ -151,7 +151,6 @@
           <ScalarProperty Name="usuarioRegistro" ColumnName="usuarioRegistro" />
           <ScalarProperty Name="fechaRegistro" ColumnName="fechaRegistro" />
           <ScalarProperty Name="estado" ColumnName="estado" />
-          <ScalarProperty Name="idUnidadMedida" ColumnName="idUnidadMedida" />
         </ComplexTypeMapping>
       </ResultMapping>
     </FunctionImportMapping>

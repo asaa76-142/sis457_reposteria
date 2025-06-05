@@ -198,7 +198,6 @@ C:\Users\auzas\Desktop\sis475_reposteria\sis457_reposteria\Sis457Mielva\CpMielva
 C:\Users\auzas\Desktop\sis475_reposteria\sis457_reposteria\Sis457Mielva\CpMielva\obj\Debug\CpMielva.FrmPrincipal.resources
 C:\Users\auzas\Desktop\sis475_reposteria\sis457_reposteria\Sis457Mielva\CpMielva\obj\Debug\CpMielva.FrmProducto.resources
 C:\Users\auzas\Desktop\sis475_reposteria\sis457_reposteria\Sis457Mielva\CpMielva\obj\Debug\CpMielva.FrmRegistroVenta.resources
-C:\Users\auzas\Desktop\sis475_reposteria\sis457_reposteria\Sis457Mielva\CpMielva\obj\Debug\CpMielva.FrmVentaDetalle.resources
 C:\Users\auzas\Desktop\sis475_reposteria\sis457_reposteria\Sis457Mielva\CpMielva\obj\Debug\CpMielva.Properties.Resources.resources
 C:\Users\auzas\Desktop\sis475_reposteria\sis457_reposteria\Sis457Mielva\CpMielva\obj\Debug\CpMielva.csproj.GenerateResource.cache
 C:\Users\auzas\Desktop\sis475_reposteria\sis457_reposteria\Sis457Mielva\CpMielva\obj\Debug\CpMielva.exe.licenses
@@ -209,3 +208,8 @@ C:\Users\auzas\Desktop\sis475_reposteria\sis457_reposteria\Sis457Mielva\CpMielva
 C:\Users\Kevin\Documents\sis457\sis457_reposteria\Sis457Mielva\CpMielva\obj\Debug\CpMielva.FrmRegistroVenta.resources
 C:\Users\Kevin\Documents\sis457\sis457_reposteria\Sis457Mielva\CpMielva\obj\Debug\CpMielva.FrmReporteVenta.resources
 B:\Materias usfx\1.- Informática\1 - 2025\sis457\sis457_reposteria\Sis457Mielva\CpMielva\obj\Debug\CpMielva.FrmReporteVenta.resources
+C:\Users\auzas\Desktop\sis475_reposteria\sis457_reposteria\Sis457Mielva\CpMielva\obj\Debug\CpMielva.FrmReporteVenta.resources
+C:\Users\auzas\Desktop\sis475_reposteria\sis457_reposteria\Sis457Mielva\CpMielva\bin\Debug\C1.Win.C1Command.4.5.2.dll
+C:\Users\auzas\Desktop\sis475_reposteria\sis457_reposteria\Sis457Mielva\CpMielva\bin\Debug\C1.Win.C1Input.4.5.2.dll
+C:\Users\auzas\Desktop\sis475_reposteria\sis457_reposteria\Sis457Mielva\CpMielva\bin\Debug\C1.Win.C1Command.4.5.2.xml
+C:\Users\auzas\Desktop\sis475_reposteria\sis457_reposteria\Sis457Mielva\CpMielva\bin\Debug\C1.Win.C1Input.4.5.2.xml

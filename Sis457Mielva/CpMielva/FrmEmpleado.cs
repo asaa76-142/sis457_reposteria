@@ -31,9 +31,9 @@ namespace CpMielva
             dgvLista.Columns["nombres"].HeaderText = "Nombres";
             dgvLista.Columns["primerApellido"].HeaderText = "Primer Apellido";
             dgvLista.Columns["segundoApellido"].HeaderText = "Segundo Apellido";
+            dgvLista.Columns["cargo"].HeaderText = "Cargo";
             dgvLista.Columns["direccion"].HeaderText = "Dirección";
             dgvLista.Columns["celular"].HeaderText = "Celular";
-            dgvLista.Columns["idCargo"].HeaderText = "Cargo";
             dgvLista.Columns["usuarioRegistro"].HeaderText = "Usuario Registro";
             dgvLista.Columns["fechaRegistro"].HeaderText = "Fecha Registro";
             if (lista.Count > 0) dgvLista.CurrentCell = dgvLista.Rows[0].Cells["cedulaIdentidad"];
@@ -46,7 +46,7 @@ namespace CpMielva
             var listaCargos = CargoCln.listar();
             cbxCargo.DataSource = listaCargos;
             cbxCargo.DisplayMember = "descripcion";
-            cbxCargo.ValueMember = "descripcion";
+            cbxCargo.ValueMember = "id";
         }
         private void FrmEmpleados_Load(object sender, EventArgs e)
         {
@@ -56,6 +56,7 @@ namespace CpMielva
             txtNombres.KeyPress += Util.onlyLetters;
             txtPrimerApellido.KeyPress += Util.onlyLetters;
             txtSegundoApellido.KeyPress += Util.onlyLetters;
+            cbxCargo.KeyPress += Util.onlyLetters;
             cargarCargos();
         }
         private void limpiar()
@@ -211,7 +212,7 @@ namespace CpMielva
             {
                 EmpleadoCln.eliminar(id, Util.usuario.usuario1);
                 listar();
-                MessageBox.Show("Producto dado de baja correctamente", "::: Mielva - Mensaje :::",
+                MessageBox.Show("Empleado eliminado correctamente", "::: Mielva - Mensaje :::",
                     MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
 

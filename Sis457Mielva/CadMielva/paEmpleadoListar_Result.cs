@@ -15,11 +15,11 @@ namespace CadMielva
     {
         public string usuario { get; set; }
         public int id { get; set; }
-        public int idCargo { get; set; }
         public string cedulaIdentidad { get; set; }
         public string nombres { get; set; }
         public string primerApellido { get; set; }
         public string segundoApellido { get; set; }
+        public string cargo { get; set; }
         public string direccion { get; set; }
         public long celular { get; set; }
         public string usuarioRegistro { get; set; }
