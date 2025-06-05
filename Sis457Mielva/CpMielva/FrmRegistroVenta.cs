@@ -124,71 +124,53 @@ namespace CpMielva
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            // 1. Buscar cliente por NIT
             var clientes = ClienteCln.listarPa2(txtNit.Text.Trim());
             if (clientes.Count == 0)
             {
                 MessageBox.Show("Debe seleccionar un cliente válido.", "...::: Mielva - Mensaje :::...", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
+
             var cliente = clientes[0];
-
-            // 2. Obtener usuario logueado (ajusta según tu lógica)
             int idUsuario = Util.usuario.id;
+            string usuarioRegistro = Util.usuario.usuario1;
 
-            // 3. Generar número de transacción (puedes mejorarlo)
-            int transaccion = (int)(DateTime.Now.Ticks % int.MaxValue);
+            var detalles = new List<(int idProducto, decimal cantidad, decimal precioUnitario)>();
 
-            // 4. Crear la venta
-            var venta = new Venta
+            void AgregarDetalle(int idProducto, decimal cantidad, decimal precio)
             {
-                idUsuario = idUsuario,
-                idCliente = cliente.id,
-                transaccion = transaccion,
-                fecha = DateTime.Now,
-                usuarioRegistro = Util.usuario.usuario1,
-                fechaRegistro = DateTime.Now,
-                estado = 1,
-                VentaDetalle = new List<VentaDetalle>()
-            };
-
-            // 5. Agregar detalles de productos vendidos
-            if (nudPastelCumpleVaron.Value > 0)
-                venta.VentaDetalle.Add(new VentaDetalle { idProducto = 1, cantidad = nudPastelCumpleVaron.Value, precioUnitario = 85, total = nudPastelCumpleVaron.Value * 85, usuarioRegistro = Util.usuario.usuario1, fechaRegistro = DateTime.Now, estado = 1 });
-            if (nudPastelCumpleMujer.Value > 0)
-                venta.VentaDetalle.Add(new VentaDetalle { idProducto = 2, cantidad = nudPastelCumpleMujer.Value, precioUnitario = 85, total = nudPastelCumpleMujer.Value * 85, usuarioRegistro = Util.usuario.usuario1, fechaRegistro = DateTime.Now, estado = 1 });
-            if (nudPastelCumpleVaron2.Value > 0)
-                venta.VentaDetalle.Add(new VentaDetalle { idProducto = 4, cantidad = nudPastelCumpleVaron2.Value, precioUnitario = 65, total = nudPastelCumpleVaron2.Value * 65, usuarioRegistro = Util.usuario.usuario1, fechaRegistro = DateTime.Now, estado = 1 });
-            if (nudPastelCumpleMujer2.Value > 0)
-                venta.VentaDetalle.Add(new VentaDetalle { idProducto = 5, cantidad = nudPastelCumpleMujer2.Value, precioUnitario = 65, total = nudPastelCumpleMujer2.Value * 65, usuarioRegistro = Util.usuario.usuario1, fechaRegistro = DateTime.Now, estado = 1 });
-            if (nudPastelNormalVaron.Value > 0)
-                venta.VentaDetalle.Add(new VentaDetalle { idProducto = 6, cantidad = nudPastelNormalVaron.Value, precioUnitario = 85, total = nudPastelNormalVaron.Value * 85, usuarioRegistro = Util.usuario.usuario1, fechaRegistro = DateTime.Now, estado = 1 });
-            if (nudPastelNormalMujer.Value > 0)
-                venta.VentaDetalle.Add(new VentaDetalle { idProducto = 7, cantidad = nudPastelNormalMujer.Value, precioUnitario = 85, total = nudPastelNormalMujer.Value * 85, usuarioRegistro = Util.usuario.usuario1, fechaRegistro = DateTime.Now, estado = 1 });
-            if (nudEmpanada.Value > 0)
-                venta.VentaDetalle.Add(new VentaDetalle { idProducto = 8, cantidad = nudEmpanada.Value, precioUnitario = 3.5m, total = nudEmpanada.Value * 3.5m, usuarioRegistro = Util.usuario.usuario1, fechaRegistro = DateTime.Now, estado = 1 });
-            if (nudGalletaNaranja.Value > 0)
-                venta.VentaDetalle.Add(new VentaDetalle { idProducto = 9, cantidad = nudGalletaNaranja.Value, precioUnitario = 0.5m, total = nudGalletaNaranja.Value * 0.5m, usuarioRegistro = Util.usuario.usuario1, fechaRegistro = DateTime.Now, estado = 1 });
-            if (nudGalletaMaicena.Value > 0)
-                venta.VentaDetalle.Add(new VentaDetalle { idProducto = 10, cantidad = nudGalletaMaicena.Value, precioUnitario = 0.5m, total = nudGalletaMaicena.Value * 0.5m, usuarioRegistro = Util.usuario.usuario1, fechaRegistro = DateTime.Now, estado = 1 });
-
-            if (venta.VentaDetalle.Count == 0)
-            {
-                MessageBox.Show("Debe seleccionar al menos un producto.", "...::: Mielva - Mensaje :::...", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
+                if (cantidad > 0)
+                    detalles.Add((idProducto, cantidad, precio));
             }
 
-            // 6. Guardar la venta
-            VentaCln.insertar(venta);
+            AgregarDetalle(1, nudPastelCumpleVaron.Value, 85);
+            AgregarDetalle(2, nudPastelCumpleMujer.Value, 85);
+            AgregarDetalle(4, nudPastelCumpleVaron2.Value, 65);
+            AgregarDetalle(5, nudPastelCumpleMujer2.Value, 65);
+            AgregarDetalle(6, nudPastelNormalVaron.Value, 85);
+            AgregarDetalle(7, nudPastelNormalMujer.Value, 85);
+            AgregarDetalle(8, nudEmpanada.Value, 3.5m);
+            AgregarDetalle(9, nudGalletaNaranja.Value, 0.5m);
+            AgregarDetalle(10, nudGalletaMaicena.Value, 0.5m);
 
-            MessageBox.Show("Venta guardada correctamente.", "...::: Mielva - Mensaje :::...", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-            // 7. Cerrar y actualizar el reporte
-            this.DialogResult = DialogResult.OK;
-            this.Close();
+            try
+            {
+                VentaCln.registrarVenta(cliente.id, idUsuario, usuarioRegistro, detalles);
+                MessageBox.Show("Venta guardada correctamente.", "...::: Mielva - Mensaje :::...", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                this.DialogResult = DialogResult.OK;
+                this.Close();
+            }
+            catch (ArgumentException ex)
+            {
+                MessageBox.Show(ex.Message, "...::: Mielva - Advertencia :::...", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Ocurrió un error al guardar la venta.\n" + ex.Message, "...::: Mielva - Error :::...", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
-        private void btnRegistrarNuevaVenta_Click(object sender, EventArgs e)
+        private void btnRegistrarNuevoCliente_Click(object sender, EventArgs e)
         {
             new FrmCliente().ShowDialog();
         }
