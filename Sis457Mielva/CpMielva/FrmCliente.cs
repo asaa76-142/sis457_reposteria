@@ -110,8 +110,8 @@ namespace CpMielva
                 var cliente = new Cliente();
                 cliente.nit = txtNit.Text.Trim();
                 cliente.razonSocial = txtRazonSocial.Text.Trim();
-                cliente.usuarioRegistro = "admin";
-                //cliente.usuarioRegistro = Util.usuario.usuario1;
+                //cliente.usuarioRegistro = "admin";
+                cliente.usuarioRegistro = Util.usuario.usuario1;
 
                 if (esNuevo)
                 {
@@ -127,7 +127,7 @@ namespace CpMielva
                 }
                 listar();
                 btnCancelar.PerformClick();
-                MessageBox.Show("Cliente guardado correctamente", "::: Minerva - Mensaje :::",
+                MessageBox.Show("Cliente guardado correctamente", "::: Mielva - Mensaje :::",
                     MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
@@ -138,13 +138,13 @@ namespace CpMielva
             int id = Convert.ToInt32(dgvLista.Rows[index].Cells["id"].Value);
             string nit = dgvLista.Rows[index].Cells["nit"].Value.ToString();
             DialogResult dialog = MessageBox.Show($"¿Está seguro de eliminar el cliente {nit}?",
-                "::: Mielva - Mensaje :::", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                "...::: Mielva - Mensaje :::...", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (dialog == DialogResult.Yes)
             {
-                ClienteCln.eliminar(id, "admin");
-                //ClienteCln.eliminar(id, Util.usuario.usuario1);
+                //ClienteCln.eliminar(id, "admin");
+                ClienteCln.eliminar(id, Util.usuario.usuario1);
                 listar();
-                MessageBox.Show("Cliente dado de baja correctamente", "::: Minerva - Mensaje :::",
+                MessageBox.Show("Cliente dado de baja correctamente", "...::: Mielva - Mensaje :::...",
                     MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }

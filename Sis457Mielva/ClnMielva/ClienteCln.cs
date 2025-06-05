@@ -25,6 +25,7 @@ namespace ClnMielva
                 var existente = context.Cliente.Find(cliente.id);
                 existente.nit = cliente.nit;
                 existente.razonSocial = cliente.razonSocial;
+                existente.usuarioRegistro = cliente.usuarioRegistro;
                 return context.SaveChanges();
             }
         }

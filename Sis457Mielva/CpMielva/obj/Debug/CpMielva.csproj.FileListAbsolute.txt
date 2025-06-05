@@ -213,3 +213,7 @@ C:\Users\auzas\Desktop\sis475_reposteria\sis457_reposteria\Sis457Mielva\CpMielva
 C:\Users\auzas\Desktop\sis475_reposteria\sis457_reposteria\Sis457Mielva\CpMielva\bin\Debug\C1.Win.C1Input.4.5.2.dll
 C:\Users\auzas\Desktop\sis475_reposteria\sis457_reposteria\Sis457Mielva\CpMielva\bin\Debug\C1.Win.C1Command.4.5.2.xml
 C:\Users\auzas\Desktop\sis475_reposteria\sis457_reposteria\Sis457Mielva\CpMielva\bin\Debug\C1.Win.C1Input.4.5.2.xml
+C:\Users\Kevin\Documents\sis457\sis457_reposteria\Sis457Mielva\CpMielva\bin\Debug\C1.Win.C1Command.4.5.2.dll
+C:\Users\Kevin\Documents\sis457\sis457_reposteria\Sis457Mielva\CpMielva\bin\Debug\C1.Win.C1Input.4.5.2.dll
+C:\Users\Kevin\Documents\sis457\sis457_reposteria\Sis457Mielva\CpMielva\bin\Debug\C1.Win.C1Command.4.5.2.xml
+C:\Users\Kevin\Documents\sis457\sis457_reposteria\Sis457Mielva\CpMielva\bin\Debug\C1.Win.C1Input.4.5.2.xml

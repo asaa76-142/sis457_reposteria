@@ -173,7 +173,7 @@ namespace CpMielva
                 }
                 listar();
                 btnCancelar.PerformClick();
-                MessageBox.Show("Producto guardado correctamente", "::: Minerva - Mensaje :::",
+                MessageBox.Show("Producto guardado correctamente", "...::: Mielva - Mensaje :::...",
                     MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
@@ -184,13 +184,13 @@ namespace CpMielva
             int id = Convert.ToInt32(dgvLista.Rows[index].Cells["id"].Value);
             string codigo = dgvLista.Rows[index].Cells["codigo"].Value.ToString();
             DialogResult dialog = MessageBox.Show($"¿Está seguro de eliminar el producto {codigo}?",
-                "::: Mielva - Mensaje :::", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                "...::: Mielva - Mensaje :::...", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (dialog == DialogResult.Yes)
             {
                 //ProductoCln.eliminar(id, "admin");
                 ProductoCln.eliminar(id, Util.usuario.usuario1);
                 listar();
-                MessageBox.Show("Producto dado de baja correctamente", "::: Minerva - Mensaje :::",
+                MessageBox.Show("Producto dado de baja correctamente", "...::: Mielva - Mensaje :::...",
                     MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }

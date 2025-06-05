@@ -26,6 +26,7 @@ namespace CpMielva
             dgvLista.Columns["idVenta"].Visible = false;
             dgvLista.Columns["estado"].Visible = false;
             dgvLista.Columns["fecha"].Visible = false;
+            dgvLista.Columns["Usuario"].Visible = false;
             dgvLista.Columns["transaccion"].HeaderText = "Transacción";
             dgvLista.Columns["fechaRegistro"].HeaderText = "Fecha de Registro";
             //dgvLista.Columns["razonSocial"].HeaderText = "Cliente";
@@ -66,7 +67,7 @@ namespace CpMielva
         private void btnEliminar_Click(object sender, EventArgs e)
         {
             int index = dgvLista.CurrentCell.RowIndex;
-            int id = Convert.ToInt32(dgvLista.Rows[index].Cells["id"].Value);
+            int id = Convert.ToInt32(dgvLista.Rows[index].Cells["idVenta"].Value);
             string transaccion = dgvLista.Rows[index].Cells["transaccion"].Value.ToString();
             DialogResult dialog = MessageBox.Show($"¿Está seguro de eliminar la venta {transaccion}?", 
                 "...::: Mielva - Mensaje :::... ", MessageBoxButtons.YesNo, MessageBoxIcon.Question);

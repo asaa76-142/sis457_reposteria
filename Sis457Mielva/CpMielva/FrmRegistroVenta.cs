@@ -79,7 +79,7 @@ namespace CpMielva
             }
             else
             {
-                MessageBox.Show("Cliente no encontrado.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Cliente no encontrado.", "...::: Mielva - Mensaje :::...", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 txtNombre.Text = "";
                 // this.clienteId = 0;
             }
@@ -128,7 +128,7 @@ namespace CpMielva
             var clientes = ClienteCln.listarPa2(txtNit.Text.Trim());
             if (clientes.Count == 0)
             {
-                MessageBox.Show("Debe seleccionar un cliente válido.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Debe seleccionar un cliente válido.", "...::: Mielva - Mensaje :::...", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
             var cliente = clientes[0];
@@ -174,14 +174,14 @@ namespace CpMielva
 
             if (venta.VentaDetalle.Count == 0)
             {
-                MessageBox.Show("Debe seleccionar al menos un producto.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Debe seleccionar al menos un producto.", "...::: Mielva - Mensaje :::...", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
             // 6. Guardar la venta
             VentaCln.insertar(venta);
 
-            MessageBox.Show("Venta guardada correctamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show("Venta guardada correctamente.", "...::: Mielva - Mensaje :::...", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             // 7. Cerrar y actualizar el reporte
             this.DialogResult = DialogResult.OK;
