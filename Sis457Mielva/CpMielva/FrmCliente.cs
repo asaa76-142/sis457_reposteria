@@ -110,7 +110,6 @@ namespace CpMielva
                 var cliente = new Cliente();
                 cliente.nit = txtNit.Text.Trim();
                 cliente.razonSocial = txtRazonSocial.Text.Trim();
-                //cliente.usuarioRegistro = "admin";
                 cliente.usuarioRegistro = Util.usuario.usuario1;
 
                 if (esNuevo)
@@ -122,14 +121,11 @@ namespace CpMielva
                             MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         return;
                     }
-                }
-                if (esNuevo)
-                {
                     cliente.fechaRegistro = DateTime.Now;
                     cliente.estado = 1;
                     ClienteCln.insertar(cliente);
                 }
-                if (!esNuevo)
+                else
                 {
                     int idActual = Convert.ToInt32(dgvLista.CurrentRow.Cells["id"].Value);
                     var lista = ClienteCln.listar();
@@ -139,9 +135,6 @@ namespace CpMielva
                             MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         return;
                     }
-                }
-                else
-                {
                     int index = dgvLista.CurrentCell.RowIndex;
                     cliente.id = Convert.ToInt32(dgvLista.Rows[index].Cells["id"].Value);
                     ClienteCln.actualizar(cliente);

@@ -37,14 +37,14 @@
             this.ribbonTab1 = new C1.Win.Ribbon.RibbonTab();
             this.ribbonGroup1 = new C1.Win.Ribbon.RibbonGroup();
             this.btnCaProductos = new C1.Win.Ribbon.RibbonButton();
-            this.ribbonButton2 = new C1.Win.Ribbon.RibbonButton();
+            this.btnCaClientes = new C1.Win.Ribbon.RibbonButton();
             this.ribbonGroup2 = new C1.Win.Ribbon.RibbonGroup();
             this.ribbonTab2 = new C1.Win.Ribbon.RibbonTab();
             this.ribbonGroup3 = new C1.Win.Ribbon.RibbonGroup();
             this.ribbonButton3 = new C1.Win.Ribbon.RibbonButton();
             this.ribbonGroup4 = new C1.Win.Ribbon.RibbonGroup();
-            this.ribbonButton4 = new C1.Win.Ribbon.RibbonButton();
-            this.ribbonButton1 = new C1.Win.Ribbon.RibbonButton();
+            this.btnCaVentas = new C1.Win.Ribbon.RibbonButton();
+            this.btnCaRegistrarVenta = new C1.Win.Ribbon.RibbonButton();
             this.ribbonTab3 = new C1.Win.Ribbon.RibbonTab();
             this.ribbonGroup5 = new C1.Win.Ribbon.RibbonGroup();
             this.btnCaEmpleadosUsuarios = new C1.Win.Ribbon.RibbonButton();
@@ -53,6 +53,7 @@
             this.ribbonTopToolBar1 = new C1.Win.Ribbon.RibbonTopToolBar();
             this.c1PictureBox1 = new C1.Win.C1Input.C1PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnCaSalir = new C1.Win.Ribbon.RibbonButton();
             ((System.ComponentModel.ISupportInitialize)(this.c1Ribbon1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.c1PictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -99,7 +100,7 @@
             // ribbonGroup1
             // 
             this.ribbonGroup1.Items.Add(this.btnCaProductos);
-            this.ribbonGroup1.Items.Add(this.ribbonButton2);
+            this.ribbonGroup1.Items.Add(this.btnCaClientes);
             this.ribbonGroup1.Name = "ribbonGroup1";
             this.ribbonGroup1.Text = "administración de Catálogos";
             // 
@@ -111,16 +112,17 @@
             this.btnCaProductos.Text = "Productos";
             this.btnCaProductos.Click += new System.EventHandler(this.btnCaProductos_Click);
             // 
-            // ribbonButton2
+            // btnCaClientes
             // 
-            this.ribbonButton2.IconSet.Add(new C1.Framework.C1BitmapIcon("DefaultImage", new System.Drawing.Size(16, 16), System.Drawing.Color.Transparent, "DefaultImage", -1));
-            this.ribbonButton2.IconSet.Add(new C1.Framework.C1BitmapIcon("Users", new System.Drawing.Size(32, 32), System.Drawing.Color.Transparent, "Preset_LargeImages", 332));
-            this.ribbonButton2.Name = "ribbonButton2";
-            this.ribbonButton2.Text = "Clientes";
-            this.ribbonButton2.Click += new System.EventHandler(this.ribbonButton2_Click);
+            this.btnCaClientes.IconSet.Add(new C1.Framework.C1BitmapIcon("DefaultImage", new System.Drawing.Size(16, 16), System.Drawing.Color.Transparent, "DefaultImage", -1));
+            this.btnCaClientes.IconSet.Add(new C1.Framework.C1BitmapIcon("Users", new System.Drawing.Size(32, 32), System.Drawing.Color.Transparent, "Preset_LargeImages", 332));
+            this.btnCaClientes.Name = "btnCaClientes";
+            this.btnCaClientes.Text = "Clientes";
+            this.btnCaClientes.Click += new System.EventHandler(this.btnCaClientes_Click);
             // 
             // ribbonGroup2
             // 
+            this.ribbonGroup2.Items.Add(this.btnCaSalir);
             this.ribbonGroup2.Name = "ribbonGroup2";
             this.ribbonGroup2.Text = "Beta";
             // 
@@ -146,26 +148,26 @@
             // 
             // ribbonGroup4
             // 
-            this.ribbonGroup4.Items.Add(this.ribbonButton4);
-            this.ribbonGroup4.Items.Add(this.ribbonButton1);
+            this.ribbonGroup4.Items.Add(this.btnCaVentas);
+            this.ribbonGroup4.Items.Add(this.btnCaRegistrarVenta);
             this.ribbonGroup4.Name = "ribbonGroup4";
             this.ribbonGroup4.Text = "Gestión de Ventas";
             // 
-            // ribbonButton4
+            // btnCaVentas
             // 
-            this.ribbonButton4.IconSet.Add(new C1.Framework.C1BitmapIcon("DefaultImage", new System.Drawing.Size(16, 16), System.Drawing.Color.Transparent, "DefaultImage", -1));
-            this.ribbonButton4.IconSet.Add(new C1.Framework.C1BitmapIcon("Open", new System.Drawing.Size(32, 32), System.Drawing.Color.Transparent, "Preset_LargeImages", 185));
-            this.ribbonButton4.Name = "ribbonButton4";
-            this.ribbonButton4.Text = "Ventas";
-            this.ribbonButton4.Click += new System.EventHandler(this.ribbonButton4_Click);
+            this.btnCaVentas.IconSet.Add(new C1.Framework.C1BitmapIcon("DefaultImage", new System.Drawing.Size(16, 16), System.Drawing.Color.Transparent, "DefaultImage", -1));
+            this.btnCaVentas.IconSet.Add(new C1.Framework.C1BitmapIcon("Open", new System.Drawing.Size(32, 32), System.Drawing.Color.Transparent, "Preset_LargeImages", 185));
+            this.btnCaVentas.Name = "btnCaVentas";
+            this.btnCaVentas.Text = "Ventas";
+            this.btnCaVentas.Click += new System.EventHandler(this.btnCaVentas_Click);
             // 
-            // ribbonButton1
+            // btnCaRegistrarVenta
             // 
-            this.ribbonButton1.IconSet.Add(new C1.Framework.C1BitmapIcon("DefaultImage", new System.Drawing.Size(16, 16), System.Drawing.Color.Transparent, "DefaultImage", -1));
-            this.ribbonButton1.IconSet.Add(new C1.Framework.C1BitmapIcon("NewWindow", new System.Drawing.Size(32, 32), System.Drawing.Color.Transparent, "Preset_LargeImages", 177));
-            this.ribbonButton1.Name = "ribbonButton1";
-            this.ribbonButton1.Text = "Registrar Venta";
-            this.ribbonButton1.Click += new System.EventHandler(this.ribbonButton1_Click);
+            this.btnCaRegistrarVenta.IconSet.Add(new C1.Framework.C1BitmapIcon("DefaultImage", new System.Drawing.Size(16, 16), System.Drawing.Color.Transparent, "DefaultImage", -1));
+            this.btnCaRegistrarVenta.IconSet.Add(new C1.Framework.C1BitmapIcon("NewWindow", new System.Drawing.Size(32, 32), System.Drawing.Color.Transparent, "Preset_LargeImages", 177));
+            this.btnCaRegistrarVenta.Name = "btnCaRegistrarVenta";
+            this.btnCaRegistrarVenta.Text = "Registrar Venta";
+            this.btnCaRegistrarVenta.Click += new System.EventHandler(this.btnCaRegistrarVenta_Click);
             // 
             // ribbonTab3
             // 
@@ -227,6 +229,14 @@
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             // 
+            // btnCaSalir
+            // 
+            this.btnCaSalir.IconSet.Add(new C1.Framework.C1BitmapIcon("DefaultImage", new System.Drawing.Size(16, 16), System.Drawing.Color.Transparent, "DefaultImage", -1));
+            this.btnCaSalir.IconSet.Add(new C1.Framework.C1BitmapIcon("Error", new System.Drawing.Size(32, 32), System.Drawing.Color.Transparent, "Preset_LargeImages", 84));
+            this.btnCaSalir.Name = "btnCaSalir";
+            this.btnCaSalir.Text = "Salir";
+            this.btnCaSalir.Click += new System.EventHandler(this.btnCaSalir_Click);
+            // 
             // FrmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -263,12 +273,12 @@
         private C1.Win.Ribbon.RibbonGroup ribbonGroup1;
         private C1.Win.Ribbon.RibbonTopToolBar ribbonTopToolBar1;
         private C1.Win.Ribbon.RibbonButton btnCaProductos;
-        private C1.Win.Ribbon.RibbonButton ribbonButton2;
+        private C1.Win.Ribbon.RibbonButton btnCaClientes;
         private C1.Win.Ribbon.RibbonTab ribbonTab2;
         private C1.Win.Ribbon.RibbonGroup ribbonGroup3;
         private C1.Win.Ribbon.RibbonButton ribbonButton3;
         private C1.Win.Ribbon.RibbonGroup ribbonGroup4;
-        private C1.Win.Ribbon.RibbonButton ribbonButton4;
+        private C1.Win.Ribbon.RibbonButton btnCaVentas;
         private C1.Win.Ribbon.RibbonTab ribbonTab3;
         private C1.Win.Ribbon.RibbonGroup ribbonGroup5;
         private C1.Win.Ribbon.RibbonButton btnCaEmpleadosUsuarios;
@@ -276,7 +286,8 @@
         private C1.Win.Ribbon.RibbonButton ribbonButton7;
         private System.Windows.Forms.PictureBox pictureBox1;
         private C1.Win.Ribbon.RibbonGroup ribbonGroup2;
-        private C1.Win.Ribbon.RibbonButton ribbonButton1;
+        private C1.Win.Ribbon.RibbonButton btnCaRegistrarVenta;
         private C1.Win.C1Input.C1PictureBox c1PictureBox1;
+        private C1.Win.Ribbon.RibbonButton btnCaSalir;
     }
 }
