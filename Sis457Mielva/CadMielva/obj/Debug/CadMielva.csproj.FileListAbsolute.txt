@@ -46,18 +46,6 @@ C:\Users\auzas\Desktop\sis475_reposteria\sis457_reposteria\Mielva\CadMielva\obj\
 C:\Users\auzas\Desktop\sis475_reposteria\sis457_reposteria\Mielva\CadMielva\obj\Debug\CadMielva.csproj.Up2Date
 C:\Users\auzas\Desktop\sis475_reposteria\sis457_reposteria\Mielva\CadMielva\obj\Debug\CadMielva.dll
 C:\Users\auzas\Desktop\sis475_reposteria\sis457_reposteria\Mielva\CadMielva\obj\Debug\CadMielva.pdb
-C:\Users\Kevin\Documents\sis457\sis457_reposteria\Sis457Mielva\CadMielva\bin\Debug\CadMielva.dll.config
-C:\Users\Kevin\Documents\sis457\sis457_reposteria\Sis457Mielva\CadMielva\bin\Debug\CadMielva.dll
-C:\Users\Kevin\Documents\sis457\sis457_reposteria\Sis457Mielva\CadMielva\bin\Debug\CadMielva.pdb
-C:\Users\Kevin\Documents\sis457\sis457_reposteria\Sis457Mielva\CadMielva\bin\Debug\EntityFramework.dll
-C:\Users\Kevin\Documents\sis457\sis457_reposteria\Sis457Mielva\CadMielva\bin\Debug\EntityFramework.SqlServer.dll
-C:\Users\Kevin\Documents\sis457\sis457_reposteria\Sis457Mielva\CadMielva\bin\Debug\EntityFramework.xml
-C:\Users\Kevin\Documents\sis457\sis457_reposteria\Sis457Mielva\CadMielva\bin\Debug\EntityFramework.SqlServer.xml
-C:\Users\Kevin\Documents\sis457\sis457_reposteria\Sis457Mielva\CadMielva\obj\Debug\CadMielva.csproj.AssemblyReference.cache
-C:\Users\Kevin\Documents\sis457\sis457_reposteria\Sis457Mielva\CadMielva\obj\Debug\CadMielva.csproj.CoreCompileInputs.cache
-C:\Users\Kevin\Documents\sis457\sis457_reposteria\Sis457Mielva\CadMielva\obj\Debug\CadMielva.csproj.Up2Date
-C:\Users\Kevin\Documents\sis457\sis457_reposteria\Sis457Mielva\CadMielva\obj\Debug\CadMielva.dll
-C:\Users\Kevin\Documents\sis457\sis457_reposteria\Sis457Mielva\CadMielva\obj\Debug\CadMielva.pdb
 B:\Materias usfx\1.- Informática\1 - 2025\sis457\sis457_reposteria\Sis457Mielva\CadMielva\bin\Debug\CadMielva.dll.config
 B:\Materias usfx\1.- Informática\1 - 2025\sis457\sis457_reposteria\Sis457Mielva\CadMielva\bin\Debug\CadMielva.dll
 B:\Materias usfx\1.- Informática\1 - 2025\sis457\sis457_reposteria\Sis457Mielva\CadMielva\bin\Debug\CadMielva.pdb
@@ -82,3 +70,15 @@ C:\Users\auzas\Desktop\sis475_reposteria\sis457_reposteria\Sis457Mielva\CadMielv
 C:\Users\auzas\Desktop\sis475_reposteria\sis457_reposteria\Sis457Mielva\CadMielva\obj\Debug\CadMielva.csproj.Up2Date
 C:\Users\auzas\Desktop\sis475_reposteria\sis457_reposteria\Sis457Mielva\CadMielva\obj\Debug\CadMielva.dll
 C:\Users\auzas\Desktop\sis475_reposteria\sis457_reposteria\Sis457Mielva\CadMielva\obj\Debug\CadMielva.pdb
+C:\Users\Kevin\Documents\sis457\sis457_reposteria\Sis457Mielva\CadMielva\bin\Debug\CadMielva.dll.config
+C:\Users\Kevin\Documents\sis457\sis457_reposteria\Sis457Mielva\CadMielva\bin\Debug\CadMielva.dll
+C:\Users\Kevin\Documents\sis457\sis457_reposteria\Sis457Mielva\CadMielva\bin\Debug\CadMielva.pdb
+C:\Users\Kevin\Documents\sis457\sis457_reposteria\Sis457Mielva\CadMielva\bin\Debug\EntityFramework.dll
+C:\Users\Kevin\Documents\sis457\sis457_reposteria\Sis457Mielva\CadMielva\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Kevin\Documents\sis457\sis457_reposteria\Sis457Mielva\CadMielva\bin\Debug\EntityFramework.xml
+C:\Users\Kevin\Documents\sis457\sis457_reposteria\Sis457Mielva\CadMielva\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Kevin\Documents\sis457\sis457_reposteria\Sis457Mielva\CadMielva\obj\Debug\CadMielva.csproj.AssemblyReference.cache
+C:\Users\Kevin\Documents\sis457\sis457_reposteria\Sis457Mielva\CadMielva\obj\Debug\CadMielva.csproj.CoreCompileInputs.cache
+C:\Users\Kevin\Documents\sis457\sis457_reposteria\Sis457Mielva\CadMielva\obj\Debug\CadMielva.csproj.Up2Date
+C:\Users\Kevin\Documents\sis457\sis457_reposteria\Sis457Mielva\CadMielva\obj\Debug\CadMielva.dll
+C:\Users\Kevin\Documents\sis457\sis457_reposteria\Sis457Mielva\CadMielva\obj\Debug\CadMielva.pdb

@@ -86,10 +86,10 @@
     <Compile Include="paProductoListar_Result.cs">
       <DependentUpon>Modelo.tt</DependentUpon>
     </Compile>
-    <Compile Include="paVentaClienteListar_Result.cs">
+    <Compile Include="paProductoVentaListar_Result.cs">
       <DependentUpon>Modelo.tt</DependentUpon>
     </Compile>
-    <Compile Include="paVentaDetalleListar_Result.cs">
+    <Compile Include="paVentaClienteListar_Result.cs">
       <DependentUpon>Modelo.tt</DependentUpon>
     </Compile>
     <Compile Include="paVentaListar_Result.cs">

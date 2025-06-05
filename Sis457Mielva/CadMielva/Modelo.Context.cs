@@ -63,6 +63,11 @@ namespace CadMielva
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<paProductoListar_Result>("paProductoListar", parametroParameter);
         }
     
+        public virtual ObjectResult<paProductoVentaListar_Result> paProductoVentaListar()
+        {
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<paProductoVentaListar_Result>("paProductoVentaListar");
+        }
+    
         public virtual ObjectResult<paVentaClienteListar_Result> paVentaClienteListar(string nit)
         {
             var nitParameter = nit != null ?
@@ -70,15 +75,6 @@ namespace CadMielva
                 new ObjectParameter("nit", typeof(string));
     
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<paVentaClienteListar_Result>("paVentaClienteListar", nitParameter);
-        }
-    
-        public virtual ObjectResult<paVentaDetalleListar_Result> paVentaDetalleListar(string parametro)
-        {
-            var parametroParameter = parametro != null ?
-                new ObjectParameter("parametro", parametro) :
-                new ObjectParameter("parametro", typeof(string));
-    
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<paVentaDetalleListar_Result>("paVentaDetalleListar", parametroParameter);
         }
     
         public virtual ObjectResult<paVentaListar_Result> paVentaListar(string parametro)

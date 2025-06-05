@@ -244,11 +244,9 @@
     <FunctionImport Name="paProductoListar" ReturnType="Collection(LabMielvaModel.paProductoListar_Result)">
       <Parameter Name="parametro" Mode="In" Type="String" />
     </FunctionImport>
+    <FunctionImport Name="paProductoVentaListar" ReturnType="Collection(LabMielvaModel.paProductoVentaListar_Result)" />
     <FunctionImport Name="paVentaClienteListar" ReturnType="Collection(LabMielvaModel.paVentaClienteListar_Result)">
       <Parameter Name="nit" Mode="In" Type="String" />
-    </FunctionImport>
-    <FunctionImport Name="paVentaDetalleListar" ReturnType="Collection(LabMielvaModel.paVentaDetalleListar_Result)">
-      <Parameter Name="parametro" Mode="In" Type="String" />
     </FunctionImport>
     <FunctionImport Name="paVentaListar" ReturnType="Collection(LabMielvaModel.paVentaListar_Result)">
       <Parameter Name="parametro" Mode="In" Type="String" />
@@ -287,6 +285,13 @@
     <Property Type="DateTime" Name="fechaRegistro" Nullable="false" Precision="23" />
     <Property Type="Int16" Name="estado" Nullable="false" />
   </ComplexType>
+  <ComplexType Name="paProductoVentaListar_Result">
+    <Property Type="Int32" Name="id" Nullable="false" />
+    <Property Type="String" Name="codigo" Nullable="false" MaxLength="20" />
+    <Property Type="String" Name="descripcion" Nullable="false" MaxLength="250" />
+    <Property Type="Decimal" Name="precioVenta" Nullable="false" Precision="18" Scale="0" />
+    <Property Type="String" Name="unidadMedida" Nullable="true" MaxLength="20" />
+  </ComplexType>
   <ComplexType Name="paVentaClienteListar_Result">
     <Property Type="Int32" Name="id" Nullable="false" />
     <Property Type="String" Name="nit" Nullable="false" MaxLength="14" />
@@ -294,20 +299,6 @@
     <Property Type="String" Name="usuarioRegistro" Nullable="false" MaxLength="50" />
     <Property Type="DateTime" Name="fechaRegistro" Nullable="false" Precision="23" />
     <Property Type="Int16" Name="estado" Nullable="false" />
-  </ComplexType>
-  <ComplexType Name="paVentaDetalleListar_Result">
-    <Property Type="Int32" Name="id" Nullable="false" />
-    <Property Type="Int32" Name="idVenta" Nullable="false" />
-    <Property Type="Int32" Name="idProducto" Nullable="false" />
-    <Property Type="Decimal" Name="cantidad" Nullable="false" Precision="18" Scale="0" />
-    <Property Type="Decimal" Name="precioUnitario" Nullable="false" Precision="10" Scale="2" />
-    <Property Type="Decimal" Name="total" Nullable="false" Precision="10" Scale="2" />
-    <Property Type="String" Name="usuarioRegistro" Nullable="false" MaxLength="50" />
-    <Property Type="DateTime" Name="fechaRegistro" Nullable="false" Precision="23" />
-    <Property Type="Int16" Name="estado" Nullable="false" />
-    <Property Type="String" Name="descripcion" Nullable="true" MaxLength="250" />
-    <Property Type="Int32" Name="transaccion" Nullable="true" />
-    <Property Type="DateTime" Name="fecha" Nullable="true" />
   </ComplexType>
   <ComplexType Name="paVentaListar_Result">
     <Property Type="Int32" Name="idVenta" Nullable="false" />

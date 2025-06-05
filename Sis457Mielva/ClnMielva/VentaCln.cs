@@ -40,6 +40,87 @@ namespace ClnMielva
                 return context.SaveChanges();
             }
         }
+
+        public static Venta obtenerUno(int id)
+        {
+            using (var context = new LabMielvaEntities())
+            {
+                return context.Venta.Find(id);
+            }
+        }
+        public static List<Venta> listar()
+        {
+            using (var context = new LabMielvaEntities())
+            {
+                return context.Venta.Where(x => x.estado != -1).ToList();
+            }
+        }
+        public static List<paVentaListar_Result> listarPa(string parametro)
+        {
+            using (var context = new LabMielvaEntities())
+            {
+                return context.paVentaListar(parametro).ToList();
+            }
+        }
+        // Método para validar una venta antes de registrarla
+        public static string validarVenta(int idCliente, List<(int idProducto, decimal cantidad, decimal precioUnitario)> detalles)
+        {
+            var errores = new List<string>();
+
+            if (idCliente <= 0)
+            {
+                errores.Add("Debe seleccionar un cliente válido.");
+            }
+
+            if (detalles == null || !detalles.Any(d => d.cantidad > 0))
+            {
+                errores.Add("Debe seleccionar al menos un producto con cantidad mayor a 0.");
+            }
+
+            // Validar que los productos existan y estén activos
+            if (detalles != null)
+            {
+                using (var context = new LabMielvaEntities())
+                {
+                    foreach (var detalle in detalles.Where(d => d.cantidad > 0))
+                    {
+                        var producto = context.Producto.Find(detalle.idProducto);
+                        if (producto == null || producto.estado != 1)
+                        {
+                            errores.Add($"El producto con ID {detalle.idProducto} no existe o no está activo.");
+                        }
+                    }
+                }
+            }
+
+            return errores.Any() ? string.Join("\n", errores) : string.Empty;
+        }
+        // Método para calcular el total de una venta
+        public static decimal calcularTotalVenta(List<(int idProducto, decimal cantidad, decimal precioUnitario)> detalles)
+        {
+            return detalles.Where(d => d.cantidad > 0).Sum(d => d.cantidad * d.precioUnitario);
+        }
+
+        // Método mejorado que usa validación
+        public static int registrarVentaConValidacion(
+            int idCliente,
+            int idUsuario,
+            string usuarioRegistro,
+            List<(int idProducto, decimal cantidad, decimal precioUnitario)> detalles)
+        {
+            // Validar antes de procesar
+            string errorValidacion = validarVenta(idCliente, detalles);
+            if (!string.IsNullOrEmpty(errorValidacion))
+            {
+                throw new ArgumentException(errorValidacion);
+            }
+
+            // Filtrar solo detalles con cantidad > 0
+            var detallesValidos = detalles.Where(d => d.cantidad > 0).ToList();
+
+            // Llamar al método original
+            return registrarVenta(idCliente, idUsuario, usuarioRegistro, detallesValidos);
+        }
         public static int registrarVenta(
         int idCliente,
         int idUsuario,
@@ -84,27 +165,14 @@ namespace ClnMielva
                 return venta.id;
             }
         }
-
-        public static Venta obtenerUno(int id)
+        // Método para obtener productos activos (opcional)
+        public static List<Producto> obtenerProductosActivos()
         {
             using (var context = new LabMielvaEntities())
             {
-                return context.Venta.Find(id);
-            }
-        }
-        public static List<Venta> listar()
-        {
-            using (var context = new LabMielvaEntities())
-            {
-                return context.Venta.Where(x => x.estado != -1).ToList();
-            }
-        }
-        public static List<paVentaListar_Result> listarPa(string parametro)
-        {
-            using (var context = new LabMielvaEntities())
-            {
-                return context.paVentaListar(parametro).ToList();
+                return context.Producto.Where(p => p.estado == 1).OrderBy(p => p.descripcion).ToList();
             }
         }
     }
 }
+
