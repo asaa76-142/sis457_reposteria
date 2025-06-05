@@ -115,9 +115,30 @@ namespace CpMielva
 
                 if (esNuevo)
                 {
+                    var lista = ClienteCln.listarPa(txtNit.Text.Trim());
+                    if (lista.Any(c => c.nit == txtNit.Text.Trim()))
+                    {
+                        MessageBox.Show("Ya existe un cliente con ese NIT.", "...::: Mielva - Advertencia :::...",
+                            MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        return;
+                    }
+                }
+                if (esNuevo)
+                {
                     cliente.fechaRegistro = DateTime.Now;
                     cliente.estado = 1;
                     ClienteCln.insertar(cliente);
+                }
+                if (!esNuevo)
+                {
+                    int idActual = Convert.ToInt32(dgvLista.CurrentRow.Cells["id"].Value);
+                    var lista = ClienteCln.listar();
+                    if (lista.Any(c => c.nit == txtNit.Text.Trim() && c.id != idActual))
+                    {
+                        MessageBox.Show("Ya existe otro cliente con ese NIT.", "...::: Mielva - Advertencia :::...",
+                            MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        return;
+                    }
                 }
                 else
                 {
@@ -127,7 +148,7 @@ namespace CpMielva
                 }
                 listar();
                 btnCancelar.PerformClick();
-                MessageBox.Show("Cliente guardado correctamente", "::: Mielva - Mensaje :::",
+                MessageBox.Show("Cliente guardado correctamente", "...::: Mielva - Mensaje :::...",
                     MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
