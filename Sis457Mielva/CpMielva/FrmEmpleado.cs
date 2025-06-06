@@ -184,6 +184,13 @@ namespace CpMielva
 
                 if (esNuevo)
                 {
+                    var lista = EmpleadoCln.listarPa(txtCedulaIdentidad.Text.Trim());
+                    if (lista.Any(c => c.cedulaIdentidad == txtCedulaIdentidad.Text.Trim()))
+                    {
+                        MessageBox.Show("Ya existe es Cedula de Identidad.", "...::: Mielva - Advertencia :::...",
+                            MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        return;
+                    }
                     empleado.fechaRegistro = DateTime.Now;
                     empleado.estado = 1;
                     EmpleadoCln.insertar(empleado, usuario);

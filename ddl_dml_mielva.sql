@@ -139,7 +139,7 @@ ALTER TABLE Cargo ADD estado SMALLINT NOT NULL DEFAULT 1; -- 1: Activo, 0: Inact
 
 --********************************************************
 GO
-CREATE PROC paProductoListar @parametro VARCHAR(100)
+ALTER PROC paProductoListar @parametro VARCHAR(100)
 AS
   SELECT p.id, p.codigo, p.descripcion, um.descripcion AS unidadMedida, p.saldo, p.precioVenta,
 		 p.usuarioRegistro, p.fechaRegistro, p.estado
@@ -149,7 +149,7 @@ AS
   ORDER BY p.estado DESC, p.descripcion ASC;
 
 GO
-CREATE PROC paEmpleadoListar @parametro VARCHAR(100)
+ALTER PROC paEmpleadoListar @parametro VARCHAR(100)
 AS
   SELECT ISNULL(u.usuario,'--') AS usuario,e.id, e.cedulaIdentidad, e.nombres, e.primerApellido, e.segundoApellido, c.descripcion AS cargo,
 		 e.direccion, e.celular, e.usuarioRegistro, e.fechaRegistro, e.estado
@@ -161,7 +161,7 @@ AS
   ORDER BY e.estado DESC, e.nombres ASC, e.primerApellido ASC;
 
 GO
-CREATE PROC paClienteListar @parametro VARCHAR(100)
+ALTER PROC paClienteListar @parametro VARCHAR(100)
 AS
 SELECT *
 FROM Cliente
@@ -175,7 +175,7 @@ ORDER BY estado DESC, razonSocial ASC;
 	ORDER BY estado DESC, razonSocial ASC;
 
 GO
-CREATE PROC paVentaClienteListar @nit VARCHAR(14)
+ALTER PROC paVentaClienteListar @nit VARCHAR(14)
 AS
 SELECT *
 FROM Cliente
@@ -184,7 +184,7 @@ WHERE estado = 1
 ORDER BY estado DESC, razonSocial ASC;
 
 GO
-CREATE PROC paVentaListar @parametro VARCHAR(100)
+ALTER PROC paVentaListar @parametro VARCHAR(100)
 AS
 SELECT 
     v.id AS idVenta,
@@ -218,7 +218,7 @@ WHERE v.estado = 1
 ORDER BY v.fecha DESC, v.transaccion DESC;
 
 GO
-CREATE PROC paProductoVentaListar
+ALTER PROC paProductoVentaListar
 AS
 SELECT id, codigo, descripcion, precioVenta, 
        (SELECT descripcion FROM UnidadMedida WHERE id = p.idUnidadMedida) AS unidadMedida
@@ -294,6 +294,16 @@ INSERT INTO Usuario(idEmpleado, usuario, clave)
 VALUES (1, 'jperez', '');
 
 UPDATE Usuario SET clave='i0hcoO/nssY6WOs9pOp5Xw==' WHERE id=1;
+
+INSERT INTO Usuario(idEmpleado, usuario, clave)
+VALUES (2, 'kevinCardenas', '');
+
+UPDATE Usuario SET clave='i0hcoO/nssY6WOs9pOp5Xw==' WHERE id=2;
+
+INSERT INTO Usuario(idEmpleado, usuario, clave)
+VALUES (3, 'samuAuza', '');
+
+UPDATE Usuario SET clave='i0hcoO/nssY6WOs9pOp5Xw==' WHERE id=3;
 
 
 INSERT INTO Cliente(nit, razonSocial)
