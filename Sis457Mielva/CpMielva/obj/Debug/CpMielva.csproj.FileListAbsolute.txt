@@ -129,7 +129,6 @@ C:\Users\Kevin\Documents\sis457\sis457_reposteria\Sis457Mielva\CpMielva\bin\Debu
 C:\Users\Kevin\Documents\sis457\sis457_reposteria\Sis457Mielva\CpMielva\bin\Debug\EntityFramework.xml
 C:\Users\Kevin\Documents\sis457\sis457_reposteria\Sis457Mielva\CpMielva\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\Kevin\Documents\sis457\sis457_reposteria\Sis457Mielva\CpMielva\obj\Debug\CpMielva.csproj.AssemblyReference.cache
-C:\Users\Kevin\Documents\sis457\sis457_reposteria\Sis457Mielva\CpMielva\obj\Debug\CpMielva.exe.config
 C:\Users\Kevin\Documents\sis457\sis457_reposteria\Sis457Mielva\CpMielva\obj\Debug\CpMielva.FrmAutenticacion.resources
 C:\Users\Kevin\Documents\sis457\sis457_reposteria\Sis457Mielva\CpMielva\obj\Debug\CpMielva.FrmCliente.resources
 C:\Users\Kevin\Documents\sis457\sis457_reposteria\Sis457Mielva\CpMielva\obj\Debug\CpMielva.FrmEmpleado.resources
