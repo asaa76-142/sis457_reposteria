@@ -52,7 +52,7 @@ CREATE TABLE Producto (
 	  descripcion VARCHAR(250) NOT NULL,
 	  --unidadMedida VARCHAR(20) NOT NULL,
 	  saldo DECIMAL NOT NULL DEFAULT 0,
-	  precioVenta DECIMAL NOT NULL CHECK (precioVenta > 0)
+	  precioVenta DECIMAL (10,2) NOT NULL CHECK (precioVenta > 0)
 	  CONSTRAINT fk_Producto_UnidadMedida FOREIGN KEY(idUnidadMedida) REFERENCES UnidadMedida(id)
 );
 
@@ -139,7 +139,7 @@ ALTER TABLE Cargo ADD estado SMALLINT NOT NULL DEFAULT 1; -- 1: Activo, 0: Inact
 
 --********************************************************
 GO
-ALTER PROC paProductoListar @parametro VARCHAR(100)
+CREATE PROC paProductoListar @parametro VARCHAR(100)
 AS
   SELECT p.id, p.codigo, p.descripcion, um.descripcion AS unidadMedida, p.saldo, p.precioVenta,
 		 p.usuarioRegistro, p.fechaRegistro, p.estado
@@ -149,7 +149,7 @@ AS
   ORDER BY p.estado DESC, p.descripcion ASC;
 
 GO
-ALTER PROC paEmpleadoListar @parametro VARCHAR(100)
+CREATE PROC paEmpleadoListar @parametro VARCHAR(100)
 AS
   SELECT ISNULL(u.usuario,'--') AS usuario,e.id, e.cedulaIdentidad, e.nombres, e.primerApellido, e.segundoApellido, c.descripcion AS cargo,
 		 e.direccion, e.celular, e.usuarioRegistro, e.fechaRegistro, e.estado
@@ -161,7 +161,7 @@ AS
   ORDER BY e.estado DESC, e.nombres ASC, e.primerApellido ASC;
 
 GO
-ALTER PROC paClienteListar @parametro VARCHAR(100)
+CREATE PROC paClienteListar @parametro VARCHAR(100)
 AS
 SELECT *
 FROM Cliente
@@ -175,7 +175,7 @@ ORDER BY estado DESC, razonSocial ASC;
 	ORDER BY estado DESC, razonSocial ASC;
 
 GO
-ALTER PROC paVentaClienteListar @nit VARCHAR(14)
+CREATE PROC paVentaClienteListar @nit VARCHAR(14)
 AS
 SELECT *
 FROM Cliente
@@ -184,7 +184,7 @@ WHERE estado = 1
 ORDER BY estado DESC, razonSocial ASC;
 
 GO
-ALTER PROC paVentaListar @parametro VARCHAR(100)
+CREATE PROC paVentaListar @parametro VARCHAR(100)
 AS
 SELECT 
     v.id AS idVenta,
@@ -218,7 +218,7 @@ WHERE v.estado = 1
 ORDER BY v.fecha DESC, v.transaccion DESC;
 
 GO
-ALTER PROC paProductoVentaListar
+CREATE PROC paProductoVentaListar
 AS
 SELECT id, codigo, descripcion, precioVenta, 
        (SELECT descripcion FROM UnidadMedida WHERE id = p.idUnidadMedida) AS unidadMedida
