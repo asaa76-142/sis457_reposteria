@@ -1,14 +1,14 @@
-﻿CREATE DATABASE LabReposteria;
+﻿CREATE DATABASE FinalReposteria;
 
 GO
 USE [master];
 GO
 CREATE LOGIN  [usrmielva] WITH PASSWORD = N'123456',
-	DEFAULT_DATABASE = [LabReposteria],
+	DEFAULT_DATABASE = [FinalReposteria],
 	CHECK_EXPIRATION = OFF,
 	CHECK_POLICY = ON
 
-USE LabReposteria
+USE FinalReposteria
 GO
 DROP USER [usrmielva]
 GO
@@ -17,7 +17,7 @@ DROP LOGIN [usrmielva]
 
 
 GO
-USE [LabReposteria]
+USE [FinalReposteria]
 GO
 CREATE USER usrmielva FOR LOGIN usrmielva
 GO
@@ -307,7 +307,7 @@ UPDATE Usuario SET clave='i0hcoO/nssY6WOs9pOp5Xw==' WHERE id=3;
 
 
 INSERT INTO Cliente(nit, razonSocial)
-VALUES (123456789, 'LabReposteria CDR');
+VALUES (123456789, 'FinalReposteria CDR');
 
 INSERT INTO Cliente(nit, razonSocial)
 VALUES (987654321, 'Mauricio Mendieta');

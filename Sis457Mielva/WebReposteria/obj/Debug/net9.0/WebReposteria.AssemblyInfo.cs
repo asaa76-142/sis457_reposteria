@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("WebReposteria")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a1fe10a0480e506e38ae4a690793ec238b1fd868")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+dc880cf701b569a5c1aa3020e253626cf3b8ec7e")]
 [assembly: System.Reflection.AssemblyProductAttribute("WebReposteria")]
 [assembly: System.Reflection.AssemblyTitleAttribute("WebReposteria")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
